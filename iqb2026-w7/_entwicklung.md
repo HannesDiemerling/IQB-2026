@@ -1,3 +1,8 @@
+# Entwicklungsnotizen
+
+Interne Doku zum Aufbau des Projekts. Der fuehrende Unterstrich im
+Dateinamen haelt sie aus der gerenderten Website heraus.
+
 # Workshop 7: Jenseits des Frequentismus
 
 IQB 2026, 23. und 24. September, jeweils 14 bis 18 Uhr. 25 Teilnehmende,
@@ -44,7 +49,8 @@ der Seite.
 - **In Folienattributen** expandiert Quarto nichts. Dort stünden von Hand
   geschriebene `.html`-Pfade. Aktuell gibt es keine, weil die Demo-Folien
   keine iframes einbetten.
-- **Nie wurzelabsolut.** `href="/apps/..."` funktioniert in der Vorschau und
+- **Nie wurzelabsolut.** Ein href, das mit einem Slash beginnt, funktioniert
+  in der Vorschau und
   bricht unter der Pages-Projektseite unter `/REPO/`. Der Prüfer fängt das im
   gerenderten Output ab.
 
@@ -98,7 +104,7 @@ app_ui = ui.page_fluid(ui.card(
 Dazu `#| standalone: true`, `#| viewerHeight: N`, ein `@render.plot` und
 optional ein `@render.ui`-Urteilspanel mit `background:#f8f9fa`.
 
-**Plot-Regeln** (aus `claudeplot.md` des Vorgängerprojekts):
+**Plot-Regeln** (aus der Plot-Konventionen des Vorgängerprojekts):
 
 - immer `layout="constrained"`, nie `tight_layout`
 - x-Grenzen fest verdrahten, damit die Skala beim Reglerziehen nicht springt

@@ -80,7 +80,7 @@ def pruefe_datei(pfad: pathlib.Path) -> list[str]:
         if "server" not in funktionen:
             fehler.append(f"{ort}  keine Funktion 'server' gefunden")
 
-        # Plot-Konvention aus claudeplot.md: nie tight_layout.
+        # Plot-Konvention: nie tight_layout, immer layout="constrained".
         if "tight_layout" in code:
             fehler.append(f"{ort}  tight_layout verwendet, layout='constrained' nutzen")
         if "plt.subplots(" in code and 'layout="constrained"' not in code:

@@ -84,6 +84,28 @@ def pruefe_text() -> list[str]:
     return fehler
 
 
+def pruefe_markdown() -> list[str]:
+    """Keine .md-Datei darf als Website-Seite gerendert werden.
+
+    Quarto rendert in einem Website-Projekt auch .md. Entwicklerdoku gehoert
+    aber nicht auf die Seite der Teilnehmenden. Der Schutz ist die
+    Unterstrich-Regel: Quarto ignoriert alles, was mit _ beginnt, Datei wie
+    Verzeichnis.
+    """
+    fehler = []
+    for p in sorted(WURZEL.rglob("*.md")):
+        teile = p.relative_to(WURZEL).parts
+        if any(t in AUSGENOMMEN for t in teile):
+            continue
+        if any(t.startswith("_") for t in teile):
+            continue
+        fehler.append(
+            f"{p.relative_to(WURZEL).as_posix()}  wuerde als Website-Seite "
+            f"gerendert, Unterstrich voranstellen"
+        )
+    return fehler
+
+
 def pruefe_site() -> list[str]:
     site = WURZEL / "_site"
     if not site.is_dir():
@@ -102,7 +124,7 @@ def pruefe_site() -> list[str]:
 
 
 def main() -> int:
-    fehler = pruefe_text() + pruefe_site()
+    fehler = pruefe_text() + pruefe_markdown() + pruefe_site()
     anzahl = sum(1 for _ in quelldateien())
     print(f"{anzahl} Quelldateien geprueft.")
     if fehler:

@@ -8,6 +8,10 @@
 #
 # seaborn und pandas standen in den Alt-Repos, werden aber von keiner einzigen
 # Anwendung importiert. Bewusst nicht uebernommen.
+#
+# ACHTUNG: Braucht Python >= 3.12. numpy 2.5.3 und scipy 1.18.1 setzen das
+# voraus. Die Action ist entsprechend auf 3.12 gesetzt. Wer eine aeltere
+# Python-Version braucht, muss diese beiden Pins senken.
 
 shiny==1.8.0
 shinylive==0.8.12

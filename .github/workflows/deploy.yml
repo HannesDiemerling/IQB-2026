@@ -37,10 +37,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # 3.12 ist Pflicht, nicht Geschmack: numpy 2.5.3 und scipy 1.18.1
+      # verlangen beide Requires-Python >=3.12. Wer hier heruntergeht, muss
+      # auch die Pins in requirements.txt anfassen.
       - name: Python einrichten
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
           cache: pip
           cache-dependency-path: iqb2026-w7/requirements.txt
 

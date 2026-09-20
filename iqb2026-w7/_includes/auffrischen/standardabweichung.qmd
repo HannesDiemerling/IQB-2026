@@ -1,0 +1,9 @@
+Die Standardabweichung beschreibt, wie weit die einzelnen Werte im Schnitt vom
+Mittelwert entfernt liegen. Sie hat dieselbe Einheit wie die Messung selbst.
+
+Bei unserem Lesetest mit einer Streuung von **5 Punkten** heißt das grob: rund
+zwei Drittel aller Lernenden liegen zwischen 7 und 17 Punkten, rund 95 Prozent
+zwischen 2 und 22.
+
+Wichtig für heute: die Standardabweichung beschreibt die **Unterschiedlichkeit
+der Personen**. Sie wird nicht kleiner, wenn du mehr Personen testest.

@@ -1,0 +1,111 @@
+---
+title: "Der Posterior"
+subtitle: "Einheit 5 · Prior und Pilotdaten fusionieren"
+---
+
+Die Pilotdaten liegen fest: fünf Klassen, Durchschnitt 6 Punkte Zuwachs.
+Beweglich ist nur dein Prior. Beobachte, wann er gewinnt und wann die Daten
+gewinnen.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 650
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+# Fixierte Daten D: 5 Pilotklassen, Durchschnitt 6 Punkte Zuwachs, SD 2.5
+data_n = 5
+data_mean = 6.0
+data_sd = 2.5
+data_se = data_sd / np.sqrt(data_n)
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Prior und Pilotdaten fusionieren"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Prior P(Theta) konfigurieren"),
+                ui.input_slider("prior_mean", "Erwarteter Zuwachs", 0, 20, 8, step=1),
+                ui.input_slider("prior_sd", "Unsicherheit (SD)", 0.5, 10, 5, step=0.5),
+                ui.hr(),
+                ui.p("Die Pilotdaten D sind fixiert (rote Kurve: 5 Klassen, "
+                     "Schnitt 6 Punkte Zuwachs). Ändere den Prior und beobachte "
+                     "den violetten Posterior."),
+            ),
+            ui.output_plot("posterior_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+    @render.plot
+    def posterior_plot():
+        p_mean = input.prior_mean()
+        p_sd = input.prior_sd()
+
+        # Konjugiertes Update fuer Normalverteilungen
+        prior_var = p_sd**2
+        data_var = data_se**2
+
+        post_var = 1.0 / ((1.0 / prior_var) + (1.0 / data_var))
+        post_mean = post_var * ((p_mean / prior_var) + (data_mean / data_var))
+        post_sd = np.sqrt(post_var)
+
+        x_vals = np.linspace(-5, 25, 400)
+
+        prior_y = norm.pdf(x_vals, p_mean, p_sd)
+        like_y = norm.pdf(x_vals, data_mean, data_se)
+        post_y = norm.pdf(x_vals, post_mean, post_sd)
+
+        fig, ax = plt.subplots(figsize=(10, 6), layout="constrained")
+
+        ax.plot(x_vals, prior_y, color='#7f8c8d', linewidth=2, linestyle='dotted',
+                label='Prior P(Theta)')
+        ax.plot(x_vals, like_y, color='#e74c3c', linewidth=2, linestyle='dashed',
+                label='Likelihood P(D|Theta)')
+        ax.plot(x_vals, post_y, color='#8e44ad', linewidth=3,
+                label='Posterior P(Theta|D)')
+
+        ci_lower, ci_upper = norm.interval(0.95, loc=post_mean, scale=post_sd)
+
+        x_fill = np.linspace(ci_lower, ci_upper, 100)
+        y_fill = norm.pdf(x_fill, post_mean, post_sd)
+        ax.fill_between(x_fill, 0, y_fill, color='#8e44ad', alpha=0.3,
+                        label='95 % Glaubwürdigkeitsintervall')
+
+        ax.set_title(f"Posterior: {post_mean:.2f} Punkte, "
+                     f"95 % HDI [{ci_lower:.2f}; {ci_upper:.2f}]")
+        ax.set_xlabel("Wahrer durchschnittlicher Kompetenzzuwachs Theta (Punkte)")
+        ax.set_ylabel("Wahrscheinlichkeitsdichte")
+        ax.set_xlim(-5, 25)
+        ax.set_ylim(0, max(np.max(like_y), np.max(post_y), np.max(prior_y)) * 1.2)
+        ax.set_yticks([])
+
+        ax.legend(loc="upper right")
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        return fig
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Bei den Startwerten liegt der Prior auf 8 Punkten, die Daten sagen 6. Der
+Posterior landet **dazwischen**, näher an den Daten.
+
+Zieh die Prior-Unsicherheit auf **10**. Der Prior wird breit, die Daten
+übernehmen fast vollständig.
+
+Zieh sie dann auf **0,5**. Jetzt gewinnt der Prior, und die Daten richten fast
+nichts mehr aus. Das ist kein Fehler, das ist die Lektion: ein sehr enger
+Prior ist eine sehr starke Behauptung, und du musst sie begründen können.
+:::

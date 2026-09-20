@@ -1,0 +1,99 @@
+project:
+  type: website
+  output-dir: _site
+
+# Wichtig: type website setzt lib-dir auf site_libs. Dadurch teilen sich alle
+# Seiten und Decks EINE Kopie der Reveal-Bibliothek und EINE Kopie der
+# Shinylive-Laufzeit. Die Teilnehmenden laden Pyodide damit einmal fuer beide
+# Tage, nicht einmal pro Anwendung. Das ist der Hauptgrund fuer das Mono-Repo.
+
+lang: de
+
+# Gilt fuer alle Formate, auch fuer die Decks. Zur Renderzeit wird nichts
+# ausgefuehrt, die Interaktivitaet liegt komplett im Browser.
+execute:
+  enabled: false
+
+website:
+  title: "Jenseits des Frequentismus"
+  site-url: "https://hannesdiemerling.github.io/iqb2026-w7/"
+  search: true
+  page-navigation: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Start
+      - href: ablauf.qmd
+        text: Ablauf
+      - href: apps/index.qmd
+        text: Anwendungen
+      - href: glossar.qmd
+        text: Glossar
+  # leitung/ steht bewusst NICHT in der Navigation. Die Seite ist ueber die
+  # URL erreichbar, taucht aber bei den Teilnehmenden nicht auf.
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - href: index.qmd
+        text: Start
+      - href: ablauf.qmd
+        text: Ablauf
+      - section: "Tag 1, die Diagnose"
+        contents:
+          - href: tag1/e1-pwert.qmd
+            text: "E1 Was der p-Wert nicht sagt"
+          - href: tag1/e2-freiheitsgrade.qmd
+            text: "E2 Freiheitsgrade des Forschens"
+          - href: tag1/e3-effektstaerken.qmd
+            text: "E3 Effektstärken und ihre Grenzen"
+      - section: "Tag 2, die Alternative"
+        contents:
+          - href: tag2/e4-bayes-denken.qmd
+            text: "E4 Die Frage umdrehen"
+          - href: tag2/e5-prior-likelihood-posterior.qmd
+            text: "E5 Prior, Likelihood, Posterior"
+          - href: tag2/e6-evidenz-berichten.qmd
+            text: "E6 Evidenz berichten"
+      - section: "Anwendungen"
+        href: apps/index.qmd
+        contents:
+          - apps/a01-schwelle.qmd
+          - apps/a02-stichprobengroesse.qmd
+          - apps/a03-garten.qmd
+          - apps/a04-dropout.qmd
+          - apps/a05-publikationsbias.qmd
+          - apps/a06-rohwerte.qmd
+          - apps/a07-cohens-d.qmd
+          - apps/a08-relevanzschwelle.qmd
+          - apps/a09-minderung.qmd
+          - apps/a10-zwei-welten.qmd
+          - apps/a11-screening.qmd
+          - apps/a12-p-und-posterior.qmd
+          - apps/a13-prior.qmd
+          - apps/a14-likelihood.qmd
+          - apps/a15-posterior.qmd
+          - apps/a16-hdi-rope.qmd
+          - apps/a17-bayesfaktor.qmd
+          - apps/a18-vorhersage.qmd
+          - apps/a19-mcmc.qmd
+      - href: glossar.qmd
+        text: Glossar
+  page-footer:
+    center: |
+      CC BY 4.0 · Workshop 7, IQB 2026 · Hannes Diemerling
+
+format:
+  # Achtung: filters, theme, toc, css und embed-resources muessen unter
+  # format.html geschachtelt bleiben. Auf oberster Ebene wuerden sie in JEDES
+  # Format lecken, auch in revealjs. Die Decks konfiguriert
+  # folien/_metadata.yml.
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    # Shinylive verweigert die Umwandlung, wenn die Seite alle Ressourcen
+    # einbettet. Muss explizit aus bleiben.
+    embed-resources: false
+    filters:
+      - shinylive

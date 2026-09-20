@@ -1,0 +1,39 @@
+/* Website-Stile. Die Folien haben ihr eigenes Theme in
+   folien/theme/iqb-slides.scss, die Tokens sind dieselben. */
+
+:root {
+  --bp-navy: #2a3f66;
+  --bp-teal: #4fa8a0;
+  --bp-coral: #e27c5c;
+  --bp-sand: #e8c9a4;
+  --bp-cream: #f7f2ea;
+  --bp-ink: #1b2436;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--bp-navy);
+  letter-spacing: -0.015em;
+}
+
+/* Derselbe Farbbalken vor h2 wie auf den Folien, damit Seite und Deck als
+   ein System wirken. */
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 0.95em;
+  background: linear-gradient(180deg, var(--bp-teal), var(--bp-coral));
+  border-radius: 3px;
+  vertical-align: -0.12em;
+  margin-right: 0.5em;
+}
+
+a {
+  color: var(--bp-coral);
+}
+
+table {
+  font-size: 0.95rem;
+}

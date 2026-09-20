@@ -1,0 +1,142 @@
+---
+title: "Arbeitsblatt Einheit 4"
+subtitle: "Die Frage umdrehen · 32 Minuten"
+---
+
+## Euer Auftrag
+
+Dreht an den drei Reglern eines Screenings und findet heraus, welcher davon
+tatsächlich entscheidet. Übertragt das Ergebnis dann auf euer eigenes
+Arbeitsfeld.
+
+**Anwendungen:** [Screening auf Leseförderbedarf](../apps/a11-screening.qmd) ·
+[Zwei Welten der Wahrscheinlichkeit](../apps/a10-zwei-welten.qmd) ·
+[p-Wert und Posterior nebeneinander](../apps/a12-p-und-posterior.qmd)
+
+## Rollen
+
+{{< include /_includes/rollen.qmd >}}
+
+Die Rollen wandern gegenüber Einheit 3 eine Position weiter.
+
+## Aufgabe 1: Beobachten
+
+Öffnet **Screening auf Leseförderbedarf**. Die Startwerte sind 3 Prozent
+Förderbedarf in der Population, 95 Prozent Erkennung, 8 Prozent Fehlalarme.
+
+1. Notiert den Posterior, also den rechten Balken.
+2. Vergleicht ihn mit eurer Schätzung aus dem Plenum. Wie weit lagt ihr
+   daneben?
+3. Rechnet die Zahl in Häufigkeiten nach: von 1000 gescreenten Lernenden, wie
+   viele echte und wie viele falsche Treffer gibt es?
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Bedingte Wahrscheinlichkeit
+
+{{< include /_includes/auffrischen/bedingte-wahrscheinlichkeit.qmd >}}
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 1
+
+Der Posterior liegt bei rund **27 Prozent**.
+
+In Häufigkeiten: von 1000 Lernenden haben **30** echten Förderbedarf, davon
+werden **28** erkannt. Von den **970** ohne Bedarf schlagen **78** falsch
+Alarm. Also 28 echte gegen 78 falsche Treffer, das sind 28 von 106 oder rund
+27 Prozent.
+
+Die meisten Menschen schätzen über 90 Prozent. Der Grund ist, dass die
+Erkennungsrate von 95 Prozent so überzeugend klingt, dass die Basisrate
+übersehen wird.
+:::
+
+## Aufgabe 2: Manipulieren
+
+Verändert jeweils **einen** Regler und stellt ihn danach wieder zurück.
+
+1. Verdoppelt die **Basisrate** von 3 auf 6 Prozent. Wie ändert sich der
+   Posterior?
+2. Zurücksetzen. Erhöht die **Erkennungsrate** von 95 auf 99 Prozent. Wie
+   ändert sich der Posterior?
+3. Zurücksetzen. Halbiert die **Fehlalarmrate** von 8 auf 4 Prozent. Wie
+   ändert sich der Posterior?
+4. Welcher Regler ist der wirksamste?
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 2
+
+- Basisrate 3 auf 6 Prozent: Posterior steigt von 27 auf rund **43 Prozent**.
+- Erkennungsrate 95 auf 99 Prozent: Posterior steigt nur auf rund
+  **28 Prozent**. Fast nichts.
+- Fehlalarmrate 8 auf 4 Prozent: Posterior steigt auf rund **42 Prozent**.
+
+Die **Erkennungsrate** ist der schwächste Hebel, obwohl sie am eindrucksvollsten
+klingt. Entscheidend sind **Basisrate** und **Fehlalarmrate**.
+
+Der Grund: bei einem seltenen Merkmal gibt es sehr viel mehr Personen ohne
+das Merkmal. Selbst eine kleine Fehlalarmrate erzeugt in dieser großen Gruppe
+mehr Treffer als die gute Erkennung in der kleinen Gruppe.
+:::
+
+## Aufgabe 3: Begreifen
+
+Öffnet **p-Wert und Posterior nebeneinander**. Die Startwerte sind die Studie
+aus Einheit 1.
+
+1. Lest beide Seiten ab: p-Wert links, die beiden Wahrscheinlichkeiten rechts.
+2. Zieht die Zahl der Lernenden auf 500 hoch. Was passiert links, was rechts?
+3. Formuliert, welche der beiden Seiten die Frage beantwortet, die eine
+   Kommission tatsächlich stellt.
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Posterior
+
+{{< include /_includes/auffrischen/posterior.qmd >}}
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 3
+
+Startwerte: **p = .048**, also knapp signifikant. Rechts:
+**P(Zuwachs > 0) = 98 Prozent**, aber **P(Zuwachs > 3 Punkte) = nur
+20 Prozent**.
+
+Bei 500 Lernenden rennt der p-Wert gegen null. Die Wahrscheinlichkeit für
+einen **relevanten** Zuwachs bleibt dagegen fast unverändert, weil der
+beobachtete Zuwachs selbst sich nicht geändert hat.
+
+Die Kommission fragt: lohnt sich das Programm? Darauf antwortet nur die
+rechte Seite, und ihre Antwort ist unbequem: wahrscheinlich wirkt es, aber
+wahrscheinlich nicht stark genug.
+:::
+
+## Pufferaufgaben
+
+::: {.callout-important collapse="true"}
+## Für schnelle Gruppen
+
+1. **Die Grenze finden.** Ab welcher Basisrate liegt der Posterior im
+   Screening über 50 Prozent? Sucht den Wert und überlegt, ob ein Merkmal mit
+   dieser Häufigkeit überhaupt noch ein Screening rechtfertigt.
+
+2. **Zwei Welten.** Öffnet die Anwendung **Zwei Welten der
+   Wahrscheinlichkeit**. Klickt fünfmal einzeln, dann stellt auf 50 Lernende
+   und klickt erneut. Beschreibt in einem Satz, was die rechte Seite die ganze
+   Zeit mitgeteilt hat und die linke nicht.
+
+3. **Transfer.** Nennt ein Screening oder Diagnoseverfahren aus eurem Feld.
+   Schätzt Basisrate und Fehlalarmrate. Was folgt daraus für die
+   Interpretation eines positiven Befunds?
+:::
+
+## Die Frage für die Fragerunde
+
+::: {.callout-warning}
+## Das berichtet eure Gruppe in Einheit 5
+
+**Welcher der drei Regler war der wichtigste, und was folgt daraus für ein
+Screening in eurem eigenen Arbeitsfeld?**
+
+Der zweite Teil ist der Ertrag. Nennt ein konkretes Verfahren.
+:::

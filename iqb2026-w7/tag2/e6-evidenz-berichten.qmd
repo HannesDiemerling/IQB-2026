@@ -1,0 +1,169 @@
+---
+title: "Arbeitsblatt Einheit 6"
+subtitle: "Evidenz berichten · 28 Minuten"
+---
+
+## Euer Auftrag
+
+Macht aus einer Verteilung eine Entscheidung. Am Ende formuliert ihr den
+Ergebnissatz, den ihr einer Kommission vorlegen würdet. Genau diesen Satz
+tragt ihr im Abschluss vor.
+
+**Anwendungen:** [HDI und ROPE](../apps/a16-hdi-rope.qmd) ·
+[Bayes-Faktor und Evidenzstärke](../apps/a17-bayesfaktor.qmd) ·
+[Posterior oder Vorhersage](../apps/a18-vorhersage.qmd) ·
+[MCMC](../apps/a19-mcmc.qmd)
+
+## Rollen
+
+{{< include /_includes/rollen.qmd >}}
+
+Die Rollen wandern gegenüber Einheit 5 eine Position weiter. Damit war jede
+Person einmal in jeder Rolle.
+
+## Aufgabe 1: Beobachten
+
+Öffnet **HDI und ROPE**. Die Startwerte sind die Studie aus Einheit 1:
+Mittelwert 2,1, Unsicherheit 1,05, ROPE von minus 3 bis plus 3.
+
+1. Notiert die Grenzen des HDI.
+2. Welcher der drei Ausgänge wird angezeigt?
+3. Lest den Ergebnissatz im Panel links. Würdet ihr ihn so unterschreiben?
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: HDI, ETI und ROPE
+
+{{< include /_includes/auffrischen/hdi.qmd >}}
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 1
+
+Das HDI läuft von **0,04 bis 4,16**. Es überlappt die ROPE, also lautet der
+Ausgang **noch nicht entschieden**.
+
+Rund 80 Prozent der Posterior-Masse liegen innerhalb der ROPE. Das heißt: der
+wahrscheinlichste Fall ist, dass der Zuwachs zwar existiert, aber unterhalb
+der Relevanzschwelle bleibt.
+
+Der Satz ist unbequem, und er ist korrekt. Frequentistisch wäre derselbe
+Befund als signifikanter Erfolg durchgegangen.
+:::
+
+## Aufgabe 2: Manipulieren
+
+Sucht alle drei möglichen Ausgänge auf.
+
+1. **Praktisch äquivalent:** stellt den Mittelwert auf **0,0** und die
+   Unsicherheit auf **0,5**. Was zeigt die Anwendung?
+2. **Relevanter Effekt:** stellt den Mittelwert zurück auf **2,1**, die
+   Unsicherheit auf **0,5** und die ROPE auf **1,0**.
+3. Was genau habt ihr im zweiten Schritt getan, und wann darf man das tun?
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 2
+
+**Praktisch äquivalent:** HDI von minus 0,98 bis 0,98, vollständig innerhalb
+der ROPE. Das ist Evidenz **für** die Abwesenheit eines relevanten Effekts,
+also ein echtes Ergebnis und kein Scheitern. Ein Signifikanztest kann dieses
+Ergebnis nicht liefern.
+
+**Relevanter Effekt:** HDI von 1,12 bis 3,08, vollständig außerhalb der ROPE.
+
+Im zweiten Schritt habt ihr zwei Dinge getan: die Unsicherheit verkleinert,
+was mehr Daten entspricht, und die **Relevanzschwelle verschoben**, nachdem
+ihr die Daten kanntet. Das Erste ist legitim. Das Zweite ist genau derselbe
+Freiheitsgrad wie die Analysepfade aus Einheit 2.
+
+Die Relevanzschwelle muss **vorher** festgelegt und begründet werden. Sonst
+ist die ROPE kein Fortschritt gegenüber .05, sondern nur eine neue Stellschraube.
+:::
+
+## Aufgabe 3: Begreifen
+
+Öffnet **Bayes-Faktor und Evidenzstärke**. Die Startwerte sind wieder die
+Studie aus Einheit 1.
+
+1. Notiert BF10 und die Einordnung.
+2. Setzt den Zuwachs auf **0,0** und die Lernenden auf **500**. Was zeigt der
+   Bayes-Faktor jetzt an?
+3. Formuliert den Unterschied zwischen "kein Effekt nachweisbar" und "Evidenz
+   für keinen Effekt".
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 3
+
+Bei den Startwerten liegt **BF10 bei rund 1,9**, also **anekdotische**
+Evidenz. Praktisch nichts, obwohl derselbe Befund frequentistisch signifikant
+war.
+
+Bei Zuwachs 0,0 und 500 Lernenden fällt BF10 auf rund **0,11**, also
+**BF01 von etwa 9,5**. Das ist moderate Evidenz **für** die Nullhypothese.
+
+Der Unterschied: "kein Effekt nachweisbar" heißt, dass die Daten nicht
+ausreichen. Das kann an einem fehlenden Effekt liegen oder an einer zu
+kleinen Studie, und man kann es nicht unterscheiden. "Evidenz für keinen
+Effekt" ist dagegen eine positive Aussage, die nur ausreichend große Daten
+stützen können.
+
+Für Wirksamkeitsnachweise und Gleichwertigkeitsfragen ist das der praktisch
+wichtigste Unterschied des ganzen Workshops.
+:::
+
+## Aufgabe 4: Der Ergebnissatz
+
+::: {.callout-warning}
+## Das ist eure Hauptaufgabe
+
+Formuliert **einen Satz** für die Kommission. Er muss vier Dinge enthalten:
+
+1. den Zuwachs **in Punkten**
+2. ein **Intervall**
+3. die **Reliabilität** des Instruments
+4. eine Aussage zur **Relevanz**
+
+Schreibt ihn auf. Ihr lest ihn im Abschluss vor.
+:::
+
+::: {.callout-note collapse="true"}
+## Ein Muster, an dem ihr euch orientieren könnt
+
+Nicht abschreiben. Die eigene Formulierung ist der Lerneffekt.
+
+> LeseStark bringt 2,1 Punkte, 95 % HDI [0,04; 4,16], gemessen mit einem
+> Instrument der Reliabilität .70. Mit 98 % Wahrscheinlichkeit wirkt das
+> Programm überhaupt, mit 20 % Wahrscheinlichkeit um mehr als die
+> Relevanzschwelle von 3 Punkten. Für eine Förderentscheidung reichen die
+> Daten noch nicht.
+:::
+
+## Pufferaufgaben
+
+::: {.callout-important collapse="true"}
+## Für schnelle Gruppen
+
+1. **Die schwerere Übung.** Schreibt denselben Satz noch einmal für eine
+   Pressemitteilung, ohne Fachbegriffe. Kein HDI, kein Prozentzeichen hinter
+   einer Wahrscheinlichkeit, keine Reliabilität. Das ist deutlich schwerer,
+   als es klingt.
+
+2. **Einzelfall gegen Durchschnitt.** Öffnet **Posterior oder Vorhersage**.
+   Zieht die Unsicherheit über Theta auf 0,1. Warum bleibt die orange Kurve
+   trotzdem breit, und was heißt das für eine Förderentscheidung zu einer
+   einzelnen Person?
+
+3. **MCMC.** Öffnet die MCMC-Anwendung. Startet mit 200 Schritten, dann mit
+   5000. Beschreibt, woran man im oberen Diagramm erkennt, dass die
+   Berechnung vertrauenswürdig ist.
+:::
+
+## Die Frage für die Fragerunde
+
+::: {.callout-warning}
+## Das berichtet eure Gruppe im Abschluss
+
+**Euer Ergebnissatz für LeseStark. Ein Satz, mit Zahl, Intervall und
+Relevanzaussage.**
+
+Vorlesen, nicht zusammenfassen.
+:::

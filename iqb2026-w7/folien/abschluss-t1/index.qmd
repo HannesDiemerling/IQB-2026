@@ -1,0 +1,136 @@
+---
+title: "Abschluss Tag 1"
+subtitle: "Was heute stand, und was morgen kommt"
+author: "Hannes Diemerling"
+date: "2026-09-23"
+date-format: "D. MMMM YYYY"
+title-slide-attributes:
+  data-background-color: "#F7F2EA"
+---
+
+## Fragerunde: Einheit 3 {background-color="#2A3F66"}
+
+[10 Minuten · eine Minute pro Gruppe]{.bp-eyebrow}
+
+::: {.bp-callout}
+Welcher wahre Effekt steckt hinter eurem beobachteten d, und was empfehlt ihr
+der Kommission: mehr Fälle oder ein besserer Test?
+:::
+
+::: {.bp-runde}
+::: {.bp-runde__gruppe}
+[1]{.bp-runde__num}
+[Rel .95]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[2]{.bp-runde__num}
+[Rel .85]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[3]{.bp-runde__num}
+[Rel .75]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[4]{.bp-runde__num}
+[Rel .65]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[5]{.bp-runde__num}
+[Rel .55]{.bp-runde__label}
+:::
+:::
+
+::: notes
+Diese Runde in der Reihenfolge der Reliabilität abfragen, also Gruppe 1 zuerst.
+Dann wächst die Kurve auf der Tafel von rechts nach links, und der Effekt ist
+sichtbar.
+
+Tafel mit b öffnen, zwei Achsen zeichnen: Reliabilität unten, wahres d links.
+Jede Gruppe liefert einen Punkt. Am Ende die Punkte verbinden.
+
+Der Satz danach: "Diese Kurve hat keine einzelne Gruppe gesehen. Die kommt erst
+zustande, weil ihr fünf verschiedene Ausgangslagen hattet. Genauso funktioniert
+Forschung im Feld."
+
+Zur zweiten Teilfrage die Bandbreite sichtbar machen: bei .95 lohnt sich der
+bessere Test nicht mehr, bei .55 bringt jede zusätzliche Erhebung wenig. Der
+Kipppunkt liegt irgendwo in der Mitte, und genau darüber lohnt die Diskussion.
+:::
+
+## Was heute stand
+
+::: {.bp-drei}
+::: {.bp-pillar .tone-coral}
+[Einheit 01]{.bp-pillar__num}
+
+### Der p-Wert antwortet auf eine andere Frage
+
+Er beschreibt die Daten unter einer Annahme, nicht die Hypothese. Und er hängt
+mindestens so sehr an n wie am Effekt.
+:::
+::: {.bp-pillar .tone-coral}
+[Einheit 02]{.bp-pillar__num}
+
+### Falsch positiv ohne Vorsatz
+
+Verborgene Freiheitsgrade, selektiver Ausfall und selektives Publizieren
+erzeugen Befunde, die niemand gefälscht hat.
+:::
+::: {.bp-pillar .tone-coral}
+[Einheit 03]{.bp-pillar__num}
+
+### Effektstärken brauchen Kontext
+
+Ohne Einheit, ohne Vergleichsmaßstab und ohne Reliabilität ist eine
+Effektstärke nicht interpretierbar.
+:::
+:::
+
+::: {.bp-warn}
+Was alle drei Einheiten gemeinsam haben: wir stellen eine Frage und bekommen die
+Antwort auf eine andere.
+:::
+
+::: notes
+Nicht neu erzählen, nur bündeln. Drei Sätze, einer pro Säule.
+
+Der Warnkasten ist die eigentliche Botschaft von Tag 1 und die Brücke zu Tag 2.
+Ihn wörtlich sagen und kurz stehen lassen.
+
+Rund 3 Minuten.
+:::
+
+## Die Frage, die offen bleibt
+
+::: {.bp-quote}
+Wie wahrscheinlich ist es, dass LeseStark wirkt, gegeben meine Daten?
+
+[Die Frage, die wir eigentlich stellen wollten]{.bp-quote__author}
+:::
+
+Kein Werkzeug von heute beantwortet sie. Nicht der p-Wert, nicht das
+Konfidenzintervall, nicht die Effektstärke.
+
+::: {.bp-callout}
+Morgen drehen wir die Frage um. Um 18:00 wirst du einen Satz formulieren
+können, der sie beantwortet.
+:::
+
+::: {.bp-quelle}
+Bis dahin: nichts vorbereiten, nichts nachlesen. Kommt ausgeruht.
+:::
+
+::: notes
+Der Cliffhanger. Kurz, ruhig, kein Pathos.
+
+Die Frage vorlesen und dann wirklich drei Sekunden schweigen. Der Kontrast zu
+allem, was heute lief, macht die Arbeit.
+
+Der letzte Satz ist ernst gemeint. Niemand soll abends Bayes-Lehrbücher wälzen.
+Tag 2 beginnt bei null und braucht kein Vorwissen.
+
+Falls jemand fragt, ob Tag 2 ohne Tag 1 funktioniert: ja, aber die Pointe
+verliert sich. Wer heute da war, versteht morgen, warum der Aufwand lohnt.
+
+Rund 2 Minuten. Pünktlich um 18:00 Schluss, das ist versprochen worden.
+:::

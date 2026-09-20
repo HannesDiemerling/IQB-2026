@@ -1,0 +1,13 @@
+Die Nullhypothese ist die Annahme, dass es **keinen** Effekt gibt, dass also
+beide Gruppen aus derselben Population stammen.
+
+Der p-Wert ist die Wahrscheinlichkeit, ein mindestens so extremes Ergebnis wie
+das beobachtete zu sehen, **wenn** die Nullhypothese wahr wäre und alle
+Modellannahmen zutreffen.
+
+Er beschreibt damit eine Eigenschaft der **Daten** unter einer Annahme, nicht
+eine Eigenschaft der **Hypothese**.
+
+Die Analogie, die meistens hilft: die Wahrscheinlichkeit, nass zu sein, wenn es
+regnet, ist hoch. Die Wahrscheinlichkeit, dass es regnet, wenn du nass bist,
+ist etwas völlig anderes.

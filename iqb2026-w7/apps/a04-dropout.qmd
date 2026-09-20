@@ -1,0 +1,95 @@
+---
+title: "Verzerrung durch fehlende Testungen"
+subtitle: "Einheit 2 · Drop-out ist ein Auswahlmechanismus"
+---
+
+100 Klassen im Programm. Je stärker eine Schule belastet ist, desto geringer
+fällt der Zuwachs aus. Und genau dort fallen Testungen aus.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 650
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Verzerrung durch fehlende Testungen"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Klassen filtern"),
+                ui.input_slider("dropout_threshold", "Maximaler Belastungsindex",
+                                1, 10, 10, step=1),
+                ui.hr(),
+                ui.p("Klassen mit einem Belastungsindex oberhalb der Schwelle "
+                     "konnten nicht vollständig getestet werden und fallen aus "
+                     "der Analyse. Beobachte die rote Durchschnittslinie."),
+            ),
+            ui.output_plot("scatter_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+
+    np.random.seed(42)
+    n_klassen = 100
+    # Belastungsindex: 1 (gut ausgestattet) bis 10 (stark belastet)
+    belastung = np.random.uniform(1, 10, n_klassen)
+    # Der Zuwachs sinkt mit steigender Belastung
+    zuwachs = 4.0 - 0.5 * belastung + np.random.normal(0, 1.5, n_klassen)
+
+    @render.plot
+    def scatter_plot():
+        threshold = input.dropout_threshold()
+
+        mask_stay = belastung <= threshold
+        mask_drop = belastung > threshold
+
+        fig, ax = plt.subplots(figsize=(10, 6), layout="constrained")
+
+        ax.scatter(belastung[mask_drop], zuwachs[mask_drop], color='#bdc3c7',
+                   s=60, alpha=0.5, label='Ausgefallene Testungen (Missings)')
+        ax.scatter(belastung[mask_stay], zuwachs[mask_stay], color='#3498db',
+                   s=80, alpha=0.9, label='Ausgewertete Klassen')
+
+        true_mean = np.mean(zuwachs)
+        ax.axhline(true_mean, color='#7f8c8d', linestyle='dotted', linewidth=2,
+                   label=f'Wahrer Durchschnitt ({true_mean:.1f} Punkte)')
+
+        biased_mean = np.mean(zuwachs[mask_stay]) if np.sum(mask_stay) > 0 else 0
+        ax.axhline(biased_mean, color='#e74c3c', linestyle='solid', linewidth=3,
+                   label=f'Verzerrter Durchschnitt ({biased_mean:.1f} Punkte)')
+
+        ax.axhline(0, color='#34495e', linestyle='solid', linewidth=1, alpha=0.3)
+
+        ax.set_title("Künstlich aufgeblähter Effekt durch fehlende Problemklassen")
+        ax.set_xlabel("Belastungsindex der Schule (Personal, Abwesenheiten, Ausstattung)")
+        ax.set_ylabel("Kompetenzzuwachs in Punkten")
+        ax.set_xlim(0, 11)
+        ax.set_ylim(-6, 8)
+
+        ax.legend(loc="lower left")
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        return fig
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Niemand hat entschieden, welche Klasse herausfällt. Die Belastung hat es
+entschieden. Genau deshalb fällt es in einem Bericht nicht auf.
+
+Ziehe die Schwelle auf 5. Der berichtete Zuwachs steigt deutlich, obwohl sich
+an der Wirkung des Programms nichts geändert hat. Das ist **MNAR**, und es
+lässt sich nicht wegrechnen.
+:::

@@ -1,0 +1,104 @@
+name: Build und Deploy
+
+# Baut die Workshop-Seite und veroeffentlicht sie auf GitHub Pages.
+#
+# Das Quarto-Projekt liegt im Unterordner iqb2026-w7. Dieser Workflow muss
+# trotzdem hier oben im Wurzelverzeichnis liegen, GitHub liest Workflows
+# ausschliesslich aus .github/workflows/ der Repo-Wurzel.
+#
+# Voraussetzung im Repo: Settings > Pages > Source muss auf "GitHub Actions"
+# stehen, nicht auf einen Branch.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+env:
+  QUARTO_VERSION: "1.8.26"
+  PROJEKT: iqb2026-w7
+
+defaults:
+  run:
+    working-directory: iqb2026-w7
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+          cache-dependency-path: iqb2026-w7/requirements.txt
+
+      - name: Build-Abhaengigkeiten installieren
+        run: pip install -r requirements.txt
+
+      # Shinylive laedt beim ersten Render seine Browser-Laufzeit herunter,
+      # rund 45 MB. Der Cache spart das bei jedem Folgelauf und macht den
+      # Build unabhaengig von Aussetzern beim Download.
+      - name: Shinylive-Assets cachen
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/shinylive
+          key: shinylive-${{ hashFiles('iqb2026-w7/requirements.txt') }}
+          restore-keys: shinylive-
+
+      - name: Quarto einrichten
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: ${{ env.QUARTO_VERSION }}
+
+      # Kein "quarto add" hier. Die Shinylive-Extension liegt versioniert
+      # unter iqb2026-w7/_extensions/. Das nimmt einen ungepinnten Netzabruf
+      # aus dem kritischen Pfad.
+
+      - name: Konventionen pruefen
+        run: python tools/check-konventionen.py
+
+      - name: Anwendungen pruefen
+        run: python tools/check-apps.py
+
+      - name: Rendern
+        run: quarto render
+
+      # Erst nach dem Render moeglich: wurzelabsolute Pfade im Output wuerden
+      # unter einer Pages-Projektseite unter /REPO/ ins Leere zeigen.
+      - name: Ausgabe pruefen
+        run: python tools/check-konventionen.py
+
+      - name: Vollstaendigkeit pruefen
+        run: |
+          set -e
+          test $(ls _site/apps/a*.html | wc -l) -eq 19 || { echo "Nicht alle 19 Anwendungen gerendert"; exit 1; }
+          test $(ls _site/folien/*/index.html | wc -l) -eq 10 || { echo "Nicht alle 10 Decks gerendert"; exit 1; }
+          echo "19 Anwendungen, 10 Decks, vollstaendig."
+
+      # Achtung: path ist relativ zur Repo-Wurzel, nicht zu working-directory.
+      - name: Artefakt hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: iqb2026-w7/_site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

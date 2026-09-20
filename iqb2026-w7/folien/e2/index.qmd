@@ -1,0 +1,415 @@
+---
+title: "Die Freiheitsgrade des Forschens"
+subtitle: "Einheit 2 · Tag 1, Die Diagnose"
+author: "Hannes Diemerling"
+date: "2026-09-23"
+date-format: "D. MMMM YYYY"
+title-slide-attributes:
+  data-background-color: "#F7F2EA"
+---
+
+<!--
+Verlinkte Seiten dieses Decks, hier zentral pflegen:
+  Arbeitsblatt     ../../tag1/e2-freiheitsgrade.html
+  App Garten       ../../apps/a03-garten.html
+  App Drop-out     ../../apps/a04-dropout.html
+  App Publikation  ../../apps/a05-publikationsbias.html
+-->
+
+## Fragerunde: Einheit 1 {background-color="#2A3F66"}
+
+[10 Minuten · eine Minute pro Gruppe]{.bp-eyebrow}
+
+::: {.bp-callout}
+Zwei Standorte, derselbe Zuwachs, verschiedene Urteile. Woran lag es, und was
+hättet ihr stattdessen berichtet?
+:::
+
+::: {.bp-runde}
+::: {.bp-runde__gruppe}
+[1]{.bp-runde__num}
+[Gruppe 1]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[2]{.bp-runde__num}
+[Gruppe 2]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[3]{.bp-runde__num}
+[Gruppe 3]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[4]{.bp-runde__num}
+[Gruppe 4]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[5]{.bp-runde__num}
+[Gruppe 5]{.bp-runde__label}
+:::
+:::
+
+::: notes
+Der Reihe nach, Gruppe 1 bis 5, eine Minute pro Gruppe. Ich sage das vorher an
+und halte mich daran, sonst frisst diese Runde die halbe Einheit.
+
+Mit der Tafel arbeiten, Taste b öffnet sie, c ist der Stift. Ich schreibe pro
+Gruppe nur ein Stichwort mit. Am Ende steht dort die Sammlung, und die ist der
+Übergang zu dieser Einheit.
+
+Die erwartete Bandbreite: die meisten Gruppen kommen auf die Streuung. Wer
+weiter ist, nennt das Konfidenzintervall oder sagt, dass beide Standorte
+zusammengefasst gehören.
+
+Wenn eine Gruppe nichts hat, nicht bohren. Stattdessen: "Was hat euch am meisten
+überrascht?" Darauf hat jede Gruppe eine Antwort.
+
+Mein Schlusssatz nach Gruppe 5, er leitet direkt über: "Bis hierhin war der
+p-Wert das Problem. Jetzt schauen wir uns an, was passiert, bevor er überhaupt
+berechnet wird."
+:::
+
+# Einheit 2 {.bp-trenner background-color="#E27C5C"}
+
+[Tag 1 · Die Diagnose]{.bp-eyebrow}
+
+## Die Freiheitsgrade des Forschens
+
+::: notes
+Kurz. Der Titel ist Programm: es geht jetzt nicht mehr um die Kennzahl, sondern
+um alles, was vor ihr passiert.
+:::
+
+## Welche davon hast du schon einmal getan?
+
+::: {.bp-aufgabe}
+1. Nach dem ersten Blick in die Daten noch Fälle nachgetestet.
+2. Auffällige Werte entfernt, nachdem du das Ergebnis gesehen hattest.
+3. Zwischen zwei Auswertungsvarianten die berichtet, die besser lief.
+4. Eine Teilgruppe berichtet, weil im Gesamtbild nichts zu sehen war.
+5. Eine Hypothese erst nach der Auswertung so formuliert, wie sie jetzt passt.
+:::
+
+::: {.bp-handzeichen}
+Handzeichen. Oder auch nicht, das ist gleich gültig.
+:::
+
+::: notes
+Der heikelste Moment der beiden Tage. Er funktioniert nur, wenn ich zuerst
+selbst die Hand hebe. Das mache ich sichtbar und ohne Umschweife.
+
+Der Zusatz "oder auch nicht, das ist gleich gültig" ist wichtig und wird
+wörtlich gesagt. Niemand muss sich hier outen.
+
+Danach der entscheidende Satz: keine dieser fünf Handlungen ist Betrug. Jede
+einzelne steht so oder so ähnlich in Methodenlehrbüchern. Das Problem entsteht
+erst durch die Menge der Möglichkeiten und dadurch, dass die Entscheidung nach
+dem Blick in die Daten fällt.
+
+Wenn gar niemand reagiert: umformulieren zu "Welche davon habt ihr schon einmal
+in einem Manuskript gelesen, das ihr begutachtet habt?" Das löst die Blockade
+zuverlässig.
+
+Rund 3 Minuten.
+:::
+
+## Der Garten der sich verzweigenden Pfade
+
+**Region Mitte**, 60 Lernende je Bedingung. Der wahre Effekt von LeseStark ist
+hier **exakt null**.
+
+::: {.bp-zwei}
+::: {}
+| Analyseschritt | p |
+|---|---|
+| Alle Daten | **0.35** |
+| ohne auffällige Testwerte | sinkt |
+| ohne unplausible Bearbeitungszeiten | sinkt weiter |
+| nur vollständige Klassen | **0.04** |
+:::
+::: {.bp-warn}
+Der Effekt wurde nicht entdeckt. Er wurde durch selektives Ausschließen
+künstlich erzeugt.
+:::
+:::
+
+::: {.bp-callout}
+Nicht die einzelne Entscheidung ist das Problem, sondern die **Zahl der
+möglichen Entscheidungen**. Jede für sich ist begründbar.
+:::
+
+::: notes
+Die wichtigste Folie der Einheit. Langsam, Zeile für Zeile.
+
+Zuerst und deutlich: der wahre Effekt ist null. Alles, was hier gefunden wird,
+ist per Konstruktion ein Fehlalarm. Diesen Satz zweimal sagen, sonst geht er
+unter.
+
+Dann jeden Schritt einzeln plausibel machen, und zwar ernsthaft, nicht
+ironisch. Auffällige Testwerte prüfen ist gute Praxis. Unplausible
+Bearbeitungszeiten auszuschließen ist bei Kompetenztests sogar geboten. Nur
+vollständige Klassen zu betrachten ist methodisch sauber begründbar.
+
+Genau das ist der Punkt: es gibt keinen Schritt, an dem jemand etwas falsch
+macht. Der Fehler liegt darin, dass die Reihenfolge der Entscheidungen von den
+Zwischenergebnissen abhängt.
+
+Den Begriff verborgene Freiheitsgrade hier einführen, er trägt den Rest der
+Einheit.
+
+Rund 4 Minuten.
+:::
+
+## Kein Randproblem
+
+::: {.bp-stats}
+::: {.bp-stat}
+[61 %]{.bp-stat__num}
+[Falsch-positiv-Rate, wenn übliche fragwürdige Forschungspraktiken (QRPs)
+zusammenkommen. *Simmons et al. (2011)*]{.bp-stat__label}
+:::
+::: {.bp-stat}
+[.05]{.bp-stat__num}
+[eine willkürliche Schwelle, die zur Trennung von wahr und falsch geworden
+ist.]{.bp-stat__label}
+:::
+::: {.bp-stat}
+[2015]{.bp-stat__num}
+[verzichtet *Basic and Applied Social Psychology* als erstes Journal vollständig
+auf p-Werte.]{.bp-stat__label}
+:::
+:::
+
+::: {.bp-quote}
+The earth is round (p < .05).
+
+[Jacob Cohen, 1994]{.bp-quote__author}
+:::
+
+::: notes
+Die drei Zahlen einzeln durchgehen, nicht als Block überfliegen.
+
+61 Prozent: das ist der Wert, den Simmons, Nelson und Simonsohn erreichen, wenn
+sie vier übliche Freiheitsgrade kombinieren. Nominal 5 Prozent, faktisch 61.
+Genau die Kombination, die die Folie davor gezeigt hat.
+
+.05: kurz erwähnen, dass Fisher die Schwelle als pragmatische Konvention
+vorgeschlagen hat, nicht als Naturkonstante. Er selbst hat sie flexibel
+gehandhabt.
+
+2015 BASP: das ist der Punkt, an dem die Einheit von Kritik zu Machbarkeit
+kippt. Es gibt ein Journal, das seit über zehn Jahren ohne p-Werte publiziert.
+Es funktioniert. Das ist keine Theorie.
+
+Das Cohen-Zitat ist der Titel eines Aufsatzes von 1994. Die Pointe: dass die
+Erde rund ist, würde niemand mit einem p-Wert belegen wollen.
+
+In der Gruppenarbeit zählt die Anwendung alle Pfade gleichzeitig aus. Das
+kündige ich hier an, weil es der stärkste Moment des Nachmittags ist.
+
+Rund 3 Minuten.
+:::
+
+## Wer fehlt, ist keine Zufallsauswahl
+
+**100 Klassen im Programm.** Die Testungen fallen genau dort aus, wo es
+schwierig wird: hohe Belastung, Personalmangel, viele Abwesenheiten.
+
+::: {.bp-zwei}
+::: {}
+- Übrig bleiben die **gut ausgestatteten** Schulen.
+- Dort wirkt LeseStark besser.
+- Der berichtete Effekt wird **künstlich aufgebläht**.
+- Kein Rechenfehler ist passiert.
+:::
+::: {.bp-quote}
+Die Daten lügen nicht, aber sie zeigen nur noch die verzerrte halbe Wahrheit.
+:::
+:::
+
+::: {.bp-callout}
+Entscheidend ist nicht, **wie viele** fehlen, sondern **wer**. Wenn 30 % deiner
+Stichprobe wegfällt und das nicht zufällig geschieht, hast du keine
+repräsentative Stichprobe mehr.
+:::
+
+::: notes
+Roter Faden: fehlende Daten sind eine Information über den Auswahlprozess, nicht
+nur ein Loch in der Tabelle.
+
+Das Beispiel ist bewusst absichtslos gewählt. Niemand hat entschieden, welche
+Schule herausfällt. Die Belastung hat es entschieden. Genau deshalb fällt es im
+Bericht nicht auf.
+
+Übertragung auf die eigene Arbeit sofort anschließen, hier ist das Publikum zu
+Hause: Wer nimmt an der freiwilligen Zusatzerhebung nicht teil? Wer bricht die
+Testung ab? Welche Schule sagt die Teilnahme kurzfristig ab, und warum
+ausgerechnet die?
+
+Die Richtung ist fast immer dieselbe: die Maßnahme sieht besser aus, als sie
+ist.
+
+Rund 4 Minuten.
+:::
+
+## Drei Mechanismen, drei Konsequenzen
+
+| | Bedeutung | Was rettbar ist |
+|---|---|---|
+| **MCAR** | völlig zufällig fehlend | unproblematisch, nur Präzisionsverlust |
+| **MAR** | fehlend abhängig von **beobachteten** Variablen | korrigierbar, etwa durch multiple Imputation |
+| **MNAR** | fehlend abhängig von **unbeobachteten** Werten selbst | nicht aus den Daten korrigierbar |
+
+::: {.bp-warn}
+Der Fall von der Folie davor ist **MNAR**. Die Ausfälle hängen an der Belastung,
+und genau dort fehlen die Werte. Das lässt sich nicht wegrechnen. Man kann es
+nur benennen und offenlegen.
+:::
+
+::: {.bp-quelle}
+Dazu die Frage der Verallgemeinerung: auch eine vollständige Stichprobe sagt
+wenig über Gruppen, die im Design nie vorkamen.
+:::
+
+::: notes
+Die Tabelle nicht vorlesen. Nur die Trennlinie erklären: MCAR und MAR sind
+technische Probleme mit technischen Lösungen. MNAR ist ein inhaltliches
+Problem, und dafür gibt es keine Rechnung.
+
+Der praktisch wichtigste Satz: die meisten Verfahren zur Behandlung fehlender
+Werte setzen MAR voraus, und diese Annahme ist aus den Daten heraus nicht
+prüfbar. Man kann sie nur begründen.
+
+Für dieses Publikum die Brücke schlagen: bei Schulleistungsstudien ist die
+Teilnahmeentscheidung selbst oft der Auswahlmechanismus, und sie hängt mit dem
+Merkmal zusammen, das gemessen werden soll. Das ist der Lehrbuchfall für MNAR.
+
+Rund 3 Minuten.
+:::
+
+## Publikationsbias: niemand hat gelogen
+
+**40 Forschungsteams** untersuchen unabhängig dasselbe. Der wahre Effekt ist
+**2,0 Punkte**. Publiziert wird nur, was signifikant wurde.
+
+::: {.bp-zwei}
+::: {}
+- Die Literatur zeigt einen **größeren** Effekt als die Wirklichkeit.
+- Meta-Analysen erben die Verzerrung.
+- Replikationen scheitern, weil sie mit realistischen Effekten arbeiten.
+:::
+::: {.bp-quote}
+Kein Betrug, kein Vorsatz. Nur ein System, das die falsche Frage belohnt: Ist es
+signifikant? statt Wie groß ist der Effekt wirklich?
+:::
+:::
+
+::: {.bp-callout}
+Niemand hat gelogen, und das Bild ist trotzdem verzerrt.
+:::
+
+::: notes
+Roter Faden: die Verzerrung entsteht bei der Auswahl dessen, was publiziert
+wird, nicht beim Rechnen.
+
+Der Trick der Darstellung in der Anwendung: man sieht alle 40 Teams, auch die,
+die es nie in ein Journal geschafft hätten. Dann zieht man die Publikationslücke
+auf und sieht, wie der Mittelwert wegwandert.
+
+Wichtig und ausdrücklich sagen: jede einzelne dieser 40 Studien ist korrekt
+gerechnet. Der Fehler steckt in der Auswahl, die wir Literatur nennen.
+
+Für dieses Publikum die Anwendung auf Programmevaluation: eine Maßnahme, die
+dreimal evaluiert wurde und zweimal nichts zeigte, erscheint in der Literatur
+möglicherweise als einmal wirksam.
+
+Rund 4 Minuten.
+:::
+
+## Was dagegen tatsächlich hilft
+
+::: {.bp-drei}
+::: {.bp-pillar .tone-teal}
+[Diagnose]{.bp-pillar__num}
+
+### Funnel-Plot
+
+Effekt gegen Präzision auftragen. Symmetrischer Trichter heißt unverzerrt,
+fehlende Ecke heißt Publikationslücke.
+:::
+::: {.bp-pillar .tone-teal}
+[Diagnose]{.bp-pillar__num}
+
+### p-Curve
+
+Die Verteilung der p-Werte knapp unter .05. Häuft sie sich dort, deutet das auf
+selektives Berichten.
+:::
+::: {.bp-pillar .tone-coral}
+[Struktur]{.bp-pillar__num}
+
+### Präregistrierung
+
+Analyseplan vor der Erhebung festlegen. Bei Registered Reports hängt die Zusage
+am Design, nicht am Ergebnis.
+:::
+:::
+
+::: {.bp-callout}
+Präregistrierung verbietet dir nichts. Sie trennt nur, was **geplant** war, von
+dem, was du **entdeckt** hast. Beides ist erlaubt, beides ist wertvoll, es muss
+nur unterscheidbar bleiben.
+:::
+
+::: notes
+Die drei Karten unterscheiden Diagnose von Struktur. Funnel-Plot und p-Curve
+erkennen das Problem im Nachhinein. Präregistrierung verhindert es. Nur das
+Zweite löst es wirklich.
+
+Der Kasten unten löst den häufigsten Widerstand auf. Präregistrierung wird als
+Fessel wahrgenommen, die exploratives Arbeiten verbietet. Sie tut das nicht, sie
+zwingt nur zur Kennzeichnung.
+
+Zur Niederschwelligkeit: bei AsPredicted sind es neun Fragen und unter zehn
+Minuten. Der häufigste Grund, es nicht zu tun, ist die Annahme, es sei
+aufwendig.
+
+Das ist die kürzbare Folie dieser Einheit. Wenn ich im Verzug bin, sage ich nur
+den Kasten und gehe weiter. Die Gruppen kommen morgen ohnehin darauf zurück.
+
+Rund 3 Minuten.
+:::
+
+## Gruppenarbeit 2 {background-color="#4FA8A0"}
+
+[30 Minuten · Breakout-Räume]{.bp-eyebrow}
+
+::: {.bp-aufgabe}
+**Die Frage für eure Gruppe:** Ihr habt den kleinsten p-Wert gesucht, den der
+Garten hergibt. Wie viele Pfade habt ihr gebraucht, und welcher davon wäre in
+einem Bericht am wenigsten aufgefallen?
+:::
+
+{{< include /folien/_shared/_rollen.qmd >}}
+
+::: {.bp-demo-hinweis}
+Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 2](../../tag1/e2-freiheitsgrade.html)
+:::
+
+::: notes
+Die Rollen wandern eine Position weiter. Kurz daran erinnern, das steht auch auf
+dem Arbeitsblatt.
+
+Das Wettbewerbselement funktioniert hier besonders gut: welche Gruppe findet den
+kleinsten p-Wert? Das ansagen, es erzeugt Energie und passt inhaltlich genau,
+weil es die Absurdität der Übung selbst vorführt.
+
+Der zweite Teil der Frage ist der eigentlich wichtige. Welcher Pfad wäre in
+einem Bericht nicht aufgefallen? Da wird es unangenehm, und da soll es
+unangenehm werden.
+
+Ich gehe zuerst in den Raum, der in Einheit 1 am langsamsten war.
+
+Nach 25 Minuten die Ansage in alle Räume: noch fünf Minuten.
+
+Rund 1,5 Minuten.
+:::

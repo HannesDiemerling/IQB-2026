@@ -1,0 +1,224 @@
+---
+title: "Gleicher Effekt, gegensätzliche Urteile"
+subtitle: "Einheit 1 · Die Illusion der harten Grenze"
+---
+
+Zwei Standorte, derselbe Zuwachs von 2,1 Punkten, zwei entgegengesetzte
+Urteile. Der einzige Unterschied ist die Streuung.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 700
+
+from shiny import App, ui, render
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import ttest_ind
+
+# Groessere Grundschrift, damit der Text auch dann lesbar bleibt, wenn das
+# Plot-Bild auf kleineren Bildschirmen herunterskaliert wird.
+plt.rcParams.update({"font.size": 13})
+
+N = 45
+MEAN_OHNE = 10.4
+MEAN_MIT = 12.5
+SD_NORD = 4.96
+
+def baue_standort(seed, sd):
+    """Erzeugt zwei Gruppen mit exakt dem Zuwachs 2,1 und exakt dieser SD.
+
+    Das Zentrieren haelt den Effekt konstant, das Normieren haelt die
+    Stichproben-SD exakt auf dem Reglerwert. Nur so sind die p-Werte
+    reproduzierbar und stimmen mit den Folien ueberein.
+    """
+    rng = np.random.RandomState(seed)
+    z_ohne = rng.standard_normal(N)
+    z_mit = rng.standard_normal(N)
+    z_ohne -= z_ohne.mean()
+    z_mit -= z_mit.mean()
+    z_ohne /= z_ohne.std(ddof=1)
+    z_mit /= z_mit.std(ddof=1)
+    return MEAN_OHNE + sd * z_ohne, MEAN_MIT + sd * z_mit
+
+ohne_nord, mit_nord = baue_standort(7, SD_NORD)
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Gleicher Effekt, gegensätzliche Urteile"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Ansichtsmodus"),
+                ui.input_radio_buttons(
+                    "view_mode", None,
+                    choices={
+                        "ponly":    "Nur p-Werte",
+                        "sig_only": "Effekt nur bei Signifikanz",
+                        "full":     "Vollständige Ansicht",
+                    },
+                    selected="ponly"
+                ),
+                ui.hr(),
+                ui.h5("Standort Süd"),
+                ui.input_slider(
+                    "sd_sued",
+                    "Streuung der Testleistung (Punkte)",
+                    min=1.5, max=6.0, value=5.10, step=0.1
+                ),
+                ui.hr(),
+                ui.output_ui("verdict_panel"),
+            ),
+            ui.output_plot("dual_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+
+    def daten_sued(sd):
+        return baue_standort(21, sd)
+
+    @render.plot
+    def dual_plot():
+        mode = input.view_mode()
+        sd_sued = input.sd_sued()
+        ohne_sued, mit_sued = daten_sued(sd_sued)
+
+        _, p_nord = ttest_ind(ohne_nord, mit_nord)
+        _, p_sued = ttest_ind(ohne_sued, mit_sued)
+        eff_nord = np.mean(mit_nord) - np.mean(ohne_nord)
+        eff_sued = np.mean(mit_sued) - np.mean(ohne_sued)
+
+        jitter_scale = 0.08
+
+        def zeichne_standort(ax, ohne_d, mit_d, name, p_val, eff, seed):
+            sig = p_val < 0.05
+            label = "SIGNIFIKANT" if sig else "NICHT SIG."
+            color_t = '#27ae60' if sig else '#c0392b'
+            rng = np.random.RandomState(seed)
+            jx_ohne = rng.uniform(-jitter_scale, jitter_scale, N)
+            jx_mit = rng.uniform(-jitter_scale, jitter_scale, N)
+            ax.scatter(1 + jx_ohne, ohne_d, color='#95a5a6', alpha=0.6, s=50,
+                       label='Ohne Förderung')
+            ax.scatter(2 + jx_mit, mit_d, color='#3498db', alpha=0.6, s=50,
+                       label='LeseStark')
+            ax.plot([1, 2], [np.mean(ohne_d), np.mean(mit_d)],
+                    color='#2c3e50', linewidth=2, linestyle='--')
+            ax.scatter([1, 2], [np.mean(ohne_d), np.mean(mit_d)],
+                       color='#2c3e50', s=100, zorder=6)
+            ax.set_title(f"{name}\n({label})", color=color_t,
+                         fontweight='bold', fontsize=12, pad=15)
+            ax.set_xlabel(f"Zuwachs: {eff:.1f} Punkte | p = {p_val:.3f}",
+                          fontsize=10, labelpad=10)
+            ax.set_xticks([1, 2])
+            ax.set_xticklabels(['Ohne Förderung', 'LeseStark'], fontsize=9)
+            ax.set_ylabel("Testleistung in Punkten")
+            ax.set_ylim(0, 26)
+            ax.spines['top'].set_visible(False)
+            ax.spines['right'].set_visible(False)
+
+        def leerer_standort(ax, name, p_val):
+            sig = p_val < 0.05
+            label = "SIGNIFIKANT" if sig else "NICHT SIG."
+            color_t = '#27ae60' if sig else '#c0392b'
+            ax.set_title(f"{name}\n({label})", color=color_t,
+                         fontweight='bold', fontsize=12, pad=15)
+            ax.text(0.5, 0.45, "Rohdaten nicht\nbetrachtet.",
+                    ha='center', va='center', fontsize=13, color='#95a5a6',
+                    style='italic', transform=ax.transAxes)
+            ax.set_facecolor('#f8f9fa')
+            ax.set_xticks([])
+            ax.set_yticks([])
+            for spine in ax.spines.values():
+                spine.set_visible(False)
+
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 7), layout="constrained")
+
+        if mode == "ponly":
+            leerer_standort(ax1, "Standort Nord", p_nord)
+            leerer_standort(ax2, "Standort Süd", p_sued)
+        elif mode == "sig_only":
+            if p_nord < 0.05:
+                zeichne_standort(ax1, ohne_nord, mit_nord, "Standort Nord",
+                                 p_nord, eff_nord, 99)
+            else:
+                leerer_standort(ax1, "Standort Nord", p_nord)
+            if p_sued < 0.05:
+                zeichne_standort(ax2, ohne_sued, mit_sued, "Standort Süd",
+                                 p_sued, eff_sued, 88)
+            else:
+                leerer_standort(ax2, "Standort Süd", p_sued)
+        else:
+            zeichne_standort(ax1, ohne_nord, mit_nord, "Standort Nord",
+                             p_nord, eff_nord, 99)
+            zeichne_standort(ax2, ohne_sued, mit_sued, "Standort Süd",
+                             p_sued, eff_sued, 88)
+
+        return fig
+
+    @render.ui
+    def verdict_panel():
+        mode = input.view_mode()
+        sd_sued = input.sd_sued()
+        ohne_sued, mit_sued = daten_sued(sd_sued)
+
+        _, p_nord = ttest_ind(ohne_nord, mit_nord)
+        _, p_sued = ttest_ind(ohne_sued, mit_sued)
+        eff_nord = np.mean(mit_nord) - np.mean(ohne_nord)
+        eff_sued = np.mean(mit_sued) - np.mean(ohne_sued)
+
+        c_nord = "#27ae60" if p_nord < 0.05 else "#c0392b"
+        c_sued = "#27ae60" if p_sued < 0.05 else "#c0392b"
+
+        gleich = (p_nord < 0.05) == (p_sued < 0.05)
+        if gleich:
+            msg = "Beide Standorte kommen zum selben Urteil."
+            msg_color = "#27ae60"
+        else:
+            if mode == "full":
+                msg = (
+                    f"Gegensätzliche Urteile. Beide Zuwächse sind "
+                    f"~{abs(eff_nord):.1f} Punkte und damit faktisch gleich "
+                    f"groß. Allein die Streuung entscheidet."
+                )
+            else:
+                msg = "Gegensätzliche Urteile, trotz faktisch gleichem Zuwachs."
+            msg_color = "#c0392b"
+
+        nord_detail = (f"Zuwachs {eff_nord:.1f} Punkte | p = {p_nord:.3f}"
+                       if mode == "full" else f"p = {p_nord:.3f}")
+        sued_detail = (f"Zuwachs {eff_sued:.1f} Punkte | p = {p_sued:.3f}"
+                       if mode == "full" else f"p = {p_sued:.3f}")
+
+        return ui.div(
+            ui.tags.p(
+                ui.tags.span("Standort Nord: ", style="font-weight:bold;"),
+                ui.tags.span(nord_detail, style=f"color:{c_nord}; font-weight:bold;"),
+            ),
+            ui.tags.p(
+                ui.tags.span("Standort Süd: ", style="font-weight:bold;"),
+                ui.tags.span(sued_detail, style=f"color:{c_sued}; font-weight:bold;"),
+            ),
+            ui.tags.hr(style="margin:8px 0;"),
+            ui.tags.p(
+                msg,
+                style=f"color:{msg_color}; font-weight:bold; font-size:13px;"
+            ),
+            style="background:#f8f9fa; padding:12px; border-radius:8px; margin-top:8px;"
+        )
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Die Zahlen hinter der Anwendung
+
+Beide Standorte: 45 Lernende je Gruppe, ohne Förderung 10,4 Punkte, mit
+LeseStark 12,5 Punkte, Zuwachs also exakt **2,1 Punkte**.
+
+Standort Nord hat eine Streuung von 4,96 Punkten und kommt damit auf
+**p = .048**. Standort Süd startet bei 5,10 Punkten und kommt auf
+**p = .054**. Der Zuwachs ist in beiden Fällen identisch.
+:::

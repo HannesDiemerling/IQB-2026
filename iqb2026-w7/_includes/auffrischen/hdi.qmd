@@ -1,0 +1,15 @@
+Das **HDI** (Highest Density Interval) ist der schmalste Bereich, der 95
+Prozent der Posterior enthält. Jeder Wert darin ist plausibler als jeder Wert
+außerhalb.
+
+Die Lesart ist die, die alle immer gemeint haben: gegeben deine Daten und dein
+Modell liegt der wahre Wert mit 95 Prozent Wahrscheinlichkeit in diesem
+Bereich. Beim Konfidenzintervall wäre genau diese Aussage falsch.
+
+Das **ETI** (Equal-Tailed Interval) schneidet stattdessen unten und oben je
+2,5 Prozent ab. Bei symmetrischen Verteilungen sind beide fast identisch, bei
+schiefen nicht.
+
+Die **ROPE** (Region of Practical Equivalence) ist etwas anderes: ein Bereich
+um null, den du **inhaltlich** als bedeutungslos festlegst. Aus dem Verhältnis
+von HDI und ROPE folgt die Entscheidung.

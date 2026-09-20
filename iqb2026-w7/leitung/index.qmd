@@ -1,0 +1,130 @@
+---
+title: "Moderationsleitfaden"
+subtitle: "Nur für die Workshop-Leitung"
+---
+
+::: {.callout-important}
+## Diese Seite ist nicht in der Navigation verlinkt
+
+Sie ist über die URL erreichbar, taucht aber nicht in der Seitenleiste auf.
+Teilnehmende finden sie im Normalfall nicht.
+:::
+
+## Die Foliendecks
+
+### Tag 1, die Diagnose
+
+| Deck | Dauer | Inhalt |
+|---|---|---|
+| [Auftakt Tag 1](../folien/auftakt-t1/) | 15 min | Einordnung, Herkunft, Ablauf, Gruppen, Technikprüfung |
+| [Einheit 1](../folien/e1/) | 25 min | Was der p-Wert nicht sagt |
+| [Einheit 2](../folien/e2/) | 10 + 25 min | Die Freiheitsgrade des Forschens |
+| [Einheit 3](../folien/e3/) | 10 + 25 min | Effektstärken und ihre Grenzen |
+| [Abschluss Tag 1](../folien/abschluss-t1/) | 15 min | Fragerunde, Bündelung, Cliffhanger |
+
+### Tag 2, die Alternative
+
+| Deck | Dauer | Inhalt |
+|---|---|---|
+| [Auftakt Tag 2](../folien/auftakt-t2/) | 10 min | Rückblick, die offene Frage, Ablauf |
+| [Einheit 4](../folien/e4/) | 28 min | Die Frage umdrehen |
+| [Einheit 5](../folien/e5/) | 10 + 25 min | Prior, Likelihood, Posterior |
+| [Einheit 6](../folien/e6/) | 10 + 22 min | Evidenz berichten |
+| [Abschluss Tag 2](../folien/abschluss-t2/) | 20 min | Fragerunde, Ergebnissatz, Transfer |
+
+Wo zwei Zahlen stehen, ist die erste die Fragerunde zur vorangegangenen
+Einheit. Sie eröffnet das jeweilige Deck.
+
+## Tastatur während der Präsentation
+
+| Taste | Wirkung |
+|---|---|
+| `s` | Moderationsnotizen in einem zweiten Fenster |
+| `f` | Vollbild |
+| `o` | Übersicht über alle Folien |
+| `b` | Tafel öffnen, für die Fragerunden |
+| `c` | Stift auf der Tafel |
+| `e` | Druckansicht |
+| `?` | alle Tastenkürzel |
+
+## Vorwärm-Checkliste
+
+::: {.callout-warning}
+## Vor jeder Sitzung, nicht erst währenddessen
+
+Die Demo-Folien binden **keine** Anwendung ein. Der Wechsel läuft über
+Alt-Tab in einen vorbereiteten Tab. Über den geteilten Bildschirm sieht das
+Publikum keinen Unterschied, aber ein vorgewärmter Tab kann nicht mitten im
+Vortrag scheitern.
+
+**Tag 1** vorher öffnen und einmal laden lassen:
+
+- [a01 Schwelle](../apps/a01-schwelle.qmd), [a02 Stichprobengröße](../apps/a02-stichprobengroesse.qmd)
+- [a03 Garten](../apps/a03-garten.qmd)
+- [a09 Minderung](../apps/a09-minderung.qmd)
+
+**Tag 2** vorher öffnen und einmal laden lassen:
+
+- [a11 Screening](../apps/a11-screening.qmd), [a12 p und Posterior](../apps/a12-p-und-posterior.qmd)
+- [a15 Posterior](../apps/a15-posterior.qmd)
+- [a16 HDI und ROPE](../apps/a16-hdi-rope.qmd)
+:::
+
+## Die sechs Fragerunden
+
+Jede Frage steht wörtlich identisch auf dem Arbeitsblatt und auf der Folie im
+Folgedeck. Zehn Minuten, fünf Gruppen, also etwa eine Minute pro Gruppe plus
+Einordnung.
+
+| Nach | Frage | Wo sie gestellt wird |
+|---|---|---|
+| E1 | Zwei Standorte, derselbe Zuwachs, verschiedene Urteile. Woran lag es, und was hättet ihr stattdessen berichtet? | Deck E2 |
+| E2 | Wie viele Pfade habt ihr gebraucht, und welcher wäre am wenigsten aufgefallen? | Deck E3 |
+| E3 | Welcher wahre Effekt steckt hinter eurem d, und was empfehlt ihr: mehr Fälle oder besserer Test? | Abschluss Tag 1 |
+| E4 | Welcher der drei Regler war der wichtigste, und was folgt daraus für euer Arbeitsfeld? | Deck E5 |
+| E5 | Ab wann hat der Prior gewonnen, und könntet ihr ihn verteidigen? | Deck E6 |
+| E6 | Euer Ergebnissatz für LeseStark, ein Satz. | Abschluss Tag 2 |
+
+## Die Reliabilitätszuweisung in Einheit 3
+
+Das ist die didaktisch wichtigste Konstruktion des Workshops. Jede Gruppe
+bekommt eine andere Reliabilität und findet dadurch ein anderes wahres d
+hinter demselben beobachteten Wert von 0.42.
+
+| Gruppe | Reliabilität | wahres d |
+|---|---|---|
+| 1 | .95 | 0.43 |
+| 2 | .85 | 0.46 |
+| 3 | .75 | 0.49 |
+| 4 | .65 | 0.52 |
+| 5 | .55 | 0.57 |
+
+In der Fragerunde die Gruppen **in dieser Reihenfolge** abfragen und die
+Punkte auf der Tafel eintragen. Es entsteht die Minderungskurve, die keine
+Gruppe allein gesehen hat.
+
+Tafel mit `b` öffnen, zwei Achsen zeichnen: Reliabilität unten, wahres d
+links.
+
+## Plan B je Block
+
+| Problem | Reaktion |
+|---|---|
+| Eine Anwendung lädt bei jemandem nicht | Die Person arbeitet über den geteilten Bildschirm der Gruppe mit und übernimmt Protokoll oder Gegenprobe. Niemand fällt raus. |
+| Die Demo lädt im Vortrag nicht | Die Folie davor enthält alle Zahlen, die für den Punkt nötig sind. Kein Drama daraus machen, weitergehen. |
+| Niemand hebt die Hand | Frage umformulieren auf "Welche davon habt ihr schon einmal in einem Paper gelesen?" Das funktioniert zuverlässig. |
+| Eine Gruppe hat nichts zu berichten | "Was hat euch am meisten überrascht?" Darauf hat jede Gruppe eine Antwort. |
+| Der Folienblock läuft über | In jedem Deck ist in den Notizen **eine Folie als kürzbar markiert**. Die fliegt raus, nicht der Kern. |
+| Die Seite ist nicht erreichbar | Notfallkopie von `_site` lokal vorhalten und per `python -m http.server` servieren. Alle Pfade sind relativ, die Anwendungen laufen auch von dort. |
+
+## Vor dem Termin
+
+- Repo 48 Stunden vorher einfrieren und taggen.
+- Jede der 19 Anwendungen einmal kalt im Browser booten und die Ladezeit
+  messen. Ein Python-Fehler in einer Anwendung fällt beim Rendern nicht auf,
+  nur im Browser.
+- `python tools/check-apps.py` ausführen, das prüft Syntax und Konventionen
+  ohne Browser.
+- `_site` herunterladen und die Offline-Variante einmal testen.
+- Zoom-Breakout-Räume vorab anlegen, damit die Zuweisung nicht live passieren
+  muss.

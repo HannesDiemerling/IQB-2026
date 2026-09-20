@@ -1,0 +1,160 @@
+---
+title: "p-Wert und Posterior nebeneinander"
+subtitle: "Einheit 4 · Die Brücke zwischen den beiden Tagen"
+---
+
+Ein Datensatz, zwei Auswertungen, gleichzeitig. Die Startwerte sind exakt die
+Studie aus Einheit 1: 45 Lernende je Gruppe, 2,1 Punkte Zuwachs, Streuung 4,96.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 740
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm, t as t_dist
+
+RELEVANZ = 3.0   # Relevanzschwelle der Kommission, in Punkten
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: p-Wert und Posterior nebeneinander"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Die Studie"),
+                ui.input_slider("n", "Lernende je Gruppe", 10, 500, 45, step=5),
+                ui.input_slider("diff", "Beobachteter Zuwachs (Punkte)",
+                                0.0, 6.0, 2.1, step=0.1),
+                ui.input_slider("sd", "Streuung (Punkte)",
+                                1.5, 10.0, 4.96, step=0.01),
+                ui.hr(),
+                ui.output_ui("saetze_panel"),
+            ),
+            ui.output_plot("main_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def kennwerte(n, diff, sd):
+    se = sd * np.sqrt(2.0 / n)
+    t_stat = diff / se if se > 0 else 0.0
+    df = 2 * n - 2
+    p = float(t_dist.sf(abs(t_stat), df) * 2)
+    lo, hi = diff - 1.96 * se, diff + 1.96 * se
+    p_groesser_null = float(1 - norm.cdf(0.0, diff, se))
+    p_relevant = float(1 - norm.cdf(RELEVANZ, diff, se))
+    return se, p, lo, hi, p_groesser_null, p_relevant
+
+def server(input, output, session):
+
+    @render.plot
+    def main_plot():
+        n, diff, sd = input.n(), input.diff(), input.sd()
+        se, p, lo, hi, p_null, p_rel = kennwerte(n, diff, sd)
+
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 6.5), layout="constrained")
+
+        # Links: die frequentistische Antwort
+        sig = p < 0.05
+        farbe = '#27ae60' if sig else '#c0392b'
+        urteil = "SIGNIFIKANT" if sig else "NICHT SIGNIFIKANT"
+
+        ax1.barh([0], [hi - lo], left=lo, height=0.25, color=farbe, alpha=0.4)
+        ax1.plot([diff], [0], marker='o', markersize=14, color=farbe)
+        ax1.axvline(0, color='#34495e', linestyle='dotted', linewidth=2)
+        ax1.text(lo, 0.22, f"{lo:.2f}", ha='center', fontsize=10, color='#2c3e50')
+        ax1.text(hi, 0.22, f"{hi:.2f}", ha='center', fontsize=10, color='#2c3e50')
+
+        ax1.set_xlim(-3, 8)
+        ax1.set_ylim(-0.6, 0.6)
+        ax1.set_yticks([])
+        ax1.set_xlabel("Kompetenzzuwachs in Punkten")
+        ax1.set_title(f"Frequentistisch\np = {p:.3f}  ·  {urteil}",
+                      color=farbe, fontweight='bold', fontsize=12)
+        ax1.text(0.5, 0.06, "95 % Konfidenzintervall", transform=ax1.transAxes,
+                 ha='center', fontsize=10, color='#7f8c8d')
+        for s in ('top', 'right', 'left'):
+            ax1.spines[s].set_visible(False)
+
+        # Rechts: die bayesianische Antwort
+        x = np.linspace(-3, 8, 500)
+        y = norm.pdf(x, diff, se)
+
+        ax2.plot(x, y, color='#8e44ad', linewidth=2.5)
+        maske_hdi = (x >= lo) & (x <= hi)
+        ax2.fill_between(x[maske_hdi], 0, y[maske_hdi], color='#8e44ad', alpha=0.25,
+                         label='95 % HDI')
+        maske_rel = x >= RELEVANZ
+        ax2.fill_between(x[maske_rel], 0, y[maske_rel], color='#27ae60', alpha=0.45,
+                         label=f'über der Relevanzschwelle ({RELEVANZ:.0f} Punkte)')
+        ax2.axvline(0, color='#34495e', linestyle='dotted', linewidth=2)
+        ax2.axvline(RELEVANZ, color='#27ae60', linestyle='dashed', linewidth=2)
+
+        ax2.set_xlim(-3, 8)
+        ax2.set_ylim(0, y.max() * 1.2)
+        ax2.set_yticks([])
+        ax2.set_xlabel("Kompetenzzuwachs in Punkten")
+        ax2.set_ylabel("Wahrscheinlichkeitsdichte")
+        ax2.set_title(f"Bayesianisch\nP(Zuwachs > 0) = {p_null*100:.0f} %  ·  "
+                      f"P(> {RELEVANZ:.0f} Punkte) = {p_rel*100:.0f} %",
+                      color='#8e44ad', fontweight='bold', fontsize=12)
+        ax2.legend(loc='upper right', fontsize=9)
+        ax2.spines['top'].set_visible(False)
+        ax2.spines['right'].set_visible(False)
+
+        return fig
+
+    @render.ui
+    def saetze_panel():
+        n, diff, sd = input.n(), input.diff(), input.sd()
+        se, p, lo, hi, p_null, p_rel = kennwerte(n, diff, sd)
+
+        sig = p < 0.05
+        satz_freq = (
+            "Wenn es keinen Effekt gäbe, wären Daten wie diese überraschend."
+            if sig else
+            "Wenn es keinen Effekt gäbe, wären Daten wie diese nicht überraschend."
+        )
+
+        satz_bayes = (
+            f"Mit {p_null*100:.0f} % Wahrscheinlichkeit wirkt das Programm "
+            f"überhaupt. Mit {p_rel*100:.0f} % Wahrscheinlichkeit um mehr als "
+            f"{RELEVANZ:.0f} Punkte."
+        )
+
+        return ui.div(
+            ui.tags.p("Was du sagen darfst",
+                      style="font-weight:bold; font-size:13px; margin-bottom:6px;"),
+            ui.tags.p("Frequentistisch:", style="font-weight:bold; margin:4px 0 0 0;"),
+            ui.tags.p(satz_freq, style="font-size:12px; margin:2px 0 8px 0;"),
+            ui.tags.p("Bayesianisch:", style="font-weight:bold; margin:4px 0 0 0;"),
+            ui.tags.p(satz_bayes,
+                      style="font-size:12px; color:#8e44ad; font-weight:600; margin:2px 0;"),
+            ui.tags.hr(style="margin:8px 0;"),
+            ui.tags.p(f"Intervall: [{lo:.2f}; {hi:.2f}] Punkte",
+                      style="font-size:11px; color:#7f8c8d;"),
+            ui.tags.p("Beide Intervalle sind bei flachem Prior fast identisch. "
+                      "Der Unterschied liegt nicht in den Zahlen, sondern darin, "
+                      "was man über sie sagen darf.",
+                      style="font-size:11px; color:#7f8c8d;"),
+            style="background:#f8f9fa; padding:12px; border-radius:8px; margin-top:8px;"
+        )
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Zieh die Zahl der Lernenden hoch auf 500. Der p-Wert rennt gegen null, das
+Urteil wird triumphal signifikant. Schau gleichzeitig nach rechts: die
+Wahrscheinlichkeit, dass der Zuwachs über der Relevanzschwelle liegt, bleibt
+fast unverändert.
+
+Das ist der Punkt von Tag 1 in neuer Form. Mehr Daten machen den p-Wert
+kleiner. Sie machen den Effekt nicht größer.
+:::

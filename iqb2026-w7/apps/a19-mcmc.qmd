@@ -1,0 +1,125 @@
+---
+title: "MCMC"
+subtitle: "Einheit 6 · Pufferaufgabe"
+---
+
+Bei realistischen Modellen lässt sich der Nenner des Bayes-Theorems nicht mehr
+ausrechnen. Statt die Verteilung zu berechnen, läuft man sie ab.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 650
+
+from shiny import App, render, ui, reactive
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: MCMC findet den wahren Kompetenzzuwachs"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Steuerung der Wanderung"),
+                ui.input_slider("n_steps", "Anzahl der Schritte", 100, 5000, 200, step=100),
+                ui.input_action_button("run_btn", "Wanderung starten",
+                                       class_="btn-primary"),
+                ui.hr(),
+                ui.p("Das Verfahren sucht den wahrscheinlichsten Kompetenzzuwachs "
+                     "Theta auf Basis der Pilotdaten D, ohne ihn je auszurechnen."),
+            ),
+            ui.output_plot("mcmc_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+
+    sim_data = reactive.Value(None)
+
+    @reactive.Effect
+    @reactive.event(input.run_btn, ignore_none=False)
+    def run_mcmc():
+        steps = input.n_steps()
+
+        target_mu = 6.0
+        target_sd = 2.5
+
+        samples = np.zeros(steps)
+        current_theta = 0.0
+
+        np.random.seed(input.run_btn() if input.run_btn() else 42)
+
+        for i in range(steps):
+            proposal_theta = current_theta + np.random.normal(0, 2.0)
+
+            prob_current = norm.pdf(current_theta, target_mu, target_sd)
+            prob_proposal = norm.pdf(proposal_theta, target_mu, target_sd)
+
+            acceptance_ratio = prob_proposal / prob_current if prob_current > 0 else 1.0
+
+            if np.random.uniform(0, 1) < acceptance_ratio:
+                current_theta = proposal_theta
+
+            samples[i] = current_theta
+
+        sim_data.set(samples)
+
+    @render.plot
+    def mcmc_plot():
+        samples = sim_data.get()
+        if samples is None:
+            return
+
+        fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8), layout="constrained")
+
+        ax1.plot(samples, color='#34495e', alpha=0.7, linewidth=0.5)
+        ax1.set_title("Wanderweg der MCMC Kette (Trace Plot)")
+        ax1.set_xlim(0, len(samples))
+        ax1.set_ylim(-3, 15)
+        ax1.set_xlabel("Schrittnummer")
+        ax1.set_ylabel("Besuchter Wert Theta")
+        ax1.spines['top'].set_visible(False)
+        ax1.spines['right'].set_visible(False)
+
+        x_vals = np.linspace(-5, 18, 200)
+        target_y = norm.pdf(x_vals, 6.0, 2.5)
+
+        ax2.hist(samples, bins=50, density=True, color='#95a5a6', alpha=0.7,
+                 label='Besuchte Werte (Simulation)')
+        ax2.plot(x_vals, target_y, color='#e74c3c', linewidth=3,
+                 label='Wahrer Posterior P(Theta|D)')
+
+        ax2.set_title("Vergleich Simulation und echtes Ziel")
+        ax2.set_xlim(-5, 18)
+        ax2.set_yticks([])
+        ax2.set_xlabel("Durchschnittlicher Kompetenzzuwachs Theta (Punkte)")
+        ax2.set_ylabel("Wahrscheinlichkeitsdichte")
+        ax2.legend(loc="upper right")
+        ax2.spines['top'].set_visible(False)
+        ax2.spines['right'].set_visible(False)
+
+        return fig
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Starte mit **200 Schritten**. Der Trace-Plot oben zeigt links einen deutlichen
+Anlauf: die Kette startet bei null und muss sich erst zum Zielbereich
+hocharbeiten. Das Histogramm unten passt noch schlecht.
+
+Stelle auf **5000 Schritte**. Der Trace sieht jetzt aus wie gleichmäßiges
+Rauschen um einen Wert, und das Histogramm deckt sich mit der roten
+Zielkurve.
+
+Genau dieser Blick auf den Trace-Plot ist die Konvergenzprüfung. Eine kranke
+Kette zeigt einen Trend oder Stufen. Wichtig: die Software gibt keine
+Fehlermeldung aus, wenn die Kette nicht konvergiert ist. Sie gibt Zahlen, und
+die sehen aus wie richtige.
+:::

@@ -1,0 +1,66 @@
+---
+title: "Glossar"
+subtitle: "Alle Auffrischungen am Stück"
+---
+
+Diese Bausteine stehen auch aufklappbar direkt in den Aufgaben, jeweils dort,
+wo sie gebraucht werden. Wer lieber am Stück liest, findet sie hier
+gesammelt.
+
+## Grundlagen
+
+### Standardabweichung
+
+{{< include /_includes/auffrischen/standardabweichung.qmd >}}
+
+### Standardfehler
+
+{{< include /_includes/auffrischen/standardfehler.qmd >}}
+
+### Verteilung und Dichte
+
+{{< include /_includes/auffrischen/verteilung.qmd >}}
+
+### Bedingte Wahrscheinlichkeit
+
+{{< include /_includes/auffrischen/bedingte-wahrscheinlichkeit.qmd >}}
+
+## Frequentistische Werkzeuge
+
+### Nullhypothese und p-Wert
+
+{{< include /_includes/auffrischen/nullhypothese.qmd >}}
+
+### Konfidenzintervall
+
+{{< include /_includes/auffrischen/konfidenzintervall.qmd >}}
+
+### Effektstärke, Cohens d
+
+{{< include /_includes/auffrischen/effektstaerke.qmd >}}
+
+### Reliabilität
+
+{{< include /_includes/auffrischen/reliabilitaet.qmd >}}
+
+## Bayesianische Werkzeuge
+
+### Der Prior
+
+{{< include /_includes/auffrischen/prior.qmd >}}
+
+### Die Likelihood
+
+{{< include /_includes/auffrischen/likelihood.qmd >}}
+
+### Der Posterior
+
+{{< include /_includes/auffrischen/posterior.qmd >}}
+
+### HDI, ETI und ROPE
+
+{{< include /_includes/auffrischen/hdi.qmd >}}
+
+## Das Szenario
+
+{{< include /_includes/szenario.qmd >}}

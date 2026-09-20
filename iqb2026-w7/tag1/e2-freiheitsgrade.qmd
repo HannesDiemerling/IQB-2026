@@ -1,0 +1,140 @@
+---
+title: "Arbeitsblatt Einheit 2"
+subtitle: "Die Freiheitsgrade des Forschens · 30 Minuten"
+---
+
+## Euer Auftrag
+
+Ihr bekommt einen Datensatz, in dem der wahre Effekt **exakt null** ist. Eure
+Aufgabe ist es, trotzdem ein signifikantes Ergebnis zu finden. Das ist keine
+Provokation, das ist die Lektion.
+
+**Anwendungen:** [Der Garten der sich verzweigenden Pfade](../apps/a03-garten.qmd) ·
+[Verzerrung durch fehlende Testungen](../apps/a04-dropout.qmd) ·
+[Publikationsbias](../apps/a05-publikationsbias.qmd)
+
+## Rollen
+
+{{< include /_includes/rollen.qmd >}}
+
+Die Rollen wandern gegenüber Einheit 1 eine Position weiter.
+
+## Aufgabe 1: Beobachten
+
+Öffnet **Der Garten der sich verzweigenden Pfade**. Alle Häkchen sind aus, die
+Subgruppe steht auf "Alle Lernenden".
+
+1. Notiert den p-Wert für diesen Ausgangspfad.
+2. Lest das Panel links unten. Wie viele Analysepfade gibt es insgesamt, und
+   wie viele davon sind bereits signifikant?
+3. Haltet fest, was der niedrigste p-Wert über alle Pfade ist.
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 1
+
+Der Ausgangspfad liegt deutlich über .05. Insgesamt gibt es **24 Pfade**, und
+mehrere davon sind bereits signifikant, ohne dass ihr irgendetwas getan habt.
+
+Der niedrigste p-Wert über alle Pfade liegt klar unter .05.
+
+Wichtig: der wahre Effekt ist null. Jeder dieser signifikanten Pfade ist per
+Konstruktion ein Fehlalarm.
+:::
+
+## Aufgabe 2: Manipulieren
+
+Sucht jetzt systematisch den **kleinsten p-Wert**, den ihr finden könnt.
+
+1. Probiert Kombinationen aus Häkchen und Subgruppe durch.
+2. Notiert, wie viele Kombinationen ihr gebraucht habt, bis ihr unter .05 wart.
+3. Haltet die beste Kombination fest.
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Wieso ist das ein Problem?
+
+Jede einzelne dieser Entscheidungen ist methodisch begründbar. Auffällige
+Testwerte zu prüfen ist gute Praxis. Nur vollständig getestete Klassen
+auszuwerten ist sauber. Sich auf eine Jahrgangsstufe zu beschränken ist
+inhaltlich begründbar.
+
+Das Problem ist nicht die einzelne Entscheidung. Das Problem ist, dass die
+**Reihenfolge und Auswahl** der Entscheidungen von den Zwischenergebnissen
+abhängt. Bei 24 möglichen Pfaden und einer nominellen Fehlerrate von 5 Prozent
+pro Pfad ist ein Treffer fast garantiert.
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 2
+
+Es gibt mehrere Kombinationen, die unter .05 landen. Die meisten Gruppen
+finden eine innerhalb weniger Versuche.
+
+Der entscheidende Punkt ist nicht, welche Kombination ihr gefunden habt,
+sondern **wie wenige Versuche nötig waren**. Genau so entstehen falsch
+positive Befunde in echter Forschung, ohne dass jemand betrügt.
+:::
+
+## Aufgabe 3: Begreifen
+
+Wechselt zu **Verzerrung durch fehlende Testungen**.
+
+1. Die Schwelle steht auf 10, also sind alle 100 Klassen dabei. Notiert den
+   wahren Durchschnitt.
+2. Zieht die Schwelle auf 5. Was passiert mit der roten Linie?
+3. Überlegt: Wer entscheidet hier eigentlich, welche Klassen herausfallen?
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: MCAR, MAR und MNAR
+
+| | Bedeutung | Was rettbar ist |
+|---|---|---|
+| **MCAR** | völlig zufällig fehlend | unproblematisch, nur Präzisionsverlust |
+| **MAR** | fehlend abhängig von **beobachteten** Variablen | korrigierbar, etwa durch Imputation |
+| **MNAR** | fehlend abhängig von **unbeobachteten** Werten selbst | nicht aus den Daten korrigierbar |
+
+Die meisten Verfahren zur Behandlung fehlender Werte setzen **MAR** voraus.
+Diese Annahme lässt sich aus den Daten heraus nicht prüfen, sie kann nur
+begründet werden.
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 3
+
+Der wahre Durchschnitt über alle 100 Klassen liegt bei rund **1,3 Punkten**.
+Bei einer Schwelle von 5 steigt der berichtete Durchschnitt deutlich an, weil
+genau die Klassen wegfallen, in denen das Programm weniger bringt.
+
+Niemand hat entschieden, welche Klasse herausfällt. Die Belastung hat es
+entschieden. Das ist **MNAR**: das Fehlen hängt mit dem Merkmal zusammen, das
+gemessen werden soll. Diese Verzerrung lässt sich nicht wegrechnen, sie kann
+nur benannt werden.
+:::
+
+## Pufferaufgaben
+
+::: {.callout-important collapse="true"}
+## Für schnelle Gruppen
+
+1. **Publikationsbias.** Öffnet die dritte Anwendung. Zieht den Regler von
+   0 auf 100 Prozent und beobachtet, wie weit sich der metaanalytische
+   Durchschnitt vom wahren Zuwachs entfernt. Notiert die Überschätzung bei
+   100 Prozent.
+
+2. **Der eigene Garten.** Zählt für eine Studie, die ihr kennt oder plant, die
+   Analyseentscheidungen, die noch nicht festgelegt sind. Multipliziert die
+   Möglichkeiten. Wie groß ist euer Garten?
+
+3. **Gegenmaßnahme.** Welche der Entscheidungen aus dem Garten ließe sich im
+   Voraus festlegen, ohne dass die Analyse an Qualität verliert? Welche nicht?
+:::
+
+## Die Frage für die Fragerunde
+
+::: {.callout-warning}
+## Das berichtet eure Gruppe in Einheit 3
+
+**Wie viele Pfade habt ihr gebraucht, um unter .05 zu kommen, und welcher
+davon wäre in einem Bericht am wenigsten aufgefallen?**
+
+Eine Minute. Der zweite Teil ist der wichtigere.
+:::

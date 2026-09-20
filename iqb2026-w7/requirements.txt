@@ -1,0 +1,16 @@
+# Build-Abhaengigkeiten. Werden NUR zur Renderzeit gebraucht.
+#
+# Die Anwendungen selbst laufen im Browser der Teilnehmenden ueber Pyodide.
+# shinylive buendelt dafuer eigene Wheels, diese Pakete landen nicht im Browser.
+#
+# Versionen sind gepinnt, damit ein Build kurz vor dem Workshop nicht durch ein
+# Upstream-Update kippt.
+#
+# seaborn und pandas standen in den Alt-Repos, werden aber von keiner einzigen
+# Anwendung importiert. Bewusst nicht uebernommen.
+
+shiny==1.8.0
+shinylive==0.8.12
+numpy==2.5.3
+matplotlib==3.11.2
+scipy==1.18.1

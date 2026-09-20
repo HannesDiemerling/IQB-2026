@@ -1,0 +1,41 @@
+# Verzeichnis-Metadaten fuer alle Foliendecks.
+#
+# format: revealjs ERSETZT hier das Projektformat html, es kommt nicht dazu.
+# Der Projekttyp website setzt projectFormatsOnly nicht, deshalb gewinnt das
+# Format aus dem Verzeichnis. Jedes Deck rendert also genau einmal, als Deck.
+#
+# Pfade in dieser Datei sind relativ zu folien/, nicht zum einzelnen Deck.
+# Quarto rechnet sie beim Einlesen auf das jeweilige Dokument um.
+
+# Ohne das hier landen saemtliche Folienfragmente im Suchindex der Website und
+# ueberschwemmen jede Suche der Teilnehmenden.
+search: false
+
+format:
+  revealjs:
+    theme: [default, theme/iqb-slides.scss]
+    width: 1280
+    height: 720
+    margin: 0.06
+    center: false
+    auto-stretch: false
+    slide-number: "c/t"
+    hash-type: number
+    progress: true
+    controls: true
+    touch: true
+    menu:
+      numbers: true
+    # Tafel zum Mitschreiben in der Fragerunde. Taste b oeffnet sie, c ist der Stift.
+    chalkboard: true
+    # embed-resources vertraegt sich nicht mit chalkboard. Nicht einschalten.
+    embed-resources: false
+    preview-links: true
+    view-distance: 2
+    transition: fade
+    background-transition: fade
+    transition-speed: fast
+    incremental: false
+    fig-align: center
+    link-external-icon: false
+    history: true

@@ -1,0 +1,97 @@
+---
+title: "Der Prior"
+subtitle: "Einheit 5 · Uninformativ ist nicht neutral"
+---
+
+Der Prior beschreibt, welche Werte du **vor** den neuen Daten für plausibel
+hältst. Baue einen, den du in einem Antrag verteidigen könntest.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 650
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Prior für den Kompetenzzuwachs"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Prior Parameter konfigurieren"),
+                ui.input_slider("mean", "Erwarteter Zuwachs (Punkte)", -10, 20, 0),
+                ui.input_slider("sd", "Unsicherheit (SD)", 1, 25, 20),
+                ui.hr(),
+                ui.p("Ein hoher SD-Wert steht für größere Ahnungslosigkeit über "
+                     "die Wirkung von LeseStark. Ein niedriger SD-Wert steht für "
+                     "fundiertes Vorwissen aus früheren Evaluationen."),
+            ),
+            ui.output_plot("prior_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+    @render.plot
+    def prior_plot():
+        mu = input.mean()
+        sigma = input.sd()
+
+        x = np.linspace(-30, 35, 500)
+        y = norm.pdf(x, mu, sigma)
+
+        fig, ax = plt.subplots(figsize=(10, 5), layout="constrained")
+
+        # x in Datenkoordinaten, y in Achsenanteilen: Beschriftungen bleiben fix
+        label_tf = ax.get_xaxis_transform()
+
+        ax.axvspan(-30, 0, color='#e74c3c', alpha=0.1)
+        ax.text(-15, 0.88, 'LeseStark\nschadet', transform=label_tf,
+                color='#c0392b', ha='center', va='center', fontweight='bold')
+
+        ax.axvspan(0, 35, color='#2ecc71', alpha=0.1)
+        ax.text(17.5, 0.88, 'LeseStark\nhilft', transform=label_tf,
+                color='#27ae60', ha='center', va='center', fontweight='bold')
+
+        ax.plot(x, y, color='#2c3e50', linewidth=2.5)
+        ax.fill_between(x, 0, y, color='#34495e', alpha=0.3)
+
+        ax.set_title("Deine Prior Verteilung $P(\\theta)$")
+        ax.set_xlabel("Kompetenzzuwachs durch LeseStark (Punkte)")
+        ax.set_ylabel("Wahrscheinlichkeitsdichte")
+
+        ax.set_xlim(-30, 35)
+        ax.set_ylim(0, y.max() * 1.2)
+        ax.set_yticks([])
+
+        ax.axvline(0, color='black', linewidth=1.5, linestyle=':')
+        ax.text(-1.5, 0.97, 'Kein Effekt (0 Punkte)', transform=label_tf,
+                rotation=90, ha='right', va='top')
+
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        return fig
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Lass den Mittelwert auf 0 und die Unsicherheit auf 20 stehen. Dieser Prior
+gilt als "uninformativ". Schau dir an, was er tatsächlich behauptet: ein
+Zuwachs von **30 Punkten** sei etwa so plausibel wie einer von 2 Punkten.
+
+Die Testskala reicht bis 25 Punkte, die Streuung liegt bei 5. Ein Zuwachs von
+30 Punkten wäre also ein d von 6 und läge außerhalb der Skala. Der
+"neutrale" Prior behauptet damit etwas offensichtlich Falsches.
+
+Zieh die Unsicherheit auf 5 herunter. Jetzt sagt der Prior etwas, das sich
+begründen lässt.
+:::

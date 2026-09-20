@@ -1,0 +1,145 @@
+---
+title: "Arbeitsblatt Einheit 5"
+subtitle: "Prior, Likelihood, Posterior · 30 Minuten"
+---
+
+## Euer Auftrag
+
+Lasst den Prior gegen die Daten antreten. Findet heraus, ab wann der Prior
+gewinnt, und entscheidet, ob ihr einen solchen Prior verteidigen könntet.
+
+**Anwendungen:** [Der Prior](../apps/a13-prior.qmd) ·
+[Die Likelihood](../apps/a14-likelihood.qmd) ·
+[Der Posterior](../apps/a15-posterior.qmd)
+
+## Rollen
+
+{{< include /_includes/rollen.qmd >}}
+
+Die Rollen wandern gegenüber Einheit 4 eine Position weiter.
+
+## Aufgabe 1: Beobachten
+
+Öffnet **Der Prior**. Die Startwerte sind Mittelwert 0 und Unsicherheit 20.
+Dieser Prior gilt gemeinhin als "uninformativ".
+
+1. Schaut euch an, wie viel Masse links von der Null liegt. Was behauptet
+   dieser Prior über die Wahrscheinlichkeit, dass LeseStark **schadet**?
+2. Schaut nach rechts. Wie plausibel hält dieser Prior einen Zuwachs von
+   30 Punkten?
+3. Erinnert euch an die Testskala. Ist das eine vernünftige Behauptung?
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Der Prior
+
+{{< include /_includes/auffrischen/prior.qmd >}}
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 1
+
+Bei Mittelwert 0 liegt die Hälfte der Masse links von der Null. Der Prior
+behauptet also, LeseStark schade mit **50 Prozent Wahrscheinlichkeit**. Das
+ist keine Neutralität, das ist eine sehr starke und ziemlich unplausible
+Behauptung.
+
+Ein Zuwachs von 30 Punkten wird als durchaus plausibel dargestellt. Die
+Testskala reicht aber nur bis 25 Punkte, und die Streuung liegt bei 5. Ein
+Zuwachs von 30 Punkten wäre ein d von 6 und läge außerhalb des Messbaren.
+
+Fazit: "uninformativ" ist nicht neutral. Ein flacher Prior trifft Aussagen,
+die niemand unterschreiben würde, wenn man sie ausspricht.
+:::
+
+## Aufgabe 2: Manipulieren
+
+Öffnet **Der Posterior**. Der Prior steht auf 8 Punkten mit Unsicherheit 5,
+die Pilotdaten sagen 6 Punkte. Die Daten sind fest.
+
+1. Notiert, wo der Posterior bei den Startwerten liegt.
+2. Zieht die Prior-Unsicherheit auf **10**. Wohin wandert der Posterior?
+3. Zieht sie dann auf **0,5**. Wohin wandert er jetzt?
+4. Ab welcher Prior-Unsicherheit liegt der Posterior näher am Prior als an den
+   Daten?
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Likelihood
+
+{{< include /_includes/auffrischen/likelihood.qmd >}}
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 2
+
+Bei den Startwerten liegt der Posterior bei rund **6,1 Punkten**, also fast
+auf den Daten. Der Prior mit Unsicherheit 5 ist im Vergleich zum
+Standardfehler der Daten breit und hat daher wenig Gewicht.
+
+Bei Unsicherheit 10 liegt der Posterior praktisch auf den Daten, rund
+**6,0 Punkte**.
+
+Bei Unsicherheit 0,5 kippt es: der Posterior liegt bei rund **7,7 Punkten**,
+also nahe am Prior. Die Daten richten fast nichts mehr aus.
+
+Der Umschlagpunkt liegt dort, wo die Prior-Unsicherheit kleiner wird als der
+Standardfehler der Daten. Der liegt hier bei etwa **1,1 Punkten**.
+
+Das ist kein Fehler der Methode. Es ist die korrekte Konsequenz daraus, dass
+ihr behauptet habt, den Wert schon sehr genau zu kennen.
+:::
+
+## Aufgabe 3: Begreifen
+
+Bleibt in derselben Anwendung.
+
+1. Stellt die Prior-Unsicherheit bewusst so ein, dass die Daten **keine
+   Rolle mehr spielen**.
+2. Schaut euch das Glaubwürdigkeitsintervall an. Wie schmal ist es geworden?
+3. Diskutiert: Könntet ihr diesen Prior in einem Antrag oder gegenüber
+   Begutachtenden verteidigen? Womit?
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 3
+
+Ab einer Prior-Unsicherheit von 0,5 ist der Einfluss der Daten minimal. Das
+Intervall wird dabei sehr schmal, die Analyse wirkt also **sehr sicher**.
+Genau das ist die Gefahr: ein enger Prior erzeugt scheinbare Präzision.
+
+Verteidigen ließe sich so ein Prior nur mit sehr starker Vorevidenz, etwa
+einer großen Meta-Analyse zum selben Programm mit demselben Instrument. Ohne
+eine solche Quelle ist er nicht begründbar.
+
+Die praktische Konsequenz heißt **Prior-Sensitivität**: rechnet das Ergebnis
+mit eurem Prior, dann noch einmal mit einem deutlich breiteren und einem
+deutlich engeren, und berichtet alle drei. Bleibt die Schlussfolgerung
+stabil, ist der Prior kein Streitpunkt mehr.
+:::
+
+## Pufferaufgaben
+
+::: {.callout-important collapse="true"}
+## Für schnelle Gruppen
+
+1. **Maximum von Hand.** Öffnet **Die Likelihood**. Sucht das Theta, bei dem
+   der Balken unten den Wert 1.00 erreicht. Vergleicht diesen Wert mit dem
+   Mittelwert der fünf Messwerte 3, 7, 5, 9 und 6.
+
+2. **Einen guten Prior bauen.** Zurück zu **Der Prior**. Baut einen Prior, der
+   drei Bedingungen erfüllt: er schließt negative Effekte nicht völlig aus, er
+   hält Zuwächse über 15 Punkte für praktisch unmöglich, und sein Schwerpunkt
+   liegt bei einem realistischen Wert. Notiert Mittelwert und Unsicherheit.
+
+3. **Die Gegenrichtung.** Setzt im Posterior den Prior auf 0 Punkte mit
+   Unsicherheit 1. Was passiert, und was würde ein Gutachter dazu sagen?
+:::
+
+## Die Frage für die Fragerunde
+
+::: {.callout-warning}
+## Das berichtet eure Gruppe in Einheit 6
+
+**Ab wann hat der Prior gewonnen, und würdet ihr einen solchen Prior in einem
+Antrag verteidigen können?**
+
+Nennt die Prior-Unsicherheit, bei der es gekippt ist.
+:::

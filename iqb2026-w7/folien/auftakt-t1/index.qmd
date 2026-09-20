@@ -1,0 +1,259 @@
+---
+title: "Jenseits des Frequentismus"
+subtitle: "Vom p-Wert zur Posterior · Workshop 7 · IQB 2026"
+author: "Hannes Diemerling"
+date: "2026-09-23"
+date-format: "D. MMMM YYYY"
+title-slide-attributes:
+  data-background-color: "#F7F2EA"
+---
+
+## Zwei Tage, eine Frage {.bp-plain}
+
+[Tag 1 von 2 · 14:00 bis 18:00]{.bp-eyebrow}
+
+::: {.bp-quote}
+Wie sicher bin ich mir eigentlich, und woher weiß ich das?
+
+[Die Frage, die jede Auswertung beantworten müsste]{.bp-quote__author}
+:::
+
+Wir haben eine Methode, die diese Frage nicht beantwortet, und wir benutzen sie
+trotzdem seit hundert Jahren. Tag 1 zeigt, warum das ein Problem ist. Tag 2
+zeigt, was du stattdessen tun kannst.
+
+::: notes
+Nicht mit Organisatorischem anfangen. Mit dieser Frage anfangen.
+
+Vorlesen, dann drei Sekunden Pause. Dann der Satz: "Der p-Wert beantwortet
+diese Frage nicht. Er beantwortet eine andere. Und das ist kein Detail, das ist
+der ganze Punkt dieser zwei Tage."
+
+Ton für beide Tage setzen: das ist keine Abrechnung mit der Disziplin und auch
+keine Bekehrungsveranstaltung. Ich sage früh, dass ich selbst jahrelang
+p-Werte falsch interpretiert habe. Das macht den Raum ehrlich und nimmt den
+Druck, schon alles wissen zu müssen.
+
+Rund 2 Minuten.
+:::
+
+## Woher dieses Material kommt
+
+::: {.bp-zwei}
+::: {}
+Die Grundlagen dieses Workshops stammen aus dem Projekt **Beyond p-values** an
+der **HMU Health and Medical University Erfurt**, gefördert von der
+**VolkswagenStiftung** in der Förderlinie Pioniervorhaben.
+
+Für heute habe ich das Material neu geschnitten und auf die Bildungsforschung
+übertragen. Was du in den Anwendungen siehst, ist dort in ähnlicher Form frei
+verfügbar.
+:::
+::: {}
+::: {.bp-callout}
+Alle Materialien dieses Workshops stehen unter **CC BY 4.0**. Du darfst sie
+weiterverwenden, umbauen und in eigener Lehre einsetzen.
+:::
+:::
+:::
+
+::: notes
+Bewusst kurz, rund 60 bis 90 Sekunden. Das ist eine Einordnung, kein Vortrag
+über das Projekt.
+
+Zwei Sätze reichen: woher das Material kommt, und dass es frei nachnutzbar ist.
+Wer mehr wissen will, kann mich in der Pause fragen.
+
+Danach direkt weiter. Nicht in eine Projektvorstellung abbiegen.
+:::
+
+## Wie diese zwei Tage laufen
+
+::: {.bp-pillars}
+::: {.bp-pillar .tone-coral}
+[Schritt 01]{.bp-pillar__num}
+
+### Ich zeige
+
+Rund 25 Minuten Input pro Einheit. Mit Fragen an dich zwischendurch, auf die
+ich eine Reaktion erwarte.
+:::
+::: {.bp-pillar .tone-teal}
+[Schritt 02]{.bp-pillar__num}
+
+### Ihr arbeitet
+
+Rund 30 Minuten in Kleingruppen im eigenen Breakout-Raum, an interaktiven
+Anwendungen im Browser.
+:::
+::: {.bp-pillar .tone-navy}
+[Schritt 03]{.bp-pillar__num}
+
+### Wir sammeln
+
+Zu Beginn der nächsten Einheit berichtet jede Gruppe eine Minute lang. Damit
+ist das Thema abgeschlossen.
+:::
+:::
+
+::: {.bp-callout}
+Dreimal pro Tag, sechsmal insgesamt. Jede Einheit baut auf der vorherigen auf.
+:::
+
+::: notes
+Das ist der Vertrag mit dem Raum. Drei Dinge ansprechen.
+
+Erstens, der Rhythmus ist immer gleich. Das nimmt Unsicherheit raus, niemand
+muss raten, was als Nächstes kommt.
+
+Zweitens, die Gruppenphasen sind kein Beiwerk. Das ist der Teil, der hängen
+bleibt. Wer nur zuhören will, kann das, aber dann nimmt er weniger mit.
+
+Drittens, die Fragerunde ist kurz und sie ist verbindlich. Eine Minute pro
+Gruppe, nicht mehr. Das sage ich jetzt schon, dann ist es später keine
+Zurechtweisung.
+
+Rund 3 Minuten.
+:::
+
+## Der Ablauf heute
+
+::: {.bp-ablauf}
+`14:00`  Ankommen, Einordnung, Gruppen  ·  **15 min**
+`14:15`  **Einheit 1** Was der p-Wert nicht sagt  ·  25 min
+`14:40`  Gruppenarbeit 1  ·  30 min
+`15:10`  Pause  ·  10 min
+`15:20`  Fragerunde, dann **Einheit 2** Die Freiheitsgrade des Forschens  ·  35 min
+`15:55`  Gruppenarbeit 2  ·  30 min
+`16:25`  Pause  ·  15 min
+`16:40`  Fragerunde, dann **Einheit 3** Effektstärken und ihre Grenzen  ·  35 min
+`17:15`  Gruppenarbeit 3  ·  30 min
+`17:45`  Fragerunde und Abschluss  ·  15 min
+:::
+
+::: {.bp-callout}
+Die Pausen sind eingeplant und werden eingehalten. Beide Tage enden um 18:00.
+:::
+
+::: notes
+Zügig durchgehen, rund 2 Minuten. Niemand merkt sich diesen Plan, er steht auf
+der Website.
+
+Der einzige Satz, der wirklich zählt: die Pausen werden eingehalten und wir
+enden pünktlich. Das nimmt die Unruhe raus, die sonst ab 17:30 entsteht.
+
+Wenn jemand fragt, ob man auch nur zuhören kann: ja, aber die Gruppenräume sind
+der Teil, für den sich das Format lohnt.
+:::
+
+## Morgen dann die andere Hälfte
+
+::: {.bp-zwei}
+::: {}
+### Heute: die Diagnose
+
+Was der p-Wert wirklich sagt. Wie falsch positive Befunde entstehen, ohne dass
+jemand lügt. Warum eine Effektstärke ohne Angabe der Messgenauigkeit wenig
+wert ist.
+:::
+::: {}
+### Morgen: die Alternative
+
+Die Frage umdrehen. Prior, Likelihood, Posterior. Wie ein Ergebnissatz
+aussieht, den du verantworten kannst, und womit du ihn rechnest.
+:::
+:::
+
+::: {.bp-warn}
+Heute wird streckenweise unbequem. Das ist Absicht. Morgen bekommst du das
+Werkzeug dafür.
+:::
+
+::: notes
+Wichtige Folie, auch wenn sie kurz ist. Sie verhindert, dass Tag 1 als reine
+Kritikveranstaltung ankommt und Leute frustriert rausgehen.
+
+Den Satz "heute wird unbequem, morgen bekommst du das Werkzeug" wörtlich sagen.
+Er ist der Klebstoff zwischen den beiden Tagen.
+
+Rund 1,5 Minuten.
+:::
+
+## Deine Gruppe für beide Tage
+
+::: {.bp-runde}
+::: {.bp-runde__gruppe}
+[1]{.bp-runde__num}
+[Gruppe 1]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[2]{.bp-runde__num}
+[Gruppe 2]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[3]{.bp-runde__num}
+[Gruppe 3]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[4]{.bp-runde__num}
+[Gruppe 4]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[5]{.bp-runde__num}
+[Gruppe 5]{.bp-runde__label}
+:::
+:::
+
+Fünf Gruppen zu je fünf Personen, an beiden Tagen dieselben. In jeder Gruppe
+gibt es fünf Rollen, die pro Einheit weiterwandern.
+
+{{< include /folien/_shared/_rollen.qmd >}}
+
+::: notes
+Die Gruppen sind in Zoom schon angelegt, ich weise sie nicht live zu. Das spart
+fünf Minuten und vermeidet Chaos.
+
+Zu den Rollen zwei Sätze: sie sind kein Selbstzweck. Die Rolle Bedienung
+verhindert, dass fünf Leute gleichzeitig klicken wollen. Die Rolle Vortrag
+sorgt dafür, dass in der Fragerunde nicht immer dieselbe Person spricht, weil
+die Rolle jede Einheit weiterwandert.
+
+Die Rollen stehen auch auf jedem Arbeitsblatt, niemand muss sie sich merken.
+
+Wenn eine Gruppe nur zu viert ist: Rolle Zeit übernimmt die Bedienung mit.
+
+Rund 3 Minuten.
+:::
+
+## Bevor es losgeht
+
+::: {.bp-aufgabe}
+1. **Öffne die Workshop-Seite** in einem zweiten Fenster, nicht im Zoom-Browser.
+2. **Klick dich auf die Seite von Einheit 1** und lass die Anwendung einmal
+   laden. Sie braucht beim ersten Mal bis zu 30 Sekunden.
+3. **Siehst du ein Diagramm?** Dann bist du bereit. Wenn nicht, schreib es
+   jetzt in den Chat, nicht erst im Gruppenraum.
+:::
+
+::: {.bp-callout}
+Du musst nichts installieren. Die Berechnungen laufen in deinem Browser, deine
+Daten verlassen deinen Rechner nicht.
+:::
+
+::: notes
+Diese Folie ist die Versicherung gegen den schlimmsten Fall: eine Gruppe sitzt
+im Breakout-Raum und bei zwei Leuten lädt nichts.
+
+Wirklich warten, bis es im Chat ruhig ist. Lieber hier zwei Minuten verlieren
+als später zwanzig.
+
+Wer die Technikprüfung vorab gemacht hat, hat die Laufzeit schon im Cache und
+ist sofort da. Das ist der Grund, warum die Prüfseite eine Woche vorher
+rausgeht.
+
+Plan B, wenn bei jemandem gar nichts geht: die Person arbeitet in ihrer Gruppe
+über den geteilten Bildschirm mit und übernimmt die Rolle Protokoll oder
+Gegenprobe. Niemand fällt raus.
+
+Rund 2 Minuten.
+:::

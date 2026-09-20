@@ -1,0 +1,13 @@
+Die Likelihood beantwortet die Frage: wie wahrscheinlich wären genau **diese**
+Daten, wenn eine bestimmte Hypothese stimmte?
+
+Der Dreh, der am Anfang rutschig ist: die **Daten stehen fest**, die
+**Hypothese wandert**. Das ist genau umgekehrt zur Intuition.
+
+Man schreibt sie $P(D \mid \theta)$. Sie ist keine Wahrscheinlichkeits-
+verteilung über $\theta$, sondern eine Bewertung jeder einzelnen Hypothese an
+denselben festen Daten.
+
+Wer schon einmal eine Regression oder ein Rasch-Modell geschätzt hat, hat mit
+Likelihoods gearbeitet. Maximum Likelihood nimmt den Wert mit dem höchsten
+Likelihood-Wert. Bayesianisch behält man die ganze Kurve.

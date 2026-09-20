@@ -1,0 +1,11 @@
+Ein 95-Prozent-Konfidenzintervall ist ein Bereich um den geschätzten Wert,
+üblicherweise berechnet als Schätzwert plus minus etwa zwei Standardfehler.
+
+Die korrekte Lesart ist unbequem: **wenn** du die Studie unendlich oft
+wiederholst, enthalten 95 Prozent der so berechneten Intervalle den wahren
+Wert. Es ist eine Aussage über das **Verfahren**, nicht über dein konkretes
+Intervall.
+
+Die intuitive Lesart, der wahre Wert liege mit 95 Prozent Wahrscheinlichkeit in
+genau diesem Intervall, ist **falsch**. Genau diese Aussage erlaubt erst das
+Glaubwürdigkeitsintervall, und das kommt an Tag 2.

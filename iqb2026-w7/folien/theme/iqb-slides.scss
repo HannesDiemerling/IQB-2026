@@ -1,0 +1,656 @@
+/*-- scss:defaults --*/
+
+// =========================================================
+// Workshop 7, Folien-Theme
+// Uebernommen aus dem Beyond-p-values-Projekt (theme/bp-slides.scss).
+//
+// Unterschiede zum Original, bewusst gesetzt:
+//  - Der gesamte QR-Apparat ist entfernt. Der Workshop laeuft ueber Zoom,
+//    niemand scannt einen geteilten Bildschirm. Damit faellt auch die
+//    Reservierung padding-right: 175px auf h1 und h2 weg, die Ueberschriften
+//    bekommen die volle Folienbreite zurueck.
+//  - Neu: bp-handzeichen, bp-runde, bp-gruppen, bp-rollen, bp-screenshot.
+//    Das sind die Bausteine fuer Mitmach-Fragen, Fragerunde, Gruppenarbeit
+//    und Demo-Folien ohne eingebettetes iframe.
+// =========================================================
+
+$bp-navy:  #2A3F66;
+$bp-teal:  #4FA8A0;
+$bp-coral: #E27C5C;
+$bp-sand:  #E8C9A4;
+$bp-cream: #F7F2EA;
+$bp-ink:   #1B2436;
+
+$font-family-sans-serif: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !default;
+$font-family-monospace: "JetBrains Mono", "SFMono-Regular", Consolas, monospace !default;
+
+$body-bg: $bp-cream !default;
+$body-color: $bp-ink !default;
+$link-color: $bp-coral !default;
+
+$presentation-font-size-root: 34px !default;
+$presentation-heading-font: $font-family-sans-serif !default;
+$presentation-heading-color: $bp-navy !default;
+$presentation-heading-font-weight: 700 !default;
+$presentation-h1-font-size: 2.1em !default;
+$presentation-h2-font-size: 1.5em !default;
+$presentation-h3-font-size: 1.15em !default;
+$presentation-line-height: 1.35 !default;
+
+$code-block-font-size: 0.62em !default;
+
+/*-- scss:mixins --*/
+
+@mixin bp-card-surface {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(42, 63, 102, 0.1);
+  border-radius: var(--bp-r-md);
+  box-shadow: var(--bp-shadow-sm);
+}
+
+/*-- scss:rules --*/
+
+:root {
+  --bp-navy: #2a3f66;
+  --bp-teal: #4fa8a0;
+  --bp-coral: #e27c5c;
+  --bp-sand: #e8c9a4;
+  --bp-cream: #f7f2ea;
+  --bp-ink: #1b2436;
+
+  --bp-border: rgba(42, 63, 102, 0.1);
+  --bp-shadow-sm: 0 1px 2px rgba(27, 36, 54, 0.06), 0 2px 6px rgba(27, 36, 54, 0.04);
+  --bp-shadow-md: 0 4px 12px rgba(27, 36, 54, 0.08), 0 12px 32px rgba(27, 36, 54, 0.06);
+
+  --bp-r-sm: 10px;
+  --bp-r-md: 18px;
+  --bp-r-lg: 28px;
+
+  --bp-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal {
+  font-feature-settings: "kern", "ss01", "cv11";
+}
+
+// Ueberschriften bekommen denselben Farbbalken wie im Projekt-Design.
+.reveal h2:not(.bp-plain) {
+  padding-left: 0;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 7px;
+    height: 1.05em;
+    background: linear-gradient(180deg, var(--bp-teal), var(--bp-coral));
+    border-radius: 4px;
+    vertical-align: -0.14em;
+    margin-right: 0.55em;
+  }
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3 {
+  letter-spacing: -0.015em;
+  text-transform: none;
+}
+
+.reveal .slides section {
+  text-align: left;
+}
+
+// =========================================================
+// Bausteine aus dem Projekt-Design
+// =========================================================
+
+// Kennzahlen
+.reveal .bp-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 0.7em;
+  margin: 0.5em 0;
+}
+
+.reveal .bp-stat {
+  @include bp-card-surface;
+  padding: 0.7em 0.8em;
+
+  .bp-stat__num {
+    display: block;
+    font-size: 1.55em;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--bp-coral);
+    letter-spacing: -0.02em;
+  }
+
+  .bp-stat__label {
+    display: block;
+    margin-top: 0.35em;
+    font-size: 0.5em;
+    line-height: 1.35;
+    color: var(--bp-ink);
+    opacity: 0.85;
+  }
+}
+
+// Saeulen
+.reveal .bp-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.7em;
+  margin: 0.5em 0;
+}
+
+.reveal .bp-pillar {
+  @include bp-card-surface;
+  padding: 0.75em 0.85em;
+  border-top: 4px solid var(--bp-teal);
+
+  .bp-pillar__num {
+    font-size: 0.42em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bp-teal);
+  }
+
+  h3 {
+    margin: 0.25em 0 0.3em 0;
+    font-size: 0.78em;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.52em;
+    line-height: 1.4;
+  }
+
+  &.tone-coral { border-top-color: var(--bp-coral); .bp-pillar__num { color: var(--bp-coral); } }
+  &.tone-navy  { border-top-color: var(--bp-navy);  .bp-pillar__num { color: var(--bp-navy); } }
+  &.tone-sand  { border-top-color: var(--bp-sand);  .bp-pillar__num { color: #a97c46; } }
+}
+
+// Karten
+.reveal .bp-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.7em;
+}
+
+.reveal .bp-card {
+  @include bp-card-surface;
+  padding: 0.75em 0.85em;
+  position: relative;
+
+  .bp-card__num {
+    position: absolute;
+    top: 0.3em;
+    right: 0.5em;
+    font-size: 1.5em;
+    font-weight: 800;
+    color: rgba(42, 63, 102, 0.1);
+    line-height: 1;
+  }
+
+  .bp-card__tag {
+    display: inline-block;
+    font-size: 0.38em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--bp-teal);
+  }
+
+  h3 {
+    margin: 0.2em 0 0.25em 0;
+    font-size: 0.76em;
+  }
+
+  p {
+    margin: 0 0 0.35em 0;
+    font-size: 0.5em;
+    line-height: 1.4;
+  }
+
+  .bp-card__meta {
+    font-size: 0.4em;
+    color: var(--bp-navy);
+    opacity: 0.7;
+
+    span + span::before {
+      content: " · ";
+    }
+  }
+}
+
+// Merksatz und Uebergang
+.reveal .bp-callout {
+  background: linear-gradient(135deg, rgba(79, 168, 160, 0.14), rgba(226, 124, 92, 0.14));
+  border-left: 6px solid var(--bp-coral);
+  border-radius: var(--bp-r-md);
+  padding: 0.7em 0.9em;
+  margin: 0.6em 0;
+  font-size: 0.95em;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Zitat. Das Anfuehrungszeichen sitzt absolut in der linken Einrueckung. Inline
+// mit vertical-align rutscht es bei umbrechenden Absaetzen in die zweite Zeile.
+.reveal .bp-quote {
+  position: relative;
+  font-size: 1.05em;
+  font-style: italic;
+  color: var(--bp-navy);
+  border: none;
+  padding: 0 0 0 1.1em;
+  margin: 0.4em 0 0.3em 0;
+  box-shadow: none;
+  background: none;
+  width: auto;
+
+  p:first-of-type::before {
+    content: "\201E";
+    position: absolute;
+    left: 0;
+    top: 0.16em;
+    font-size: 1.7em;
+    line-height: 1;
+    font-style: normal;
+    color: var(--bp-sand);
+  }
+}
+
+.reveal .bp-quote__author {
+  font-size: 0.5em;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--bp-navy);
+  opacity: 0.7;
+}
+
+// Adresse zum Mitlesen, Monospace und Umbruch halten sie lesbar.
+.reveal .bp-url {
+  display: block;
+  font-family: $font-family-monospace;
+  font-size: 0.62em;
+  line-height: 1.3;
+  color: var(--bp-navy);
+  word-break: break-all;
+  margin: 0.3em 0;
+}
+
+// Pills
+.reveal .bp-pill {
+  display: inline-block;
+  font-size: 0.36em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.35em 0.7em;
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
+.reveal .bp-pill--live {
+  background: rgba(79, 168, 160, 0.18);
+  color: #2f6d67;
+}
+
+.reveal .bp-pill--soon {
+  background: rgba(232, 201, 164, 0.35);
+  color: #8a6231;
+}
+
+// Eyebrow ueber der Ueberschrift
+.reveal .bp-eyebrow {
+  display: block;
+  font-size: 0.4em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bp-teal);
+  margin-bottom: 0.4em;
+}
+
+// Zeitmarke, z. B. "00:30, 20 Minuten"
+.reveal .bp-zeit {
+  display: inline-block;
+  font-family: $font-family-monospace;
+  font-size: 0.38em;
+  font-weight: 600;
+  color: #fff;
+  background: var(--bp-navy);
+  border-radius: var(--bp-r-sm);
+  padding: 0.3em 0.6em;
+  margin-bottom: 0.4em;
+}
+
+// Ablauf-Tabelle
+.reveal .bp-ablauf {
+  font-family: $font-family-monospace;
+  font-size: 0.46em;
+  line-height: 1.75;
+
+  b {
+    color: var(--bp-coral);
+  }
+}
+
+// Zwei- und Dreispalter
+.reveal .bp-zwei {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  align-items: start;
+}
+
+.reveal .bp-drei {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8em;
+  align-items: start;
+}
+
+// Kleingedrucktes, z. B. Quellenangaben unter einer Folie
+.reveal .bp-quelle {
+  font-size: 0.38em;
+  line-height: 1.4;
+  color: var(--bp-navy);
+  opacity: 0.65;
+  margin-top: 0.6em;
+}
+
+// Aufgabenkasten
+.reveal .bp-aufgabe {
+  @include bp-card-surface;
+  border-left: 6px solid var(--bp-teal);
+  padding: 0.7em 0.9em;
+  font-size: 0.95em;
+
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+// Warn- und Merkkasten
+.reveal .bp-warn {
+  background: rgba(226, 124, 92, 0.12);
+  border-left: 6px solid var(--bp-coral);
+  border-radius: var(--bp-r-md);
+  padding: 0.65em 0.9em;
+  font-size: 0.92em;
+}
+
+// =========================================================
+// Neu fuer diesen Workshop
+// =========================================================
+
+// Die Mitmach-Aufforderung. Muss auf geteiltem Bildschirm sofort ins Auge
+// springen, sonst hebt niemand die Hand. Deshalb Flaeche statt nur Fettdruck.
+.reveal .bp-handzeichen {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  background: var(--bp-navy);
+  color: #fff;
+  border-radius: var(--bp-r-md);
+  padding: 0.55em 0.9em;
+  margin: 0.6em 0 0 0;
+  font-size: 0.95em;
+  font-weight: 600;
+
+  p {
+    margin: 0;
+    color: #fff;
+  }
+
+  &::before {
+    content: "\270B";
+    font-size: 1.5em;
+    line-height: 1;
+    flex: 0 0 auto;
+  }
+}
+
+// Fragerunde: eine Zeile je Gruppe, damit sichtbar ist, wer schon dran war.
+.reveal .bp-runde {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.55em;
+  margin: 0.6em 0;
+  counter-reset: bp-gruppe;
+}
+
+.reveal .bp-runde__gruppe {
+  @include bp-card-surface;
+  border-top: 4px solid var(--bp-teal);
+  padding: 0.6em 0.5em;
+  text-align: center;
+
+  .bp-runde__num {
+    display: block;
+    font-size: 0.85em;
+    font-weight: 800;
+    color: var(--bp-navy);
+    line-height: 1;
+  }
+
+  .bp-runde__label {
+    display: block;
+    margin-top: 0.3em;
+    font-size: 0.42em;
+    line-height: 1.3;
+    color: var(--bp-ink);
+    opacity: 0.8;
+  }
+}
+
+// Rollenverteilung in der Kleingruppe
+.reveal .bp-rollen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.5em;
+  margin: 0.5em 0;
+  font-size: 0.52em;
+}
+
+.reveal .bp-rolle {
+  background: rgba(79, 168, 160, 0.12);
+  border-radius: var(--bp-r-sm);
+  padding: 0.5em 0.7em;
+  line-height: 1.35;
+
+  b {
+    display: block;
+    color: var(--bp-navy);
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+// Demo-Folie ohne eingebettetes iframe: Screenshot plus Hinweiszeile.
+// Das Bild wird vor der Sitzung erzeugt, die App laeuft in einem eigenen Tab.
+.reveal .bp-screenshot {
+  display: block;
+  max-height: 62vh;
+  width: auto;
+  margin: 0.3em auto;
+  border-radius: var(--bp-r-md);
+  border: 1px solid var(--bp-border);
+  box-shadow: var(--bp-shadow-md);
+}
+
+.reveal .bp-demo-hinweis {
+  font-size: 0.42em;
+  line-height: 1.4;
+  color: var(--bp-navy);
+  text-align: center;
+  margin-top: 0.4em;
+
+  a {
+    font-weight: 700;
+  }
+}
+
+// =========================================================
+// Sektions-Trenner in der Tone-Farbe des jeweiligen Tages
+// =========================================================
+
+// Trenner werden zur zentrierten Spalte. Das Eyebrow steht im Markdown
+// zwangslaeufig hinter der Ueberschrift, order: -1 holt es optisch darueber.
+.reveal section.bp-trenner {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 78%;
+
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  strong,
+  em {
+    color: #fff;
+  }
+
+  h2::before {
+    background: rgba(255, 255, 255, 0.55);
+  }
+
+  .bp-eyebrow {
+    order: -1;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .bp-quote {
+    color: #fff;
+
+    p:first-of-type::before {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .bp-quote__author {
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
+  }
+
+  .bp-quelle {
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
+  }
+}
+
+// Das Eyebrow muss als eigener Flex-Block liegen, sonst greift order nicht.
+.reveal section.bp-trenner > p:has(> .bp-eyebrow) {
+  order: -1;
+  margin-bottom: 0.2em;
+}
+
+// Titelfolie
+#title-slide {
+  .title {
+    color: var(--bp-navy);
+  }
+
+  .subtitle {
+    color: var(--bp-ink);
+    opacity: 0.8;
+    font-size: 0.62em;
+    line-height: 1.4;
+  }
+
+  .quarto-title-authors,
+  .author,
+  .date {
+    font-size: 0.45em;
+    color: var(--bp-navy);
+    opacity: 0.75;
+  }
+}
+
+// Fusszeile und Folienzahl ruhig halten
+.reveal .footer,
+.reveal .slide-number {
+  font-size: 0.36em;
+  color: var(--bp-navy);
+  opacity: 0.6;
+}
+
+.reveal .slide-number {
+  background: none;
+  top: auto !important;
+  bottom: 10px !important;
+  right: 14px !important;
+  left: auto !important;
+}
+
+// Fusszeile und Folienzahl liegen ausserhalb der Folie und lassen sich nicht
+// folienweise umfaerben. Reveal setzt aber has-dark-background auf dem Viewport,
+// sobald die aktuelle Folie einen dunklen Hintergrund hat. Genau da haengen wir ein.
+.reveal-viewport.has-dark-background {
+  .footer,
+  .slide-number {
+    color: rgba(255, 255, 255, 0.8);
+    opacity: 0.85;
+  }
+}
+
+// Tabellen kompakter, sonst sprengen sie 720 px Hoehe
+.reveal table {
+  font-size: 0.5em;
+  margin: 0.3em 0;
+
+  th {
+    color: var(--bp-navy);
+    border-bottom: 2px solid var(--bp-border);
+  }
+
+  td,
+  th {
+    padding: 0.28em 0.5em;
+  }
+}
+
+// Pandoc packt Inhalte von Fenced Divs in Absaetze. Innerhalb der kompakten
+// Bausteine sollen die Absatz-Abstaende nicht doppelt zaehlen.
+.reveal .bp-stat p,
+.reveal .bp-pillar p,
+.reveal .bp-card p,
+.reveal .bp-quote p,
+.reveal .bp-quelle p,
+.reveal .bp-rolle p,
+.reveal .bp-runde__gruppe p,
+.reveal .bp-demo-hinweis p {
+  margin: 0;
+}
+
+.reveal .bp-pillar p + p,
+.reveal .bp-card p + p {
+  margin-top: 0.3em;
+}
+
+.reveal ul,
+.reveal ol {
+  margin-left: 0.6em;
+}
+
+.reveal li {
+  margin-bottom: 0.25em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

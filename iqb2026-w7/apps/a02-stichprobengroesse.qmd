@@ -1,0 +1,147 @@
+---
+title: "Signifikanz durch Datenmasse"
+subtitle: "Einheit 1 · Der p-Wert misst vor allem n"
+---
+
+Der Zuwachs bleibt konstant bei 0,2 Punkten. Verändern lässt sich nur, wie
+viele Lernende getestet werden.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 700
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.ticker as mticker
+from scipy.stats import t as t_dist
+
+plt.rcParams.update({"font.size": 12})
+
+DIFF = 0.2          # Zuwachs in Punkten, bleibt konstant
+SD = 3.0
+MEAN_OHNE = 12.3
+MEAN_MIT = MEAN_OHNE + DIFF
+
+def compute_p(n):
+    se = SD * np.sqrt(2.0 / n)
+    t_stat = DIFF / se
+    df = 2 * n - 2
+    return t_dist.sf(np.abs(t_stat), df) * 2
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Signifikanz durch Datenmasse"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Erhebung steuern"),
+                ui.input_slider("n_lernende", "Getestete Lernende pro Gruppe",
+                                10, 5000, 50, step=50),
+                ui.hr(),
+                ui.output_ui("stats_panel"),
+            ),
+            ui.output_plot("dual_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+
+    @render.plot
+    def dual_plot():
+        n = input.n_lernende()
+        p_val = compute_p(n)
+
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6), layout="constrained")
+
+        # Linkes Panel: Verlauf des p-Wertes
+        n_vals = np.linspace(10, 5000, 400)
+        se_vals = SD * np.sqrt(2.0 / n_vals)
+        t_vals = DIFF / se_vals
+        p_vals = t_dist.sf(np.abs(t_vals), 2 * n_vals - 2) * 2
+
+        ax1.plot(n_vals, p_vals, color='#34495e', linewidth=2,
+                 label='Verlauf des p Wertes')
+        pt_color = '#e74c3c' if p_val < 0.05 else '#2980b9'
+        ax1.scatter([n], [p_val], color=pt_color, s=150, zorder=5,
+                    label=f'Aktuell: p = {p_val:.4f}')
+        ax1.axhline(0.05, color='#e74c3c', linestyle='dotted', linewidth=2,
+                    label='Signifikanzschwelle (0.05)')
+
+        ax1.xaxis.set_major_formatter(mticker.StrMethodFormatter('{x:.0f}'))
+        ax1.set_xlabel("Getestete Lernende pro Gruppe")
+        ax1.set_ylabel("p Wert")
+        ax1.set_title("p Wert schrumpft mit der Stichprobengröße", fontsize=10)
+        ax1.set_ylim(-0.02, 1.0)
+        ax1.set_xlim(0, 5000)
+        ax1.legend(loc='upper right', fontsize=9)
+        ax1.spines['top'].set_visible(False)
+        ax1.spines['right'].set_visible(False)
+
+        # Rechtes Panel: Mittelwerte mit Konfidenzintervall
+        ci = 1.96 * SD / np.sqrt(n)
+        means = [MEAN_OHNE, MEAN_MIT]
+        labels = ['Ohne Förderung', 'LeseStark']
+        colors = ['#95a5a6', '#3498db']
+        x_pos = [1, 2]
+
+        ax2.bar(x_pos, means, color=colors, alpha=0.75, width=0.4)
+        ax2.errorbar(x_pos, means, yerr=[ci, ci],
+                     color='#2c3e50', linewidth=2.5, capsize=10, fmt='none')
+
+        ci_max = 1.96 * SD / np.sqrt(10)
+        ax2.set_ylim(max(0, MEAN_OHNE - ci_max - 0.5), MEAN_MIT + ci_max + 0.5)
+        ax2.set_xticks(x_pos)
+        ax2.set_xticklabels(labels, fontsize=11)
+        ax2.set_ylabel("Durchschnittliche Testleistung (Punkte)")
+        ax2.set_title(
+            f"Zuwachs: {DIFF:.1f} Punkte | 95% KI: ±{ci:.2f} Punkte",
+            fontsize=10
+        )
+        ax2.spines['top'].set_visible(False)
+        ax2.spines['right'].set_visible(False)
+
+        return fig
+
+    @render.ui
+    def stats_panel():
+        n = input.n_lernende()
+        p_val = compute_p(n)
+        is_sig = p_val < 0.05
+        status_color = "#27ae60" if is_sig else "#2980b9"
+        status_text = "SIGNIFIKANT" if is_sig else "NICHT SIGNIFIKANT"
+
+        ci = 1.96 * SD / np.sqrt(n)
+
+        return ui.div(
+            ui.tags.p(
+                ui.tags.span("Status: ", style="font-weight:bold;"),
+                ui.tags.span(status_text,
+                             style=f"color:{status_color}; font-weight:bold;"),
+            ),
+            ui.tags.p(f"p = {p_val:.4f}", style="font-weight:bold; margin:2px 0;"),
+            ui.tags.p(f"95% KI: ±{ci:.2f} Punkte", style="margin:2px 0;"),
+            ui.tags.hr(style="margin:8px 0;"),
+            ui.tags.p(
+                "Wahrer Zuwachs: konstant 0,2 Punkte.",
+                style="font-size:12px; color:#7f8c8d;"
+            ),
+            style="background:#f8f9fa; padding:12px; border-radius:8px; margin-top:8px;"
+        )
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Der Zuwachs von 0,2 Punkten ist bei einer Streuung von 3 Punkten ein
+**d von etwa 0.07**, also praktisch nichts. Trotzdem wird er ab etwa
+1800 Lernenden je Gruppe hochsignifikant.
+
+Der Balken rechts bewegt sich dabei nie. Nur das Fehlerbalken-Intervall
+schrumpft.
+:::

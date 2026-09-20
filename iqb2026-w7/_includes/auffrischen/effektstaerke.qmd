@@ -1,0 +1,15 @@
+Cohens **d** ist der Unterschied zwischen zwei Mittelwerten, geteilt durch die
+Standardabweichung.
+
+$$d = \frac{|M_1 - M_2|}{SD}$$
+
+Es ist also ein Signal-Rausch-Verhältnis. Ein Zuwachs von 2,1 Punkten bei
+einer Streuung von 5 Punkten ergibt d = 0.42.
+
+Der Gewinn: Studien mit verschiedenen Messinstrumenten werden vergleichbar.
+Der Preis: die Einheit geht verloren, und damit die Grundlage für jede
+praktische Entscheidung.
+
+Die Richtwerte 0.2, 0.5 und 0.8 stammen von Cohen selbst, der sie
+ausdrücklich als Notlösung bezeichnet hat. Sie sind keine inhaltlichen
+Kriterien.

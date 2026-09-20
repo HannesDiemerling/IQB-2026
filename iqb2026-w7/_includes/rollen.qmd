@@ -1,0 +1,10 @@
+| Rolle | Aufgabe |
+|---|---|
+| **Bedienung** | Teilt den Bildschirm und bewegt die Regler. Nur diese eine Person klickt. |
+| **Protokoll** | Hält in zwei bis drei Sätzen fest, was passiert ist. Kein Protokoll, kein Ergebnis. |
+| **Vortrag** | Beantwortet in der nächsten Einheit die Frage der Gruppe. Eine Minute. |
+| **Gegenprobe** | Fragt bei jedem Schritt: würde das auch mit anderen Zahlen gelten? |
+| **Zeit** | Behält die Uhr und sagt an, wann die Gruppe zur letzten Aufgabe muss. |
+
+Die Rollen wandern pro Einheit eine Position weiter. Wenn ihr nur zu viert
+seid, übernimmt die Bedienung die Rolle Zeit mit.

@@ -1,0 +1,187 @@
+---
+title: "Unstandardisierter Effekt in Punkten"
+subtitle: "Einheit 3 · Zuerst die Einheit, dann die Statistik"
+---
+
+Der Zuwachs in Punkten ist die Zahl, über die eine Kommission entscheiden
+kann. Verändere ihn und beobachte, was das für einen ganzen Jahrgang und für
+einzelne Lernende bedeutet.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 750
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+MEAN_OHNE = 10.0
+SD_OHNE = 5.0
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Unstandardisierter Effekt in Punkten"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("LeseStark einstellen"),
+                ui.input_slider("mit_mean",
+                                "Durchschnittliche Testleistung mit LeseStark (Punkte)",
+                                0, 30, 15),
+                ui.input_slider("mit_sd",
+                                "Streuung der Testleistung mit LeseStark (Punkte)",
+                                1, 15, 4),
+                ui.hr(),
+                ui.output_ui("jahrgangsrechner"),
+                ui.output_ui("einzelfall_panel"),
+            ),
+            ui.output_plot("hist_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+
+    @render.plot
+    def hist_plot():
+        mean_mit = input.mit_mean()
+        sd_mit = input.mit_sd()
+        effect = mean_mit - MEAN_OHNE
+
+        np.random.seed(42)
+        data_ohne = np.random.normal(MEAN_OHNE, SD_OHNE, 2000)
+        data_mit = np.random.normal(mean_mit, sd_mit, 2000)
+
+        fig, ax = plt.subplots(figsize=(10, 6), layout="constrained")
+        bins = np.linspace(-10, 40, 60)
+
+        ax.hist(data_ohne, bins=bins, alpha=0.5, color='#95a5a6',
+                label=f'Ohne Förderung  (Ø {MEAN_OHNE:.0f} Punkte)', density=True)
+        ax.hist(data_mit, bins=bins, alpha=0.6, color='#3498db',
+                label=f'Mit LeseStark  (Ø {mean_mit:.0f} Punkte)', density=True)
+
+        ax.axvline(MEAN_OHNE, color='#7f8c8d', linestyle='dotted', linewidth=2)
+        ax.axvline(mean_mit, color='#2980b9', linestyle='dotted', linewidth=2)
+
+        y_arrow = ax.get_ylim()[1] * 0.85
+        if abs(effect) > 0.5:
+            ax.annotate(
+                "", xy=(mean_mit, y_arrow), xytext=(MEAN_OHNE, y_arrow),
+                arrowprops=dict(arrowstyle="<->", color='#2c3e50', lw=2)
+            )
+            ax.text((MEAN_OHNE + mean_mit) / 2, y_arrow * 1.02,
+                    f'{abs(effect):.1f} Punkte', ha='center', va='bottom',
+                    fontweight='bold', fontsize=12, color='#2c3e50')
+
+        title_color = '#27ae60' if effect > 0 else '#c0392b'
+        label = "Zuwachs" if effect > 0 else "Rückgang"
+        ax.set_title(f"Unstandardisierter Effekt: {abs(effect):.1f} Punkte {label}",
+                     color=title_color, fontweight='bold', fontsize=13)
+        ax.set_xlabel("Testleistung in Punkten (Rohwerte)")
+        ax.set_ylabel("Relative Häufigkeit")
+        ax.set_xlim(-10, 40)
+        ax.set_yticks([])
+        ax.legend(loc='upper right')
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        return fig
+
+    @render.ui
+    def jahrgangsrechner():
+        mean_mit = input.mit_mean()
+        effect = mean_mit - MEAN_OHNE
+        lernende = 230                      # Lernende pro Jahrgang
+        jahreswert = effect * lernende      # Punktsumme pro Jahrgang
+        d_wert = effect / SD_OHNE
+
+        if effect > 0:
+            farbe = "#27ae60"
+            pfeil = "▲"
+            label = "gewonnen"
+        else:
+            farbe = "#c0392b"
+            pfeil = "▼"
+            label = "verloren"
+
+        return ui.div(
+            ui.tags.p("Hochrechnung (230 Lernende pro Jahrgang)",
+                      style="font-weight:bold; font-size:13px; margin-bottom:6px;"),
+            ui.tags.p(
+                ui.tags.span(f"{pfeil} {abs(effect):.1f} Punkte ",
+                             style=f"color:{farbe}; font-weight:bold; font-size:16px;"),
+                "pro Lernenden",
+            ),
+            ui.tags.p(
+                ui.tags.span(f"{pfeil} {abs(jahreswert):.0f} Punkte ",
+                             style=f"color:{farbe}; font-weight:bold; font-size:16px;"),
+                f"{label} im Jahrgang",
+            ),
+            ui.tags.p(
+                ui.tags.span(f"= d von {abs(d_wert):.2f}",
+                             style=f"color:{farbe}; font-weight:bold; font-size:16px;"),
+                " bei einer Streuung von 5 Punkten",
+            ),
+            style="background:#f8f9fa; padding:12px; border-radius:8px; margin-top:8px;"
+        )
+
+    @render.ui
+    def einzelfall_panel():
+        mean_mit = input.mit_mean()
+        sd_mit = input.mit_sd()
+        effect = mean_mit - MEAN_OHNE
+
+        # CLES: P(geförderte Person liegt über einer nicht geförderten Person)
+        sigma_diff = np.sqrt(SD_OHNE**2 + sd_mit**2)
+        prob = norm.cdf(effect / sigma_diff) if sigma_diff > 0 else 0.5
+        pct = prob * 100
+
+        if effect <= 0:
+            color = "#c0392b"
+            fazit = "LeseStark verschlechtert den Einzelfall."
+        elif pct >= 80:
+            color = "#27ae60"
+            fazit = "Effekt ist im Einzelfall klar spürbar."
+        elif pct >= 65:
+            color = "#e67e22"
+            fazit = "Effekt ist im Einzelfall mäßig spürbar."
+        else:
+            color = "#c0392b"
+            fazit = "Effekt geht in der Streuung unter."
+
+        return ui.div(
+            ui.tags.p("Einzelfall-Perspektive (CLES)",
+                      style="font-weight:bold; font-size:13px; margin-bottom:6px;"
+                            "margin-top:10px;"),
+            ui.tags.p(
+                ui.tags.span(f"{pct:.0f}% ",
+                             style=f"color:{color}; font-weight:bold; font-size:16px;"),
+                "der Vergleiche gehen an die geförderte Person",
+            ),
+            ui.tags.p(fazit, style=f"color:{color}; font-size:12px; font-style:italic;"),
+            ui.tags.hr(style="margin:6px 0;"),
+            ui.tags.p(
+                "Der Mittelwertsunterschied allein sagt nicht, wie verlässlich "
+                "der Effekt für eine einzelne Person ist. Das hängt auch von "
+                "der Streuung ab.",
+                style="font-size:11px; color:#7f8c8d;"
+            ),
+            style="background:#f8f9fa; padding:12px; border-radius:8px; margin-top:8px;"
+        )
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Stelle die Streuung auf 15 Punkte und lass den Mittelwert stehen. Der Zuwachs
+in Punkten ändert sich nicht, das **d** und die CLES-Prozentzahl brechen aber
+deutlich ein.
+
+Genau das ist der Unterschied zwischen einem Effekt und seiner
+Entdeckbarkeit.
+:::

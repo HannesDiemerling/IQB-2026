@@ -1,0 +1,11 @@
+Der Standardfehler beschreibt, wie genau du den **Mittelwert** geschätzt hast.
+Er ist nicht dasselbe wie die Standardabweichung.
+
+$$SE = \frac{SD}{\sqrt{n}}$$
+
+Die Standardabweichung beschreibt, wie unterschiedlich die Personen sind. Sie
+bleibt gleich, egal wie viele du testest. Der Standardfehler beschreibt deine
+Unsicherheit über den Mittelwert, und er **schrumpft mit der Wurzel aus n**.
+
+Daraus folgt das Wurzelgesetz: um den Standardfehler zu halbieren, brauchst du
+die **vierfache** Zahl an Personen.

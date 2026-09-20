@@ -1,0 +1,72 @@
+---
+title: "Alle Anwendungen"
+subtitle: "19 interaktive Anwendungen, im Browser, ohne Installation"
+---
+
+Normalerweise brauchst du diese Seite nicht. Die Arbeitsblätter verlinken
+jeweils genau die Anwendungen, die du in der Einheit brauchst. Hier stehen
+sie zum Stöbern und Wiederfinden.
+
+::: {.callout-note}
+## Beim ersten Mal dauert es
+
+Die Rechenumgebung wird einmal in deinen Browser geladen, das kann bis zu
+30 Sekunden dauern. Danach startet jede weitere Anwendung schnell, auch an
+Tag 2.
+:::
+
+## Tag 1, die Diagnose
+
+### Einheit 1, Was der p-Wert nicht sagt
+
+- [Gleicher Effekt, gegensätzliche Urteile](a01-schwelle.qmd) · zwei
+  Standorte, derselbe Zuwachs, entgegengesetzte Urteile
+- [Signifikanz durch Datenmasse](a02-stichprobengroesse.qmd) · ein belangloser
+  Effekt wird hochsignifikant
+
+### Einheit 2, Die Freiheitsgrade des Forschens
+
+- [Der Garten der sich verzweigenden Pfade](a03-garten.qmd) · 24 Analysepfade
+  gleichzeitig, bei wahrem Effekt null
+- [Verzerrung durch fehlende Testungen](a04-dropout.qmd) · Drop-out als
+  Auswahlmechanismus
+- [Publikationsbias](a05-publikationsbias.qmd) · 40 Studien, und was davon
+  sichtbar wird
+
+### Einheit 3, Effektstärken und ihre Grenzen
+
+- [Unstandardisierter Effekt in Punkten](a06-rohwerte.qmd) · Hochrechnung und
+  Einzelfallperspektive
+- [Cohens d in zwei Kontexten](a07-cohens-d.qmd) · Entdeckbarkeit und
+  Vergleichbarkeit
+- [Signifikanz gegen praktische Bedeutsamkeit](a08-relevanzschwelle.qmd) ·
+  deine eigene Relevanzschwelle
+- [Reliabilität dämpft Effektstärken](a09-minderung.qmd) · die Obergrenze, die
+  niemand berichtet
+
+## Tag 2, die Alternative
+
+### Einheit 4, Die Frage umdrehen
+
+- [Zwei Welten der Wahrscheinlichkeit](a10-zwei-welten.qmd) · dieselben Daten,
+  zwei Antworten
+- [Screening auf Leseförderbedarf](a11-screening.qmd) · Basisraten und warum
+  die Intuition kippt
+- [p-Wert und Posterior nebeneinander](a12-p-und-posterior.qmd) · die Brücke
+  zwischen den beiden Tagen
+
+### Einheit 5, Prior, Likelihood, Posterior
+
+- [Der Prior](a13-prior.qmd) · uninformativ ist nicht neutral
+- [Die Likelihood](a14-likelihood.qmd) · die Daten stehen fest, die Hypothese
+  wandert
+- [Der Posterior](a15-posterior.qmd) · Prior und Pilotdaten fusionieren
+
+### Einheit 6, Evidenz berichten
+
+- [HDI und ROPE](a16-hdi-rope.qmd) · aus einer Verteilung eine Entscheidung
+- [Bayes-Faktor und Evidenzstärke](a17-bayesfaktor.qmd) · Evidenz in beide
+  Richtungen
+- [Posterior oder Vorhersage](a18-vorhersage.qmd) · zwei Arten von
+  Unsicherheit
+- [MCMC](a19-mcmc.qmd) · wenn sich die Posterior nicht ausrechnen lässt

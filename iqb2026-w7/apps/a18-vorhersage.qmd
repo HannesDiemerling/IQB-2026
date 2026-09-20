@@ -1,0 +1,94 @@
+---
+title: "Posterior oder Vorhersage?"
+subtitle: "Einheit 6 · Zwei Arten von Unsicherheit"
+---
+
+Der Posterior beschreibt den **Durchschnittseffekt**. Die Vorhersage
+beschreibt, was bei **einer einzelnen Person** passiert. Das sind zwei
+verschiedene Fragen mit zwei verschiedenen Breiten.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 650
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Vorhersage für die nächste Person"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Wissen über den Durchschnittseffekt"),
+                ui.input_slider("post_mean", "Geschätzter Zuwachs Theta", 0, 20, 6),
+                ui.input_slider("post_sd", "Unsicherheit über Theta", 0.1, 10, 2),
+                ui.hr(),
+                ui.h5("Unterschiede zwischen Lernenden"),
+                ui.input_slider("noise_sd", "Natürliche Streuung pro Person", 1, 15, 4),
+            ),
+            ui.output_plot("pred_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+    @render.plot
+    def pred_plot():
+        mu = input.post_mean()
+        sd_theta = input.post_sd()
+        sd_noise = input.noise_sd()
+
+        # Die Vorhersagevarianz ist die Summe aus Parametervarianz und
+        # natuerlicher Streuung.
+        sd_pred = np.sqrt(sd_theta**2 + sd_noise**2)
+
+        x_vals = np.linspace(-20, 50, 400)
+        post_y = norm.pdf(x_vals, mu, sd_theta)
+        pred_y = norm.pdf(x_vals, mu, sd_pred)
+
+        fig, ax = plt.subplots(figsize=(10, 6), layout="constrained")
+
+        ax.plot(x_vals, post_y, color='#8e44ad', linewidth=2,
+                label='Posterior P(Theta|D), der Durchschnitt')
+        ax.fill_between(x_vals, 0, post_y, color='#8e44ad', alpha=0.3)
+
+        ax.plot(x_vals, pred_y, color='#e67e22', linewidth=3,
+                label='Vorhersage P(y neu|D), die einzelne Person')
+
+        ax.axvline(0, color='#34495e', linestyle='dotted', linewidth=1.5)
+
+        ax.set_title("Vorhersage für die nächste geförderte Person")
+        ax.set_xlabel("Kompetenzzuwachs in Punkten")
+        ax.set_ylabel("Wahrscheinlichkeitsdichte")
+        ax.set_xlim(-20, 50)
+        ax.set_ylim(0, max(np.max(post_y), np.max(pred_y)) * 1.2)
+        ax.set_yticks([])
+
+        ax.legend(loc="upper right")
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        return fig
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Zieh die **Unsicherheit über Theta** auf 0,1 herunter. Die violette Kurve wird
+extrem schmal: du kennst den Durchschnittseffekt jetzt fast exakt.
+
+Die orange Kurve bleibt trotzdem breit. Diese Unsicherheit verschwindet nicht,
+egal wie viele Daten du sammelst. Sie ist keine Wissenslücke, sie ist die
+echte Unterschiedlichkeit zwischen Lernenden.
+
+Praktische Konsequenz: "Das Programm bringt im Schnitt 6 Punkte" und "Dieses
+Kind wird 6 Punkte gewinnen" sind völlig verschiedene Aussagen. Für
+Förderentscheidungen im Einzelfall ist die orange Kurve die richtige.
+:::

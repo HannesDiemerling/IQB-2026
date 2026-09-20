@@ -1,0 +1,12 @@
+Reliabilität ist die Zuverlässigkeit einer Messung, also der Anteil der
+beobachteten Streuung, der auf echte Unterschiede zwischen Personen zurückgeht
+und nicht auf Messfehler.
+
+Sie läuft von 0 bis 1. Ein Wert von **.70** heißt: 70 Prozent der Streuung in
+deinen Testwerten sind echte Unterschiede, 30 Prozent sind Rauschen. Für
+Schulleistungstests sind Werte zwischen .70 und .90 üblich.
+
+Berichtet wird sie meist als Cronbachs Alpha oder als Retest-Korrelation.
+
+Warum das hier zählt: unzuverlässige Messung **dämpft** jede Effektstärke, und
+zwar systematisch nach unten. Mehr Fälle helfen dagegen nicht.

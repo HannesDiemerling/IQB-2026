@@ -1,0 +1,249 @@
+---
+title: "Cohens d in zwei Kontexten"
+subtitle: "Einheit 3 · Was d leistet"
+---
+
+Cohens d leistet zwei verschiedene Dinge. Schalte zwischen beiden um und sieh
+dir an, was jeweils passiert.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 780
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+EFFEKT_PKT = 5.0     # fixer Zuwachs in Punkten (Aspekt 1)
+MEAN_OHNE = 10.0     # Ausgangsniveau ohne Foerderung (Aspekt 1)
+
+SD_KURZ = 1.0        # Aspekt 2: Screening-Kurzform, Skala 1 bis 5
+SD_VOLL = 20.0       # Aspekt 2: Vollform des Lesetests, Skala 0 bis 100
+BASE_KURZ = 3.2      # Ausgangswert Kurzform
+BASE_VOLL = 64.0     # Ausgangswert Vollform
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Cohens d in zwei Kontexten"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Aspekt"),
+                ui.input_radio_buttons(
+                    "aspekt", None,
+                    choices={
+                        "detect":  "1. Entdeckbarkeit",
+                        "compare": "2. Vergleichbarkeit",
+                    },
+                    selected="detect"
+                ),
+                ui.hr(),
+                ui.panel_conditional(
+                    "input.aspekt === 'detect'",
+                    ui.h5("Streuung einstellen"),
+                    ui.input_slider("sd_val", "Streuung der Testleistung (Punkte)",
+                                    min=1.0, max=20.0, value=5.0, step=0.5),
+                ),
+                ui.panel_conditional(
+                    "input.aspekt === 'compare'",
+                    ui.h5("Effektgröße einstellen"),
+                    ui.input_slider("d_val", "Cohens d",
+                                    min=0.1, max=1.5, value=0.5, step=0.05),
+                ),
+                ui.hr(),
+                ui.output_ui("info_panel"),
+            ),
+            ui.output_plot("main_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+
+    @render.plot
+    def main_plot():
+        aspekt = input.aspekt()
+
+        if aspekt == "detect":
+            sd = input.sd_val()
+            d = EFFEKT_PKT / sd
+            mean_mit = MEAN_OHNE + EFFEKT_PKT
+
+            span = max(4.0 * sd, EFFEKT_PKT + 2.0 * sd)
+            x = np.linspace(MEAN_OHNE - span, mean_mit + span, 500)
+
+            y_ohne = norm.pdf(x, MEAN_OHNE, sd)
+            y_mit = norm.pdf(x, mean_mit, sd)
+
+            fig, ax = plt.subplots(figsize=(10, 6), layout="constrained")
+            ax.fill_between(x, y_ohne, alpha=0.45, color='#95a5a6',
+                            label='Ohne Förderung')
+            ax.fill_between(x, y_mit, alpha=0.55, color='#3498db',
+                            label='Mit LeseStark')
+            ax.axvline(MEAN_OHNE, color='#7f8c8d', linestyle='dotted', lw=1.5)
+            ax.axvline(mean_mit, color='#2980b9', linestyle='dotted', lw=1.5)
+
+            tf = ax.get_xaxis_transform()
+            ax.annotate("", xy=(mean_mit, 0.80), xytext=(MEAN_OHNE, 0.80),
+                        xycoords=tf, textcoords=tf,
+                        arrowprops=dict(arrowstyle="<->", color='#2c3e50', lw=2))
+            ax.text((MEAN_OHNE + mean_mit) / 2, 0.85,
+                    f'{EFFEKT_PKT:.0f} Punkte', ha='center', transform=tf,
+                    fontweight='bold', fontsize=11, color='#2c3e50')
+
+            ax.set_title(f"d = {EFFEKT_PKT:.0f} Punkte / {sd:.1f} Punkte = {d:.2f}",
+                         fontweight='bold', fontsize=13)
+            ax.set_xlabel("Testleistung in Punkten")
+            ax.set_ylabel("Dichte")
+            ax.set_yticks([])
+            ax.set_ylim(0, max(y_ohne.max(), y_mit.max()) * 1.2)
+            ax.legend(loc='upper right')
+            ax.spines['top'].set_visible(False)
+            ax.spines['right'].set_visible(False)
+            return fig
+
+        else:
+            d = input.d_val()
+            eff_kurz = d * SD_KURZ
+            eff_voll = d * SD_VOLL
+
+            fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 6), layout="constrained")
+
+            # Screening-Kurzform
+            span_k = 3.5 * SD_KURZ
+            x_k = np.linspace(BASE_KURZ - span_k, BASE_KURZ + eff_kurz + span_k, 400)
+            yk_base = norm.pdf(x_k, BASE_KURZ, SD_KURZ)
+            yk_neu = norm.pdf(x_k, BASE_KURZ + eff_kurz, SD_KURZ)
+
+            ax1.fill_between(x_k, yk_base, alpha=0.45, color='#95a5a6',
+                             label='Ohne Förderung')
+            ax1.fill_between(x_k, yk_neu, alpha=0.55, color='#3498db',
+                             label='Mit LeseStark')
+            ax1.axvline(BASE_KURZ, color='#7f8c8d', linestyle='dotted', lw=1.5)
+            ax1.axvline(BASE_KURZ + eff_kurz, color='#2980b9', linestyle='dotted', lw=1.5)
+
+            tf1 = ax1.get_xaxis_transform()
+            ax1.annotate("", xy=(BASE_KURZ + eff_kurz, 0.80), xytext=(BASE_KURZ, 0.80),
+                         xycoords=tf1, textcoords=tf1,
+                         arrowprops=dict(arrowstyle="<->", color='#2c3e50', lw=2))
+            ax1.text(BASE_KURZ + eff_kurz / 2, 0.85, f'+{eff_kurz:.2f} Pkt.',
+                     ha='center', transform=tf1,
+                     fontweight='bold', fontsize=10, color='#2c3e50')
+
+            ax1.set_title(f"Screening-Kurzform (Skala 1 bis 5)\n"
+                          f"d = {eff_kurz:.2f} / {SD_KURZ:.0f} = {d:.2f}",
+                          fontweight='bold', fontsize=11)
+            ax1.set_xlabel("Lesekompetenz (1 bis 5 Punkte)")
+            ax1.set_ylabel("Dichte")
+            ax1.set_yticks([])
+            ax1.set_ylim(0, max(yk_base.max(), yk_neu.max()) * 1.2)
+            ax1.legend(fontsize=8)
+            ax1.spines['top'].set_visible(False)
+            ax1.spines['right'].set_visible(False)
+
+            # Vollform
+            span_v = 3.5 * SD_VOLL
+            x_v = np.linspace(BASE_VOLL - span_v, BASE_VOLL + eff_voll + span_v, 400)
+            yv_base = norm.pdf(x_v, BASE_VOLL, SD_VOLL)
+            yv_neu = norm.pdf(x_v, BASE_VOLL + eff_voll, SD_VOLL)
+
+            ax2.fill_between(x_v, yv_base, alpha=0.45, color='#95a5a6',
+                             label='Ohne Förderung')
+            ax2.fill_between(x_v, yv_neu, alpha=0.55, color='#27ae60',
+                             label='Mit LeseStark')
+            ax2.axvline(BASE_VOLL, color='#7f8c8d', linestyle='dotted', lw=1.5)
+            ax2.axvline(BASE_VOLL + eff_voll, color='#229954', linestyle='dotted', lw=1.5)
+
+            tf2 = ax2.get_xaxis_transform()
+            ax2.annotate("", xy=(BASE_VOLL + eff_voll, 0.80), xytext=(BASE_VOLL, 0.80),
+                         xycoords=tf2, textcoords=tf2,
+                         arrowprops=dict(arrowstyle="<->", color='#2c3e50', lw=2))
+            ax2.text(BASE_VOLL + eff_voll / 2, 0.85, f'+{eff_voll:.1f} Pkt.',
+                     ha='center', transform=tf2,
+                     fontweight='bold', fontsize=10, color='#2c3e50')
+
+            ax2.set_title(f"Vollform des Lesetests (Skala 0 bis 100)\n"
+                          f"d = {eff_voll:.1f} / {SD_VOLL:.0f} = {d:.2f}",
+                          fontweight='bold', fontsize=11)
+            ax2.set_xlabel("Lesekompetenz (0 bis 100 Punkte)")
+            ax2.set_ylabel("Dichte")
+            ax2.set_yticks([])
+            ax2.set_ylim(0, max(yv_base.max(), yv_neu.max()) * 1.2)
+            ax2.legend(fontsize=8)
+            ax2.spines['top'].set_visible(False)
+            ax2.spines['right'].set_visible(False)
+
+            return fig
+
+    @render.ui
+    def info_panel():
+        aspekt = input.aspekt()
+
+        if aspekt == "detect":
+            sd = input.sd_val()
+            d = EFFEKT_PKT / sd
+            prob = norm.cdf(d / np.sqrt(2)) * 100
+
+            if d >= 0.8:
+                farbe = "#27ae60"
+                fazit = "Effekt klar erkennbar."
+            elif d >= 0.4:
+                farbe = "#e67e22"
+                fazit = "Effekt mäßig erkennbar."
+            else:
+                farbe = "#c0392b"
+                fazit = "Effekt geht im Rauschen unter."
+
+            return ui.div(
+                ui.tags.p(
+                    "d = ",
+                    ui.tags.span(f"{d:.2f}",
+                                 style=f"color:{farbe}; font-weight:bold; font-size:18px;"),
+                ),
+                ui.tags.p(f"In {prob:.0f}% der Vergleiche liegt die geförderte "
+                          f"Person vorn.", style="margin:2px 0;"),
+                ui.tags.p(fazit,
+                          style=f"color:{farbe}; font-style:italic; font-size:12px;"),
+                style="background:#f8f9fa; padding:12px; border-radius:8px; margin-top:8px;"
+            )
+
+        else:
+            d = input.d_val()
+            eff_kurz = d * SD_KURZ
+            eff_voll = d * SD_VOLL
+
+            return ui.div(
+                ui.tags.p("Screening-Kurzform (1 bis 5):", style="font-weight:bold;"),
+                ui.tags.p(f"Roheffekt: +{eff_kurz:.2f} Pkt. | d = {d:.2f}",
+                          style="color:#3498db; margin:2px 0;"),
+                ui.tags.hr(style="margin:6px 0;"),
+                ui.tags.p("Vollform (0 bis 100):", style="font-weight:bold;"),
+                ui.tags.p(f"Roheffekt: +{eff_voll:.1f} Pkt. | d = {d:.2f}",
+                          style="color:#27ae60; margin:2px 0;"),
+                ui.tags.hr(style="margin:6px 0;"),
+                ui.tags.p(
+                    "Beide messen denselben Effekt.",
+                    style="font-weight:bold; font-size:12px; color:#2c3e50;"
+                ),
+                style="background:#f8f9fa; padding:12px; border-radius:8px; "
+                      "margin-top:8px; font-size:13px;"
+            )
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+**Aspekt 1:** Der Zuwachs bleibt immer bei 5 Punkten. Nur die Streuung
+verändert sich, und mit ihr das d. Genau deshalb ist d ein
+Signal-Rausch-Verhältnis und keine Größenangabe.
+
+**Aspekt 2:** Zwei Instrumente für dieselbe Kompetenz, zwei völlig
+verschiedene Rohwerte, identisches d. Das ist der Grund, warum es d
+überhaupt gibt. Der Preis: die Einheit ist weg, und mit ihr die
+Entscheidungsgrundlage.
+:::

@@ -1,0 +1,186 @@
+---
+title: "Abschluss"
+subtitle: "Der Ergebnissatz, und was du davon mitnimmst"
+author: "Hannes Diemerling"
+date: "2026-09-24"
+date-format: "D. MMMM YYYY"
+title-slide-attributes:
+  data-background-color: "#F7F2EA"
+---
+
+## Fragerunde: Einheit 6 {background-color="#2A3F66"}
+
+[10 Minuten · eine Minute pro Gruppe]{.bp-eyebrow}
+
+::: {.bp-callout}
+Euer Ergebnissatz für LeseStark. Ein Satz, mit Zahl, Intervall und
+Relevanzaussage.
+:::
+
+::: {.bp-runde}
+::: {.bp-runde__gruppe}
+[1]{.bp-runde__num}
+[Gruppe 1]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[2]{.bp-runde__num}
+[Gruppe 2]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[3]{.bp-runde__num}
+[Gruppe 3]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[4]{.bp-runde__num}
+[Gruppe 4]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[5]{.bp-runde__num}
+[Gruppe 5]{.bp-runde__label}
+:::
+:::
+
+::: notes
+Die wichtigste Fragerunde der beiden Tage. Jede Gruppe liest ihren Satz laut
+vor, und ich schreibe ihn auf der Tafel mit, wörtlich.
+
+Nicht korrigieren, während vorgelesen wird. Erst alle fünf sammeln, dann
+gemeinsam anschauen.
+
+Worauf ich beim Vergleich zeige: Wer hat die Einheit genannt? Wer hat ein
+Intervall? Wer hat sich getraut, "noch nicht entschieden" zu schreiben? Der
+letzte Punkt ist der mutigste und der richtigste.
+
+Wenn alle fünf Sätze einen relevanten Effekt behaupten, obwohl das HDI die ROPE
+überlappt: das ansprechen, freundlich. Der Reflex, ein Ergebnis positiv zu
+verkaufen, ist stärker als anderthalb Tage Workshop, und das ist die ehrlichste
+Beobachtung, die man am Ende machen kann.
+:::
+
+## Vorher und nachher
+
+::: {.bp-zwei}
+::: {.bp-pillar .tone-sand}
+[Gestern früh]{.bp-pillar__num}
+
+### Der übliche Satz
+
+"LeseStark führte zu einer signifikanten Verbesserung der Lesekompetenz
+(p = .047)."
+
+Klingt nach einem Ergebnis. Enthält keine Zahl, keine Einheit, keine
+Unsicherheit und keine Aussage über Relevanz.
+:::
+::: {.bp-pillar .tone-navy}
+[Heute Abend]{.bp-pillar__num}
+
+### Der Satz, den du jetzt schreiben kannst
+
+"LeseStark bringt 2,1 Punkte, 95 % HDI [0,0; 4,2], gemessen mit einem
+Instrument der Reliabilität .70. Mit 98 % Wahrscheinlichkeit wirkt das
+Programm überhaupt, mit 20 % Wahrscheinlichkeit um mehr als die
+Relevanzschwelle von 3 Punkten. Für eine Förderentscheidung reichen die Daten
+noch nicht."
+:::
+:::
+
+::: {.bp-warn}
+Der zweite Satz ist länger, unbequemer und deutlich weniger verkäuflich. Er ist
+auch der einzige der beiden, der stimmt.
+:::
+
+::: notes
+Der Höhepunkt und der Schlusspunkt. Hier Zeit lassen, das ist die Folie, die
+hängen bleibt.
+
+Beide Sätze vorlesen, den zweiten langsam. Dann die vier Bestandteile zeigen
+und jeweils sagen, aus welcher Einheit sie stammen: die Zahl mit Einheit aus
+Einheit 3, die Reliabilität aus Einheit 3, das Intervall aus Einheit 5, die
+Relevanzaussage aus Einheit 6.
+
+Der Warnkasten ist wichtig und ehrlich. Ich verkaufe hier nicht, dass der
+bessere Satz auch der bequemere ist. Er ist es nicht. Er ist schwerer zu
+schreiben, schwerer zu publizieren und schwerer in eine Pressemitteilung zu
+bekommen.
+
+Wenn der Einwand kommt, dass so ein Satz in keinem Journal durchgeht: ernst
+nehmen und zustimmen. Und dann darauf hinweisen, dass sich das ändert, und
+zwar in genau dem Tempo, in dem Leute wie die hier Anwesenden anfangen, es
+anders zu machen und es in Begutachtungen einzufordern.
+
+Rund 6 Minuten.
+:::
+
+## Was du morgen anders machen kannst
+
+::: {.bp-aufgabe}
+1. **Berichte den unstandardisierten Effekt zuerst.** Mit Einheit. Immer.
+2. **Nenne die Reliabilität deines Instruments** neben jeder Effektstärke.
+3. **Lege eine Relevanzschwelle fest**, bevor du die Daten siehst, und schreib
+   sie auf.
+4. **Rechne einen Befund zusätzlich bayesianisch.** In JASP dauert das fünf
+   Minuten.
+5. **Frag in der nächsten Begutachtung** nach dem Intervall, nicht nach dem
+   p-Wert.
+:::
+
+::: {.bp-callout}
+Punkt 1 bis 3 kosten nichts und ändern sofort etwas. Punkt 4 und 5 sind die,
+die das Feld bewegen.
+:::
+
+::: notes
+Fünf konkrete Dinge, kein Appell. Das ist der Unterschied zwischen einem
+Workshop, nach dem man sich gut fühlt, und einem, nach dem sich etwas ändert.
+
+Punkt 3 ist der unterschätzteste. Eine Relevanzschwelle vorher festzulegen
+kostet zehn Minuten Nachdenken und schützt gegen die halbe Liste von gestern.
+
+Punkt 5 ist der, der über die eigene Arbeit hinauswirkt. Wer begutachtet, hat
+Einfluss, und die meisten hier begutachten.
+
+Wenn Zeit ist: zwei oder drei Personen fragen, welchen Punkt sie tatsächlich
+umsetzen. Ausgesprochene Vorsätze werden eher umgesetzt als gedachte.
+
+Rund 3 Minuten.
+:::
+
+## Mitnehmen und weitergeben {.bp-plain}
+
+::: {.bp-zwei}
+::: {}
+Alle Folien, alle Anwendungen und alle Arbeitsblätter bleiben online und stehen
+unter **CC BY 4.0**. Du darfst sie in eigener Lehre einsetzen, umbauen und
+weitergeben.
+
+Die Anwendungen laufen ohne Installation im Browser und funktionieren auch
+offline, wenn die Seite einmal geladen war.
+:::
+::: {}
+::: {.bp-quelle}
+Die Grundlagen dieses Workshops stammen aus dem Projekt Beyond p-values an der
+HMU Health and Medical University Erfurt, gefördert von der VolkswagenStiftung
+in der Förderlinie Pioniervorhaben. Für das IQB neu geschnitten und auf die
+Bildungsforschung übertragen.
+:::
+:::
+:::
+
+::: {.bp-quote}
+Danke für zwei Tage, an denen niemand so getan hat, als wäre das alles einfach.
+:::
+
+::: notes
+Kurz und ohne Pathos. Eine Minute.
+
+Die drei Sachinformationen: bleibt online, CC BY, funktioniert offline. Mehr
+braucht es nicht.
+
+Die Herkunftsangabe ist hier die zweite und letzte Nennung, nach der
+Vorstellungsfolie an Tag 1. Nicht vorlesen, sie steht da.
+
+Dann bedanken und pünktlich um 18:00 aufhören. Das war zweimal versprochen
+worden.
+
+Wer noch Fragen hat, kann bleiben. Den Raum nicht sofort schließen.
+:::

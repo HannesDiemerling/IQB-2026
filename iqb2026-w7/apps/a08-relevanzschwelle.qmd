@@ -1,0 +1,136 @@
+---
+title: "Signifikanz gegen praktische Bedeutsamkeit"
+subtitle: "Einheit 3 · Pufferaufgabe"
+---
+
+Die Studie ist hochsignifikant, p < 0.001. Die Frage ist eine andere: reicht
+der Zuwachs, damit sich eine Entscheidung ändert? Diese Schwelle setzt du
+selbst.
+
+Der Regler arbeitet in **Hundertstelpunkten**, damit auch sehr kleine Effekte
+sichtbar bleiben. 100 Hundertstelpunkte sind ein ganzer Kompetenzpunkt.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 720
+
+from shiny import App, render, ui
+import matplotlib.pyplot as plt
+
+KOSTEN_MIO = 180        # Millionen Euro Programmkosten
+LERNENDE_JAHR = 500_000 # gefoerderte Lernende pro Jahr
+JAHRE = 10              # Laufzeit
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Signifikanz gegen praktische Bedeutsamkeit"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Studienergebnis"),
+                ui.input_slider("eff_hp", "Gemessener Zuwachs (Hundertstelpunkte)",
+                                1, 600, 4),
+                ui.tags.p("Studie: p < 0.001, statistisch hochsignifikant.",
+                          style="font-size:12px; color:#7f8c8d;"),
+                ui.hr(),
+                ui.h5("Deine Relevanzschwelle"),
+                ui.input_slider("schwelle", "Ab wann ist es dir relevant? (Hundertstelpunkte)",
+                                10, 600, 120),
+                ui.hr(),
+                ui.output_ui("invest_panel"),
+            ),
+            ui.output_plot("relevanz_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+
+    @render.plot
+    def relevanz_plot():
+        eff = input.eff_hp()
+        schwelle = input.schwelle()
+
+        is_relevant = eff >= schwelle
+        bar_color = '#27ae60' if is_relevant else '#c0392b'
+
+        fig, ax = plt.subplots(figsize=(10, 6), layout="constrained")
+
+        ax.barh(["Gemessener\nZuwachs"], [eff], color=bar_color, height=0.35, alpha=0.85)
+        ax.axvline(schwelle, color='#2c3e50', linestyle='dotted', linewidth=2.5)
+
+        ax.text(schwelle + 8, 0, f'Deine Schwelle:\n{schwelle/100:.2f} Punkte',
+                va='center', fontweight='bold', fontsize=10, color='#2c3e50')
+
+        ax.set_xlim(0, 720)
+        ax.set_xlabel("Zuwachs in Hundertstelpunkten")
+
+        status = "Praktisch relevant" if is_relevant else "Praktisch irrelevant"
+        status_color = '#27ae60' if is_relevant else '#c0392b'
+        konj = "und" if is_relevant else "aber"
+        ax.set_title(f"Hochsignifikant, {konj}: {status}",
+                     fontweight='bold', color=status_color, fontsize=13)
+
+        eff_punkte = eff / 100
+        ax.text(eff / 2 if eff > 30 else eff + 5,
+                -0.28, f'{eff_punkte:.2f} Punkte',
+                ha='center', va='top', fontsize=10, color='#7f8c8d')
+
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.spines['left'].set_visible(False)
+        ax.set_yticks([])
+
+        return fig
+
+    @render.ui
+    def invest_panel():
+        eff_hp = input.eff_hp()
+
+        hp_gesamt = eff_hp * LERNENDE_JAHR * JAHRE
+        punkte_ges = hp_gesamt / 100
+        kosten_eur = KOSTEN_MIO * 1_000_000
+
+        kosten_pro_punkt = kosten_eur / punkte_ges if punkte_ges > 0 else float('inf')
+        kosten_str = (f"{kosten_pro_punkt:,.0f} €" if kosten_pro_punkt < 1_000_000
+                      else f"{kosten_pro_punkt/1_000_000:.1f} Mio €")
+
+        return ui.div(
+            ui.tags.p("Investitionsrechner",
+                      style="font-weight:bold; font-size:13px; margin-bottom:6px;"),
+            ui.tags.p(
+                ui.tags.span(
+                    f"{eff_hp/100:.2f} Punkte × {LERNENDE_JAHR:,} Lernende/Jahr × {JAHRE} Jahre",
+                    style="font-size:11px; color:#7f8c8d;"),
+            ),
+            ui.tags.p(
+                ui.tags.span(f"= {punkte_ges:,.0f} Punkte ",
+                             style="font-weight:bold; font-size:14px;"),
+                "Kompetenzzuwachs gesamt",
+            ),
+            ui.tags.p(
+                ui.tags.span(f"{KOSTEN_MIO} Mio € ÷ {punkte_ges:,.0f} Punkte",
+                             style="font-size:11px; color:#7f8c8d;"),
+            ),
+            ui.tags.p(
+                ui.tags.span(f"= {kosten_str} ",
+                             style="font-weight:bold; font-size:15px; color:#c0392b;"),
+                "pro Kompetenzpunkt",
+            ),
+            style="background:#f8f9fa; padding:12px; border-radius:8px; margin-top:8px;"
+        )
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Bei den Startwerten kostet ein einzelner Kompetenzpunkt rund **900 Euro**. Der
+gemessene Zuwachs von 0,04 Punkten ist hochsignifikant und trotzdem weit
+unterhalb jeder sinnvollen Relevanzschwelle.
+
+Die Signifikanz hat diese Frage nicht beantwortet. Sie konnte es nicht.
+:::

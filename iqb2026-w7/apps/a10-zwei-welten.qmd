@@ -1,0 +1,120 @@
+---
+title: "Zwei Welten der Wahrscheinlichkeit"
+subtitle: "Einheit 4 · Dieselben Daten, zwei Antworten"
+---
+
+Der wahre Anteil der Lernenden, die unter LeseStark den Mindeststandard
+erreichen, liegt bei **85 Prozent**. Du weißt das nicht. Du siehst nur, was du
+getestet hast.
+
+Links die frequentistische Antwort, rechts die bayesianische. Beide bekommen
+exakt dieselben Daten.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 600
+
+from shiny import App, render, ui, reactive
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import beta
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Mindeststandard an der Pilotschule"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Steuerung"),
+                ui.input_slider("step", "Getestete Lernende pro Klick", 1, 50, 1, step=1),
+                ui.input_action_button("sim_btn", "Lernende testen", class_="btn-primary"),
+                ui.input_action_button("reset_btn", "Zurücksetzen",
+                                       class_="btn-outline-secondary"),
+                ui.hr(),
+                ui.p("Jeder Klick testet weitere Lernende und fügt sie den "
+                     "bisherigen hinzu."),
+                ui.p("Der wahre, dir unbekannte Anteil liegt bei 85 %."),
+            ),
+            ui.output_plot("prob_plot"),
+            col_widths=(3, 9)
+        )
+    )
+)
+
+def server(input, output, session):
+
+    data = reactive.Value(np.array([], dtype=int))
+
+    @reactive.Effect
+    @reactive.event(input.sim_btn)
+    def add_lernende():
+        new = np.random.binomial(1, 0.85, input.step())
+        data.set(np.concatenate([data.get(), new]))
+
+    @reactive.Effect
+    @reactive.event(input.reset_btn)
+    def reset_lernende():
+        data.set(np.array([], dtype=int))
+
+    @render.plot
+    def prob_plot():
+        lernende = data.get()
+        n = len(lernende)
+        erreicht = int(np.sum(lernende))
+
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 5), layout="constrained")
+
+        # Frequentistisch: der aktuelle Anteil
+        if n > 0:
+            freq_est = erreicht / n
+            ax1.bar(["Aktueller Anteil"], [freq_est], color="#3498db")
+            ax1.set_title(f"Frequentistisch\n{erreicht} von {n} erreichen den "
+                          f"Standard ({freq_est:.2f})")
+        else:
+            ax1.text(0.5, 0.5, "Noch niemand\ngetestet",
+                     ha="center", va="center", color="#7f8c8d",
+                     transform=ax1.transAxes)
+            ax1.set_title("Frequentistisch\n0 von 0 Lernenden")
+        ax1.axhline(0.85, color="#e74c3c", linestyle="dotted", label="Wahrer Wert")
+        ax1.set_ylim(0, 1)
+        ax1.legend()
+        ax1.spines['top'].set_visible(False)
+        ax1.spines['right'].set_visible(False)
+
+        # Bayesianisch: Posterior bei flachem Prior Beta(1, 1)
+        x = np.linspace(0, 1, 200)
+        alpha_post = 1 + erreicht
+        beta_post = 1 + (n - erreicht)
+        y = beta.pdf(x, alpha_post, beta_post)
+
+        ax2.plot(x, y, color="#2ecc71", linewidth=2)
+        ax2.fill_between(x, 0, y, color="#2ecc71", alpha=0.3)
+        ax2.axvline(0.85, color="#e74c3c", linestyle="dotted")
+        kurve = ("Prior (noch keine Daten)" if n == 0
+                 else f"Posterior nach {n} Lernenden")
+        ax2.set_title(f"Bayesianisch\n{kurve}")
+        ax2.set_xlabel("Möglicher Anteil, der den Mindeststandard erreicht")
+        ax2.set_xlim(0, 1)
+        ax2.set_ylim(bottom=0)
+        ax2.set_yticks([])
+        ax2.spines['top'].set_visible(False)
+        ax2.spines['right'].set_visible(False)
+        ax2.spines['left'].set_visible(False)
+
+        return fig
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Klicke zuerst fünfmal einzeln. Links springt der Balken wild hin und her, weil
+ein Anteil aus wenigen Fällen fast nichts aussagt. Rechts siehst du dagegen
+sofort, **wie unsicher** die Schätzung ist: die Kurve ist breit.
+
+Stelle dann 50 Lernende pro Klick ein und klicke mehrfach. Beide Seiten
+nähern sich dem wahren Wert. Der Unterschied ist, dass die rechte Seite ihre
+eigene Unsicherheit die ganze Zeit mitgeteilt hat.
+:::

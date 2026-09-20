@@ -1,0 +1,124 @@
+---
+title: "Jenseits des Frequentismus"
+subtitle: "Tag 2 · Die Alternative"
+author: "Hannes Diemerling"
+date: "2026-09-24"
+date-format: "D. MMMM YYYY"
+title-slide-attributes:
+  data-background-color: "#F7F2EA"
+---
+
+## Wo wir gestern stehen geblieben sind
+
+::: {.bp-drei}
+::: {.bp-pillar .tone-coral}
+[Einheit 01]{.bp-pillar__num}
+
+### Falsche Frage
+
+Der p-Wert beschreibt die Daten unter einer Annahme, nicht die Hypothese.
+:::
+::: {.bp-pillar .tone-coral}
+[Einheit 02]{.bp-pillar__num}
+
+### Falsch positiv ohne Vorsatz
+
+Verborgene Freiheitsgrade und selektive Auswahl erzeugen Befunde, die niemand
+gefälscht hat.
+:::
+::: {.bp-pillar .tone-coral}
+[Einheit 03]{.bp-pillar__num}
+
+### Zahlen ohne Kontext
+
+Ohne Einheit, Vergleichsmaßstab und Reliabilität ist eine Effektstärke nicht
+interpretierbar.
+:::
+:::
+
+::: {.bp-quote}
+Wie wahrscheinlich ist es, dass LeseStark wirkt, gegeben meine Daten?
+
+[Die Frage, die gestern offen geblieben ist]{.bp-quote__author}
+:::
+
+::: notes
+Drei Sätze, mehr nicht. Die Gruppe war gestern dabei, das ist kein neuer
+Vortrag.
+
+Wenn jemand neu dazukommt, in einem Satz: gestern ging es darum, dass unsere
+Standardwerkzeuge eine andere Frage beantworten als die, die wir stellen.
+
+Das Zitat unten ist die Klammer. Darauf zeigen und sagen: "Heute beantworten
+wir genau die."
+
+Rund 4 Minuten.
+:::
+
+## Heute drehen wir die Frage um
+
+::: {.bp-zwei}
+::: {.bp-pillar .tone-navy}
+[Bisher]{.bp-pillar__num}
+
+### Wie überraschend sind meine Daten, wenn nichts wirkt?
+
+Eine Aussage über die Daten. Sie antwortet mit ja oder nein.
+:::
+::: {.bp-pillar .tone-teal}
+[Ab heute]{.bp-pillar__num}
+
+### Wie plausibel sind verschiedene Wirkungen, gegeben meine Daten?
+
+Eine Aussage über die Wirkung selbst. Sie antwortet mit einer Verteilung.
+:::
+:::
+
+::: {.bp-callout}
+Das ist kein anderer Test. Es ist eine andere Frage. Und deshalb bekommt sie
+eine andere Art von Antwort.
+:::
+
+::: notes
+Die wichtigste Folie des Vormittags, obwohl sie fast nichts enthält.
+
+Den Unterschied zwischen ja-nein und Verteilung betonen. Das ist der Punkt, an
+dem die meisten zum ersten Mal verstehen, warum Bayes kein besserer Test ist,
+sondern eine andere Sorte Antwort.
+
+Wenn jemand fragt, ob das aufwendiger ist: ehrlich antworten. Rechnen ja,
+denken nein. Die Software nimmt einem das Rechnen ab, und das Denken war vorher
+auch nötig, nur hat es niemand verlangt.
+
+Rund 3 Minuten.
+:::
+
+## Der Ablauf heute
+
+::: {.bp-ablauf}
+`14:00`  Ankommen und Einordnung  ·  **10 min**
+`14:10`  **Einheit 4** Die Frage umdrehen  ·  28 min
+`14:38`  Gruppenarbeit 4  ·  32 min
+`15:10`  Pause  ·  10 min
+`15:20`  Fragerunde, dann **Einheit 5** Prior, Likelihood, Posterior  ·  35 min
+`15:55`  Gruppenarbeit 5  ·  30 min
+`16:25`  Pause  ·  15 min
+`16:40`  Fragerunde, dann **Einheit 6** Evidenz berichten  ·  32 min
+`17:12`  Gruppenarbeit 6  ·  28 min
+`17:40`  Fragerunde, Transfer und Abschluss  ·  20 min
+:::
+
+::: {.bp-callout}
+Gleiche Gruppen wie gestern, gleiche Rollen, sie wandern weiter. Ende wieder
+pünktlich um 18:00.
+:::
+
+::: notes
+Zügig. Der Ablauf ist identisch zu gestern, also nur die Unterschiede nennen:
+etwas mehr Zeit in der ersten Gruppenarbeit, weil Bayes für die meisten neu
+ist, und der Transferteil am Ende ist länger.
+
+Kurz ansagen, dass die Gruppen unverändert sind. Das erspart Rückfragen.
+
+Rund 3 Minuten.
+:::

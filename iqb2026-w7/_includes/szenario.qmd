@@ -1,0 +1,16 @@
+**LeseStark** ist ein Leseförderprogramm für die Sekundarstufe I. Gemessen wird
+mit einem standardisierten Lesekompetenztest.
+
+| | |
+|---|---|
+| Testskala | Rohwerte **0 bis 25** Punkte |
+| Mittelwert in der Population | rund **12** Punkte |
+| Streuung | rund **5** Punkte |
+| Reliabilität des Tests | **.70** |
+| Zentrale Evaluationsstudie | **45** Lernende je Gruppe |
+| Beobachteter Zuwachs | **2,1** Punkte, also **d = 0.42** |
+| Relevanzschwelle der Kommission | **3** Punkte |
+
+Diese Zahlen ziehen sich durch alle sechs Einheiten. Wenn dir in einer
+Anwendung eine Zahl begegnet, die du nicht einordnen kannst, ist sie fast immer
+hier erklärt.

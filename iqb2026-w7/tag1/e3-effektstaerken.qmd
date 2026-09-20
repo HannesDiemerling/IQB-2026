@@ -1,0 +1,180 @@
+---
+title: "Arbeitsblatt Einheit 3"
+subtitle: "Effektstärken und ihre Grenzen · 30 Minuten"
+---
+
+## Euer Auftrag
+
+Jede Gruppe arbeitet mit einem **anderen Messinstrument**. Findet heraus,
+welcher wahre Effekt hinter eurem beobachteten d steckt, und was ihr der
+Kommission empfehlen würdet.
+
+In der Fragerunde setzt sich aus euren fünf Antworten eine Kurve zusammen, die
+keine Gruppe allein sehen kann.
+
+**Anwendungen:** [Reliabilität dämpft Effektstärken](../apps/a09-minderung.qmd) ·
+[Unstandardisierter Effekt in Punkten](../apps/a06-rohwerte.qmd) ·
+[Cohens d in zwei Kontexten](../apps/a07-cohens-d.qmd) ·
+[Signifikanz gegen praktische Bedeutsamkeit](../apps/a08-relevanzschwelle.qmd)
+
+## Eure Reliabilität
+
+::: {.callout-warning}
+## Sucht hier eure Gruppennummer
+
+| Gruppe | Reliabilität eures Tests |
+|---|---|
+| Gruppe 1 | **.95** |
+| Gruppe 2 | **.85** |
+| Gruppe 3 | **.75** |
+| Gruppe 4 | **.65** |
+| Gruppe 5 | **.55** |
+
+Alle Gruppen haben denselben **beobachteten** Effekt von **d = 0.42**. Nur die
+Messgenauigkeit unterscheidet sich.
+:::
+
+## Rollen
+
+{{< include /_includes/rollen.qmd >}}
+
+Die Rollen wandern gegenüber Einheit 2 eine Position weiter.
+
+## Aufgabe 1: Beobachten
+
+Öffnet **Unstandardisierter Effekt in Punkten**.
+
+1. Notiert bei den Startwerten den Zuwachs in Punkten und das zugehörige d.
+2. Zieht die Streuung von 4 auf 15. Was passiert mit dem Zuwachs in Punkten,
+   was mit dem d, und was mit der CLES-Prozentzahl?
+3. Formuliert in einem Satz, warum der Zuwachs in Punkten für eine Kommission
+   nützlicher ist als das d.
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Cohens d
+
+{{< include /_includes/auffrischen/effektstaerke.qmd >}}
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 1
+
+Startwerte: 15 minus 10 ergibt **5 Punkte** Zuwachs, bei einer Streuung von
+5 Punkten also **d = 1.00**.
+
+Bei einer Streuung von 15 bleibt der Zuwachs exakt bei 5 Punkten. Das d wird
+nicht angezeigt, aber die CLES-Prozentzahl bricht deutlich ein, weil die
+Verteilungen sich stark überlappen.
+
+Der Zuwachs in Punkten ist die Größe, über die man entscheiden kann. Das d
+sagt, wie gut man ihn vom Rauschen unterscheiden kann. Das sind zwei
+verschiedene Fragen.
+:::
+
+## Aufgabe 2: Manipulieren
+
+Öffnet **Reliabilität dämpft Effektstärken**. Stellt die Reliabilität auf
+**euren Gruppenwert** aus der Tabelle oben.
+
+1. Setzt das wahre d zunächst auf 0.50. Welches d würdet ihr messen?
+2. Verstellt nun das wahre d so lange, bis die Anwendung ein **beobachtetes d
+   von 0.42** anzeigt. Welches wahre d ist das?
+3. Notiert diesen Wert. Ihr braucht ihn in der Fragerunde.
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Reliabilität
+
+{{< include /_includes/auffrischen/reliabilitaet.qmd >}}
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 2
+
+Aus einem wahren d von 0.50 wird bei eurer Reliabilität:
+
+| Gruppe | Reliabilität | aus 0.50 wird |
+|---|---|---|
+| 1 | .95 | 0.49 |
+| 2 | .85 | 0.46 |
+| 3 | .75 | 0.43 |
+| 4 | .65 | 0.40 |
+| 5 | .55 | 0.37 |
+
+Umgekehrt steckt hinter einem **beobachteten d von 0.42** dieses wahre d:
+
+| Gruppe | Reliabilität | wahres d |
+|---|---|---|
+| 1 | .95 | **0.43** |
+| 2 | .85 | **0.46** |
+| 3 | .75 | **0.49** |
+| 4 | .65 | **0.52** |
+| 5 | .55 | **0.57** |
+
+Derselbe beobachtete Befund, fünf verschiedene Wahrheiten dahinter. Der
+Unterschied liegt allein im Messinstrument.
+:::
+
+## Aufgabe 3: Begreifen
+
+Bleibt in derselben Anwendung.
+
+1. Lasst euren Reliabilitätswert stehen und stellt das wahre d auf 1.00. Wie
+   viel geht verloren, absolut und in Prozent?
+2. Diskutiert: Würde eine **Verdoppelung der Stichprobe** diesen Verlust
+   ausgleichen? Begründet eure Antwort.
+3. Entscheidet als Gruppe: Wenn ihr Geld für genau eine Sache hättet, mehr
+   Fälle oder ein besseres Messinstrument, wofür würdet ihr es ausgeben?
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 3
+
+Der prozentuale Verlust hängt nur an der Reliabilität, nicht am wahren d. Er
+beträgt immer denselben Anteil:
+
+| Reliabilität | Verlust |
+|---|---|
+| .95 | 2,5 % |
+| .85 | 7,8 % |
+| .75 | 13,4 % |
+| .65 | 19,4 % |
+| .55 | 25,8 % |
+
+Zur zweiten Frage: **nein**. Mehr Fälle machen die Schätzung präziser, das
+Konfidenzintervall wird schmaler. Aber die Schätzung konvergiert gegen den
+**gedämpften** Wert, nicht gegen den wahren. Reliabilität ist eine
+Obergrenze, kein Rauschen, das sich herausmittelt.
+
+Zur dritten Frage gibt es keine allgemein richtige Antwort, und genau deshalb
+sind die Reliabilitäten verteilt. Bei .95 bringt ein besserer Test fast
+nichts mehr, bei .55 bringt jede zusätzliche Erhebung wenig, solange das
+Instrument so ungenau misst. Der Kipppunkt liegt dazwischen.
+:::
+
+## Pufferaufgaben
+
+::: {.callout-important collapse="true"}
+## Für schnelle Gruppen
+
+1. **Zwei Skalen.** Öffnet **Cohens d in zwei Kontexten** und schaltet auf
+   "Vergleichbarkeit". Stellt d auf 0.50. Notiert beide Roheffekte. Erklärt
+   jemandem in einem Satz, warum beide denselben Effekt zeigen.
+
+2. **Die Relevanzschwelle.** Öffnet **Signifikanz gegen praktische
+   Bedeutsamkeit**. Bei den Startwerten kostet ein Kompetenzpunkt rund
+   900 Euro. Ab welchem Zuwachs sinken die Kosten unter 100 Euro pro Punkt?
+
+3. **Berichtssatz.** Schreibt den vollständigen Ergebnissatz für eure Gruppe:
+   Zuwachs in Punkten, d, Intervall und Reliabilität. Vier Angaben, ein Satz.
+:::
+
+## Die Frage für die Fragerunde
+
+::: {.callout-warning}
+## Das berichtet eure Gruppe im Tagesabschluss
+
+**Welcher wahre Effekt steckt hinter eurem beobachteten d, und was empfehlt
+ihr der Kommission: mehr Fälle oder ein besserer Test?**
+
+Nennt zuerst eure Reliabilität, dann euer wahres d. Die Reihenfolge der
+Gruppen ist 1 bis 5.
+:::

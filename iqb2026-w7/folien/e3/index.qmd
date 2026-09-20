@@ -1,0 +1,403 @@
+---
+title: "Effektstärken und ihre Grenzen"
+subtitle: "Einheit 3 · Tag 1, Die Diagnose"
+author: "Hannes Diemerling"
+date: "2026-09-23"
+date-format: "D. MMMM YYYY"
+title-slide-attributes:
+  data-background-color: "#F7F2EA"
+---
+
+<!--
+Verlinkte Seiten dieses Decks, hier zentral pflegen:
+  Arbeitsblatt        ../../tag1/e3-effektstaerken.html
+  App unstandardisiert ../../apps/a06-rohwerte.html
+  App Cohens d        ../../apps/a07-cohens-d.html
+  App Relevanz        ../../apps/a08-relevanzschwelle.html
+  App Minderung       ../../apps/a09-minderung.html
+-->
+
+## Fragerunde: Einheit 2 {background-color="#2A3F66"}
+
+[10 Minuten · eine Minute pro Gruppe]{.bp-eyebrow}
+
+::: {.bp-callout}
+Wie viele Pfade habt ihr gebraucht, um unter .05 zu kommen, und welcher davon
+wäre in einem Bericht am wenigsten aufgefallen?
+:::
+
+::: {.bp-runde}
+::: {.bp-runde__gruppe}
+[1]{.bp-runde__num}
+[Gruppe 1]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[2]{.bp-runde__num}
+[Gruppe 2]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[3]{.bp-runde__num}
+[Gruppe 3]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[4]{.bp-runde__num}
+[Gruppe 4]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[5]{.bp-runde__num}
+[Gruppe 5]{.bp-runde__label}
+:::
+:::
+
+::: notes
+Die Pfadzahlen auf der Tafel sammeln, das ergibt eine sichtbare Reihe. Taste b
+öffnet sie.
+
+Der zweite Teil der Frage ist der wichtige. Hier kommt regelmäßig die
+unangenehme Einsicht, dass der unauffälligste Pfad auch der übliche ist. Diesen
+Moment nicht überspielen, sondern stehen lassen.
+
+Wenn eine Gruppe sehr wenige Pfade gebraucht hat: fragen, ob sie Glück hatte
+oder gesucht hat. Beides ist eine gute Antwort und beides macht denselben Punkt.
+
+Mein Überleitungssatz: "Bis jetzt ging es darum, ob überhaupt etwas da ist.
+Jetzt geht es darum, wie viel, und ob wir das überhaupt messen können."
+:::
+
+# Einheit 3 {.bp-trenner background-color="#E27C5C"}
+
+[Tag 1 · Die Diagnose]{.bp-eyebrow}
+
+## Effektstärken und ihre Grenzen
+
+::: notes
+Kurz. Der Zusatz "und ihre Grenzen" ist der Unterschied zu einem üblichen
+Effektstärken-Vortrag. Genau darauf läuft die Einheit hinaus.
+:::
+
+## Ist das ein großer Effekt?
+
+::: {.bp-aufgabe}
+Eine Evaluation berichtet für LeseStark **d = 0.42**.
+:::
+
+::: {.bp-handzeichen}
+Handzeichen, wer das für einen großen Effekt hält.
+:::
+
+::: {.bp-quelle}
+Halte das Ergebnis im Kopf. Wir kommen am Ende dieser Einheit darauf zurück.
+:::
+
+::: notes
+Bewusst knapp. Die Folie stellt eine Falle, und sie soll sie stellen.
+
+Die ehrliche Antwort lautet: die Frage ist so nicht beantwortbar. Das sage ich
+hier aber noch nicht. Ich zähle nur die Hände und notiere die Zahl auf der
+Tafel.
+
+Am Ende der Einheit komme ich darauf zurück, dann mit drei Gründen, warum die
+Frage unvollständig war: die Einheit fehlt, der Vergleichsmaßstab fehlt, und
+die Messgenauigkeit fehlt.
+
+Wenn jemand sofort ruft, dass man das nicht beantworten kann: loben und bitten,
+die Begründung noch zwei Folien zurückzuhalten.
+
+Rund 2 Minuten.
+:::
+
+## Zuerst die Einheit, dann die Statistik
+
+::: {.bp-quote}
+Ein Effekt ist der Unterschied in der interessierenden Variable zwischen Gruppen
+oder Bedingungen, oder die Stärke eines Zusammenhangs.
+
+[Er ist die Brücke von der Statistik in die Realität]{.bp-quote__author}
+:::
+
+::: {.bp-zwei}
+::: {}
+**0,4 Punkte oder 6 Punkte?** Dieselbe Analyse, völlig verschiedene Konsequenz
+für die Förderentscheidung. Der p-Wert unterscheidet die beiden nicht
+zuverlässig. Die Zahl schon.
+:::
+::: {}
+**Zwei Übersetzungen, die sofort wirken:**
+
+- **Hochrechnung:** Punkte pro Lernenden, hochgerechnet auf einen Jahrgang.
+- **Einzelfall:** Wie viel Prozent der geförderten Lernenden liegen über dem
+  Median der Vergleichsgruppe?
+:::
+:::
+
+::: {.bp-callout}
+Berichte immer zuerst den unstandardisierten Effekt. Er ist der einzige, über
+den man eine praktische Entscheidung treffen kann.
+:::
+
+::: notes
+Der Kern: die Einheit ist keine Nebensache, sie ist die Entscheidungsgrundlage.
+
+Baguley (2009) ist hier die Referenz, falls jemand fragt. Sein Argument: die
+Standardisierung ist ein Werkzeug für den Vergleich zwischen Studien, nicht für
+die Interpretation einer einzelnen Studie.
+
+Für dieses Publikum die konkrete Form: Eine Kommission entscheidet nicht über
+d. Sie entscheidet über Punkte, Förderstunden und Kosten.
+
+Die Einzelfall-Übersetzung ist der Teil, den die Teilnehmenden am ehesten
+mitnehmen. Sie kommt in der Werkzeugkasten-Tabelle als CLES wieder.
+
+Rund 4 Minuten.
+:::
+
+## Was d leistet
+
+$$d = \frac{|M_1 - M_2|}{SD}$$
+
+::: {.bp-zwei}
+::: {.bp-pillar .tone-coral}
+[Aspekt 01]{.bp-pillar__num}
+
+### Entdeckbarkeit
+
+Ein Zuwachs von 5 Punkten bei **SD = 2** ist ein klares Signal. Dieselben
+5 Punkte bei **SD = 20** verschwinden im Rauschen.
+
+d ist ein Signal-Rausch-Verhältnis.
+:::
+::: {.bp-pillar .tone-teal}
+[Aspekt 02]{.bp-pillar__num}
+
+### Vergleichbarkeit
+
+Die **Screening-Kurzform** läuft auf einer Skala von 1 bis 5, **+0,50** Punkte.
+Die **Vollform** läuft auf einer Skala von 0 bis 100, **+10** Punkte.
+
+Verschiedene Skalen, identisches d. Erst das macht sie vergleichbar.
+:::
+:::
+
+::: {.bp-callout}
+Genau deshalb existiert d: Meta-Analysen brauchen eine gemeinsame Skala. Der
+Preis ist, dass die Einheit verloren geht.
+:::
+
+::: notes
+Zuerst die Formel entschärfen: das ist eine Division, mehr nicht. Das laut zu
+sagen entspannt spürbar.
+
+Aspekt 1 erklärt, warum d sinkt, wenn die Streuung steigt, obwohl sich am
+Effekt nichts ändert. Das ist genau der Mechanismus aus Einheit 1, jetzt in
+einer Kennzahl.
+
+Aspekt 2 ist für dieses Publikum der relevantere. Zwei Instrumente für
+dieselbe Kompetenz mit verschiedener Skalierung sind ohne Standardisierung
+nicht vergleichbar. Das ist Alltag in der Bildungsforschung.
+
+In der Anwendung lässt sich d frei einstellen, und die beiden Rohwerte
+bewegen sich mit. Bei d = 0.50 sind es +0,50 auf der Kurzform und +10 auf der
+Vollform.
+
+Der Preis ist die Pointe und die Überleitung: Punkte kann man einer Kommission
+erklären, d nicht.
+
+Rund 4 Minuten.
+:::
+
+## Die Faustregeln sind kein Kriterium
+
+::: {.bp-warn}
+Die Richtwerte von Cohen (0.2 · 0.5 · 0.8) sind grobe Orientierungen, keine
+inhaltlichen Kriterien. Ein d = 0.3 kann in einem Kontext wichtig und in einem
+anderen trivial sein.
+:::
+
+::: {.bp-zwei}
+::: {}
+**Groß:** d = 0.2 für eine Maßnahme, die flächendeckend und fast kostenlos
+ausgerollt werden kann.
+:::
+::: {}
+**Mittelmäßig:** d = 0.5 für ein aufwendiges Einzelförderformat in einem
+gut beforschten Feld.
+:::
+:::
+
+::: {.bp-quelle}
+Schäfer & Schwarz (2019). *The meaningfulness of effect sizes in psychological
+research.* Frontiers in Psychology. Liefert empirische Verteilungen von
+Effektstärken als Vergleichsmaßstab.
+:::
+
+::: notes
+Der Satz, der sitzen muss: wer nur Cohens Faustregel benutzt, hat das Ritual
+ersetzt, nicht überwunden. Aus p < .05 wird d > 0.5, und die Denkarbeit bleibt
+dieselbe, nämlich keine.
+
+Der bessere Maßstab ist die empirische Verteilung im eigenen Feld. Schäfer und
+Schwarz liefern die, und der Aufwand ist gering: einmal nachschauen, was in
+vergleichbaren Studien gefunden wurde.
+
+Cohen selbst hat die Werte ausdrücklich als Notlösung für den Fall bezeichnet,
+dass gar nichts Besseres verfügbar ist.
+
+Rund 3 Minuten.
+:::
+
+## Und dann misst du auch noch ungenau
+
+Jede Effektstärke wird durch die Unzuverlässigkeit der Messung **nach unten
+gezogen**. Das ist kein Schätzfehler, das ist systematisch.
+
+$$d_{\text{beobachtet}} = d_{\text{wahr}} \cdot \sqrt{\text{Rel}}$$
+
+| Reliabilität des Tests | aus wahrem d = 0.50 wird |
+|---|---|
+| 1.00 | 0.50 |
+| .90 | 0.47 |
+| .80 | 0.45 |
+| **.70** | **0.42** |
+| .50 | 0.35 |
+
+::: {.bp-warn}
+Der beobachtete Effekt aus Einheit 1, **d = 0.42**, ist bei einer
+Testreliabilität von .70 genau das, was ein wahrer Effekt von **0.50**
+hinterlässt. Kein Stichprobenumfang der Welt holt das zurück.
+:::
+
+::: notes
+Das ist die Folie, wegen der diese Einheit anders aussieht als ein üblicher
+Effektstärken-Vortrag. Hier langsam werden.
+
+Der Rückgriff auf Einheit 1 ist der Clou. Dieselbe Zahl, 0.42, die wir vorhin
+noch für den Effekt gehalten haben, ist in Wahrheit der Schatten eines größeren
+Effekts, gedämpft durch die Messung.
+
+Drei Punkte, die sitzen müssen:
+
+Erstens, die Richtung ist immer dieselbe. Unzuverlässige Messung macht Effekte
+kleiner, nie größer. Wer also bei schlechter Reliabilität einen Effekt findet,
+hat eher einen starken Effekt als einen schwachen.
+
+Zweitens, mehr Fälle helfen nicht. Ein größeres n macht die Schätzung präziser,
+aber sie konvergiert gegen den gedämpften Wert, nicht gegen den wahren.
+Reliabilität ist eine Obergrenze, kein Rauschen.
+
+Drittens, die Konsequenz für die Planung: Investition in ein besseres
+Messinstrument kann mehr bringen als Investition in mehr Fälle. Für dieses
+Publikum ist das der praktisch wertvollste Satz des Tages.
+
+Falls jemand nach der Minderungskorrektur fragt: ja, man kann nach oben
+korrigieren, und ja, das ist umstritten, weil die Korrektur die
+Reliabilitätsschätzung mitschleppt. Berichten sollte man beides, korrigiert und
+unkorrigiert.
+
+Falls jemand nach Korrelationen fragt: dort werden beide Variablen gedämpft,
+die Wurzel steht dann über dem Produkt beider Reliabilitäten.
+
+Rund 5 Minuten. Nicht kürzen, das ist der Kern der Einheit.
+:::
+
+## Der Werkzeugkasten hinter d
+
+| Maß | Wofür | Orientierung |
+|---|---|---|
+| **Cohen's d** | Mittelwertsvergleich zweier Gruppen | 0.2 · 0.5 · 0.8 |
+| **Hedges' g** | wie d, korrigiert für kleine Stichproben | ≈ d ab n > 50 |
+| **η² / ω²** | Varianzaufklärung, ANOVA | .01 · .06 · .14 |
+| **Pearson's r** | Zusammenhang zweier stetiger Variablen | .10 · .30 · .50 |
+| **CLES** | Wahrscheinlichkeit, dass ein zufälliger Fall besser ist | 0.50 = Zufall, 0.71 ≈ d 0.8 |
+| **Odds / Risk Ratio** | binäre Ergebnisse | 1 = kein Unterschied |
+
+::: {.bp-callout}
+**CLES ist der Kommunikations-Tipp.** "In 71 % der Vergleiche liegt die
+geförderte Person vorn" versteht jede Kommission sofort. "d = 0.8" nicht.
+:::
+
+::: notes
+Die Tabelle nicht durchgehen, das wird zäh. Stattdessen fragen, welche Maße die
+Anwesenden tatsächlich berichten, und nur die besprechen. Die Tabelle bleibt als
+Nachschlagewerk stehen und steht auch auf dem Arbeitsblatt.
+
+CLES ist der Punkt, der am meisten mitgenommen wird. Es übersetzt ein
+standardisiertes Maß in eine Aussage über Einzelfälle, und genau das wollen
+Praxis, Ministerien und Öffentlichkeit hören.
+
+Bei Odds Ratio kurz warnen: sie werden systematisch als Risiken fehlgelesen. Bei
+häufigen Ereignissen liegen OR und RR weit auseinander.
+
+Das ist die kürzbare Folie dieser Einheit.
+
+Rund 3 Minuten.
+:::
+
+## So berichtest du es
+
+::: {.bp-aufgabe}
+**Der Minimalstandard für jeden Ergebnissatz:**
+
+1. **Unstandardisiert**, in der Einheit der Sache. *2,1 Punkte im Lesetest.*
+2. **Standardisiert**, für die Einordnung. *d = 0.42.*
+3. **Ein Intervall**, immer. *95 % CI [0.18, 0.66]*.
+4. **Die Reliabilität des Instruments.** *α = .70.*
+5. **Ein Vergleich mit dem Feld**, nicht mit Cohens Faustregel.
+:::
+
+::: {.bp-callout}
+Zurück zur Eingangsfrage: **Ist d = 0.42 ein großer Effekt?** Die Frage war
+nicht beantwortbar. Es fehlten die Einheit, der Vergleichsmaßstab und die
+Messgenauigkeit.
+:::
+
+::: notes
+Die praktisch nützlichste Folie des ganzen Tages. Hier darf man langsam werden.
+
+Punkt 4 ist der, den ich gegenüber dem üblichen Standard ergänzt habe, und er
+folgt direkt aus der Minderungsfolie. Ohne Reliabilitätsangabe ist eine
+Effektstärke nicht interpretierbar.
+
+Punkt 5 fehlt am häufigsten und macht am wenigsten Arbeit.
+
+Dann der Rückgriff auf die Eingangsfrage. Die Zahl der Hände von vorhin steht
+noch auf der Tafel. Darauf zeigen und auflösen. Das schließt die Einheit als
+Bogen und ist der stärkste mögliche Schluss.
+
+Rund 2,5 Minuten.
+:::
+
+## Gruppenarbeit 3 {background-color="#4FA8A0"}
+
+[30 Minuten · Breakout-Räume]{.bp-eyebrow}
+
+::: {.bp-aufgabe}
+**Die Frage für eure Gruppe:** Jede Gruppe bekommt eine andere Reliabilität
+zugewiesen. Berichtet, welcher wahre Effekt hinter eurem beobachteten d steckt,
+und was ihr der Kommission empfehlen würdet: mehr Fälle oder ein besserer Test?
+:::
+
+{{< include /folien/_shared/_rollen.qmd >}}
+
+::: {.bp-demo-hinweis}
+Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 3](../../tag1/e3-effektstaerken.html)
+:::
+
+::: notes
+Die Zuweisung der Reliabilitäten steht auf dem Arbeitsblatt: Gruppe 1 bekommt
+.95, Gruppe 2 .85, Gruppe 3 .75, Gruppe 4 .65, Gruppe 5 .55.
+
+Das ist bewusst so gebaut: in der Fragerunde setzt sich aus den fünf Antworten
+die Minderungskurve zusammen, die sonst niemand gesehen hätte. Ich zeichne sie
+auf der Tafel mit, während die Gruppen berichten.
+
+Das ansagen, es motiviert. Jede Gruppe liefert einen Punkt, den keine andere
+hat.
+
+Der zweite Teil der Frage, mehr Fälle oder besserer Test, ist die Transferfrage.
+Die Antwort ist nicht immer dieselbe, sie hängt davon ab, wo die Gruppe
+startet. Genau deshalb sind die Reliabilitäten verteilt.
+
+Nach 25 Minuten die Ansage: noch fünf Minuten.
+
+Rund 1,5 Minuten.
+:::

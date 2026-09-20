@@ -1,0 +1,16 @@
+Der Prior ist deine Überzeugung darüber, welche Werte plausibel sind, **bevor**
+du die neuen Daten kennst. Er wird als Verteilung angegeben, also mit einem
+Schwerpunkt und einer Breite.
+
+Drei Sorten:
+
+- **Uninformativ:** sehr breit, alle Werte etwa gleich plausibel. Klingt
+  neutral, ist es nicht. Ein flacher Prior behauptet, ein absurd großer Effekt
+  sei so plausibel wie ein realistischer.
+- **Informativ:** schmal, gestützt auf frühere Studien oder auf die Logik der
+  Sache.
+- **Schwach informativ:** der praktische Mittelweg. Schließt Unsinn aus, lässt
+  den Daten aber allen Spielraum.
+
+Der Prior erfindet keine Annahmen. Er macht die Annahmen sichtbar, die ohnehin
+da sind.

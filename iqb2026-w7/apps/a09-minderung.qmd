@@ -1,0 +1,182 @@
+---
+title: "Reliabilität dämpft Effektstärken"
+subtitle: "Einheit 3 · Die Obergrenze, die niemand berichtet"
+---
+
+Jede Effektstärke wird durch die Unzuverlässigkeit der Messung nach unten
+gezogen. Das ist kein Zufallsfehler, der sich mit mehr Fällen auszahlt. Es ist
+eine systematische Dämpfung.
+
+$$d_{\text{beobachtet}} = d_{\text{wahr}} \cdot \sqrt{\text{Rel}}$$
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 720
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Bewusst ohne scipy. Die Normaldichte ist ein Einzeiler, und diese Anwendung
+# gehoert zu den ersten, die eine Gruppe oeffnet. Jedes eingesparte Wheel
+# verkuerzt den Kaltstart.
+def normpdf(x, mu, sd):
+    return np.exp(-0.5 * ((x - mu) / sd) ** 2) / (sd * np.sqrt(2 * np.pi))
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Reliabilität dämpft Effektstärken"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Der wahre Effekt"),
+                ui.input_slider("d_wahr", "Wahres d (unbeobachtbar)",
+                                min=0.0, max=1.2, value=0.50, step=0.01),
+                ui.hr(),
+                ui.h5("Dein Messinstrument"),
+                ui.input_slider("rel", "Reliabilität des Tests",
+                                min=0.50, max=1.00, value=0.70, step=0.01),
+                ui.hr(),
+                ui.output_ui("info_panel"),
+            ),
+            ui.output_plot("main_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+
+    @render.plot
+    def main_plot():
+        d_wahr = input.d_wahr()
+        rel = input.rel()
+        d_beob = d_wahr * np.sqrt(rel)
+
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(13, 6), layout="constrained")
+
+        # Links: die Minderungskurve
+        rel_grid = np.linspace(0.50, 1.00, 200)
+        d_grid = d_wahr * np.sqrt(rel_grid)
+
+        ax1.plot(rel_grid, d_grid, color='#2c3e50', linewidth=2.5,
+                 label='beobachtbares d')
+        ax1.axhline(d_wahr, color='#27ae60', linestyle='dotted', linewidth=2,
+                    label=f'wahres d = {d_wahr:.2f}')
+        ax1.fill_between(rel_grid, d_grid, d_wahr, color='#e74c3c', alpha=0.12)
+        ax1.scatter([rel], [d_beob], color='#e74c3c', s=160, zorder=5)
+
+        tf = ax1.get_xaxis_transform()
+        ax1.text(0.75, 0.93, "verlorener Anteil", ha='center', transform=tf,
+                 fontsize=10, color='#c0392b', style='italic')
+
+        ax1.set_xlim(0.50, 1.00)
+        ax1.set_ylim(0, 1.3)
+        ax1.set_xlabel("Reliabilität des Tests")
+        ax1.set_ylabel("Effektstärke d")
+        ax1.set_title(f"Bei Rel = {rel:.2f} bleibt von {d_wahr:.2f} nur {d_beob:.2f}",
+                      fontweight='bold', fontsize=12)
+        ax1.legend(loc='lower right', fontsize=9)
+        ax1.spines['top'].set_visible(False)
+        ax1.spines['right'].set_visible(False)
+
+        # Rechts: was du tatsaechlich siehst
+        x = np.linspace(-3.5, 4.5, 400)
+        y_ohne = normpdf(x, 0.0, 1.0)
+        y_beob = normpdf(x, d_beob, 1.0)
+
+        ax2.fill_between(x, y_ohne, alpha=0.45, color='#95a5a6',
+                         label='Ohne Förderung')
+        ax2.fill_between(x, y_beob, alpha=0.55, color='#3498db',
+                         label='Mit LeseStark, gemessen')
+        ax2.axvline(d_wahr, color='#27ae60', linestyle='dotted', linewidth=2,
+                    label='wahre Lage des Effekts')
+        ax2.axvline(d_beob, color='#e74c3c', linestyle='solid', linewidth=2,
+                    label='gemessene Lage')
+
+        ax2.set_xlim(-3.5, 4.5)
+        ax2.set_ylim(0, max(y_ohne.max(), y_beob.max()) * 1.2)
+        ax2.set_yticks([])
+        ax2.set_xlabel("Testleistung in Standardabweichungen")
+        ax2.set_ylabel("Dichte")
+        ax2.set_title("Was in deinen Daten ankommt", fontweight='bold', fontsize=12)
+        ax2.legend(loc='upper right', fontsize=8)
+        ax2.spines['top'].set_visible(False)
+        ax2.spines['right'].set_visible(False)
+
+        return fig
+
+    @render.ui
+    def info_panel():
+        d_wahr = input.d_wahr()
+        rel = input.rel()
+        d_beob = d_wahr * np.sqrt(rel)
+        verlust = d_wahr - d_beob
+        anteil = (1 - np.sqrt(rel)) * 100
+
+        if rel >= 0.90:
+            farbe = "#27ae60"
+            fazit = "Gute Reliabilität. Der Verlust ist klein."
+        elif rel >= 0.70:
+            farbe = "#e67e22"
+            fazit = "Übliche Reliabilität. Der Verlust ist spürbar."
+        else:
+            farbe = "#c0392b"
+            fazit = "Schwache Reliabilität. Ein Teil des Effekts ist unerreichbar."
+
+        return ui.div(
+            ui.tags.p(
+                ui.tags.span("Du misst: ", style="font-weight:bold;"),
+                ui.tags.span(f"d = {d_beob:.2f}",
+                             style=f"color:{farbe}; font-weight:bold; font-size:18px;"),
+            ),
+            ui.tags.p(
+                ui.tags.span("Tatsächlich da: ", style="font-weight:bold;"),
+                ui.tags.span(f"d = {d_wahr:.2f}",
+                             style="color:#27ae60; font-weight:bold; font-size:16px;"),
+            ),
+            ui.tags.p(f"Verlust: {verlust:.2f} Punkte d, das sind {anteil:.0f} %.",
+                      style="margin:4px 0;"),
+            ui.tags.p(fazit,
+                      style=f"color:{farbe}; font-style:italic; font-size:12px;"),
+            ui.tags.hr(style="margin:8px 0;"),
+            ui.tags.p(
+                "Kein Stichprobenumfang der Welt holt das zurück. Mehr Fälle "
+                "machen die Schätzung präziser, aber sie konvergiert gegen den "
+                "gedämpften Wert, nicht gegen den wahren.",
+                style="font-size:11px; color:#7f8c8d;"
+            ),
+            style="background:#f8f9fa; padding:12px; border-radius:8px; margin-top:8px;"
+        )
+
+app = App(app_ui, server)
+```
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Was ist Reliabilität?
+
+Reliabilität ist die Zuverlässigkeit einer Messung, also der Anteil der
+beobachteten Varianz, der auf echte Unterschiede zurückgeht und nicht auf
+Messfehler.
+
+Sie läuft von 0 bis 1. Ein Wert von **.70** heißt: 70 Prozent der Streuung in
+deinen Testwerten sind echte Unterschiede zwischen den Lernenden, 30 Prozent
+sind Rauschen. Für Schulleistungstests sind Werte zwischen .70 und .90 üblich.
+
+Berichtet wird sie meist als Cronbachs Alpha oder als Retest-Korrelation.
+:::
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Stelle die Reliabilität auf **.70** und das wahre d auf **0.50**. Du misst
+dann genau **0.42**, also exakt den Wert aus der Studie in Einheit 1.
+
+Die Richtung ist immer dieselbe: unzuverlässige Messung macht Effekte
+kleiner, nie größer. Wer also trotz schlechter Reliabilität einen Effekt
+findet, hat eher einen starken Effekt vor sich als einen schwachen.
+
+Die praktische Konsequenz für die Planung: ein besseres Messinstrument kann
+mehr bringen als mehr Fälle.
+:::

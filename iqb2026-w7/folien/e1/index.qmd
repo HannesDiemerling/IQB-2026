@@ -1,0 +1,367 @@
+---
+title: "Was der p-Wert nicht sagt"
+subtitle: "Einheit 1 · Tag 1, Die Diagnose"
+author: "Hannes Diemerling"
+date: "2026-09-23"
+date-format: "D. MMMM YYYY"
+title-slide-attributes:
+  data-background-color: "#F7F2EA"
+---
+
+<!--
+Verlinkte Seiten dieses Decks, hier zentral pflegen:
+  Arbeitsblatt   ../../tag1/e1-pwert.html
+  App Streuung   ../../apps/a01-schwelle.html
+  App n treibt p ../../apps/a02-stichprobengroesse.html
+Pfade sind dokumentrelativ und funktionieren dadurch in der Vorschau wie unter
+der Projektseite auf GitHub Pages. Ein fuehrender Slash waere hier falsch.
+-->
+
+# Einheit 1 {.bp-trenner background-color="#E27C5C"}
+
+[Tag 1 · Die Diagnose]{.bp-eyebrow}
+
+## Was der p-Wert nicht sagt
+
+::: notes
+Kurz stehen lassen, fünf Sekunden. Der Titel ist die Behauptung, der Rest der
+Einheit ist der Beleg.
+:::
+
+## Welche dieser Aussagen ist richtig?
+
+Eine Evaluationsstudie zum Leseförderprogramm **LeseStark** berichtet
+**p = .01**.
+
+::: {.bp-aufgabe}
+1. Die Nullhypothese ist mit 1 % Wahrscheinlichkeit wahr.
+2. Der Effekt ist real, denn p liegt unter .05.
+3. Der Effekt ist groß, jedenfalls größer als bei p = .04.
+4. Die Wahrscheinlichkeit, dass sich der Befund replizieren lässt, ist 99 %.
+5. Die Wahrscheinlichkeit, dass das Ergebnis reiner Zufall war, ist 1 %.
+6. Wäre p größer als .05, gäbe es keinen Effekt.
+:::
+
+::: {.bp-handzeichen}
+Handzeichen bitte. Bei jeder Aussage einzeln.
+:::
+
+::: notes
+Das ist der wichtigste Moment der ganzen Einheit. Nicht überspringen, und nicht
+abkürzen.
+
+Ablauf: jede Aussage einzeln vorlesen, dann Handzeichen abwarten. Ruhig etwas
+Zeit lassen, auch wenn es still wird. Erfahrungsgemäß gehen bei 2, 4 und 5 viele
+Hände hoch.
+
+In Zoom die Reaktionsfunktion nutzen und selbst laut mitzählen: "vier Hände,
+sechs Hände". Sonst sieht niemand, wie die Gruppe steht, und der Effekt der
+Folie verpufft.
+
+Wichtig ist der Ton. Das ist kein Test, bei dem jemand durchfällt. Ich sage
+vorher: "Ich habe das selbst jahrelang falsch gehabt, und die Leute, die
+Methoden unterrichten, haben es auch falsch." Das nimmt den Druck raus und macht
+den Raum ehrlich.
+
+Wenn niemand die Hand hebt, weil alle den Trick ahnen: dann frage ich stattdessen
+"Welche davon habt ihr schon einmal so in einem Paper gelesen?" Das funktioniert
+immer.
+
+Rund 3 Minuten.
+:::
+
+## Alle sechs sind falsch
+
+::: {.bp-warn}
+Keine einzige der sechs Aussagen trifft zu. Sie sind nicht ungenau, sie sind
+falsch.
+:::
+
+::: {.bp-stats}
+::: {.bp-stat}
+[~ 90 %]{.bp-stat__num}
+[der Forschenden interpretieren mindestens eine Aussage zum p-Wert falsch.
+*Haller & Krauss (2002)*]{.bp-stat__label}
+:::
+::: {.bp-stat}
+[auch die Lehrenden]{.bp-stat__num}
+[Dieselbe Untersuchung zeigt: auch Personen, die Methoden unterrichten, liegen
+daneben.]{.bp-stat__label}
+:::
+:::
+
+Das ist kein Wissensproblem einzelner Personen. Es ist ein strukturelles Problem
+der Ausbildung.
+
+::: notes
+Die Auflösung ohne Triumph vortragen. Der Satz, der sitzen muss: das ist kein
+individuelles Versäumnis, sondern ein Ausbildungsproblem.
+
+Haller und Krauss (2002) haben Studierende, wissenschaftliche Mitarbeitende und
+Methoden-Lehrende befragt. In allen drei Gruppen lagen die Fehlerquoten hoch. Der
+Befund ist mehrfach repliziert worden und gilt bis heute.
+
+Wenn jemand nach Aussage 3 nachfragt: p = .01 gegen p = .04 sagt nichts über die
+Effektgröße, weil der p-Wert von Effekt UND Stichprobengröße abhängt. Das kommt
+zwei Folien weiter.
+
+Rund 3 Minuten.
+:::
+
+## Was der p-Wert tatsächlich ist
+
+::: {.bp-callout}
+Der p-Wert ist die Wahrscheinlichkeit, **ein mindestens so extremes Ergebnis wie
+das beobachtete zu sehen, wenn die Nullhypothese wahr wäre und alle
+Modellannahmen zutreffen**.
+:::
+
+Er beschreibt also eine Eigenschaft der **Daten** unter einer Annahme. Nicht eine
+Eigenschaft der **Hypothese**.
+
+Das klingt nach einer Feinheit. Es ist der ganze Unterschied.
+
+::: notes
+Langsam vorlesen, wörtlich. Dann den Kern zweimal sagen: bedingte
+Wahrscheinlichkeit der Daten gegeben die Hypothese, nicht der Hypothese gegeben
+die Daten.
+
+Analogie, die gut funktioniert: "Die Wahrscheinlichkeit, nass zu sein, wenn es
+regnet, ist hoch. Die Wahrscheinlichkeit, dass es regnet, wenn ich nass bin, ist
+etwas völlig anderes." Genau diese Verwechslung steckt in Aussage 1 des Quiz.
+
+Die Formulierung "und alle Modellannahmen zutreffen" nicht unterschlagen. Sie ist
+der Teil, der in Lehrbüchern meist fehlt, und sie ist praktisch relevant: bei
+verletzten Annahmen ist der p-Wert nicht nur ungenau, er ist bedeutungslos.
+
+Das ist auch die Folie, auf die ich morgen in Einheit 4 zurückkomme, wenn wir
+die Frage umdrehen. Schon hier ankündigen.
+
+Rund 4 Minuten.
+:::
+
+## Er sagt nichts darüber, {.bp-plain}
+
+::: {.incremental}
+- wie wahrscheinlich die Nullhypothese ist,
+- wie wahrscheinlich deine Alternativhypothese ist,
+- wie **groß** der gefundene Effekt ist,
+- wie **wichtig** oder bedeutsam der Effekt ist,
+- wie wahrscheinlich es ist, das Ergebnis zu **replizieren**,
+- oder ob ein Effekt überhaupt existiert.
+:::
+
+::: {.bp-quelle}
+Genau das sind aber die sechs Fragen, die wir eigentlich stellen wollen.
+:::
+
+::: notes
+Diese Liste Punkt für Punkt einblenden, das ist der Rhythmus der Folie. Bei jedem
+Punkt eine Sekunde Pause.
+
+Der Schlusssatz ist die Pointe: die Liste dessen, was der p-Wert nicht kann, ist
+identisch mit der Liste dessen, was wir wissen wollen. Ruhig kurz stehen lassen,
+bevor es weitergeht.
+
+Wenn Widerstand kommt, etwa "der p-Wert ist doch nicht nutzlos": zustimmen. Er ist
+nicht nutzlos, er ist ein Maß für Überraschung unter einer Annahme. Das Problem
+ist nicht der p-Wert, das Problem ist, dass wir ihn zum einzigen Kriterium
+gemacht haben. Diese Nuance ist wichtig, sonst wirkt die Einheit ideologisch.
+
+Rund 3 Minuten.
+:::
+
+## Dieselbe Förderwirkung, zwei Urteile
+
+**LeseStark an zwei Standorten.** Je 45 getestete Lernende, beide Standorte
+gewinnen rund **2,1 Punkte** im Lesekompetenztest.
+
+| Standort | Zuwachs | p | Urteil |
+|---|---|---|---|
+| Nord | ~ 2,1 Punkte | **0.047** | signifikant, Programm wirkt |
+| Süd | ~ 2,1 Punkte | **0.053** | nicht signifikant, Programm wirkt nicht |
+
+::: {.bp-warn}
+Zwei faktisch gleich starke Effekte. Zwei konträre Entscheidungen. Und in der
+Praxis zwei verschiedene Förderbescheide.
+:::
+
+::: {.bp-quote}
+Die Natur zieht keine magische Grenze zwischen p = 0.049 und p = 0.051.
+:::
+
+::: notes
+Die Tabelle in zwei Schritten aufbauen, das ist der ganze Trick der Folie.
+
+Erst nur die Spalte Zuwachs zeigen und fragen lassen: sind das dieselben
+Ergebnisse? Der Raum sagt ja.
+
+Dann p und Urteil einblenden. Der Bruch entsteht erst hier, und er entsteht
+sichtbar.
+
+Anschlussfrage: was unterscheidet die beiden Standorte tatsächlich? Antwort: die
+Streuung, nicht der Effekt. Genau daran dreht die erste Anwendung in der
+Gruppenarbeit.
+
+Die Zeile mit dem Förderbescheid ist der Grund, warum das für dieses Publikum
+kein akademisches Problem ist. Kurz betonen, nicht ausmalen.
+
+Das Szenario im Hinterkopf, falls jemand nachrechnet: Lesekompetenztest,
+Rohwerte 0 bis 25, Mittelwert rund 12, SD rund 5 Punkte. Je 45 Lernende pro
+Standort. Der Zuwachs von 2,1 Punkten entspricht damit d = 0.42. Der
+Unterschied zwischen den Standorten liegt allein in der Streuung, 4,96 gegen
+5,10 Punkte. Genau daraus entstehen die beiden p-Werte. Die Anwendung in der
+Gruppenarbeit rechnet mit exakt diesen Werten.
+
+Rund 4 Minuten.
+:::
+
+## Signifikanz misst vor allem n
+
+**Der belanglose Rekord.** Eine Variante von LeseStark verbessert die
+Testleistung um **0,2 Punkte**. Dieser Effekt bleibt jetzt konstant.
+
+::: {.bp-zwei}
+::: {}
+| Stichprobe | p-Wert | Urteil |
+|---|---|---|
+| n = 20 | deutlich über .05 | nichts gefunden |
+| n = 5000 | weit unter .05 | hochsignifikant |
+:::
+::: {.bp-warn}
+Die Signifikanz testet primär deine **Stichprobengröße**, nicht die Größe oder
+Wichtigkeit des Effekts.
+
+Und umgekehrt: bei kleinem n bleibt ein großer, wichtiger Effekt unentdeckt.
+Nicht signifikant heißt nicht, dass nichts da ist.
+:::
+:::
+
+::: notes
+0,2 Punkte erst einordnen lassen: ist das viel? Der Raum antwortet zuverlässig
+nein. Bei der Streuung von 3 Punkten, mit der die Anwendung rechnet, sind das
+d = 0.07.
+
+Dann zeigen, dass genau dieser Effekt hochsignifikant werden kann, wenn nur
+genug Lernende getestet werden. Bei Schulleistungsstudien mit mehreren tausend
+Fällen ist das der Normalfall, nicht die Ausnahme. Das trifft dieses Publikum
+direkt.
+
+Den Umkehrschluss betonen, er ist der praktisch wichtigere: die kleine
+Pilotstudie, die nichts findet, hat meist nicht gezeigt, dass nichts wirkt. Sie
+hat gezeigt, dass sie zu klein war.
+
+Nicht schon alles verraten, die Gruppenarbeit dreht genau an diesem Regler.
+
+Rund 4 Minuten.
+:::
+
+## Alle sieben Fehlannahmen
+
+| | Aussage | Status |
+|---|---|---|
+| 1 | p ist die Wahrscheinlichkeit, dass H₀ wahr ist | falsch |
+| 2 | p < .05 heißt, der Effekt ist real | falsch, 5 % Fehlalarme per Konstruktion |
+| 3 | p < .05 heißt, der Effekt ist groß oder wichtig | falsch, hängt an n |
+| 4 | 1 − p ist die Replikationswahrscheinlichkeit | falsch, und besonders schädlich |
+| 5 | p ist die Wahrscheinlichkeit, dass es Zufall war | falsch |
+| 6 | Nicht signifikant heißt kein Effekt | falsch |
+| 7 | Konfidenzintervalle sind der bessere p-Wert | **halb richtig** |
+
+::: {.bp-callout}
+Nummer 7 ist der interessante Fall. Das Intervall zeigt wenigstens die
+Effektgröße. Aber die intuitive Lesart, der wahre Wert liege mit 95 %
+Wahrscheinlichkeit darin, ist auch falsch. Diese Lesart erlaubt erst das
+Glaubwürdigkeitsintervall, und das kommt morgen.
+:::
+
+::: notes
+Die Tabelle nicht durchlesen. Stattdessen zwei Zeilen herausgreifen.
+
+Nummer 4, weil sie die schädlichste ist. Wer glaubt, ein p von .01 bedeute 99 %
+Replikationschance, wundert sich zu Recht über die Replikationskrise. Die
+Replizierbarkeit hängt an wahrer Effektstärke und Stichprobenqualität, nicht am p
+der Originalstudie.
+
+Nummer 6, weil sie die häufigste Fehlentscheidung in der Praxis erzeugt. Absence
+of evidence is not evidence of absence. Für dieses Publikum konkret: ein
+Programm, das in einer kleinen Evaluation nicht signifikant wurde, ist nicht
+widerlegt.
+
+Nummer 7 als Cliffhanger für morgen stehen lassen. Nicht auflösen.
+
+Diese Folie ist zugleich die Vorbereitung auf die Anwendung, ich rede hier also
+bewusst eine gute Minute länger, bevor ich den Tab wechsle.
+
+Rund 2,5 Minuten.
+:::
+
+## Gleich seht ihr, woran es wirklich liegt
+
+In der Anwendung stehen die beiden Standorte nebeneinander. Der Zuwachs ist
+festgenagelt, verändern lässt sich nur die **Streuung** am zweiten Standort.
+
+::: {.bp-callout}
+Achte darauf, was sich bewegt, wenn du den Regler ziehst: der Effekt bleibt
+gleich, das Urteil kippt.
+:::
+
+::: {.bp-demo-hinweis}
+Anwendung: **Die Illusion der harten Grenze** · [zum Selbstausprobieren](../../apps/a01-schwelle.html)
+:::
+
+::: notes
+Diese Folie ist die Brücke zur Live-Demo und sie hat eine zweite Funktion: sie
+kauft die Ladezeit. Ich spreche hier mindestens 45 Sekunden, während die
+Anwendung im zweiten Tab schon offen ist.
+
+Vor der Sitzung: den Tab mit der Anwendung öffnen und einmal laden lassen. Nicht
+erst jetzt. Der Wechsel geht dann per Alt-Tab und das Publikum sieht über den
+geteilten Bildschirm keinen Unterschied zu einer eingebetteten Ansicht.
+
+In der Demo selbst nur eine einzige Sache zeigen: Regler von links nach rechts,
+p kippt über die Schwelle, der Effekt bleibt stehen. Nicht mehr. Die Gruppen
+machen den Rest gleich selbst.
+
+Wenn die Anwendung nicht lädt: die Tabelle von der Folie davor reicht
+vollständig aus, um den Punkt zu machen. Kein Drama daraus machen.
+
+Diese Folie ist die kürzbare Folie dieser Einheit. Wenn ich im Verzug bin,
+fliegt sie raus und ich gehe direkt in die Gruppenarbeit.
+
+Rund 1 Minute, plus die Demo selbst.
+:::
+
+## Gruppenarbeit 1 {background-color="#4FA8A0"}
+
+[30 Minuten · Breakout-Räume]{.bp-eyebrow}
+
+::: {.bp-aufgabe}
+**Die Frage für eure Gruppe:** Zwei Standorte, derselbe Zuwachs, verschiedene
+Urteile. Woran liegt es, und was hättet ihr stattdessen berichtet?
+:::
+
+{{< include /folien/_shared/_rollen.qmd >}}
+
+::: {.bp-demo-hinweis}
+Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 1](../../tag1/e1-pwert.html)
+:::
+
+::: notes
+Drei Dinge ansagen, dann die Räume öffnen. Nicht länger.
+
+Erstens, wo das Arbeitsblatt steht. Zweitens, dass die Lösungen aufklappbar
+danebenstehen und niemand feststecken muss. Drittens, dass es Pufferaufgaben
+gibt, falls die Gruppe früh fertig ist.
+
+Die Frage oben ist die, die in der Fragerunde nach der Pause drankommt. Das
+sage ich jetzt, damit die Gruppen sie mitlaufen lassen.
+
+Ich gehe in den ersten fünf Minuten durch alle fünf Räume und schaue nur, ob die
+Anwendung läuft. Danach bleibe ich dort, wo es hakt.
+
+Nach 25 Minuten eine Nachricht an alle Räume: noch fünf Minuten, kommt zur
+letzten Aufgabe.
+
+Rund 1,5 Minuten.
+:::

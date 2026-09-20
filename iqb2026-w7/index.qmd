@@ -1,0 +1,96 @@
+---
+title: "Jenseits des Frequentismus: Vom p-Wert zur Posterior"
+subtitle: "Workshop 7 · IQB 2026 · 23. und 24. September, jeweils 14 bis 18 Uhr"
+---
+
+Willkommen. Auf dieser Seite findest du alles, was du für die beiden
+Workshop-Tage brauchst: die Arbeitsblätter für die Gruppenphasen, die
+interaktiven Anwendungen und ein Glossar zum Nachschlagen.
+
+::: {.callout-important}
+## Du musst nichts installieren
+
+Alle Anwendungen laufen direkt in deinem Browser. Deine Eingaben und
+Berechnungen verlassen deinen Rechner nicht.
+
+Beim **ersten** Aufruf einer Anwendung dauert es bis zu 30 Sekunden, bis sie
+geladen ist. Danach geht es schnell, auch an Tag 2.
+:::
+
+## Die Arbeitsblätter
+
+### Tag 1, die Diagnose
+
+| Einheit | Thema | Dauer |
+|---|---|---|
+| [Einheit 1](tag1/e1-pwert.qmd) | Was der p-Wert nicht sagt | 30 min |
+| [Einheit 2](tag1/e2-freiheitsgrade.qmd) | Die Freiheitsgrade des Forschens | 30 min |
+| [Einheit 3](tag1/e3-effektstaerken.qmd) | Effektstärken und ihre Grenzen | 30 min |
+
+### Tag 2, die Alternative
+
+| Einheit | Thema | Dauer |
+|---|---|---|
+| [Einheit 4](tag2/e4-bayes-denken.qmd) | Die Frage umdrehen | 32 min |
+| [Einheit 5](tag2/e5-prior-likelihood-posterior.qmd) | Prior, Likelihood, Posterior | 30 min |
+| [Einheit 6](tag2/e6-evidenz-berichten.qmd) | Evidenz berichten | 28 min |
+
+Der [vollständige Ablauf](ablauf.qmd) beider Tage steht auf einer eigenen
+Seite.
+
+## So läuft eine Einheit
+
+1. **Folien.** Input im Plenum, mit mindestens einer Frage, bei der
+   Handzeichen erwartet werden.
+2. **Gruppenarbeit.** Ihr arbeitet zu fünft im Breakout-Raum an den
+   Anwendungen. Das Arbeitsblatt führt euch durch.
+3. **Fragerunde.** Zu Beginn der nächsten Einheit berichtet jede Gruppe eine
+   Minute lang. Damit ist das Thema abgeschlossen.
+
+In jeder Gruppe gibt es fünf Rollen, die pro Einheit eine Position
+weiterwandern. Sie stehen auf jedem Arbeitsblatt, du musst dir nichts merken.
+
+::: {.callout-tip}
+## Wenn du an einer Stelle hängst
+
+In den Aufgaben stecken **aufklappbare Kästen**. Grün markierte frischen
+Grundlagen auf, falls dir ein Begriff gerade fehlt. Blau markierte enthalten
+die Lösung.
+
+Beides ist ausdrücklich zum Benutzen da. Niemand soll eine halbe
+Gruppenphase feststecken.
+
+Wer lieber am Stück liest, findet alle Auffrischungen im [Glossar](glossar.qmd).
+:::
+
+## Das durchgehende Beispiel
+
+{{< include /_includes/szenario.qmd >}}
+
+## Wenn etwas nicht funktioniert
+
+Falls eine Anwendung bei dir nicht startet: sag es im Chat, nicht erst im
+Gruppenraum. In jedem Arbeitsblatt stehen die erwarteten Ergebnisse in den
+Lösungskästen, die Aufgaben sind also auch lesend lösbar. Und in der Gruppe
+teilt ohnehin eine Person den Bildschirm.
+
+::: {.callout-note collapse="true"}
+## Technische Hinweise
+
+- Nutze einen aktuellen Browser, nicht den in Zoom eingebauten.
+- Firefox, Chrome, Edge und Safari ab Version 16.4 funktionieren.
+- Öffne die Seite in einem **eigenen Fenster** neben Zoom, nicht in einem Tab
+  dahinter.
+- Nutze an beiden Tagen denselben Browser. Dann liegt die Rechenumgebung
+  bereits im Zwischenspeicher und alles lädt sofort.
+:::
+
+## Material und Lizenz
+
+Alle Folien, Anwendungen und Arbeitsblätter stehen unter **CC BY 4.0**. Du
+darfst sie in eigener Lehre einsetzen, umbauen und weitergeben.
+
+Die Grundlagen dieses Workshops stammen aus dem Projekt Beyond p-values an der
+HMU Health and Medical University Erfurt, gefördert von der
+VolkswagenStiftung in der Förderlinie Pioniervorhaben. Für das IQB neu
+geschnitten und auf die Bildungsforschung übertragen.

@@ -1,0 +1,61 @@
+---
+title: "Ablauf"
+subtitle: "Beide Tage, 14 bis 18 Uhr"
+---
+
+Die Pausen sind eingeplant und werden eingehalten. Beide Tage enden pünktlich
+um 18:00.
+
+## Tag 1, Dienstag 23. September
+
+Die Diagnose. Was unsere Standardwerkzeuge tatsächlich beantworten, und was
+nicht.
+
+| Zeit | Was passiert | Dauer |
+|---|---|---|
+| 14:00 | Ankommen, Einordnung, Gruppen, Technikprüfung | 15 min |
+| 14:15 | **Einheit 1** Was der p-Wert nicht sagt | 25 min |
+| 14:40 | [Gruppenarbeit 1](tag1/e1-pwert.qmd) | 30 min |
+| 15:10 | Pause | 10 min |
+| 15:20 | Fragerunde, dann **Einheit 2** Die Freiheitsgrade des Forschens | 35 min |
+| 15:55 | [Gruppenarbeit 2](tag1/e2-freiheitsgrade.qmd) | 30 min |
+| 16:25 | Pause | 15 min |
+| 16:40 | Fragerunde, dann **Einheit 3** Effektstärken und ihre Grenzen | 35 min |
+| 17:15 | [Gruppenarbeit 3](tag1/e3-effektstaerken.qmd) | 30 min |
+| 17:45 | Fragerunde und Tagesabschluss | 15 min |
+
+## Tag 2, Mittwoch 24. September
+
+Die Alternative. Die Frage umdrehen und einen Ergebnissatz bauen, den man
+verantworten kann.
+
+| Zeit | Was passiert | Dauer |
+|---|---|---|
+| 14:00 | Rückblick und Einstieg | 10 min |
+| 14:10 | **Einheit 4** Die Frage umdrehen | 28 min |
+| 14:38 | [Gruppenarbeit 4](tag2/e4-bayes-denken.qmd) | 32 min |
+| 15:10 | Pause | 10 min |
+| 15:20 | Fragerunde, dann **Einheit 5** Prior, Likelihood, Posterior | 35 min |
+| 15:55 | [Gruppenarbeit 5](tag2/e5-prior-likelihood-posterior.qmd) | 30 min |
+| 16:25 | Pause | 15 min |
+| 16:40 | Fragerunde, dann **Einheit 6** Evidenz berichten | 32 min |
+| 17:12 | [Gruppenarbeit 6](tag2/e6-evidenz-berichten.qmd) | 28 min |
+| 17:40 | Fragerunde, Transfer und Abschluss | 20 min |
+
+## Die Gruppen
+
+Fünf Gruppen zu je fünf Personen, an beiden Tagen dieselben. Die Zuordnung
+bekommst du zu Beginn von Tag 1 in Zoom.
+
+In jeder Gruppe gibt es fünf Rollen:
+
+{{< include /_includes/rollen.qmd >}}
+
+## Warum dieser Rhythmus
+
+Jede Einheit besteht aus drei Teilen: Input, Gruppenarbeit, Fragerunde. Die
+Fragerunde zu einer Einheit eröffnet immer die **nächste** Einheit. So bleibt
+zwischen Arbeit und Bericht eine Pause, und niemand muss unter Zeitdruck ein
+Ergebnis formulieren.
+
+Die Gruppenphasen sind kein Beiwerk. Sie sind der Teil, der hängen bleibt.

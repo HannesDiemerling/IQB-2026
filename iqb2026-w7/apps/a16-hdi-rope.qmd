@@ -1,0 +1,171 @@
+---
+title: "HDI und ROPE"
+subtitle: "Einheit 6 · Aus einer Verteilung eine Entscheidung machen"
+---
+
+Das **HDI** ist der schmalste Bereich, der 95 Prozent der Posterior enthält.
+Die **ROPE** ist der Bereich, den du inhaltlich als bedeutungslos festlegst.
+Aus dem Verhältnis der beiden folgt die Entscheidung.
+
+Es gibt drei mögliche Ausgänge, nicht zwei.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 720
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: HDI und ROPE"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Deine Posterior"),
+                ui.input_slider("post_mean", "Mittelwert (Punkte)",
+                                -2.0, 8.0, 2.1, step=0.1),
+                ui.input_slider("post_sd", "Unsicherheit (SD)",
+                                0.2, 4.0, 1.05, step=0.05),
+                ui.hr(),
+                ui.h5("Deine Relevanzschwelle"),
+                ui.input_slider("rope", "ROPE reicht von minus bis plus (Punkte)",
+                                0.5, 5.0, 3.0, step=0.1),
+                ui.hr(),
+                ui.output_ui("entscheidung_panel"),
+            ),
+            ui.output_plot("rope_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def auswertung(mu, sd, rope):
+    lo, hi = mu - 1.96 * sd, mu + 1.96 * sd
+    masse_in_rope = float(norm.cdf(rope, mu, sd) - norm.cdf(-rope, mu, sd))
+    if lo > rope or hi < -rope:
+        ausgang = "relevant"
+    elif lo >= -rope and hi <= rope:
+        ausgang = "aequivalent"
+    else:
+        ausgang = "offen"
+    return lo, hi, masse_in_rope, ausgang
+
+def server(input, output, session):
+
+    @render.plot
+    def rope_plot():
+        mu, sd, rope = input.post_mean(), input.post_sd(), input.rope()
+        lo, hi, masse, ausgang = auswertung(mu, sd, rope)
+
+        farben = {"relevant": '#27ae60', "aequivalent": '#2980b9', "offen": '#e67e22'}
+        titel = {
+            "relevant": "Relevanter Effekt. Das HDI liegt vollständig außerhalb der ROPE.",
+            "aequivalent": "Praktisch äquivalent zu null. Das HDI liegt vollständig in der ROPE.",
+            "offen": "Noch nicht entschieden. Das HDI überlappt die ROPE.",
+        }
+        farbe = farben[ausgang]
+
+        x = np.linspace(-8, 12, 600)
+        y = norm.pdf(x, mu, sd)
+
+        fig, ax = plt.subplots(figsize=(11, 6), layout="constrained")
+
+        ax.axvspan(-rope, rope, color='#95a5a6', alpha=0.22)
+        tf = ax.get_xaxis_transform()
+        ax.text(0, 0.94, "ROPE", transform=tf, ha='center', fontsize=11,
+                fontweight='bold', color='#5d6d7e')
+
+        ax.plot(x, y, color='#8e44ad', linewidth=2.5)
+        maske = (x >= lo) & (x <= hi)
+        ax.fill_between(x[maske], 0, y[maske], color='#8e44ad', alpha=0.3,
+                        label='95 % HDI')
+
+        ax.plot([lo, hi], [0, 0], color=farbe, linewidth=6, solid_capstyle='round')
+        ax.text(lo, 0.06, f"{lo:.2f}", transform=tf, ha='center', fontsize=10,
+                color=farbe, fontweight='bold')
+        ax.text(hi, 0.06, f"{hi:.2f}", transform=tf, ha='center', fontsize=10,
+                color=farbe, fontweight='bold')
+
+        ax.axvline(0, color='#34495e', linestyle='dotted', linewidth=1.5)
+
+        ax.set_xlim(-8, 12)
+        ax.set_ylim(0, y.max() * 1.25)
+        ax.set_yticks([])
+        ax.set_xlabel("Kompetenzzuwachs in Punkten")
+        ax.set_ylabel("Wahrscheinlichkeitsdichte")
+        ax.set_title(titel[ausgang], color=farbe, fontweight='bold', fontsize=12)
+        ax.legend(loc='upper right', fontsize=9)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        return fig
+
+    @render.ui
+    def entscheidung_panel():
+        mu, sd, rope = input.post_mean(), input.post_sd(), input.rope()
+        lo, hi, masse, ausgang = auswertung(mu, sd, rope)
+
+        farben = {"relevant": '#27ae60', "aequivalent": '#2980b9', "offen": '#e67e22'}
+        farbe = farben[ausgang]
+
+        saetze = {
+            "relevant": (
+                f"Der Zuwachs beträgt {mu:.2f} Punkte, 95 % HDI "
+                f"[{lo:.2f}; {hi:.2f}]. Er liegt vollständig oberhalb der "
+                f"Relevanzschwelle von {rope:.1f} Punkten."
+            ),
+            "aequivalent": (
+                f"Der Zuwachs beträgt {mu:.2f} Punkte, 95 % HDI "
+                f"[{lo:.2f}; {hi:.2f}]. Er ist praktisch äquivalent zu null."
+            ),
+            "offen": (
+                f"Der Zuwachs beträgt {mu:.2f} Punkte, 95 % HDI "
+                f"[{lo:.2f}; {hi:.2f}]. Für eine Entscheidung reichen die Daten "
+                f"noch nicht aus."
+            ),
+        }
+
+        return ui.div(
+            ui.tags.p("Dein Ergebnissatz",
+                      style="font-weight:bold; font-size:13px; margin-bottom:6px;"),
+            ui.tags.p(saetze[ausgang],
+                      style=f"color:{farbe}; font-weight:600; font-size:12px;"),
+            ui.tags.hr(style="margin:8px 0;"),
+            ui.tags.p(f"Masse innerhalb der ROPE: {masse*100:.1f} %",
+                      style="font-size:12px; margin:2px 0;"),
+            ui.tags.p("Drei Ausgänge sind möglich: relevant, praktisch "
+                      "äquivalent, oder noch nicht entschieden. Ein "
+                      "Signifikanztest kennt nur zwei.",
+                      style="font-size:11px; color:#7f8c8d; margin-top:6px;"),
+            style="background:#f8f9fa; padding:12px; border-radius:8px; margin-top:8px;"
+        )
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Die Startwerte sind die Studie aus Einheit 1. Das HDI läuft von 0,04 bis 4,16
+und überlappt die ROPE von minus 3 bis plus 3. Die ehrliche Antwort lautet:
+**noch nicht entschieden**.
+
+Probiere alle drei Ausgänge durch:
+
+- **Noch nicht entschieden**, die Startwerte. Es reicht weder für ein Ja noch
+  für ein Nein.
+- **Praktisch äquivalent zu null:** Mittelwert auf **0,0**, Unsicherheit auf
+  **0,5**. Das HDI liegt jetzt vollständig in der ROPE. Das ist ein echtes
+  Ergebnis, kein Scheitern.
+- **Relevanter Effekt:** Mittelwert zurück auf **2,1**, Unsicherheit auf
+  **0,5**, ROPE auf **1,0**. Jetzt liegt das HDI vollständig außerhalb.
+
+Achte beim letzten Schritt darauf, was du getan hast: du hast die
+Relevanzschwelle verschoben, nachdem du die Daten kanntest. Genau deshalb muss
+sie **vorher** festgelegt und begründet werden. Sonst ist sie nur ein weiterer
+Freiheitsgrad, so wie die aus Einheit 2.
+:::

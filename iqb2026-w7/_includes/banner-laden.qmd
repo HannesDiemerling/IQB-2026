@@ -1,0 +1,29 @@
+::: {.shiny-loading}
+⏳ Die Anwendung wird geladen, dies kann beim ersten Mal bis zu 30 Sekunden dauern.
+:::
+
+```{=html}
+<script>
+(function(){
+  // Klassenbasiert, nicht ueber eine id. Die Bestandsfassung nutzte
+  // id="shiny-loading". Bei zwei Anwendungen auf einer Seite waere die id
+  // doppelt vergeben und der zweite Hinweis verschwaende nie.
+  var banners = document.querySelectorAll('.shiny-loading');
+  if (!banners.length) return;
+  function hideAll(){
+    banners.forEach(function(d){
+      d.style.transition = 'opacity 0.5s';
+      d.style.opacity = '0';
+      setTimeout(function(){ d.style.display = 'none'; }, 500);
+    });
+  }
+  // Shinylive meldet sich per postMessage, sobald die Anwendung steht.
+  window.addEventListener('message', function h(e){
+    hideAll();
+    window.removeEventListener('message', h);
+  });
+  // Harter Rueckfall, falls die Meldung ausbleibt.
+  setTimeout(hideAll, 45000);
+})();
+</script>
+```

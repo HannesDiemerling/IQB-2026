@@ -1,0 +1,81 @@
+---
+title: "Screening auf Leseförderbedarf"
+subtitle: "Einheit 4 · Basisraten"
+---
+
+Ein Screening-Verfahren meldet Leseförderbedarf. Wie wahrscheinlich liegt
+tatsächlich welcher vor? Drei Regler, eine Intuition, die kippt.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 650
+
+from shiny import App, render, ui
+import matplotlib.pyplot as plt
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Screening auf Leseförderbedarf"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Prior"),
+                ui.input_slider("prior", "Förderbedarf in der Population (%)", 1, 100, 3),
+                ui.h5("Likelihood"),
+                ui.input_slider("likelihood", "Erkennung bei echtem Bedarf (%)", 1, 100, 95),
+                ui.h5("Fehlalarme"),
+                ui.input_slider("false_positive", "Alarm OHNE echten Bedarf (%)", 1, 100, 8),
+            ),
+            ui.output_plot("bayes_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+    @render.plot
+    def bayes_plot():
+        p_prior = input.prior() / 100.0
+        p_likelihood = input.likelihood() / 100.0
+        p_false_positive = input.false_positive() / 100.0
+
+        p_evidence = (p_likelihood * p_prior) + (p_false_positive * (1 - p_prior))
+        p_posterior = (p_likelihood * p_prior) / p_evidence if p_evidence > 0 else 0
+
+        fig, ax = plt.subplots(figsize=(8, 5), layout="constrained")
+
+        categories = ['Prior\n(Vorwissen)', 'Posterior\n(Aktualisiertes Wissen)']
+        values = [p_prior * 100, p_posterior * 100]
+
+        bars = ax.bar(categories, values, color=['#34495e', '#e67e22'])
+
+        ax.set_ylim(0, 108)
+        ax.set_yticks([0, 20, 40, 60, 80, 100])
+        ax.set_ylabel("Wahrscheinlichkeit in Prozent")
+        ax.set_title("Wahrscheinlichkeit eines echten Förderbedarfs\nbei positivem Screening")
+
+        for bar in bars:
+            height = bar.get_height()
+            ax.text(bar.get_x() + bar.get_width()/2., height + 2,
+                    f'{height:.1f} %',
+                    ha='center', va='bottom', fontweight='bold')
+
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+
+        return fig
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Nachrechnen in Häufigkeiten
+
+Bei den Startwerten, also 3 % Förderbedarf, 95 % Erkennung und 8 % Fehlalarme:
+
+Von **1000** gescreenten Lernenden haben **30** tatsächlich Förderbedarf, davon
+werden **28** erkannt. Von den **970** ohne Bedarf schlagen **78** falsch Alarm.
+
+Also **28** echte gegen **78** falsche Treffer, das sind rund **27 %**.
+:::

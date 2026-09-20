@@ -1,0 +1,13 @@
+Eine bedingte Wahrscheinlichkeit schreibt man $P(A \mid B)$ und liest sie als
+"Wahrscheinlichkeit von A, **gegeben** dass B zutrifft".
+
+Der entscheidende Punkt: $P(A \mid B)$ und $P(B \mid A)$ sind **nicht**
+dasselbe, und sie können sich drastisch unterscheiden.
+
+Beispiel aus dieser Einheit: Die Wahrscheinlichkeit, dass ein Screening
+anschlägt, **wenn** echter Förderbedarf vorliegt, beträgt 95 Prozent. Die
+Wahrscheinlichkeit, dass echter Förderbedarf vorliegt, **wenn** das Screening
+angeschlagen hat, beträgt nur rund 27 Prozent.
+
+Der Unterschied kommt von der Basisrate. Wenn ein Merkmal selten ist,
+produziert auch ein sehr guter Test überwiegend Fehlalarme.

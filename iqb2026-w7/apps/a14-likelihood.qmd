@@ -1,0 +1,114 @@
+---
+title: "Die Likelihood"
+subtitle: "Einheit 5 · Die Daten stehen fest, die Hypothese wandert"
+---
+
+Fünf Pilotklassen haben einen Zuwachs von **3, 7, 5, 9 und 6 Punkten**
+gezeigt. Diese fünf Zahlen ändern sich nie mehr. Beweglich ist nur deine
+Hypothese darüber, wie groß der wahre Zuwachs ist.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 650
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+data_points = np.array([3, 7, 5, 9, 6])
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Wie gut passt deine Hypothese zu den Messwerten?"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Hypothese Theta testen"),
+                ui.input_slider("hypo_mean", "Wahrer durchschnittlicher Zuwachs",
+                                0, 15, 1, step=0.5),
+                ui.hr(),
+                ui.p("Bewege den Regler. Finde das Theta, das die roten "
+                     "Messwerte D am wahrscheinlichsten macht."),
+            ),
+            ui.output_plot("likelihood_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+    @render.plot
+    def likelihood_plot():
+        mu_hypo = input.hypo_mean()
+        sigma_fixed = 4.0
+
+        fig, (ax1, ax2) = plt.subplots(
+            2, 1, figsize=(10, 8),
+            gridspec_kw={'height_ratios': [2, 1]}, layout="constrained"
+        )
+
+        x_vals = np.linspace(-5, 18, 200)
+        y_vals = norm.pdf(x_vals, mu_hypo, sigma_fixed)
+
+        ax1.plot(x_vals, y_vals, color='#2980b9', linewidth=2,
+                 label=f"Hypothese Theta = {mu_hypo}")
+        ax1.fill_between(x_vals, 0, y_vals, color='#3498db', alpha=0.2)
+
+        ax1.scatter(data_points, np.zeros_like(data_points), color='#c0392b',
+                    s=100, zorder=5, label="Daten D")
+
+        for dp in data_points:
+            likelihood_of_dp = norm.pdf(dp, mu_hypo, sigma_fixed)
+            ax1.vlines(dp, 0, likelihood_of_dp, color='#e74c3c',
+                       linestyle='dotted', linewidth=1.5)
+
+        ax1.set_title("Messwerte D aus den fünf Pilotklassen unter deiner Hypothese")
+        ax1.set_xlim(-5, 18)
+        ax1.set_ylim(-0.005, 0.15)
+        ax1.set_yticks([])
+        ax1.set_ylabel("Wahrscheinlichkeitsdichte")
+        ax1.set_xlabel("Kompetenzzuwachs (Punkte)")
+        ax1.legend(loc="upper right")
+        ax1.spines['top'].set_visible(False)
+        ax1.spines['right'].set_visible(False)
+
+        possible_mus = np.linspace(0, 15, 100)
+        max_likelihood = np.max(
+            [np.prod(norm.pdf(data_points, m, sigma_fixed)) for m in possible_mus]
+        )
+
+        current_likelihood = np.prod(norm.pdf(data_points, mu_hypo, sigma_fixed))
+        current_likelihood_norm = current_likelihood / max_likelihood
+
+        ax2.bar([0], [current_likelihood_norm], width=0.5, color='#2c3e50')
+        ax2.text(0, current_likelihood_norm + 0.04, f"{current_likelihood_norm:.2f}",
+                 ha='center', va='bottom', fontweight='bold')
+
+        ax2.set_title(f"Gesamte Likelihood P(D|Theta) für Theta = {mu_hypo}")
+        ax2.set_ylabel("Likelihood Wert")
+        ax2.set_xlim(-1, 1)
+        ax2.set_ylim(0, 1.15)
+        ax2.set_xticks([])
+        ax2.spines['top'].set_visible(False)
+        ax2.spines['right'].set_visible(False)
+
+        return fig
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Der Balken unten erreicht **1.00** genau dann, wenn deine Hypothese die Daten
+bestmöglich erklärt. Suche diesen Punkt von Hand.
+
+Du findest ihn bei **6 Punkten**, also genau beim Mittelwert der fünf
+Messwerte. Damit hast du gerade eine Maximum-Likelihood-Schätzung von Hand
+durchgeführt.
+
+Bayesianisch geht es hier weiter: statt nur den besten Wert zu nehmen, behält
+man die ganze Kurve und verrechnet sie mit dem Prior.
+:::

@@ -1,0 +1,186 @@
+---
+title: "Publikationsbias"
+subtitle: "Einheit 2 · Pufferaufgabe"
+---
+
+40 Forschungsteams evaluieren LeseStark unabhängig voneinander. Der wahre
+Zuwachs beträgt 2,0 Punkte. Publiziert wird nur, was signifikant wurde.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 740
+
+from shiny import App, render, ui
+import numpy as np
+import matplotlib.pyplot as plt
+import matplotlib.patches as mpatches
+from matplotlib.lines import Line2D
+
+np.random.seed(42)
+N = 40
+TRUE_EFFECT = 2.0                          # echter, aber kleiner Zuwachs in Punkten
+se_vals = np.random.uniform(0.4, 2.0, N)
+effects = np.random.normal(TRUE_EFFECT, se_vals, N)
+is_sig_pos = (effects / se_vals) > 1.96    # einseitig signifikant positiv
+order = np.argsort(effects)                # einmal sortieren, stabil
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Publikationsbias, kein Betrug, nur ein fehlgeleitetes System"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Einreichungsverhalten einstellen"),
+                ui.input_slider(
+                    "bias_pct",
+                    "Anteil nicht-signifikanter Studien, die nie eingereicht wurden",
+                    min=0, max=100, value=0, step=10,
+                    post="%"
+                ),
+                ui.hr(),
+                ui.output_ui("bias_panel"),
+            ),
+            ui.output_plot("results_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def get_visible(pct):
+    nonsig_idx = np.where(~is_sig_pos)[0]
+    n_hide = int(len(nonsig_idx) * pct / 100)
+    np.random.seed(7)
+    hidden_idx = np.random.choice(nonsig_idx, size=n_hide, replace=False)
+    visible = np.ones(N, dtype=bool)
+    visible[hidden_idx] = False
+    return visible, hidden_idx
+
+def server(input, output, session):
+
+    @render.plot
+    def results_plot():
+        pct = input.bias_pct()
+        visible, _ = get_visible(pct)
+        hidden = ~visible
+        reported_mean = np.mean(effects[visible]) if visible.sum() > 0 else TRUE_EFFECT
+
+        fig, ax = plt.subplots(figsize=(11, 7), layout="constrained")
+
+        for rank, idx in enumerate(order):
+            eff = effects[idx]
+            if hidden[idx]:
+                ax.barh(rank, eff, color='#dfe6e9', alpha=0.55, height=0.7,
+                        edgecolor='#b2bec3', linewidth=0.5)
+            elif is_sig_pos[idx]:
+                ax.barh(rank, eff, color='#3498db', alpha=0.82, height=0.7)
+            else:
+                ax.barh(rank, eff, color='#a8d8ea', alpha=0.75, height=0.7)
+
+        ax.axvline(TRUE_EFFECT, color='#2c3e50', linewidth=1.8, linestyle='dotted')
+
+        ueberschaetz = reported_mean - TRUE_EFFECT
+        line_color = '#27ae60' if ueberschaetz < 0.5 else '#c0392b'
+        ax.axvline(reported_mean, color=line_color, linewidth=3)
+
+        ax.set_xlabel("Gemessener Zuwachs in Punkten", fontsize=11, labelpad=8)
+        ax.set_yticks(range(N))
+        ax.set_yticklabels([f"Studie {idx + 1}" for idx in order], fontsize=6.5)
+        ax.set_ylabel("Studie", fontsize=11, labelpad=8)
+        ax.set_xlim(-3, 9)
+        ax.set_ylim(-0.8, N + 0.5)
+
+        title_color = '#27ae60' if pct == 0 else ('#e67e22' if pct < 70 else '#c0392b')
+        ax.set_title(
+            f"40 Evaluationsstudien  |  sichtbar: {visible.sum()}, "
+            f"nie eingereicht: {hidden.sum()}",
+            fontweight='bold', fontsize=11, color=title_color, pad=14
+        )
+
+        patch_sig = mpatches.Patch(color='#3498db', alpha=0.82,
+                                   label='Publiziert (signifikant)')
+        patch_ns = mpatches.Patch(color='#a8d8ea', alpha=0.75,
+                                  label='Publiziert (nicht signifikant)')
+        patch_hid = mpatches.Patch(color='#dfe6e9', alpha=0.7,
+                                   label='Nie eingereicht (Schublade)')
+        line_true = Line2D([0], [0], color='#2c3e50', linewidth=1.8, linestyle='dotted',
+                           label=f'Wahrer Zuwachs ({TRUE_EFFECT:.0f} Punkte)')
+        line_gut = Line2D([0], [0], color=line_color, linewidth=3,
+                          label=f'Metaanalytischer Durchschnitt: {reported_mean:.2f} Punkte')
+
+        ax.legend(handles=[patch_sig, patch_ns, patch_hid, line_true, line_gut],
+                  loc='lower right', fontsize=9, framealpha=0.92)
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        return fig
+
+    @render.ui
+    def bias_panel():
+        pct = input.bias_pct()
+        visible, _ = get_visible(pct)
+        reported_mean = np.mean(effects[visible]) if visible.sum() > 0 else TRUE_EFFECT
+        ueberschaetz = reported_mean - TRUE_EFFECT
+        n_hidden = N - visible.sum()
+
+        if pct == 0:
+            interpretation = (f"Vollständiges Bild. Der metaanalytische Durchschnitt "
+                              f"liegt nahe am wahren Zuwachs von {TRUE_EFFECT:.0f} Punkten.")
+            interp_color = "#27ae60"
+        elif ueberschaetz < 0.5:
+            interpretation = "Leichte Überschätzung. Der Bias ist noch gering."
+            interp_color = "#e67e22"
+        else:
+            interpretation = (
+                f"Starke Überschätzung. Die Literatur suggeriert "
+                f"{reported_mean:.1f} Punkte, der wahre Zuwachs beträgt nur "
+                f"{TRUE_EFFECT:.0f} Punkte. Niemand hat gelogen."
+            )
+            interp_color = "#c0392b"
+
+        warn = "color:#c0392b; font-weight:bold;" if n_hidden > 0 else "color:#27ae60;"
+        sign = "+" if ueberschaetz >= 0 else ""
+
+        return ui.div(
+            ui.tags.p(
+                ui.tags.span("In der Literatur: ", style="font-weight:bold;"),
+                f"{visible.sum()} von {N} Studien",
+            ),
+            ui.tags.p(
+                ui.tags.span("Nie eingereicht: ", style="font-weight:bold;"),
+                ui.tags.span(f"{n_hidden} Studien", style=warn),
+            ),
+            ui.tags.p(
+                ui.tags.span("Metaanalytischer Durchschnitt: ", style="font-weight:bold;"),
+                ui.tags.span(
+                    f"{reported_mean:.2f} Punkte",
+                    style=f"color:{'#c0392b' if ueberschaetz >= 0.5 else '#27ae60'};"
+                          f"font-weight:bold; font-size:14px;"
+                ),
+            ),
+            ui.tags.p(
+                ui.tags.span("Überschätzung: ", style="font-weight:bold;"),
+                f"{sign}{ueberschaetz:.2f} Punkte gegenüber dem wahren Zuwachs "
+                f"({TRUE_EFFECT:.0f} Punkte)",
+            ),
+            ui.tags.hr(style="margin:8px 0;"),
+            ui.tags.p(
+                interpretation,
+                style=f"color:{interp_color}; font-weight:bold; font-size:12px;"
+            ),
+            style="background:#f8f9fa; padding:12px; border-radius:8px;"
+                  "margin-top:8px; font-size:13px;"
+        )
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Jede der 40 Studien ist korrekt gerechnet. Niemand hat manipuliert. Die
+Verzerrung entsteht allein dadurch, welche Studien den Weg in die Literatur
+finden.
+
+Ziehe den Regler auf 100 % und beobachte, wie weit sich der metaanalytische
+Durchschnitt vom wahren Zuwachs entfernt.
+:::

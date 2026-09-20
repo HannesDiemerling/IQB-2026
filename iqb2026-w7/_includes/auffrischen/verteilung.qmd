@@ -1,0 +1,11 @@
+Eine Verteilung zeigt, welche Werte wie häufig vorkommen. Bei stetigen Größen
+zeichnet man sie als **Dichtekurve**.
+
+Die Höhe der Kurve ist keine Wahrscheinlichkeit. Nur die **Fläche** unter der
+Kurve ist eine: die Fläche unter der gesamten Kurve ist 1, die Fläche über
+einem Abschnitt ist die Wahrscheinlichkeit, einen Wert in diesem Abschnitt zu
+sehen.
+
+Deshalb sind in den Anwendungen die Zahlen an der senkrechten Achse
+ausgeblendet. Sie sind nicht interpretierbar. Was zählt, ist wo die Kurve
+liegt und wie breit sie ist.

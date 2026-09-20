@@ -1,0 +1,8 @@
+# Einheitlich LF im Repository. Der Build laeuft unter Linux, die Entwicklung
+# unter Windows. Ohne diese Zeile landen CRLF in Lua- und Python-Dateien.
+* text=auto eol=lf
+
+# Binaerdateien unangetastet lassen.
+*.png binary
+*.jpg binary
+*.svg text eol=lf

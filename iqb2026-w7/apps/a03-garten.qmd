@@ -1,0 +1,213 @@
+---
+title: "Der Garten der sich verzweigenden Pfade"
+subtitle: "Einheit 2 · Verborgene Freiheitsgrade"
+---
+
+Region Mitte, 60 Lernende je Bedingung. **Der wahre Effekt ist exakt null.**
+Alles, was du hier findest, ist per Konstruktion ein Fehlalarm.
+
+Jede der vier Entscheidungen ist für sich begründbar. Das Panel links unten
+zeigt dir gleichzeitig, wie viele Pfade es insgesamt gibt.
+
+{{< include /_includes/banner-laden.qmd >}}
+
+```{shinylive-python}
+#| standalone: true
+#| viewerHeight: 750
+
+from shiny import App, render, ui, reactive
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import ttest_ind
+from itertools import product
+
+app_ui = ui.page_fluid(
+    ui.card(
+        ui.card_header("LeseStark: Der Garten der sich verzweigenden Pfade"),
+        ui.layout_columns(
+            ui.div(
+                ui.h5("Plausible Analyse-Entscheidungen"),
+                ui.input_checkbox("drop_outlier",
+                                  "Auffällige Testwerte ausschließen", False),
+                ui.input_checkbox("control_weather",
+                                  "Nur vollständig getestete Klassen", False),
+                ui.input_checkbox("weekdays_only",
+                                  "Nur Regelklassen betrachten", False),
+                ui.input_radio_buttons(
+                    "subgroup", "Subgruppe wählen",
+                    {"all": "Alle Lernenden",
+                     "morning": "Nur Jahrgangsstufe 7",
+                     "long": "Nur Ganztagsschulen"},
+                    selected="all"
+                ),
+                ui.hr(),
+                ui.p("Jede Option ist für sich begründbar. Doch jede Kombination "
+                     "ist ein eigener Analysepfad.",
+                     style="font-size: 0.9em; color: #555;"),
+                ui.output_ui("garden_status"),
+            ),
+            ui.output_plot("hack_plot"),
+            col_widths=(4, 8)
+        )
+    )
+)
+
+def server(input, output, session):
+
+    # Erzeugt einen reproduzierbaren Datensatz OHNE echten Effekt.
+    # Jede Person traegt Zusatzmerkmale, an denen die "plausiblen" Filter ansetzen.
+    @reactive.calc
+    def base_data():
+        rng = np.random.default_rng(42)
+        n = 60
+        wert_ohne = rng.normal(12, 3.0, n)
+        wert_mit = rng.normal(12, 3.0, n)   # kein Effekt: gleiche Verteilung
+
+        # Begleitmerkmale, reines Rauschen
+        voll_ohne = rng.random(n) > 0.4
+        voll_mit = rng.random(n) > 0.4
+        regel_ohne = rng.random(n) > 0.3
+        regel_mit = rng.random(n) > 0.3
+        jg_ohne = rng.random(n) > 0.5
+        jg_mit = rng.random(n) > 0.5
+        gt_ohne = rng.random(n) > 0.5
+        gt_mit = rng.random(n) > 0.5
+
+        return dict(
+            wert_ohne=wert_ohne, wert_mit=wert_mit,
+            voll_ohne=voll_ohne, voll_mit=voll_mit,
+            regel_ohne=regel_ohne, regel_mit=regel_mit,
+            jg_ohne=jg_ohne, jg_mit=jg_mit,
+            gt_ohne=gt_ohne, gt_mit=gt_mit,
+        )
+
+    def apply_path(d, drop_outlier, nur_vollstaendig, nur_regelklassen, subgroup):
+        ohne = d["wert_ohne"].copy()
+        mit = d["wert_mit"].copy()
+        mask_ohne = np.ones(len(ohne), dtype=bool)
+        mask_mit = np.ones(len(mit), dtype=bool)
+
+        if nur_vollstaendig:
+            mask_ohne &= d["voll_ohne"]
+            mask_mit &= d["voll_mit"]
+        if nur_regelklassen:
+            mask_ohne &= d["regel_ohne"]
+            mask_mit &= d["regel_mit"]
+        if subgroup == "morning":
+            mask_ohne &= d["jg_ohne"]
+            mask_mit &= d["jg_mit"]
+        elif subgroup == "long":
+            mask_ohne &= d["gt_ohne"]
+            mask_mit &= d["gt_mit"]
+
+        ohne = ohne[mask_ohne]
+        mit = mit[mask_mit]
+
+        if drop_outlier:
+            # Auffaellige Werte entfernen: hoechsten Wert je Gruppe streichen
+            if len(ohne) > 2:
+                ohne = np.sort(ohne)[:-1]
+            if len(mit) > 2:
+                mit = np.sort(mit)[:-1]
+
+        return ohne, mit
+
+    @reactive.calc
+    def current_path():
+        d = base_data()
+        return apply_path(
+            d,
+            input.drop_outlier(),
+            input.control_weather(),
+            input.weekdays_only(),
+            input.subgroup(),
+        )
+
+    # Durchlaeuft ALLE moeglichen Pfade, um den Garten zu zeigen.
+    @reactive.calc
+    def all_paths():
+        d = base_data()
+        results = []
+        for do, cw, wo, sg in product([False, True], [False, True],
+                                      [False, True], ["all", "morning", "long"]):
+            ohne, mit = apply_path(d, do, cw, wo, sg)
+            if len(ohne) >= 3 and len(mit) >= 3:
+                _, p = ttest_ind(ohne, mit)
+                results.append(p)
+        return np.array(results)
+
+    @render.ui
+    def garden_status():
+        ps = all_paths()
+        n_sig = int(np.sum(ps < 0.05))
+        p_min = float(np.min(ps))
+        return ui.div(
+            ui.hr(),
+            ui.h5("Der Garten insgesamt"),
+            ui.p(f"Mögliche Analysepfade: {len(ps)}"),
+            ui.p(f"Davon bereits signifikant (p < 0.05): {n_sig}",
+                 style="color: #c0392b; font-weight: bold;" if n_sig > 0 else ""),
+            ui.p(f"Niedrigster p Wert über alle Pfade: {p_min:.3f}",
+                 style="color: #c0392b; font-weight: bold;" if p_min < 0.05 else ""),
+            ui.p("Obwohl der wahre Effekt null ist.",
+                 style="font-size: 0.85em; color: #555;"),
+        )
+
+    @render.plot
+    def hack_plot():
+        ohne_hacked, mit_hacked = current_path()
+
+        t_stat, p_val = ttest_ind(ohne_hacked, mit_hacked)
+
+        fig, ax = plt.subplots(figsize=(10, 6), layout="constrained")
+
+        jit = np.random.default_rng(99)
+        x_ohne = jit.normal(1, 0.05, len(ohne_hacked))
+        x_mit = jit.normal(2, 0.05, len(mit_hacked))
+
+        ax.scatter(x_ohne, ohne_hacked, color='#95a5a6', s=80, alpha=0.7,
+                   label='Ohne Förderung')
+        ax.scatter(x_mit, mit_hacked, color='#3498db', s=80, alpha=0.7,
+                   label='LeseStark')
+
+        mean_ohne = np.mean(ohne_hacked)
+        mean_mit = np.mean(mit_hacked)
+        ax.plot([0.8, 1.2], [mean_ohne, mean_ohne], color='#2c3e50', linewidth=3)
+        ax.plot([1.8, 2.2], [mean_mit, mean_mit], color='#2980b9', linewidth=3)
+
+        is_sig = p_val < 0.05
+        title_color = '#27ae60' if is_sig else '#c0392b'
+        status = "SIGNIFIKANT (LeseStark wirkt)" if is_sig else "NICHT SIGNIFIKANT"
+
+        ax.set_title(
+            f"Dieser Pfad: p = {p_val:.3f}  |  Urteil: {status}\n"
+            f"(n ohne = {len(ohne_hacked)}, n LeseStark = {len(mit_hacked)})",
+            color=title_color, fontweight='bold', fontsize=13
+        )
+
+        ax.set_xlim(0.5, 2.5)
+        ax.set_ylim(2, 22)
+        ax.set_xticks([1, 2])
+        ax.set_xticklabels(['Ohne Förderung', 'LeseStark'], fontsize=12)
+        ax.set_ylabel("Testleistung in Punkten")
+
+        ax.spines['top'].set_visible(False)
+        ax.spines['right'].set_visible(False)
+        ax.legend(loc="upper right")
+
+        return fig
+
+app = App(app_ui, server)
+```
+
+::: {.callout-note collapse="true"}
+## Worauf du achten solltest
+
+Das Panel links unten zählt **alle 24 Kombinationen** gleichzeitig durch, nicht
+nur die, die du gerade eingestellt hast. Es zeigt dir also den ganzen Garten,
+während du auf einem einzelnen Pfad stehst.
+
+Der niedrigste p-Wert über alle Pfade liegt deutlich unter .05, obwohl der
+wahre Effekt exakt null ist. Genau das meint die Zahl 61 Prozent bei Simmons
+und Kollegen.
+:::

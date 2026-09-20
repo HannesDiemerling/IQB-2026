@@ -1,0 +1,360 @@
+---
+title: "Prior, Likelihood, Posterior"
+subtitle: "Einheit 5 · Tag 2, Die Alternative"
+author: "Hannes Diemerling"
+date: "2026-09-24"
+date-format: "D. MMMM YYYY"
+title-slide-attributes:
+  data-background-color: "#F7F2EA"
+---
+
+<!--
+Verlinkte Seiten dieses Decks, hier zentral pflegen:
+  Arbeitsblatt    ../../tag2/e5-prior-likelihood-posterior.html
+  App Prior       ../../apps/a13-prior.html
+  App Likelihood  ../../apps/a14-likelihood.html
+  App Posterior   ../../apps/a15-posterior.html
+-->
+
+## Fragerunde: Einheit 4 {background-color="#2A3F66"}
+
+[10 Minuten · eine Minute pro Gruppe]{.bp-eyebrow}
+
+::: {.bp-callout}
+Welcher der drei Regler war der wichtigste, und was folgt daraus für ein
+Screening in eurem eigenen Arbeitsfeld?
+:::
+
+::: {.bp-runde}
+::: {.bp-runde__gruppe}
+[1]{.bp-runde__num}
+[Gruppe 1]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[2]{.bp-runde__num}
+[Gruppe 2]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[3]{.bp-runde__num}
+[Gruppe 3]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[4]{.bp-runde__num}
+[Gruppe 4]{.bp-runde__label}
+:::
+::: {.bp-runde__gruppe}
+[5]{.bp-runde__num}
+[Gruppe 5]{.bp-runde__label}
+:::
+:::
+
+::: notes
+Die Antwort auf den ersten Teil ist fast immer die Basisrate, und das ist
+richtig. Deshalb liegt der Ertrag im zweiten Teil.
+
+Auf der Tafel zwei Spalten führen: Anwendungsfeld links, Konsequenz rechts. Am
+Ende steht dort eine Liste, die die Gruppe selbst erzeugt hat.
+
+Wenn mehrere Gruppen dasselbe Feld nennen: nach dem Unterschied fragen. Bei
+Hochbegabungsdiagnostik und Förderbedarfsdiagnostik sind die Basisraten
+verschieden, und das ändert die Antwort.
+
+Überleitungssatz: "Ihr habt gerade mit einem Prior gearbeitet, ohne dass ich
+das Wort benutzt habe. Die Basisrate war der Prior. Jetzt schauen wir ihn uns
+richtig an."
+:::
+
+# Einheit 5 {.bp-trenner background-color="#2A3F66"}
+
+[Tag 2 · Die Alternative]{.bp-eyebrow}
+
+## Prior, Likelihood, Posterior
+
+::: notes
+Kurz. Drei Zutaten, eine pro Block.
+:::
+
+## Ist ein Prior unwissenschaftlich?
+
+::: {.bp-aufgabe}
+Der häufigste Einwand gegen bayesianische Verfahren lautet: **"Der Prior ist
+subjektiv, damit kann ich mir das Ergebnis backen."**
+:::
+
+::: {.bp-handzeichen}
+Handzeichen, wer diesen Einwand schon einmal gehört oder selbst gemacht hat.
+:::
+
+::: notes
+Die Hände gehen fast vollständig hoch, und das ist gut so. Der Einwand ist
+verbreitet, er ist ernst gemeint, und er ist teilweise berechtigt.
+
+Ich nehme ihn hier ausdrücklich an und löse ihn nicht sofort auf. Der Satz:
+"Der Einwand ist gut. Er stimmt sogar, nur nicht so, wie er gemeint ist. Am
+Ende dieser Einheit habt ihr die Antwort darauf."
+
+Wenn jemand den Einwand ausführen will: gern, aber auf zwei Sätze begrenzen und
+auf das Ende der Einheit vertagen. Sonst kippt die Einheit in eine Debatte,
+bevor die Begriffe stehen.
+
+Rund 2 Minuten.
+:::
+
+## Der Prior: uninformativ ist nicht neutral
+
+Der Prior beschreibt, welche Werte wir **vor** den neuen Daten für plausibel
+halten.
+
+::: {.bp-zwei}
+::: {}
+**Uninformativ.** Alle Werte gleich plausibel. Klingt neutral, ist es nicht: er
+hält einen Zuwachs von **30 Punkten** für genauso plausibel wie einen von
+2 Punkten, auf einem Test mit einer Streuung von 5 Punkten.
+
+**Informativ.** Nutzt Vorwissen aus früheren Evaluationen oder aus der Logik der
+Sache, um Unsinn auszuschließen.
+
+**Schwach informativ.** Der praktische Mittelweg: schließt Unsinn aus, lässt den
+Daten aber allen Spielraum.
+:::
+::: {.bp-callout}
+Der Prior erfindet keine Annahmen. Er macht die Annahmen, die ohnehin da sind,
+sichtbar und dadurch angreifbar.
+:::
+:::
+
+::: notes
+Die zentrale Einsicht der Einheit: uninformativ ist nicht neutral.
+
+Das 30-Punkte-Argument ist stark und konkret, deshalb steht es hier. Ein flacher
+Prior behauptet, ein Zuwachs von 30 Punkten sei genauso plausibel wie einer von
+2. Bei einer Streuung von 5 Punkten wäre das ein d von 6. Das ist keine
+Neutralität, das ist eine Behauptung, und zwar eine offensichtlich falsche.
+
+Für dieses Publikum die Anschlussfrage stellen: welche Effektgrößen sind in der
+Bildungsforschung überhaupt realistisch? Die Antwort kennt der Raum, und genau
+diese Antwort ist ein Prior. Die Leute haben also längst einen, sie schreiben
+ihn nur nicht auf.
+
+Der Kasten ist die halbe Antwort auf den Einwand von der Folie davor. Die
+andere Hälfte kommt zwei Folien weiter.
+
+Rund 5 Minuten.
+:::
+
+## Die Likelihood: die Daten stehen fest
+
+*Wie wahrscheinlich ist es, genau diese Daten zu sehen, falls eine bestimmte
+Hypothese stimmt?*
+
+**Fünf Pilotklassen, gemessener Zuwachs:** 3 · 7 · 5 · 9 · 6 Punkte.
+
+::: {.bp-zwei}
+::: {}
+| Hypothese | Likelihood |
+|---|---|
+| θ = 0 Punkte | praktisch null |
+| θ = 3 Punkte | gering |
+| θ = 6 Punkte | **Maximum** |
+| θ = 12 Punkte | gering |
+:::
+::: {}
+Die Likelihood ist der **Filter**, durch den die Daten auf den Prior wirken. Sie
+ist keine Wahrscheinlichkeitsverteilung über θ, sondern eine Bewertung jeder
+einzelnen Hypothese an denselben, festen Daten.
+:::
+:::
+
+::: {.bp-callout}
+Beim Maximum-Likelihood-Verfahren hört man hier auf und nimmt den besten Wert.
+Bayesianisch behält man die ganze Kurve und verrechnet sie mit dem Prior.
+:::
+
+::: notes
+Roter Faden: die Daten sind fix, die Hypothese wandert. Das ist genau umgekehrt
+zur Intuition, und deshalb ist dieses Kapitel das rutschigste.
+
+Die fünf Zahlen nennen und betonen: die ändern sich nie mehr. In der Anwendung
+wandert die Kurve über die fünf festen Punkte, und genau dieses Bild ist die
+Likelihood.
+
+Die Abgrenzung zu Maximum Likelihood lohnt sich, weil viele im Raum ML aus der
+Regression oder aus IRT-Modellen kennen. Für ein Publikum aus der
+Bildungsforschung ist das der beste Anknüpfungspunkt überhaupt: wer schon
+einmal Parameter eines Rasch-Modells geschätzt hat, hat mit Likelihoods
+gearbeitet.
+
+Der Schritt zu Bayes ist dann klein: statt nur des Maximums behält man die
+ganze Kurve.
+
+Wenn die Zeit drängt, ist das die Folie, die am ehesten gekürzt werden kann. Sie
+ist die technischste und die am wenigsten überraschende.
+
+Rund 4 Minuten.
+:::
+
+## Der Posterior: ein sichtbarer Kompromiss
+
+**Prior gegen Daten.** Frühere Evaluationen sagen **8 Punkte**. Die fünf
+Pilotklassen sagen **6 Punkte**.
+
+::: {.bp-zwei}
+::: {}
+Der Posterior landet **dazwischen**. Wie nah an den Daten, hängt davon ab, wie
+sicher der Prior formuliert war:
+
+- **Breiter Prior:** die Daten dominieren.
+- **Schmaler Prior:** es braucht viele Daten, um ihn zu bewegen.
+- **Viele Daten:** der Prior wird irrelevant.
+:::
+::: {.bp-callout}
+Und damit ist der Einwand von vorhin beantwortet. Wer genug Daten hat, bei dem
+spielt es keine Rolle mehr, was er vorher geglaubt hat. Wer wenig Daten hat,
+bei dem spielt es eine Rolle, und dann ist es besser, wenn man es sieht.
+:::
+:::
+
+::: {.bp-demo-hinweis}
+Anwendung: **Prior und Daten verrechnen** · [zum Selbstausprobieren](../../apps/a15-posterior.html)
+:::
+
+::: notes
+Der Höhepunkt der Einheit. In der Anwendung liegen drei Kurven übereinander:
+Prior grau, Likelihood rot, Posterior violett. Hier Zeit lassen.
+
+Die drei Regeln wörtlich sagen. Sie sind die praktische Antwort auf den
+Subjektivitätsvorwurf, und sie sind überprüfbar, nicht rhetorisch.
+
+Der Kasten rechts ist der Moment, auf den die Einheit zuläuft. Ich beziehe mich
+ausdrücklich auf die erhobenen Hände von vorhin.
+
+Ein Zusatz, der bei diesem Publikum zieht: in der Bildungsforschung hat man oft
+wenig Daten und viel Vorwissen. Genau dort ist ein informativer Prior kein
+Makel, sondern der einzige Weg, das Vorwissen überhaupt zu nutzen, statt es
+wegzuwerfen und bei null anzufangen.
+
+Hier ist auch der Punkt für die Live-Demo. Der Tab ist vorher geöffnet, ich
+zeige genau eine Sache: den Prior-Regler schmal ziehen und beobachten, wie der
+Posterior sich vom Datenwert entfernt.
+
+Rund 5 Minuten inklusive Demo.
+:::
+
+## Was du jetzt sagen darfst
+
+::: {.bp-zwei}
+::: {.bp-pillar .tone-sand}
+[Konfidenzintervall]{.bp-pillar__num}
+
+### 95 % CI [0,0; 4,2]
+
+Wenn ich diese Studie unendlich oft wiederhole, enthalten 95 % der so
+berechneten Intervalle den wahren Wert.
+
+Über **dieses** Intervall sagt das nichts.
+:::
+::: {.bp-pillar .tone-navy}
+[Glaubwürdigkeitsintervall]{.bp-pillar__num}
+
+### 95 % HDI [0,0; 4,2]
+
+Gegeben meine Daten und mein Modell liegt der wahre Wert mit 95 %
+Wahrscheinlichkeit in diesem Bereich.
+
+Genau die Aussage, die alle gemeint haben.
+:::
+:::
+
+::: {.bp-callout}
+**HDI** heißt Highest Density Interval: der schmalste Bereich, der 95 % der
+Verteilung enthält. Jeder Wert darin ist plausibler als jeder Wert außerhalb.
+:::
+
+::: notes
+Die Rechnung von gestern wird hier beglichen. Fehlannahme Nummer 7 aus Einheit
+1 ausdrücklich aufrufen.
+
+Die beiden Sätze nebeneinander vorlesen und die Gruppe spüren lassen, dass der
+rechte der ist, den sie ohnehin immer gemeint haben.
+
+Wichtig und ehrlich: "gegeben meine Daten und mein Modell". Der Zusatz gehört
+dazu. Ein Glaubwürdigkeitsintervall ist keine Aussage über die Wirklichkeit,
+sondern über die Wirklichkeit unter einem bestimmten Modell. Wer das
+unterschlägt, verkauft Bayes als Wundermittel, und das rächt sich in der
+Diskussion.
+
+Der Unterschied zwischen HDI und ETI nur kurz: ETI schneidet unten und oben je
+2,5 Prozent ab, HDI nimmt den schmalsten Bereich. Bei symmetrischen
+Verteilungen fast identisch, bei schiefen nicht. Mehr braucht es hier nicht,
+das steht auf dem Arbeitsblatt.
+
+Rund 4 Minuten.
+:::
+
+## Und wie berichtest du den Prior?
+
+::: {.bp-aufgabe}
+**Prior-Sensitivität, in drei Zeilen:**
+
+1. Rechne das Ergebnis mit deinem gewählten Prior.
+2. Rechne es noch einmal mit einem deutlich breiteren und einem deutlich
+   engeren Prior.
+3. Berichte alle drei. Wenn die Schlussfolgerung stabil bleibt, ist der Prior
+   kein Streitpunkt mehr. Wenn nicht, hast du etwas Wichtiges gelernt.
+:::
+
+::: {.bp-warn}
+Der Prior wird dadurch überprüfbar. Genau das kann eine unausgesprochene
+Annahme nie werden.
+:::
+
+::: notes
+Die praktische Konsequenz aus der ganzen Einheit, und der Satz, mit dem man
+jede Begutachtung übersteht.
+
+Der Aufwand ist gering. In brms oder JASP ist das ein zusätzlicher Durchlauf
+mit geänderten Priorwerten, keine neue Analyse.
+
+Der Vergleich, der hier gut funktioniert: niemand verlangt, dass eine
+Sensitivitätsanalyse das Ergebnis bestätigt. Verlangt wird nur, dass sie
+berichtet wird. Genauso wie bei fehlenden Werten oder Ausreißern, wo das längst
+Standard ist.
+
+Das ist die kürzbare Folie dieser Einheit, aber ungern. Sie ist der Unterschied
+zwischen jemandem, der Bayes kann, und jemandem, der Bayes benutzt.
+
+Rund 2 Minuten.
+:::
+
+## Gruppenarbeit 5 {background-color="#4FA8A0"}
+
+[30 Minuten · Breakout-Räume]{.bp-eyebrow}
+
+::: {.bp-aufgabe}
+**Die Frage für eure Gruppe:** Ihr habt den Prior gegen die Daten antreten
+lassen. Ab wann hat der Prior gewonnen, und würdet ihr einen solchen Prior in
+einem Antrag verteidigen können?
+:::
+
+{{< include /folien/_shared/_rollen.qmd >}}
+
+::: {.bp-demo-hinweis}
+Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 5](../../tag2/e5-prior-likelihood-posterior.html)
+:::
+
+::: notes
+Auf dem Arbeitsblatt ist der dritte Arbeitsschritt bewusst destruktiv angelegt:
+die Gruppen sollen den Prior so eng setzen, dass die Daten nichts mehr
+ausrichten. Das ist kein Fehler, das ist die Lektion. Kurz ansagen, sonst
+glauben sie, sie hätten etwas kaputtgemacht.
+
+Der zweite Teil der Frage ist der eigentliche Transfer. "In einem Antrag
+verteidigen" ist die Formulierung, die dieses Publikum ernst nimmt.
+
+Auffrischungen zu Verteilung, Standardabweichung und bedingter
+Wahrscheinlichkeit stehen aufklappbar direkt bei den Aufgaben.
+
+Nach 25 Minuten die Ansage: noch fünf Minuten.
+
+Rund 1,5 Minuten.
+:::

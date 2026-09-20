@@ -1,0 +1,143 @@
+---
+title: "Arbeitsblatt Einheit 1"
+subtitle: "Was der p-Wert nicht sagt · 30 Minuten"
+---
+
+## Euer Auftrag
+
+Zwei Standorte melden denselben Zuwachs, kommen aber zu entgegengesetzten
+Urteilen. Findet heraus, woran das liegt, und einigt euch darauf, was ihr
+stattdessen berichten würdet.
+
+**Anwendungen:** [Gleicher Effekt, gegensätzliche Urteile](../apps/a01-schwelle.qmd)
+und [Signifikanz durch Datenmasse](../apps/a02-stichprobengroesse.qmd)
+
+## Rollen
+
+{{< include /_includes/rollen.qmd >}}
+
+## Das Szenario
+
+{{< include /_includes/szenario.qmd >}}
+
+## Aufgabe 1: Beobachten
+
+Öffnet die Anwendung **Gleicher Effekt, gegensätzliche Urteile**. Der
+Ansichtsmodus steht auf "Nur p-Werte". Mehr seht ihr zunächst nicht, und genau
+so wird in vielen Berichten gelesen.
+
+1. Notiert die beiden p-Werte.
+2. Welchen Standort würdet ihr allein auf dieser Grundlage weiterfördern?
+3. Schaltet jetzt auf "Vollständige Ansicht". Was ändert sich an eurer
+   Einschätzung?
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Nullhypothese und p-Wert
+
+{{< include /_includes/auffrischen/nullhypothese.qmd >}}
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 1
+
+Standort Nord liegt bei **p = .048**, Standort Süd bei **p = .054**. Nach der
+üblichen Konvention wäre nur Nord ein Erfolg.
+
+In der vollständigen Ansicht zeigt sich: beide Standorte haben exakt denselben
+Zuwachs von **2,1 Punkten**. Die Entscheidung hing an einer Differenz von
+sechs Tausendstel im p-Wert, nicht an einem Unterschied in der Wirkung.
+:::
+
+## Aufgabe 2: Manipulieren
+
+Bleibt in derselben Anwendung, Modus "Vollständige Ansicht". Der Regler
+verändert nur die **Streuung** an Standort Süd, nicht den Zuwachs.
+
+1. Zieht den Regler langsam von 5,10 nach unten. Ab welchem Wert kippt das
+   Urteil für Süd auf signifikant?
+2. Zieht ihn dann nach oben bis 6,0. Was passiert?
+3. Prüft dabei ständig die Zahl neben "Zuwachs". Verändert sie sich?
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Standardabweichung
+
+{{< include /_includes/auffrischen/standardabweichung.qmd >}}
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 2
+
+Das Urteil kippt bei einer Streuung von etwa **4,95**. Bei 6,0 liegt der
+p-Wert bei rund .10, also weit von der Schwelle entfernt.
+
+Der Zuwachs bleibt die ganze Zeit exakt bei 2,1 Punkten. Er ist in der
+Anwendung fest verdrahtet.
+
+Das ist der Kern: der p-Wert reagiert auf die Streuung, nicht nur auf den
+Effekt. Zwei Standorte mit identischer Wirkung bekommen verschiedene Urteile,
+weil ihre Schülerschaft unterschiedlich homogen ist.
+:::
+
+## Aufgabe 3: Begreifen
+
+Wechselt zur zweiten Anwendung, **Signifikanz durch Datenmasse**. Hier ist der
+Zuwachs mit 0,2 Punkten fest eingestellt, verändern lässt sich nur die Zahl
+der getesteten Lernenden.
+
+1. Startet bei 50 Lernenden. Was sagt der Status?
+2. Zieht hoch, bis der Status auf SIGNIFIKANT springt. Bei welcher Zahl
+   passiert das?
+3. Schaut dabei auf die Balken rechts. Was bewegt sich, und was nicht?
+
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Standardfehler
+
+{{< include /_includes/auffrischen/standardfehler.qmd >}}
+:::
+
+::: {.callout-note collapse="true"}
+## Lösung Aufgabe 3
+
+Bei 50 Lernenden ist nichts signifikant. Der Umschlag passiert bei rund
+**1800 Lernenden je Gruppe**.
+
+Die beiden Balken bewegen sich überhaupt nicht, denn die Mittelwerte sind
+fest. Kleiner wird nur der Fehlerbalken, also das Konfidenzintervall.
+
+Der Zuwachs von 0,2 Punkten entspricht bei der hier verwendeten Streuung von
+3 Punkten einem **d von etwa 0.07**. Das ist praktisch nichts, und es wird
+trotzdem hochsignifikant, sobald die Stichprobe groß genug ist.
+
+Bei Schulleistungsstudien mit mehreren tausend Fällen ist das der Normalfall,
+nicht die Ausnahme.
+:::
+
+## Pufferaufgaben
+
+::: {.callout-important collapse="true"}
+## Für schnelle Gruppen
+
+1. **Der Umkehrschluss.** Stellt in der zweiten Anwendung 20 Lernende ein.
+   Formuliert einen Satz, der korrekt beschreibt, was dieses Ergebnis über die
+   Wirkung von LeseStark aussagt. Vermeidet dabei das Wort "kein".
+
+2. **Die Gegenprobe.** Angenommen, beide Standorte hätten je 200 statt 45
+   Lernende getestet, bei gleichem Zuwachs und gleicher Streuung. Was würde
+   mit den beiden p-Werten passieren, und wäre die Entscheidung dann besser
+   begründet?
+
+3. **Transfer.** Denkt an eine Studie aus eurem eigenen Feld, bei der ein
+   knapp nicht signifikanter Befund als "kein Effekt" berichtet wurde. Was
+   hätte stattdessen dort stehen müssen?
+:::
+
+## Die Frage für die Fragerunde
+
+::: {.callout-warning}
+## Das berichtet eure Gruppe nach der Pause
+
+**Zwei Standorte, derselbe Zuwachs, verschiedene Urteile. Woran lag es, und
+was hättet ihr stattdessen berichtet?**
+
+Eine Minute. Einigt euch vorher auf einen Satz.
+:::

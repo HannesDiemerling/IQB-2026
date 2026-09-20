@@ -1,0 +1,16 @@
+Der Posterior ist das Ergebnis: deine aktualisierte Überzeugung, nachdem die
+Daten einbezogen wurden. Geschrieben $P(\theta \mid D)$.
+
+Er entsteht aus Prior mal Likelihood, normiert:
+
+$$P(\theta \mid D) = \frac{P(D \mid \theta)\, P(\theta)}{P(D)}$$
+
+Er liegt immer **zwischen** Prior und Daten. Wie nah an den Daten, hängt
+davon ab, wie sicher der Prior formuliert war:
+
+- Breiter Prior: die Daten dominieren.
+- Schmaler Prior: es braucht viele Daten, um ihn zu bewegen.
+- Viele Daten: der Prior wird irrelevant.
+
+Anders als ein p-Wert ist der Posterior eine Aussage über die **Hypothese**,
+und genau deshalb darfst du über ihn Wahrscheinlichkeitsaussagen machen.

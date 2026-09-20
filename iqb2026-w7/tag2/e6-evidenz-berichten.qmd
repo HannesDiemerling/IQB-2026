@@ -9,10 +9,15 @@ Macht aus einer Verteilung eine Entscheidung. Am Ende formuliert ihr den
 Ergebnissatz, den ihr einer Kommission vorlegen würdet. Genau diesen Satz
 tragt ihr im Abschluss vor.
 
-**Anwendungen:** [HDI und ROPE](../apps/a16-hdi-rope.qmd) ·
-[Bayes-Faktor und Evidenzstärke](../apps/a17-bayesfaktor.qmd) ·
-[Posterior oder Vorhersage](../apps/a18-vorhersage.qmd) ·
-[MCMC](../apps/a19-mcmc.qmd)
+**Anwendungen:** [HDI und ROPE](../apps/a16-hdi-rope.qmd){target="_blank"} ·
+[Bayes-Faktor und Evidenzstärke](../apps/a17-bayesfaktor.qmd){target="_blank"} ·
+[Posterior oder Vorhersage](../apps/a18-vorhersage.qmd){target="_blank"} ·
+[MCMC](../apps/a19-mcmc.qmd){target="_blank"}
+
+::: {.callout-note appearance="simple"}
+Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
+bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
+:::
 
 ## Rollen
 
@@ -22,6 +27,8 @@ Die Rollen wandern gegenüber Einheit 5 eine Position weiter. Damit war jede
 Person einmal in jeder Rolle.
 
 ## Aufgabe 1: Beobachten
+
+[Anwendung öffnen: HDI und ROPE](../apps/a16-hdi-rope.qmd){.app-start target="_blank"}
 
 Öffnet **HDI und ROPE**. Die Startwerte sind die Studie aus Einheit 1:
 Mittelwert 2,1, Unsicherheit 1,05, ROPE von minus 3 bis plus 3.
@@ -52,6 +59,8 @@ Befund als signifikanter Erfolg durchgegangen.
 
 ## Aufgabe 2: Manipulieren
 
+[Anwendung öffnen: HDI und ROPE](../apps/a16-hdi-rope.qmd){.app-start target="_blank"}
+
 Sucht alle drei möglichen Ausgänge auf.
 
 1. **Praktisch äquivalent:** stellt den Mittelwert auf **0,0** und die
@@ -80,6 +89,8 @@ ist die ROPE kein Fortschritt gegenüber .05, sondern nur eine neue Stellschraub
 :::
 
 ## Aufgabe 3: Begreifen
+
+[Anwendung öffnen: Bayes-Faktor und Evidenzstärke](../apps/a17-bayesfaktor.qmd){.app-start target="_blank"}
 
 Öffnet **Bayes-Faktor und Evidenzstärke**. Die Startwerte sind wieder die
 Studie aus Einheit 1.
@@ -147,12 +158,12 @@ Nicht abschreiben. Die eigene Formulierung ist der Lerneffekt.
    einer Wahrscheinlichkeit, keine Reliabilität. Das ist deutlich schwerer,
    als es klingt.
 
-2. **Einzelfall gegen Durchschnitt.** Öffnet **Posterior oder Vorhersage**.
+2. **Einzelfall gegen Durchschnitt.** Öffnet [Posterior oder Vorhersage](../apps/a18-vorhersage.qmd){target="_blank"}.
    Zieht die Unsicherheit über Theta auf 0,1. Warum bleibt die orange Kurve
    trotzdem breit, und was heißt das für eine Förderentscheidung zu einer
    einzelnen Person?
 
-3. **MCMC.** Öffnet die MCMC-Anwendung. Startet mit 200 Schritten, dann mit
+3. **MCMC.** Öffnet [MCMC](../apps/a19-mcmc.qmd){target="_blank"}. Startet mit 200 Schritten, dann mit
    5000. Beschreibt, woran man im oberen Diagramm erkennt, dass die
    Berechnung vertrauenswürdig ist.
 :::

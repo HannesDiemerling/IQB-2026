@@ -9,8 +9,13 @@ Zwei Standorte melden denselben Zuwachs, kommen aber zu entgegengesetzten
 Urteilen. Findet heraus, woran das liegt, und einigt euch darauf, was ihr
 stattdessen berichten würdet.
 
-**Anwendungen:** [Gleicher Effekt, gegensätzliche Urteile](../apps/a01-schwelle.qmd)
-und [Signifikanz durch Datenmasse](../apps/a02-stichprobengroesse.qmd)
+**Anwendungen:** [Gleicher Effekt, gegensätzliche Urteile](../apps/a01-schwelle.qmd){target="_blank"}
+und [Signifikanz durch Datenmasse](../apps/a02-stichprobengroesse.qmd){target="_blank"}
+
+::: {.callout-note appearance="simple"}
+Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
+bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
+:::
 
 ## Rollen
 
@@ -21,6 +26,8 @@ und [Signifikanz durch Datenmasse](../apps/a02-stichprobengroesse.qmd)
 {{< include /_includes/szenario.qmd >}}
 
 ## Aufgabe 1: Beobachten
+
+[Anwendung öffnen: Gleicher Effekt, gegensätzliche Urteile](../apps/a01-schwelle.qmd){.app-start target="_blank"}
 
 Öffnet die Anwendung **Gleicher Effekt, gegensätzliche Urteile**. Der
 Ansichtsmodus steht auf "Nur p-Werte". Mehr seht ihr zunächst nicht, und genau
@@ -49,6 +56,8 @@ sechs Tausendstel im p-Wert, nicht an einem Unterschied in der Wirkung.
 :::
 
 ## Aufgabe 2: Manipulieren
+
+[Anwendung öffnen: Gleicher Effekt, gegensätzliche Urteile](../apps/a01-schwelle.qmd){.app-start target="_blank"}
 
 Bleibt in derselben Anwendung, Modus "Vollständige Ansicht". Der Regler
 verändert nur die **Streuung** an Standort Süd, nicht den Zuwachs.
@@ -79,6 +88,8 @@ weil ihre Schülerschaft unterschiedlich homogen ist.
 :::
 
 ## Aufgabe 3: Begreifen
+
+[Anwendung öffnen: Signifikanz durch Datenmasse](../apps/a02-stichprobengroesse.qmd){.app-start target="_blank"}
 
 Wechselt zur zweiten Anwendung, **Signifikanz durch Datenmasse**. Hier ist der
 Zuwachs mit 0,2 Punkten fest eingestellt, verändern lässt sich nur die Zahl
@@ -117,7 +128,7 @@ nicht die Ausnahme.
 ::: {.callout-important collapse="true"}
 ## Für schnelle Gruppen
 
-1. **Der Umkehrschluss.** Stellt in der zweiten Anwendung 20 Lernende ein.
+1. **Der Umkehrschluss.** Stellt in [Signifikanz durch Datenmasse](../apps/a02-stichprobengroesse.qmd){target="_blank"} 20 Lernende ein.
    Formuliert einen Satz, der korrekt beschreibt, was dieses Ergebnis über die
    Wirkung von LeseStark aussagt. Vermeidet dabei das Wort "kein".
 

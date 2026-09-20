@@ -8,9 +8,14 @@ subtitle: "Prior, Likelihood, Posterior · 30 Minuten"
 Lasst den Prior gegen die Daten antreten. Findet heraus, ab wann der Prior
 gewinnt, und entscheidet, ob ihr einen solchen Prior verteidigen könntet.
 
-**Anwendungen:** [Der Prior](../apps/a13-prior.qmd) ·
-[Die Likelihood](../apps/a14-likelihood.qmd) ·
-[Der Posterior](../apps/a15-posterior.qmd)
+**Anwendungen:** [Der Prior](../apps/a13-prior.qmd){target="_blank"} ·
+[Die Likelihood](../apps/a14-likelihood.qmd){target="_blank"} ·
+[Der Posterior](../apps/a15-posterior.qmd){target="_blank"}
+
+::: {.callout-note appearance="simple"}
+Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
+bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
+:::
 
 ## Rollen
 
@@ -19,6 +24,8 @@ gewinnt, und entscheidet, ob ihr einen solchen Prior verteidigen könntet.
 Die Rollen wandern gegenüber Einheit 4 eine Position weiter.
 
 ## Aufgabe 1: Beobachten
+
+[Anwendung öffnen: Der Prior](../apps/a13-prior.qmd){.app-start target="_blank"}
 
 Öffnet **Der Prior**. Die Startwerte sind Mittelwert 0 und Unsicherheit 20.
 Dieser Prior gilt gemeinhin als "uninformativ".
@@ -52,6 +59,8 @@ die niemand unterschreiben würde, wenn man sie ausspricht.
 :::
 
 ## Aufgabe 2: Manipulieren
+
+[Anwendung öffnen: Der Posterior](../apps/a15-posterior.qmd){.app-start target="_blank"}
 
 Öffnet **Der Posterior**. Der Prior steht auf 8 Punkten mit Unsicherheit 5,
 die Pilotdaten sagen 6 Punkte. Die Daten sind fest.
@@ -90,6 +99,8 @@ ihr behauptet habt, den Wert schon sehr genau zu kennen.
 
 ## Aufgabe 3: Begreifen
 
+[Anwendung öffnen: Der Posterior](../apps/a15-posterior.qmd){.app-start target="_blank"}
+
 Bleibt in derselben Anwendung.
 
 1. Stellt die Prior-Unsicherheit bewusst so ein, dass die Daten **keine
@@ -120,11 +131,11 @@ stabil, ist der Prior kein Streitpunkt mehr.
 ::: {.callout-important collapse="true"}
 ## Für schnelle Gruppen
 
-1. **Maximum von Hand.** Öffnet **Die Likelihood**. Sucht das Theta, bei dem
+1. **Maximum von Hand.** Öffnet [Die Likelihood](../apps/a14-likelihood.qmd){target="_blank"}. Sucht das Theta, bei dem
    der Balken unten den Wert 1.00 erreicht. Vergleicht diesen Wert mit dem
    Mittelwert der fünf Messwerte 3, 7, 5, 9 und 6.
 
-2. **Einen guten Prior bauen.** Zurück zu **Der Prior**. Baut einen Prior, der
+2. **Einen guten Prior bauen.** Zurück zu [Der Prior](../apps/a13-prior.qmd){target="_blank"}. Baut einen Prior, der
    drei Bedingungen erfüllt: er schließt negative Effekte nicht völlig aus, er
    hält Zuwächse über 15 Punkte für praktisch unmöglich, und sein Schwerpunkt
    liegt bei einem realistischen Wert. Notiert Mittelwert und Unsicherheit.

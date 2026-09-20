@@ -9,9 +9,14 @@ Dreht an den drei Reglern eines Screenings und findet heraus, welcher davon
 tatsächlich entscheidet. Übertragt das Ergebnis dann auf euer eigenes
 Arbeitsfeld.
 
-**Anwendungen:** [Screening auf Leseförderbedarf](../apps/a11-screening.qmd) ·
-[Zwei Welten der Wahrscheinlichkeit](../apps/a10-zwei-welten.qmd) ·
-[p-Wert und Posterior nebeneinander](../apps/a12-p-und-posterior.qmd)
+**Anwendungen:** [Screening auf Leseförderbedarf](../apps/a11-screening.qmd){target="_blank"} ·
+[Zwei Welten der Wahrscheinlichkeit](../apps/a10-zwei-welten.qmd){target="_blank"} ·
+[p-Wert und Posterior nebeneinander](../apps/a12-p-und-posterior.qmd){target="_blank"}
+
+::: {.callout-note appearance="simple"}
+Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
+bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
+:::
 
 ## Rollen
 
@@ -20,6 +25,8 @@ Arbeitsfeld.
 Die Rollen wandern gegenüber Einheit 3 eine Position weiter.
 
 ## Aufgabe 1: Beobachten
+
+[Anwendung öffnen: Screening auf Leseförderbedarf](../apps/a11-screening.qmd){.app-start target="_blank"}
 
 Öffnet **Screening auf Leseförderbedarf**. Die Startwerte sind 3 Prozent
 Förderbedarf in der Population, 95 Prozent Erkennung, 8 Prozent Fehlalarme.
@@ -53,6 +60,8 @@ Erkennungsrate von 95 Prozent so überzeugend klingt, dass die Basisrate
 
 ## Aufgabe 2: Manipulieren
 
+[Anwendung öffnen: Screening auf Leseförderbedarf](../apps/a11-screening.qmd){.app-start target="_blank"}
+
 Verändert jeweils **einen** Regler und stellt ihn danach wieder zurück.
 
 1. Verdoppelt die **Basisrate** von 3 auf 6 Prozent. Wie ändert sich der
@@ -80,6 +89,8 @@ mehr Treffer als die gute Erkennung in der kleinen Gruppe.
 :::
 
 ## Aufgabe 3: Begreifen
+
+[Anwendung öffnen: p-Wert und Posterior nebeneinander](../apps/a12-p-und-posterior.qmd){.app-start target="_blank"}
 
 Öffnet **p-Wert und Posterior nebeneinander**. Die Startwerte sind die Studie
 aus Einheit 1.
@@ -120,8 +131,8 @@ wahrscheinlich nicht stark genug.
    Screening über 50 Prozent? Sucht den Wert und überlegt, ob ein Merkmal mit
    dieser Häufigkeit überhaupt noch ein Screening rechtfertigt.
 
-2. **Zwei Welten.** Öffnet die Anwendung **Zwei Welten der
-   Wahrscheinlichkeit**. Klickt fünfmal einzeln, dann stellt auf 50 Lernende
+2. **Zwei Welten.** Öffnet [Zwei Welten der Wahrscheinlichkeit](../apps/a10-zwei-welten.qmd){target="_blank"}.
+   Klickt fünfmal einzeln, dann stellt auf 50 Lernende
    und klickt erneut. Beschreibt in einem Satz, was die rechte Seite die ganze
    Zeit mitgeteilt hat und die linke nicht.
 

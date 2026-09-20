@@ -37,3 +37,49 @@ a {
 table {
   font-size: 0.95rem;
 }
+
+/* Startknopf fuer eine Anwendung. Steht bei jeder Aufgabe und oeffnet in
+   einem neuen Fenster, damit das Arbeitsblatt geoeffnet bleibt. */
+a.app-start {
+  display: inline-block;
+  margin: 0.2rem 0 1rem 0;
+  padding: 0.55rem 1.1rem;
+  background: var(--bp-teal);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 1px solid rgba(42, 63, 102, 0.12);
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+a.app-start::before {
+  /* Schlichter Pfeil statt Icon-Schrift, damit keine Abhaengigkeit entsteht. */
+  content: "\25B6";
+  margin-right: 0.55em;
+  font-size: 0.8em;
+}
+
+a.app-start::after {
+  content: "  (neues Fenster)";
+  font-weight: 400;
+  font-size: 0.82em;
+  opacity: 0.85;
+}
+
+a.app-start:hover,
+a.app-start:focus {
+  background: var(--bp-navy);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a.app-start {
+    transition: none;
+  }
+  a.app-start:hover,
+  a.app-start:focus {
+    transform: none;
+  }
+}

@@ -12,10 +12,10 @@ Kommission empfehlen würdet.
 In der Fragerunde setzt sich aus euren fünf Antworten eine Kurve zusammen, die
 keine Gruppe allein sehen kann.
 
-**Anwendungen:** [Reliabilität dämpft Effektstärken](../apps/a09-minderung.qmd) ·
-[Unstandardisierter Effekt in Punkten](../apps/a06-rohwerte.qmd) ·
-[Cohens d in zwei Kontexten](../apps/a07-cohens-d.qmd) ·
-[Signifikanz gegen praktische Bedeutsamkeit](../apps/a08-relevanzschwelle.qmd)
+**Anwendungen:** [Reliabilität dämpft Effektstärken](../apps/a09-minderung.qmd){target="_blank"} ·
+[Unstandardisierter Effekt in Punkten](../apps/a06-rohwerte.qmd){target="_blank"} ·
+[Cohens d in zwei Kontexten](../apps/a07-cohens-d.qmd){target="_blank"} ·
+[Signifikanz gegen praktische Bedeutsamkeit](../apps/a08-relevanzschwelle.qmd){target="_blank"}
 
 ## Eure Reliabilität
 
@@ -34,6 +34,11 @@ Alle Gruppen haben denselben **beobachteten** Effekt von **d = 0.42**. Nur die
 Messgenauigkeit unterscheidet sich.
 :::
 
+::: {.callout-note appearance="simple"}
+Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
+bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
+:::
+
 ## Rollen
 
 {{< include /_includes/rollen.qmd >}}
@@ -41,6 +46,8 @@ Messgenauigkeit unterscheidet sich.
 Die Rollen wandern gegenüber Einheit 2 eine Position weiter.
 
 ## Aufgabe 1: Beobachten
+
+[Anwendung öffnen: Unstandardisierter Effekt in Punkten](../apps/a06-rohwerte.qmd){.app-start target="_blank"}
 
 Öffnet **Unstandardisierter Effekt in Punkten**.
 
@@ -72,6 +79,8 @@ verschiedene Fragen.
 :::
 
 ## Aufgabe 2: Manipulieren
+
+[Anwendung öffnen: Reliabilität dämpft Effektstärken](../apps/a09-minderung.qmd){.app-start target="_blank"}
 
 Öffnet **Reliabilität dämpft Effektstärken**. Stellt die Reliabilität auf
 **euren Gruppenwert** aus der Tabelle oben.
@@ -116,6 +125,8 @@ Unterschied liegt allein im Messinstrument.
 
 ## Aufgabe 3: Begreifen
 
+[Anwendung öffnen: Reliabilität dämpft Effektstärken](../apps/a09-minderung.qmd){.app-start target="_blank"}
+
 Bleibt in derselben Anwendung.
 
 1. Lasst euren Reliabilitätswert stehen und stellt das wahre d auf 1.00. Wie
@@ -155,12 +166,12 @@ Instrument so ungenau misst. Der Kipppunkt liegt dazwischen.
 ::: {.callout-important collapse="true"}
 ## Für schnelle Gruppen
 
-1. **Zwei Skalen.** Öffnet **Cohens d in zwei Kontexten** und schaltet auf
+1. **Zwei Skalen.** Öffnet [Cohens d in zwei Kontexten](../apps/a07-cohens-d.qmd){target="_blank"} und schaltet auf
    "Vergleichbarkeit". Stellt d auf 0.50. Notiert beide Roheffekte. Erklärt
    jemandem in einem Satz, warum beide denselben Effekt zeigen.
 
-2. **Die Relevanzschwelle.** Öffnet **Signifikanz gegen praktische
-   Bedeutsamkeit**. Bei den Startwerten kostet ein Kompetenzpunkt rund
+2. **Die Relevanzschwelle.** Öffnet [Signifikanz gegen praktische Bedeutsamkeit](../apps/a08-relevanzschwelle.qmd){target="_blank"}.
+   Bei den Startwerten kostet ein Kompetenzpunkt rund
    900 Euro. Ab welchem Zuwachs sinken die Kosten unter 100 Euro pro Punkt?
 
 3. **Berichtssatz.** Schreibt den vollständigen Ergebnissatz für eure Gruppe:

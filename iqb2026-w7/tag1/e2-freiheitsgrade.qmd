@@ -9,9 +9,14 @@ Ihr bekommt einen Datensatz, in dem der wahre Effekt **exakt null** ist. Eure
 Aufgabe ist es, trotzdem ein signifikantes Ergebnis zu finden. Das ist keine
 Provokation, das ist die Lektion.
 
-**Anwendungen:** [Der Garten der sich verzweigenden Pfade](../apps/a03-garten.qmd) ·
-[Verzerrung durch fehlende Testungen](../apps/a04-dropout.qmd) ·
-[Publikationsbias](../apps/a05-publikationsbias.qmd)
+**Anwendungen:** [Der Garten der sich verzweigenden Pfade](../apps/a03-garten.qmd){target="_blank"} ·
+[Verzerrung durch fehlende Testungen](../apps/a04-dropout.qmd){target="_blank"} ·
+[Publikationsbias](../apps/a05-publikationsbias.qmd){target="_blank"}
+
+::: {.callout-note appearance="simple"}
+Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
+bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
+:::
 
 ## Rollen
 
@@ -20,6 +25,8 @@ Provokation, das ist die Lektion.
 Die Rollen wandern gegenüber Einheit 1 eine Position weiter.
 
 ## Aufgabe 1: Beobachten
+
+[Anwendung öffnen: Der Garten der sich verzweigenden Pfade](../apps/a03-garten.qmd){.app-start target="_blank"}
 
 Öffnet **Der Garten der sich verzweigenden Pfade**. Alle Häkchen sind aus, die
 Subgruppe steht auf "Alle Lernenden".
@@ -42,6 +49,8 @@ Konstruktion ein Fehlalarm.
 :::
 
 ## Aufgabe 2: Manipulieren
+
+[Anwendung öffnen: Der Garten der sich verzweigenden Pfade](../apps/a03-garten.qmd){.app-start target="_blank"}
 
 Sucht jetzt systematisch den **kleinsten p-Wert**, den ihr finden könnt.
 
@@ -75,6 +84,8 @@ positive Befunde in echter Forschung, ohne dass jemand betrügt.
 :::
 
 ## Aufgabe 3: Begreifen
+
+[Anwendung öffnen: Verzerrung durch fehlende Testungen](../apps/a04-dropout.qmd){.app-start target="_blank"}
 
 Wechselt zu **Verzerrung durch fehlende Testungen**.
 
@@ -115,7 +126,7 @@ nur benannt werden.
 ::: {.callout-important collapse="true"}
 ## Für schnelle Gruppen
 
-1. **Publikationsbias.** Öffnet die dritte Anwendung. Zieht den Regler von
+1. **Publikationsbias.** Öffnet [Publikationsbias](../apps/a05-publikationsbias.qmd){target="_blank"}. Zieht den Regler von
    0 auf 100 Prozent und beobachtet, wie weit sich der metaanalytische
    Durchschnitt vom wahren Zuwachs entfernt. Notiert die Überschätzung bei
    100 Prozent.

@@ -18,7 +18,7 @@ Verlinkte Seiten dieses Decks, hier zentral pflegen:
 
 ## Fragerunde: Einheit 4 {background-color="#2A3F66"}
 
-[10 Minuten · eine Minute pro Gruppe]{.bp-eyebrow}
+[Kurz zusammentragen]{.bp-eyebrow}
 
 ::: {.bp-callout}
 Welcher der drei Regler war der wichtigste, und was folgt daraus für ein
@@ -328,15 +328,13 @@ Rund 2 Minuten.
 
 ## Gruppenarbeit 5 {background-color="#4FA8A0"}
 
-[30 Minuten · Breakout-Räume]{.bp-eyebrow}
+[Gruppenarbeit · Breakout-Räume]{.bp-eyebrow}
 
 ::: {.bp-aufgabe}
 **Die Frage für eure Gruppe:** Ihr habt den Prior gegen die Daten antreten
 lassen. Ab wann hat der Prior gewonnen, und würdet ihr einen solchen Prior in
 einem Antrag verteidigen können?
 :::
-
-{{< include /folien/_shared/_rollen.qmd >}}
 
 ::: {.bp-demo-hinweis}
 Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 5](../../tag2/e5-prior-likelihood-posterior.html)

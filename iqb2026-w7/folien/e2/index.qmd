@@ -18,7 +18,7 @@ Verlinkte Seiten dieses Decks, hier zentral pflegen:
 
 ## Fragerunde: Einheit 1 {background-color="#2A3F66"}
 
-[10 Minuten · eine Minute pro Gruppe]{.bp-eyebrow}
+[Kurz zusammentragen]{.bp-eyebrow}
 
 ::: {.bp-callout}
 Zwei Standorte, derselbe Zuwachs, verschiedene Urteile. Woran lag es, und was
@@ -381,7 +381,7 @@ Rund 3 Minuten.
 
 ## Gruppenarbeit 2 {background-color="#4FA8A0"}
 
-[30 Minuten · Breakout-Räume]{.bp-eyebrow}
+[Gruppenarbeit · Breakout-Räume]{.bp-eyebrow}
 
 ::: {.bp-aufgabe}
 **Die Frage für eure Gruppe:** Ihr habt den kleinsten p-Wert gesucht, den der
@@ -389,16 +389,11 @@ Garten hergibt. Wie viele Pfade habt ihr gebraucht, und welcher davon wäre in
 einem Bericht am wenigsten aufgefallen?
 :::
 
-{{< include /folien/_shared/_rollen.qmd >}}
-
 ::: {.bp-demo-hinweis}
 Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 2](../../tag1/e2-freiheitsgrade.html)
 :::
 
 ::: notes
-Die Rollen wandern eine Position weiter. Kurz daran erinnern, das steht auch auf
-dem Arbeitsblatt.
-
 Das Wettbewerbselement funktioniert hier besonders gut: welche Gruppe findet den
 kleinsten p-Wert? Das ansagen, es erzeugt Energie und passt inhaltlich genau,
 weil es die Absurdität der Übung selbst vorführt.

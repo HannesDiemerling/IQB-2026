@@ -1,6 +1,6 @@
 ---
 title: "Arbeitsblatt Einheit 3"
-subtitle: "Effektstärken und ihre Grenzen · 30 Minuten"
+subtitle: "Effektstärken und ihre Grenzen"
 ---
 
 ## Euer Auftrag
@@ -39,11 +39,9 @@ Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
 bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
 :::
 
-## Rollen
+## Zusammenarbeit
 
-{{< include /_includes/rollen.qmd >}}
-
-Die Rollen wandern gegenüber Einheit 2 eine Position weiter.
+{{< include /_includes/zusammenarbeit.qmd >}}
 
 ## Aufgabe 1: Beobachten
 
@@ -186,6 +184,5 @@ Instrument so ungenau misst. Der Kipppunkt liegt dazwischen.
 **Welcher wahre Effekt steckt hinter eurem beobachteten d, und was empfehlt
 ihr der Kommission: mehr Fälle oder ein besserer Test?**
 
-Nennt zuerst eure Reliabilität, dann euer wahres d. Die Reihenfolge der
-Gruppen ist 1 bis 5.
+Nennt zuerst eure Reliabilität, dann euer wahres d.
 :::

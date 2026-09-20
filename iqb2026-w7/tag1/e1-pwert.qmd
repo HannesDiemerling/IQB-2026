@@ -1,6 +1,6 @@
 ---
 title: "Arbeitsblatt Einheit 1"
-subtitle: "Was der p-Wert nicht sagt · 30 Minuten"
+subtitle: "Was der p-Wert nicht sagt"
 ---
 
 ## Euer Auftrag
@@ -17,9 +17,9 @@ Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
 bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
 :::
 
-## Rollen
+## Zusammenarbeit
 
-{{< include /_includes/rollen.qmd >}}
+{{< include /_includes/zusammenarbeit.qmd >}}
 
 ## Das Szenario
 
@@ -132,7 +132,7 @@ nicht die Ausnahme.
    Formuliert einen Satz, der korrekt beschreibt, was dieses Ergebnis über die
    Wirkung von LeseStark aussagt. Vermeidet dabei das Wort "kein".
 
-2. **Die Gegenprobe.** Angenommen, beide Standorte hätten je 200 statt 45
+2. **Die Gegenrechnung.** Angenommen, beide Standorte hätten je 200 statt 45
    Lernende getestet, bei gleichem Zuwachs und gleicher Streuung. Was würde
    mit den beiden p-Werten passieren, und wäre die Entscheidung dann besser
    begründet?
@@ -150,5 +150,5 @@ nicht die Ausnahme.
 **Zwei Standorte, derselbe Zuwachs, verschiedene Urteile. Woran lag es, und
 was hättet ihr stattdessen berichtet?**
 
-Eine Minute. Einigt euch vorher auf einen Satz.
+Einigt euch vorher auf eine gemeinsame Antwort.
 :::

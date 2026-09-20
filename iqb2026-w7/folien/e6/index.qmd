@@ -19,7 +19,7 @@ Verlinkte Seiten dieses Decks, hier zentral pflegen:
 
 ## Fragerunde: Einheit 5 {background-color="#2A3F66"}
 
-[10 Minuten · eine Minute pro Gruppe]{.bp-eyebrow}
+[Kurz zusammentragen]{.bp-eyebrow}
 
 ::: {.bp-callout}
 Ab wann hat der Prior gewonnen, und würdet ihr einen solchen Prior in einem
@@ -353,15 +353,13 @@ Rund 2 Minuten, plus die Demo selbst.
 
 ## Gruppenarbeit 6 {background-color="#4FA8A0"}
 
-[28 Minuten · Breakout-Räume]{.bp-eyebrow}
+[Gruppenarbeit · Breakout-Räume]{.bp-eyebrow}
 
 ::: {.bp-aufgabe}
 **Die Frage für eure Gruppe:** Formuliert den Ergebnissatz für LeseStark, so wie
 ihr ihn einer Kommission vorlegen würdet. Ein Satz. Mit Zahl, Intervall und
 Relevanzaussage.
 :::
-
-{{< include /folien/_shared/_rollen.qmd >}}
 
 ::: {.bp-demo-hinweis}
 Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 6](../../tag2/e6-evidenz-berichten.html)

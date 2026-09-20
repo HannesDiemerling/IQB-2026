@@ -10,7 +10,7 @@ title-slide-attributes:
 
 ## Fragerunde: Einheit 6 {background-color="#2A3F66"}
 
-[10 Minuten · eine Minute pro Gruppe]{.bp-eyebrow}
+[Kurz zusammentragen]{.bp-eyebrow}
 
 ::: {.bp-callout}
 Euer Ergebnissatz für LeseStark. Ein Satz, mit Zahl, Intervall und

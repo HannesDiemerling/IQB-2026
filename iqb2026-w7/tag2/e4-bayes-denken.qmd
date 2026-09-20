@@ -1,6 +1,6 @@
 ---
 title: "Arbeitsblatt Einheit 4"
-subtitle: "Die Frage umdrehen · 32 Minuten"
+subtitle: "Die Frage umdrehen"
 ---
 
 ## Euer Auftrag
@@ -18,11 +18,9 @@ Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
 bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
 :::
 
-## Rollen
+## Zusammenarbeit
 
-{{< include /_includes/rollen.qmd >}}
-
-Die Rollen wandern gegenüber Einheit 3 eine Position weiter.
+{{< include /_includes/zusammenarbeit.qmd >}}
 
 ## Aufgabe 1: Beobachten
 

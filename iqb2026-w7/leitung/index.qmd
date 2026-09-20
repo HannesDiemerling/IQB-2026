@@ -35,6 +35,43 @@ Teilnehmende finden sie im Normalfall nicht.
 Wo zwei Zahlen stehen, ist die erste die Fragerunde zur vorangegangenen
 Einheit. Sie eröffnet das jeweilige Deck.
 
+## Zeitplanung, minutengenau
+
+Diese Aufstellung steht bewusst nur hier. Teilnehmende sehen auf der Website
+und auf den Folien nur den groben Rhythmus, keine Minutenangaben.
+
+### Tag 1
+
+| Zeit | Block | Dauer |
+|---|---|---|
+| 14:00 | Ankommen, Einordnung, Gruppen, Technikcheck | 15 |
+| 14:15 | Einheit 1 | 25 |
+| 14:40 | Gruppenarbeit 1 | 30 |
+| 15:10 | Pause | 10 |
+| 15:20 | Zusammentragen E1, dann Einheit 2 | 10 + 25 |
+| 15:55 | Gruppenarbeit 2 | 30 |
+| 16:25 | Pause | 15 |
+| 16:40 | Zusammentragen E2, dann Einheit 3 | 10 + 25 |
+| 17:15 | Gruppenarbeit 3 | 30 |
+| 17:45 | Zusammentragen E3 und Tagesabschluss | 15 |
+
+### Tag 2
+
+| Zeit | Block | Dauer |
+|---|---|---|
+| 14:00 | Rückblick und Einstieg | 10 |
+| 14:10 | Einheit 4 | 28 |
+| 14:38 | Gruppenarbeit 4 | 32 |
+| 15:10 | Pause | 10 |
+| 15:20 | Zusammentragen E4, dann Einheit 5 | 10 + 25 |
+| 15:55 | Gruppenarbeit 5 | 30 |
+| 16:25 | Pause | 15 |
+| 16:40 | Zusammentragen E5, dann Einheit 6 | 10 + 22 |
+| 17:12 | Gruppenarbeit 6 | 28 |
+| 17:40 | Zusammentragen E6, Transfer, Abschluss | 20 |
+
+Beide Tage gehen exakt auf 240 Minuten auf.
+
 ## Tastatur während der Präsentation
 
 | Taste | Wirkung |
@@ -73,8 +110,8 @@ Vortrag scheitern.
 ## Die sechs Fragerunden
 
 Jede Frage steht wörtlich identisch auf dem Arbeitsblatt und auf der Folie im
-Folgedeck. Zehn Minuten, fünf Gruppen, also etwa eine Minute pro Gruppe plus
-Einordnung.
+Folgedeck. Zehn Minuten für fünf Gruppen. Den Zeitrahmen nicht ansagen, sonst
+wird aus dem Zusammentragen eine Prüfung.
 
 | Nach | Frage | Wo sie gestellt wird |
 |---|---|---|
@@ -110,7 +147,7 @@ links.
 
 | Problem | Reaktion |
 |---|---|
-| Eine Anwendung lädt bei jemandem nicht | Die Person arbeitet über den geteilten Bildschirm der Gruppe mit und übernimmt Protokoll oder Gegenprobe. Niemand fällt raus. |
+| Eine Anwendung lädt bei jemandem nicht | Die Person arbeitet über den geteilten Bildschirm der Gruppe mit. Niemand fällt raus. |
 | Die Demo lädt im Vortrag nicht | Die Folie davor enthält alle Zahlen, die für den Punkt nötig sind. Kein Drama daraus machen, weitergehen. |
 | Niemand hebt die Hand | Frage umformulieren auf "Welche davon habt ihr schon einmal in einem Paper gelesen?" Das funktioniert zuverlässig. |
 | Eine Gruppe hat nichts zu berichten | "Was hat euch am meisten überrascht?" Darauf hat jede Gruppe eine Antwort. |

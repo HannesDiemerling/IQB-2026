@@ -334,14 +334,12 @@ Rund 1 Minute, plus die Demo selbst.
 
 ## Gruppenarbeit 1 {background-color="#4FA8A0"}
 
-[30 Minuten · Breakout-Räume]{.bp-eyebrow}
+[Gruppenarbeit · Breakout-Räume]{.bp-eyebrow}
 
 ::: {.bp-aufgabe}
 **Die Frage für eure Gruppe:** Zwei Standorte, derselbe Zuwachs, verschiedene
 Urteile. Woran liegt es, und was hättet ihr stattdessen berichtet?
 :::
-
-{{< include /folien/_shared/_rollen.qmd >}}
 
 ::: {.bp-demo-hinweis}
 Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 1](../../tag1/e1-pwert.html)

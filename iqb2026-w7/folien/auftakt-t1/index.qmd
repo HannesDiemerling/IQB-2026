@@ -75,24 +75,24 @@ Danach direkt weiter. Nicht in eine Projektvorstellung abbiegen.
 
 ### Ich zeige
 
-Rund 25 Minuten Input pro Einheit. Mit Fragen an dich zwischendurch, auf die
-ich eine Reaktion erwarte.
+Input im Plenum, mit Fragen an dich zwischendurch, auf die ich eine
+Reaktion erwarte.
 :::
 ::: {.bp-pillar .tone-teal}
 [Schritt 02]{.bp-pillar__num}
 
 ### Ihr arbeitet
 
-Rund 30 Minuten in Kleingruppen im eigenen Breakout-Raum, an interaktiven
-Anwendungen im Browser.
+In Kleingruppen im eigenen Breakout-Raum, an interaktiven Anwendungen
+im Browser.
 :::
 ::: {.bp-pillar .tone-navy}
 [Schritt 03]{.bp-pillar__num}
 
 ### Wir sammeln
 
-Zu Beginn der nächsten Einheit berichtet jede Gruppe eine Minute lang. Damit
-ist das Thema abgeschlossen.
+Zu Beginn der nächsten Einheit tragen wir kurz zusammen, was in den
+Gruppen herausgekommen ist.
 :::
 :::
 
@@ -109,9 +109,8 @@ muss raten, was als Nächstes kommt.
 Zweitens, die Gruppenphasen sind kein Beiwerk. Das ist der Teil, der hängen
 bleibt. Wer nur zuhören will, kann das, aber dann nimmt er weniger mit.
 
-Drittens, die Fragerunde ist kurz und sie ist verbindlich. Eine Minute pro
-Gruppe, nicht mehr. Das sage ich jetzt schon, dann ist es später keine
-Zurechtweisung.
+Drittens, das Zusammentragen bleibt kurz. Ich halte es selbst knapp, damit
+es nicht zur Pflichtübung wird.
 
 Rund 3 Minuten.
 :::
@@ -119,20 +118,18 @@ Rund 3 Minuten.
 ## Der Ablauf heute
 
 ::: {.bp-ablauf}
-`14:00`  Ankommen, Einordnung, Gruppen  ·  **15 min**
-`14:15`  **Einheit 1** Was der p-Wert nicht sagt  ·  25 min
-`14:40`  Gruppenarbeit 1  ·  30 min
-`15:10`  Pause  ·  10 min
-`15:20`  Fragerunde, dann **Einheit 2** Die Freiheitsgrade des Forschens  ·  35 min
-`15:55`  Gruppenarbeit 2  ·  30 min
-`16:25`  Pause  ·  15 min
-`16:40`  Fragerunde, dann **Einheit 3** Effektstärken und ihre Grenzen  ·  35 min
-`17:15`  Gruppenarbeit 3  ·  30 min
-`17:45`  Fragerunde und Abschluss  ·  15 min
+**Ankommen**  ·  Einordnung, Gruppen, Technikcheck
+**Einheit 1**  ·  Was der p-Wert nicht sagt
+`Pause`
+**Einheit 2**  ·  Die Freiheitsgrade des Forschens
+`Pause`
+**Einheit 3**  ·  Effektstärken und ihre Grenzen
+**Abschluss**  ·  Zusammentragen und Ausblick
 :::
 
 ::: {.bp-callout}
-Die Pausen sind eingeplant und werden eingehalten. Beide Tage enden um 18:00.
+Auf jede Einheit folgt eine Gruppenphase. Die Pausen sind eingeplant und
+werden eingehalten. Beide Tage enden um 18 Uhr.
 :::
 
 ::: notes
@@ -204,25 +201,25 @@ Rund 1,5 Minuten.
 :::
 :::
 
-Fünf Gruppen zu je fünf Personen, an beiden Tagen dieselben. In jeder Gruppe
-gibt es fünf Rollen, die pro Einheit weiterwandern.
+Fünf Gruppen zu je fünf Personen, an beiden Tagen dieselben.
 
-{{< include /folien/_shared/_rollen.qmd >}}
+::: {.bp-callout}
+Wie ihr in der Gruppe vorgeht, entscheidet ihr selbst. Sinnvoll ist nur, dass
+eine Person den Bildschirm teilt, damit alle dasselbe sehen.
+:::
 
 ::: notes
 Die Gruppen sind in Zoom schon angelegt, ich weise sie nicht live zu. Das spart
 fünf Minuten und vermeidet Chaos.
 
-Zu den Rollen zwei Sätze: sie sind kein Selbstzweck. Die Rolle Bedienung
-verhindert, dass fünf Leute gleichzeitig klicken wollen. Die Rolle Vortrag
-sorgt dafür, dass in der Fragerunde nicht immer dieselbe Person spricht, weil
-die Rolle jede Einheit weiterwandert.
+Bewusst keine Rollenverteilung vorgeben. Das sind Berufstätige, die
+organisieren sich selbst. Der einzige praktische Hinweis, den ich gebe: eine
+Person teilt den Bildschirm, sonst reden fünf Leute über verschiedene Bilder.
 
-Die Rollen stehen auch auf jedem Arbeitsblatt, niemand muss sie sich merken.
+Falls eine Gruppe von sich aus nach Rollen fragt, kann ich Bedienung und
+Mitschrift vorschlagen. Aber nur auf Nachfrage.
 
-Wenn eine Gruppe nur zu viert ist: Rolle Zeit übernimmt die Bedienung mit.
-
-Rund 3 Minuten.
+Rund 2 Minuten.
 :::
 
 ## Bevor es losgeht
@@ -247,13 +244,12 @@ im Breakout-Raum und bei zwei Leuten lädt nichts.
 Wirklich warten, bis es im Chat ruhig ist. Lieber hier zwei Minuten verlieren
 als später zwanzig.
 
-Wer die Technikprüfung vorab gemacht hat, hat die Laufzeit schon im Cache und
-ist sofort da. Das ist der Grund, warum die Prüfseite eine Woche vorher
-rausgeht.
+Die Seite geht erst heute raus, niemand hat also vorgewärmt. Deshalb ist
+dieser Block eingeplant und nicht optional. Wer hier einmal geladen hat, für
+den geht es den Rest der beiden Tage schnell.
 
 Plan B, wenn bei jemandem gar nichts geht: die Person arbeitet in ihrer Gruppe
-über den geteilten Bildschirm mit und übernimmt die Rolle Protokoll oder
-Gegenprobe. Niemand fällt raus.
+über den geteilten Bildschirm der Gruppe mit. Niemand fällt raus.
 
 Rund 2 Minuten.
 :::

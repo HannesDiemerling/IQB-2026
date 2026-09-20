@@ -10,7 +10,7 @@ title-slide-attributes:
 
 ## Fragerunde: Einheit 3 {background-color="#2A3F66"}
 
-[10 Minuten · eine Minute pro Gruppe]{.bp-eyebrow}
+[Kurz zusammentragen]{.bp-eyebrow}
 
 ::: {.bp-callout}
 Welcher wahre Effekt steckt hinter eurem beobachteten d, und was empfehlt ihr

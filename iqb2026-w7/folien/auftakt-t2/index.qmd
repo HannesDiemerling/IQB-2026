@@ -96,21 +96,18 @@ Rund 3 Minuten.
 ## Der Ablauf heute
 
 ::: {.bp-ablauf}
-`14:00`  Ankommen und Einordnung  ·  **10 min**
-`14:10`  **Einheit 4** Die Frage umdrehen  ·  28 min
-`14:38`  Gruppenarbeit 4  ·  32 min
-`15:10`  Pause  ·  10 min
-`15:20`  Fragerunde, dann **Einheit 5** Prior, Likelihood, Posterior  ·  35 min
-`15:55`  Gruppenarbeit 5  ·  30 min
-`16:25`  Pause  ·  15 min
-`16:40`  Fragerunde, dann **Einheit 6** Evidenz berichten  ·  32 min
-`17:12`  Gruppenarbeit 6  ·  28 min
-`17:40`  Fragerunde, Transfer und Abschluss  ·  20 min
+**Ankommen**  ·  Rückblick und Einstieg
+**Einheit 4**  ·  Die Frage umdrehen
+`Pause`
+**Einheit 5**  ·  Prior, Likelihood, Posterior
+`Pause`
+**Einheit 6**  ·  Evidenz berichten
+**Abschluss**  ·  Ergebnissatz und Transfer
 :::
 
 ::: {.bp-callout}
-Gleiche Gruppen wie gestern, gleiche Rollen, sie wandern weiter. Ende wieder
-pünktlich um 18:00.
+Gleicher Rhythmus wie gestern, gleiche Gruppen. Ende wieder pünktlich um
+18 Uhr.
 :::
 
 ::: notes

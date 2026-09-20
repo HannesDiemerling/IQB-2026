@@ -1,6 +1,6 @@
 ---
 title: "Arbeitsblatt Einheit 6"
-subtitle: "Evidenz berichten · 28 Minuten"
+subtitle: "Evidenz berichten"
 ---
 
 ## Euer Auftrag
@@ -19,12 +19,9 @@ Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
 bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
 :::
 
-## Rollen
+## Zusammenarbeit
 
-{{< include /_includes/rollen.qmd >}}
-
-Die Rollen wandern gegenüber Einheit 5 eine Position weiter. Damit war jede
-Person einmal in jeder Rolle.
+{{< include /_includes/zusammenarbeit.qmd >}}
 
 ## Aufgabe 1: Beobachten
 

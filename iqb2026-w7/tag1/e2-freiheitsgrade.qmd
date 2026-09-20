@@ -1,6 +1,6 @@
 ---
 title: "Arbeitsblatt Einheit 2"
-subtitle: "Die Freiheitsgrade des Forschens · 30 Minuten"
+subtitle: "Die Freiheitsgrade des Forschens"
 ---
 
 ## Euer Auftrag
@@ -18,11 +18,9 @@ Alle Anwendungen öffnen in einem **neuen Fenster**. Dieses Arbeitsblatt
 bleibt dadurch offen, ihr könnt zwischen beiden hin und her wechseln.
 :::
 
-## Rollen
+## Zusammenarbeit
 
-{{< include /_includes/rollen.qmd >}}
-
-Die Rollen wandern gegenüber Einheit 1 eine Position weiter.
+{{< include /_includes/zusammenarbeit.qmd >}}
 
 ## Aufgabe 1: Beobachten
 
@@ -147,5 +145,5 @@ nur benannt werden.
 **Wie viele Pfade habt ihr gebraucht, um unter .05 zu kommen, und welcher
 davon wäre in einem Bericht am wenigsten aufgefallen?**
 
-Eine Minute. Der zweite Teil ist der wichtigere.
+Der zweite Teil ist der wichtigere.
 :::

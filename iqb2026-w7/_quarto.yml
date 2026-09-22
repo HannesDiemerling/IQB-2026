@@ -16,7 +16,7 @@ execute:
 
 website:
   title: "Jenseits des Frequentismus"
-  site-url: "https://hannesdiemerling.github.io/iqb2026-w7/"
+  site-url: "https://hannesdiemerling.github.io/IQB-2026/"
   search: true
   page-navigation: true
   navbar:

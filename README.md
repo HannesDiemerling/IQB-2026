@@ -4,8 +4,8 @@ Workshop 7 beim **IQB 2026**, am 23. und 24. September, jeweils 14 bis 18 Uhr,
 online über Zoom, für 25 Teilnehmende.
 
 Dieses Repository enthält das komplette Material: eine Website mit
-interaktiven Anwendungen und Arbeitsblättern, dazu zehn Foliendecks für die
-Präsentation. Alles wird von einem Quarto-Projekt gebaut und über GitHub
+interaktiven Anwendungen und Arbeitsblättern, dazu ein Foliendeck je
+Workshop-Tag. Alles wird von einem Quarto-Projekt gebaut und über GitHub
 Pages veröffentlicht.
 
 ## Worum es geht
@@ -49,7 +49,7 @@ Ergebnissatz auf der Schlussfolie. Sie stehen an genau einer Stelle:
 | `iqb2026-w7/index.qmd` | Startseite für die Teilnehmenden |
 | `iqb2026-w7/tag1/`, `tag2/` | sechs Arbeitsblätter |
 | `iqb2026-w7/apps/` | 19 interaktive Anwendungen |
-| `iqb2026-w7/folien/` | zehn Reveal.js-Decks, mit Moderationsnotizen |
+| `iqb2026-w7/folien/` | zwei Reveal.js-Decks, eines je Tag, mit Moderationsnotizen |
 | `iqb2026-w7/leitung/` | **Moderationsleitfaden**, nicht in der Navigation |
 | `iqb2026-w7/_includes/` | Szenario, Auffrischungen, Ladehinweis |
 | `iqb2026-w7/tools/` | zwei Prüfskripte |

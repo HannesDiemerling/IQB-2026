@@ -1,13 +1,3 @@
----
-title: "Abschluss"
-subtitle: "Der Ergebnissatz, und was du davon mitnimmst"
-author: "Hannes Diemerling"
-date: "2026-09-24"
-date-format: "D. MMMM YYYY"
-title-slide-attributes:
-  data-background-color: "#F7F2EA"
----
-
 ## Fragerunde: Einheit 6 {background-color="#2A3F66"}
 
 [Kurz zusammentragen]{.bp-eyebrow}

@@ -1,13 +1,3 @@
----
-title: "Jenseits des Frequentismus"
-subtitle: "Tag 2 · Die Alternative"
-author: "Hannes Diemerling"
-date: "2026-09-24"
-date-format: "D. MMMM YYYY"
-title-slide-attributes:
-  data-background-color: "#F7F2EA"
----
-
 ## Wo wir gestern stehen geblieben sind
 
 ::: {.bp-drei}

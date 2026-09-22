@@ -87,8 +87,8 @@ jobs:
         run: |
           set -e
           test $(ls _site/apps/a*.html | wc -l) -eq 19 || { echo "Nicht alle 19 Anwendungen gerendert"; exit 1; }
-          test $(ls _site/folien/*/index.html | wc -l) -eq 10 || { echo "Nicht alle 10 Decks gerendert"; exit 1; }
-          echo "19 Anwendungen, 10 Decks, vollstaendig."
+          test $(ls _site/folien/*/index.html | wc -l) -eq 2 || { echo "Nicht beide Tagesdecks gerendert"; exit 1; }
+          echo "19 Anwendungen, 2 Tagesdecks, vollstaendig."
 
       # Achtung: path ist relativ zur Repo-Wurzel, nicht zu working-directory.
       - name: Artefakt hochladen

@@ -13,7 +13,7 @@ Pages.
 
 | Pfad | Inhalt |
 |---|---|
-| `folien/` | 10 Reveal.js-Decks, Format kommt aus `folien/_metadata.yml` |
+| `folien/` | zwei Tagesdecks, Bausteine in `folien/_teile/`, Format aus `folien/_metadata.yml` |
 | `apps/` | 19 Shinylive-Anwendungen, eine Datei je Anwendung |
 | `tag1/`, `tag2/` | 6 Arbeitsblätter für die Gruppenphasen |
 | `_includes/` | Bausteine, werden nicht gerendert (Unterstrich-Regel) |
@@ -41,6 +41,19 @@ sonst wird `collapse` stillschweigend ignoriert.
 **4. `embed-resources: false` muss gesetzt bleiben.** Sonst verweigert der
 Shinylive-Filter die Umwandlung, und der Python-Code landet als roher Text auf
 der Seite.
+
+## Foliendecks
+
+Ein Deck pro Tag, `folien/tag1/` und `folien/tag2/`. Beide bestehen nur aus
+Frontmatter und einer Reihe von Includes. Der Inhalt liegt in
+`folien/_teile/`, eine Datei je Einheit plus `_pause.qmd`.
+
+Bearbeitet wird immer der Teil, nie das Tagesdeck. Wer eine Einheit
+verschieben will, aendert die Include-Reihenfolge im Tagesdeck.
+
+Die Teile liegen unter einem Unterstrich-Verzeichnis und erzeugen deshalb
+keine eigenen Seiten. Wichtig fuer die Pfade darin: das Tagesdeck liegt wie
+die alten Einzeldecks zwei Ebenen tief, `../../apps/...` stimmt also weiter.
 
 ## Pfade
 

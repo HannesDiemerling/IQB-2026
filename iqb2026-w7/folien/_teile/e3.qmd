@@ -1,13 +1,3 @@
----
-title: "Effektstärken und ihre Grenzen"
-subtitle: "Einheit 3 · Tag 1, Die Diagnose"
-author: "Hannes Diemerling"
-date: "2026-09-23"
-date-format: "D. MMMM YYYY"
-title-slide-attributes:
-  data-background-color: "#F7F2EA"
----
-
 <!--
 Verlinkte Seiten dieses Decks, hier zentral pflegen:
   Arbeitsblatt        ../../tag1/e3-effektstaerken.html
@@ -366,9 +356,11 @@ Bogen und ist der stärkste mögliche Schluss.
 Rund 2,5 Minuten.
 :::
 
-## Gruppenarbeit 3 {background-color="#4FA8A0"}
+# Jetzt seid ihr dran {.bp-trenner background-color="#4FA8A0"}
 
-[Gruppenarbeit · Breakout-Räume]{.bp-eyebrow}
+[Gruppenarbeit in den Breakout-Räumen]{.bp-eyebrow}
+
+## Gruppenarbeit 3 {background-color="#4FA8A0"}
 
 ::: {.bp-aufgabe}
 **Die Frage für eure Gruppe:** Jede Gruppe bekommt eine andere Reliabilität

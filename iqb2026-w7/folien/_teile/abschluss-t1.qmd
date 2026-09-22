@@ -1,13 +1,3 @@
----
-title: "Abschluss Tag 1"
-subtitle: "Was heute stand, und was morgen kommt"
-author: "Hannes Diemerling"
-date: "2026-09-23"
-date-format: "D. MMMM YYYY"
-title-slide-attributes:
-  data-background-color: "#F7F2EA"
----
-
 ## Fragerunde: Einheit 3 {background-color="#2A3F66"}
 
 [Kurz zusammentragen]{.bp-eyebrow}

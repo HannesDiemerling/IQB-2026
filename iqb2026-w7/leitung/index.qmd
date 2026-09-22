@@ -12,28 +12,31 @@ Teilnehmende finden sie im Normalfall nicht.
 
 ## Die Foliendecks
 
-### Tag 1, die Diagnose
+Ein Deck pro Tag. Beide öffnen in einem neuen Fenster, damit die
+Workshop-Seite daneben offen bleiben kann.
 
-| Deck | Dauer | Inhalt |
-|---|---|---|
-| [Auftakt Tag 1](../folien/auftakt-t1/) | 15 min | Einordnung, Herkunft, Ablauf, Gruppen, Technikprüfung |
-| [Einheit 1](../folien/e1/) | 25 min | Was der p-Wert nicht sagt |
-| [Einheit 2](../folien/e2/) | 10 + 25 min | Die Freiheitsgrade des Forschens |
-| [Einheit 3](../folien/e3/) | 10 + 25 min | Effektstärken und ihre Grenzen |
-| [Abschluss Tag 1](../folien/abschluss-t1/) | 15 min | Fragerunde, Bündelung, Cliffhanger |
+| Deck | Inhalt |
+|---|---|
+| **[Tag 1, Die Diagnose](../folien/tag1/){target="_blank"}** | Auftakt, Einheiten 1 bis 3, Abschluss |
+| **[Tag 2, Die Alternative](../folien/tag2/){target="_blank"}** | Auftakt, Einheiten 4 bis 6, Abschluss |
 
-### Tag 2, die Alternative
+Die Gruppenphasen und Pausen sind als eigene Folien eingebaut, du klickst also
+einfach durch. Reihenfolge in beiden Decks:
 
-| Deck | Dauer | Inhalt |
-|---|---|---|
-| [Auftakt Tag 2](../folien/auftakt-t2/) | 10 min | Rückblick, die offene Frage, Ablauf |
-| [Einheit 4](../folien/e4/) | 28 min | Die Frage umdrehen |
-| [Einheit 5](../folien/e5/) | 10 + 25 min | Prior, Likelihood, Posterior |
-| [Einheit 6](../folien/e6/) | 10 + 22 min | Evidenz berichten |
-| [Abschluss Tag 2](../folien/abschluss-t2/) | 20 min | Fragerunde, Ergebnissatz, Transfer |
+Auftakt → Einheit → **Jetzt seid ihr dran** → **Pause** → Zusammentragen →
+Einheit → **Jetzt seid ihr dran** → **Pause** → Zusammentragen → Einheit →
+**Jetzt seid ihr dran** → Zusammentragen → Abschluss
 
-Wo zwei Zahlen stehen, ist die erste die Fragerunde zur vorangegangenen
-Einheit. Sie eröffnet das jeweilige Deck.
+Die Zusammentragen-Folie zu einer Einheit steht immer **vor** der nächsten
+Einheit, nicht direkt nach der Gruppenphase. Dazwischen liegt die Pause.
+
+::: {.callout-tip}
+## Die Bausteine liegen einzeln
+
+Bearbeitet wird nicht das Tagesdeck selbst, sondern die Teile unter
+`folien/_teile/`. Eine Einheit, eine Datei. Das Tagesdeck bindet sie nur in
+Reihenfolge ein.
+:::
 
 ## Zeitplanung, minutengenau
 

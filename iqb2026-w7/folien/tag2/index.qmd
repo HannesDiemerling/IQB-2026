@@ -1,0 +1,37 @@
+---
+title: "Jenseits des Frequentismus"
+subtitle: "Vom p-Wert zur Posterior · Tag 2, Die Alternative · Workshop 7, IQB 2026"
+author: "Hannes Diemerling"
+date: "2026-09-24"
+date-format: "D. MMMM YYYY"
+title-slide-attributes:
+  data-background-color: "#F7F2EA"
+---
+
+<!--
+Ein Deck für den ganzen Tag. Die Bausteine liegen in folien/_teile/ und werden
+hier in Ablaufreihenfolge eingebunden.
+
+Reihenfolge, wie sie am Tag laeuft:
+  Auftakt
+  Einheit 4                  -> endet mit der Gruppenarbeits-Folie
+  Pause
+  Zusammentragen E4, Einheit 5
+  Pause
+  Zusammentragen E5, Einheit 6
+  Zusammentragen E6, Abschluss
+-->
+
+{{< include /folien/_teile/auftakt-t2.qmd >}}
+
+{{< include /folien/_teile/e4.qmd >}}
+
+{{< include /folien/_teile/_pause.qmd >}}
+
+{{< include /folien/_teile/e5.qmd >}}
+
+{{< include /folien/_teile/_pause.qmd >}}
+
+{{< include /folien/_teile/e6.qmd >}}
+
+{{< include /folien/_teile/abschluss-t2.qmd >}}

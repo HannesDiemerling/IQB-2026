@@ -1,0 +1,19 @@
+## Pause {background-color="#2A3F66"}
+
+[Wir machen weiter, wenn die Zeit um ist]{.bp-eyebrow}
+
+::: {.bp-callout}
+Lass die Workshop-Seite offen. Dann bleibt die Rechenumgebung im
+Zwischenspeicher und die nächste Anwendung startet sofort.
+:::
+
+::: notes
+Die Pause ansagen und die Uhrzeit nennen, zu der es weitergeht. Dann selbst
+den Raum verlassen, sonst bleiben Leute aus Höflichkeit sitzen.
+
+Den Hinweis mit der offenen Seite wirklich sagen. Wer den Tab schließt, wartet
+nachher wieder dreißig Sekunden.
+
+Vor dem Weitermachen: die Anwendung für den nächsten Block einmal laden lassen,
+solange noch niemand zuschaut.
+:::

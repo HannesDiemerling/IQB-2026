@@ -111,6 +111,12 @@ der getesteten Lernenden.
 {{< include /_includes/auffrischen/standardfehler.qmd >}}
 :::
 
+::: {.callout-tip collapse="true"}
+## Kurz auffrischen: Teststärke und wie man eine Stichprobe plant
+
+{{< include /_includes/auffrischen/power.qmd >}}
+:::
+
 ::: {.callout-note collapse="true"}
 ## Lösung Aufgabe 3
 

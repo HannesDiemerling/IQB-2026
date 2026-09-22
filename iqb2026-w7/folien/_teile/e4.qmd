@@ -207,6 +207,12 @@ Dasselbe Intervall, zwei Sätze. Nur der rechte beantwortet die Frage, die
 jemand gestellt hat.
 :::
 
+::: {.bp-quelle}
+Links steht ein t-Test für zwei Gruppen, rechts derselbe Vergleich
+bayesianisch gerechnet. Das ist der **bayesianische t-Test**, und ihr rechnet
+ihn heute den ganzen Tag.
+:::
+
 ::: notes
 Die Brücke zwischen den beiden Tagen und die vielleicht wichtigste Folie des
 Workshops. Hier langsam werden.
@@ -224,6 +230,15 @@ Der zweite Teil des rechten Satzes ist der eigentliche Gewinn: eine Aussage übe
 die Relevanzschwelle. Genau die lässt sich frequentistisch nicht formulieren,
 und genau danach fragt jede Praxisentscheidung. Die 3 Punkte sind dieselbe
 Schwelle, die uns in Einheit 6 wieder begegnet.
+
+Die Quellenzeile unten ausdrücklich vorlesen, sie ordnet den ganzen Tag ein.
+Bis hierhin haben wir nie gesagt, welches Verfahren das eigentlich ist. Es ist
+der Zweistichprobenvergleich, also genau der t-Test, den alle im Raum kennen,
+nur bayesianisch gerechnet. Alle Anwendungen von heute rechnen ihn.
+
+Wer weiterfragt, bekommt die Verallgemeinerung: ANOVA und Regression
+funktionieren genauso. Jeder Parameter bekommt statt eines p-Werts eine
+Posterior. Mehr dazu auf der Werkzeugfolie in Einheit 6.
 
 Wenn jemand einwendet, dass 98 Prozent und ein p von .047 doch dasselbe seien:
 ernst nehmen. Zahlenmäßig hängen sie bei flachem Prior zusammen. Inhaltlich
@@ -287,9 +302,9 @@ Diese Gruppenarbeit ist die längste des Workshops, 32 Minuten. Der Grund: für
 die meisten ist Bayes neu, und die Basisraten-Anwendung braucht Zeit, bis die
 Intuition kippt.
 
-Auf dem Arbeitsblatt stehen die Auffrischungen zu bedingter Wahrscheinlichkeit
-und zum Bayes-Theorem direkt bei den Aufgaben, aufklappbar. Das ansagen, es
-nimmt Druck von denen, die gestern nicht dabei waren.
+Auf dem Arbeitsblatt steht die Auffrischung zur bedingten Wahrscheinlichkeit
+direkt bei den Aufgaben, aufklappbar, dazu der Posterior bei Aufgabe 3. Das
+ansagen, es nimmt Druck von denen, die gestern nicht dabei waren.
 
 Die zweite Teilfrage ist der Transfer und der eigentliche Ertrag. Jede Gruppe
 hat jemanden dabei, der mit Diagnostik zu tun hat.

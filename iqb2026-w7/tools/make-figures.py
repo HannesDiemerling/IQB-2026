@@ -22,7 +22,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.lines import Line2D
-from scipy.stats import norm, t as t_dist, ttest_ind
+from scipy.stats import nct, norm, t as t_dist, ttest_ind
 
 WURZEL = pathlib.Path(__file__).resolve().parent.parent
 ZIEL = WURZEL / "folien" / "assets"
@@ -130,6 +130,65 @@ def e1_p_gegen_n():
                  fontweight="bold", fontsize=16)
     blank(ax)
     sichern(fig, "e1-p-gegen-n")
+
+
+def e1_teststaerke():
+    """Wie oft findet die Studie ihren eigenen Effekt ueberhaupt?
+
+    Rechnet mit den Szenariozahlen: d = 0.42, je 45 Lernende, alpha .05
+    zweiseitig. Die Pointe steht nicht auf der Folie, sondern faellt aus der
+    Rechnung: die Teststaerke liegt bei rund 50 Prozent.
+    """
+    D, N_STUDIE, ZIEL = 0.42, 45, 0.80
+
+    def power(n):
+        df = 2 * n - 2
+        ncp = D * np.sqrt(n / 2.0)
+        krit = t_dist.ppf(1 - .05 / 2, df)
+        return nct.sf(krit, df, ncp) + nct.cdf(-krit, df, ncp)
+
+    n_noetig = 2
+    while power(n_noetig) < ZIEL:
+        n_noetig += 1
+
+    n = np.arange(5, 251)
+    p = np.array([power(k) for k in n])
+    p_studie = power(N_STUDIE)
+
+    fig, ax = plt.subplots(figsize=(11.5, 5.0), layout="constrained")
+    ax.plot(n, p * 100, color=NAVY, lw=3.5, zorder=4)
+    ax.axhline(ZIEL * 100, color=TEAL, ls="dotted", lw=2.5, zorder=3)
+    ax.text(248, ZIEL * 100 + 2.5, "üblicher Anspruch: 80 %", ha="right",
+            fontsize=13, color=TEAL)
+
+    ax.fill_between(n, 0, p * 100, where=(n <= N_STUDIE), color=CORAL,
+                    alpha=.13, zorder=1)
+    ax.scatter([N_STUDIE], [p_studie * 100], s=260, color=CORAL, zorder=6,
+               edgecolor=CREAM, lw=2.5)
+    ax.annotate(f"die LeseStark-Studie\nje {N_STUDIE} Lernende: "
+                f"{p_studie * 100:.0f} %",
+                xy=(N_STUDIE, p_studie * 100), xytext=(N_STUDIE + 26, 27),
+                fontsize=13.5, color=CORAL, fontweight="bold",
+                arrowprops=dict(arrowstyle="-", color=GRAU, lw=1.3))
+
+    ax.scatter([n_noetig], [power(n_noetig) * 100], s=200, color=TEAL,
+               zorder=6, edgecolor=CREAM, lw=2)
+    ax.annotate(f"für 80 % bräuchte sie\nje {n_noetig} Lernende",
+                xy=(n_noetig, power(n_noetig) * 100),
+                xytext=(n_noetig + 30, 62), fontsize=13.5, color=TEAL,
+                fontweight="bold",
+                arrowprops=dict(arrowstyle="-", color=GRAU, lw=1.3))
+
+    ax.set_xlim(0, 250)
+    ax.set_ylim(0, 103)
+    ax.set_yticks([0, 20, 40, 60, 80, 100])
+    ax.set_yticklabels(["0 %", "20 %", "40 %", "60 %", "80 %", "100 %"])
+    ax.set_xlabel("Getestete Lernende pro Gruppe")
+    ax.set_ylabel("Teststärke")
+    ax.set_title("Wie oft findet die Studie ihren eigenen Effekt?\n"
+                 "Teststärke bei d = 0.42", fontweight="bold", fontsize=16)
+    blank(ax)
+    sichern(fig, "e1-teststaerke")
 
 
 def e1_lortie_forgues():
@@ -660,7 +719,8 @@ def e6_bayesfaktor():
 
 def main() -> int:
     print("Abbildungen erzeugen:")
-    for f in (e1_zwei_standorte, e1_p_gegen_n, e1_lortie_forgues,
+    for f in (e1_zwei_standorte, e1_p_gegen_n, e1_teststaerke,
+              e1_lortie_forgues,
               e2_garten, e2_publikationsbias, e2_replikation,
               e3_minderung, e3_benchmarks, e3_design_effekte,
               e4_basisrate, e5_likelihood, e5_drei_kurven,

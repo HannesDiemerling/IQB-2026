@@ -163,8 +163,8 @@ Rund 4 Minuten.
 ::: {.bp-stats}
 ::: {.bp-stat}
 [61 %]{.bp-stat__num}
-[Falsch-positiv-Rate, wenn übliche fragwürdige Forschungspraktiken (QRPs)
-zusammenkommen. *Simmons et al. (2011)*]{.bp-stat__label}
+[Falsch-positiv-Rate, wenn übliche fragwürdige Forschungspraktiken
+zusammenkommen. QRPs, p-Hacking. *Simmons et al. (2011)*]{.bp-stat__label}
 :::
 ::: {.bp-stat}
 [.05]{.bp-stat__num}

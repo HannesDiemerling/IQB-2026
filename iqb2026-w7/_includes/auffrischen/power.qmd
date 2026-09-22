@@ -1,0 +1,32 @@
+Die **Teststärke**, englisch Power, ist die Wahrscheinlichkeit, einen Effekt
+als signifikant zu erkennen, **wenn es ihn wirklich gibt**. Üblich ist der
+Anspruch von 80 Prozent. Erreicht wird er selten.
+
+Für unser Szenario, d = 0.42 bei je 45 Lernenden, liegt die Teststärke bei
+rund **50 Prozent**. Die Studie hätte ihren eigenen Effekt also nur in jedem
+zweiten Anlauf gefunden. Für 80 Prozent bräuchte sie je 90 Lernende.
+
+Die unangenehme Folge betrifft nicht die Studien, die nichts finden, sondern
+die, die etwas finden: bei schwacher Teststärke kommt nur ein besonders großer
+Zufallsausschlag über die Schwelle. Wer bei kleiner Stichprobe signifikant
+wird, **überschätzt den Effekt systematisch**.
+
+### Drei Wege zur Stichprobengröße
+
+**Poweranalyse**, der verbreitete Weg. Die Frage lautet: wie viele Lernende
+brauche ich, um mit 80 Prozent Wahrscheinlichkeit ein signifikantes Ergebnis
+zu bekommen, wenn der wahre Effekt d = 0.42 ist? Der Haken steckt im
+Nebensatz. Das Verfahren setzt genau die Zahl voraus, die man eigentlich
+herausfinden will. In der Praxis setzt man deshalb meist ein, was man sich
+erhofft, und bekommt systematisch zu kleine Stichproben.
+
+**Präzisionsplanung**, der ehrlichere Weg. Die Frage lautet: wie viele
+brauche ich, damit mein Intervall schmaler wird als plus minus 0,15? Diese
+Frage lässt sich inhaltlich beantworten, ohne den Effekt vorher zu kennen.
+
+**Bayes-Faktor-Design**, der Weg von Tag 2. Die Frage lautet: wie viele
+brauche ich, damit der Bayes-Faktor mit hoher Wahrscheinlichkeit über 10
+liegt, falls es den Effekt gibt?
+
+Für alle drei gilt dieselbe Ernüchterung: Genauigkeit ist teuer. Um den
+Fehler zu halbieren, brauchst du die vierfache Stichprobe.

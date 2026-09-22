@@ -10,6 +10,11 @@ Das **ETI** (Equal-Tailed Interval) schneidet stattdessen unten und oben je
 2,5 Prozent ab. Bei symmetrischen Verteilungen sind beide fast identisch, bei
 schiefen nicht.
 
+HDI und ETI sind zwei Bauarten desselben Dings. Der Oberbegriff heißt auf
+Deutsch **Glaubwürdigkeitsintervall** und in der englischen Literatur
+**Credible Interval**. Wenn dir eine dieser Bezeichnungen begegnet, ist
+dasselbe gemeint.
+
 Die **ROPE** (Region of Practical Equivalence) ist etwas anderes: ein Bereich
 um null, den du **inhaltlich** als bedeutungslos festlegst. Aus dem Verhältnis
 von HDI und ROPE folgt die Entscheidung.

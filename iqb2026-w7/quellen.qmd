@@ -6,6 +6,33 @@ subtitle: "Alle im Workshop genannten Arbeiten, mit DOI"
 Die Angaben sind geprüft. Wo eine Seitenzahl fehlt, ist sie nicht belegt, der
 DOI führt aber zuverlässig zur Arbeit.
 
+## Zum Nachlesen empfohlen
+
+Diese beiden Arbeiten stehen in der Workshop-Ausschreibung. Beide sind
+optional, beide lohnen sich, und zusammen decken sie die zwei Tage ab.
+
+**Greenland, S., Senn, S. J., Rothman, K. J., Carlin, J. B., Poole, C.,
+Goodman, S. N. & Altman, D. G. (2016).** Statistical tests, P values,
+confidence intervals, and power: a guide to misinterpretations. *European
+Journal of Epidemiology*, 31(4), 337–350.
+[doi:10.1007/s10654-016-0149-3](https://doi.org/10.1007/s10654-016-0149-3)
+
+> Die Landkarte zu Tag 1. Arbeitet 25 verbreitete Fehlinterpretationen ab, und
+> zwar für p-Wert, Konfidenzintervall und Teststärke gemeinsam. Wer nach
+> Einheit 1 das Gefühl hat, dass da noch mehr Fallstricke sein müssen, findet
+> sie hier.
+
+**Wagenmakers, E.-J., Marsman, M., Jamil, T., Ly, A., Verhagen, J., Love, J.,
+Selker, R., Gronau, Q. F., Šmíra, M., Epskamp, S., Matzke, D., Rouder, J. N. &
+Morey, R. D. (2018).** Bayesian inference for psychology. Part I: Theoretical
+advantages and practical ramifications. *Psychonomic Bulletin & Review*,
+25(1), 35–57.
+[doi:10.3758/s13423-017-1343-3](https://doi.org/10.3758/s13423-017-1343-3)
+
+> Die Landkarte zu Tag 2, von derselben Gruppe, die JASP entwickelt. Begründet
+> ausführlich, was wir an Tag 2 nur zeigen: warum die bayesianische Frage die
+> ist, die man eigentlich stellen wollte.
+
 ## Was der p-Wert nicht sagt
 
 **Haller, H. & Krauss, S. (2002).** Misinterpretations of significance: A
@@ -165,4 +192,49 @@ kein Ersatz für eine Auswertung in JASP oder brms.
 
 Alle Zahlen des LeseStark-Szenarios sind für den Workshop gesetzt und nicht
 empirisch erhoben. Das gilt auch für die Screening-Werte in Einheit 4.
+:::
+
+## Software für danach
+
+Im Workshop brauchst du nichts davon, dort genügt der Browser. Diese Liste ist
+für den Moment, in dem du es an eigenen Daten probieren willst. Sortiert nach
+Einstiegshürde, nicht nach Güte.
+
+### Ohne Programmieren
+
+[**JASP**](https://jasp-stats.org) ist die Empfehlung für den ersten eigenen
+Versuch. Kostenlos, in zwei Minuten installiert, und es rechnet bayesianischen
+t-Test, ANOVA, Regression und Korrelation direkt neben den klassischen
+Verfahren. Du siehst also beide Ergebnisse nebeneinander und kannst vergleichen,
+was sich ändert. [**Jamovi**](https://www.jamovi.org) ist die Alternative mit
+ähnlichem Zuschnitt.
+
+### In R
+
+[**BayesFactor**](https://richarddmorey.github.io/BayesFactor/) ist der
+kürzeste Weg zu einem Bayes-Faktor für die Standardverfahren. Ein Aufruf,
+fertig.
+
+[**bayestestR**](https://easystats.github.io/bayestestR/) macht aus einer
+Posterior die Kennzahlen, die wir an Tag 2 von Hand gelesen haben: HDI, ROPE
+und die Wahrscheinlichkeit, dass der Effekt eine Richtung hat.
+
+[**brms**](https://paul-buerkner.github.io/brms/) ist der Schritt zum eigenen
+Modell. Die Formelschreibweise ist dieselbe wie in lme4. Wer schon
+Mehrebenenmodelle rechnet, muss fast nichts Neues lernen.
+
+### In Python
+
+[**PyMC**](https://www.pymc.io) für die freie Modellspezifikation,
+[**ArviZ**](https://python.arviz.org) für Diagnostik und Darstellung der
+Ergebnisse. [**Stan**](https://mc-stan.org) liegt unter brms und ist auch
+direkt ansprechbar, wenn ein Modell wirklich maßgeschneidert sein muss.
+
+::: {.callout-tip}
+## Womit anfangen
+
+Wenn du heute Abend eine Sache ausprobieren willst, dann JASP mit einem
+Datensatz, den du ohnehin schon ausgewertet hast. Du kennst das Ergebnis
+bereits, und genau deshalb siehst du sofort, was die bayesianische Auswertung
+zusätzlich sagt.
 :::

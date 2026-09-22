@@ -49,6 +49,9 @@ Seite.
 
 Wie ihr euch in der Gruppe organisiert, bleibt euch überlassen.
 
+**Fragen gehen jederzeit.** Du musst nicht bis zum Zusammentragen warten. Ruf
+dazwischen, heb die Hand oder schreib in den Chat, auch mitten im Input.
+
 ::: {.callout-tip}
 ## Wenn du an einer Stelle hängst
 

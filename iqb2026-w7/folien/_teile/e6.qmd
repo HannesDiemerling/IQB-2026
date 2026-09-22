@@ -240,24 +240,25 @@ Rund 3 Minuten.
 
 ### JASP und Jamovi
 
-Klick-Oberfläche, bayesianische Verfahren direkt neben den klassischen.
+Bayesianischer **t-Test, ANOVA und Regression** per Klick, direkt neben den
+klassischen Verfahren.
 
 **Der Einstieg für heute Abend.**
 :::
 ::: {.bp-pillar .tone-navy}
 [Mit R]{.bp-pillar__num}
 
-### brms
+### BayesFactor, bayestestR, brms
 
-Formelschreibweise wie in lme4. Wer Mehrebenenmodelle rechnet, lernt fast
-nichts Neues.
+Vom fertigen Bayes-Faktor bis zum eigenen Modell in lme4-Schreibweise.
 :::
 ::: {.bp-pillar .tone-sand}
-[Voller Zugriff]{.bp-pillar__num}
+[Mit Python]{.bp-pillar__num}
 
-### Stan und PyMC
+### PyMC, ArviZ, Stan
 
-Modell frei spezifizieren. Nötig für Mehrebenen- und Messmodelle.
+Modell frei spezifizieren, Diagnostik inklusive. Für Mehrebenen- und
+Messmodelle.
 :::
 :::
 
@@ -271,16 +272,31 @@ richtige.
 Die Folie, die verhindert, dass alles Theorie bleibt. Drei Wege, klar nach
 Vorkenntnis sortiert.
 
-JASP ist der Einstieg, den ich empfehle, und zwar heute Abend. Es ist kostenlos,
-installiert in zwei Minuten und rechnet denselben t-Test, den die Anwesenden
-ohnehin rechnen, zusätzlich bayesianisch. Der Aufwand ist praktisch null.
+Der Satz, der hier zählt: t-Test, ANOVA und Regression gibt es alle
+bayesianisch, und die Logik ist in allen drei Fällen dieselbe. Statt eines
+p-Werts je Parameter bekommst du eine Posterior je Parameter, und damit alles,
+was wir heute damit gemacht haben: Intervall, Relevanzaussage, Bayes-Faktor in
+beide Richtungen. Wer die Regressionstabelle lesen kann, kann auch die
+bayesianische lesen.
 
-Bei brms betonen: die Formelschreibweise ist dieselbe wie in lme4. Wer schon
+JASP ist der Einstieg, den ich empfehle, und zwar heute Abend. Es ist
+kostenlos, installiert in zwei Minuten und rechnet genau diese drei Verfahren
+zusätzlich bayesianisch, direkt neben dem klassischen Ergebnis. Der Aufwand
+ist praktisch null.
+
+Wir codieren hier nichts, die Werkzeugfolie ist Orientierung. Für R den Bogen
+nennen: BayesFactor liefert fertige Bayes-Faktoren für die
+Standardverfahren, bayestestR macht HDI und ROPE zu einem Einzeiler, brms
+nimmt die lme4-Formelschreibweise für eigene Modelle. Wer schon
 Mehrebenenmodelle rechnet, muss fast nichts Neues lernen.
 
-Stan und PyMC nur erwähnen, nicht ausführen. Für dieses Publikum ist der
-relevante Hinweis, dass Mehrebenen- und IRT-Modelle dort natürlich
-bayesianisch formuliert werden.
+Python nur erwähnen, nicht ausführen. PyMC für das Modell, ArviZ für
+Diagnostik und Darstellung. Für dieses Publikum ist der relevante Hinweis,
+dass Mehrebenen- und IRT-Modelle dort natürlich bayesianisch formuliert
+werden.
+
+Die Adressen stehen alle auf der Quellenseite, darauf verweisen statt sie
+vorzulesen.
 
 Der Warnkasten ist die einzige Stelle, an der MCMC vorkommt, und das reicht für
 heute. Wer mehr will, findet die Anwendung dazu als Pufferaufgabe auf dem

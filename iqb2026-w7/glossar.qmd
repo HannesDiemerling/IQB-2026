@@ -31,6 +31,10 @@ gesammelt.
 
 {{< include /_includes/auffrischen/nullhypothese.qmd >}}
 
+### Teststärke, Power
+
+{{< include /_includes/auffrischen/power.qmd >}}
+
 ### Konfidenzintervall
 
 {{< include /_includes/auffrischen/konfidenzintervall.qmd >}}

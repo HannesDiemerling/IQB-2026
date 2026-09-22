@@ -306,6 +306,55 @@ Nicht schon alles verraten, die Gruppenarbeit dreht genau an diesem Regler.
 Rund 4 Minuten.
 :::
 
+## Ein Münzwurf mit Datenerhebung
+
+![](../assets/e1-teststaerke.png){.bp-abb}
+
+::: {.bp-warn}
+Die **Teststärke** ist die Wahrscheinlichkeit, einen echten Effekt auch zu
+finden. Hier liegt sie bei 50 %. Und hier kommt die Replikationskrise her:
+eine schwache Studie, die trotzdem signifikant wird, hat den Effekt fast
+zwangsläufig **überschätzt**. Nur die Ausreißer nach oben kommen über die
+Schwelle.
+:::
+
+::: notes
+Die unbequemste Folie des Nachmittags, und sie kostet nur drei Minuten.
+
+Zuerst die Abbildung lesen: waagerecht die Lernenden je Gruppe, senkrecht die
+Wahrscheinlichkeit, einen Effekt dieser Größe überhaupt zu entdecken. Die
+türkis gepunktete Linie ist der übliche Anspruch von 80 Prozent.
+
+Dann der korallenrote Punkt. Das ist unsere Studie, mit der wir seit einer
+Stunde arbeiten. Je 45 Lernende, d = 0.42, und damit eine Teststärke von rund
+50 Prozent. Diesen Satz langsam sagen: die Studie hätte ihren eigenen Effekt
+nur in jedem zweiten Versuch gefunden. Sie ist ein Münzwurf.
+
+Der türkise Punkt daneben ist die Antwort auf die Frage, die sofort kommt: für
+80 Prozent bräuchte dieselbe Studie je 90 Lernende, also die doppelte
+Stichprobe.
+
+Dann der Warnkasten, und der ist der eigentliche Grund für diese Folie. Bei
+schwacher Teststärke schafft nicht irgendein Befund die Schwelle, sondern nur
+ein besonders großer. Wer also bei kleiner Stichprobe etwas findet, findet
+systematisch zu viel. Genau deshalb schrumpfen Effekte in Replikationen, und
+genau das ist der Befund der Open Science Collaboration, den wir in Einheit 2
+sehen werden. Hier ankündigen, dort einlösen.
+
+Was ich nicht auf die Folie genommen habe, weil es sonst eine eigene Einheit
+bräuchte: wie man eine Stichprobe ehrlich plant. Das steht aufklappbar auf dem
+Arbeitsblatt, drei Wege, und der wichtigste Einwand dort ist, dass die
+klassische Poweranalyse den wahren Effekt bereits als Eingabe braucht. Man
+setzt also meist ein, was man sich wünscht. Wenn jemand nachfragt, darauf
+verweisen.
+
+Falls jemand eine Quelle will: Greenland et al. (2016) behandelt genau diese
+Verwechslungen, p-Wert, Intervall und Teststärke, in einer einzigen Arbeit.
+Steht auf der Quellenseite.
+
+Rund 3 Minuten.
+:::
+
 ## Sechs erledigt, eine offen
 
 ::: {.bp-warn}

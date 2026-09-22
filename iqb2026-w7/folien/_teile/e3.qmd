@@ -383,6 +383,13 @@ Rund 3 Minuten.
 5. **Ein Vergleich mit dem Feld**, nicht mit Cohens Faustregel.
 :::
 
+::: {.bp-warn}
+**Was Nummer 3 leistet, und was nicht.** Das Intervall zeigt genau das, was
+der p-Wert verschweigt: wie groß der Effekt ist und wie genau du ihn kennst.
+Ein breites Intervall ist kein Makel, sondern ein ehrliches Eingeständnis.
+Nur die eine Auskunft, die du eigentlich willst, gibt es nicht dazu.
+:::
+
 ::: {.bp-callout}
 Zurück zur Eingangsfrage: **Ist d = 0.42 ein großer Effekt?** Die Frage war
 nicht beantwortbar. Es fehlten die Einheit, der Vergleichsmaßstab und die
@@ -397,6 +404,17 @@ folgt direkt aus der Minderungsfolie. Ohne Reliabilitätsangabe ist eine
 Effektstärke nicht interpretierbar.
 
 Punkt 5 fehlt am häufigsten und macht am wenigsten Arbeit.
+
+Beim Warnkasten kurz innehalten, das ist die einzige Stelle an Tag 1, an der
+das Konfidenzintervall etwas Raum bekommt. Zwei Sätze reichen: es zeigt
+Effektgröße und Präzision, und ein breites Intervall ist eine ehrliche
+Auskunft, kein Versagen.
+
+Den letzten Satz bewusst offen lassen und **nicht** auflösen. Wer nachhakt,
+welche Auskunft denn fehlt, bekommt: genau die, die heute Nachmittag im Quiz
+als Nummer 7 stand. Morgen. Das ist derselbe
+Cliffhanger wie in Einheit 1 und er wird hier nur nachgezogen, nicht
+aufgelöst.
 
 Dann der Rückgriff auf die Eingangsfrage. Die Zahl der Hände von vorhin steht
 noch auf der Tafel. Darauf zeigen und auflösen. Das schließt die Einheit als

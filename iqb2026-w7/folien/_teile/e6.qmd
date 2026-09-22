@@ -97,42 +97,31 @@ Rund 2 Minuten.
 
 ## Aus einer Verteilung eine Entscheidung machen
 
-::: {.bp-drei}
-::: {.bp-pillar .tone-navy}
-[Intervall]{.bp-pillar__num}
-
-### ETI
-
-Equal-Tailed Interval: schneidet unten und oben je 2,5 % ab. Einfach, bei
-schiefen Verteilungen unglücklich.
-:::
-::: {.bp-pillar .tone-navy}
-[Intervall]{.bp-pillar__num}
-
-### HDI
-
-Highest Density Interval: der schmalste Bereich mit 95 % der Masse. Jeder Wert
-darin ist plausibler als jeder außerhalb.
-:::
-::: {.bp-pillar .tone-coral}
-[Entscheidung]{.bp-pillar__num}
-
-### ROPE
-
-Region of Practical Equivalence: der Bereich, der als praktisch bedeutungslos
-gilt. Du legst ihn inhaltlich fest, nicht statistisch.
-:::
-:::
+![](../assets/e6-hdi-rope.png){.bp-abb}
 
 ::: {.bp-warn}
-**Unser Fall.** Relevanzschwelle 3 Punkte, also ROPE von −3 bis +3. Das HDI
-läuft von 0,0 bis 4,2 und **überlappt** damit die ROPE. Die ehrliche Antwort
-lautet: noch nicht entschieden.
+**Unser Fall** ist der linke. Relevanzschwelle 3 Punkte, HDI von 0,0 bis 4,2,
+Überlappung mit der ROPE. Die ehrliche Antwort: noch nicht entschieden.
 :::
 
 ::: notes
-Die Folie, die aus Statistik eine Entscheidung macht. Drei Begriffe, aber nur
-einer ist wirklich neu.
+Die Folie, die aus Statistik eine Entscheidung macht.
+
+Die drei Panels der Abbildung einzeln durchgehen. In allen drei ist das graue
+Band die ROPE, also der Bereich, den man als praktisch bedeutungslos
+festgelegt hat. Die violette Kurve ist die Posterior, der dicke Balken darunter
+das HDI.
+
+Links: das HDI ragt aus der ROPE heraus, liegt aber nicht ganz außerhalb.
+Unentschieden. Das ist unser Fall.
+
+Mitte: das HDI liegt vollständig in der ROPE. Praktisch äquivalent zu null,
+und das ist ein echtes Ergebnis.
+
+Rechts: das HDI liegt vollständig außerhalb. Relevanter Effekt.
+
+Erst danach die Begriffe HDI, ETI und ROPE benennen. Das Bild zuerst, die
+Vokabeln danach. Umgekehrt steigen Leute aus.
 
 ROPE ist die Brücke zurück zu Einheit 3. Die Relevanzschwelle, die dort
 inhaltlich bestimmt wurde, wird hier zum Kriterium. Nicht mehr "ist der Effekt

@@ -69,15 +69,23 @@ falsch.
 
 ::: {.bp-stats}
 ::: {.bp-stat}
-[~ 90 %]{.bp-stat__num}
-[der Forschenden interpretieren mindestens eine Aussage zum p-Wert falsch.
-*Haller & Krauss (2002)*]{.bp-stat__label}
+[100 %]{.bp-stat__num}
+[der befragten Studierenden machten mindestens einen Fehler.]{.bp-stat__label}
 :::
 ::: {.bp-stat}
-[auch die Lehrenden]{.bp-stat__num}
-[Dieselbe Untersuchung zeigt: auch Personen, die Methoden unterrichten, liegen
-daneben.]{.bp-stat__label}
+[90 %]{.bp-stat__num}
+[der forschenden Psychologinnen und Psychologen ebenfalls.]{.bp-stat__label}
 :::
+::: {.bp-stat}
+[80 %]{.bp-stat__num}
+[der Methoden-Lehrenden ebenfalls.]{.bp-stat__label}
+:::
+:::
+
+::: {.bp-quelle}
+Haller & Krauss (2002), *Misinterpretations of significance*, Methods of
+Psychological Research Online 7(1). Genau diese sechs Aussagen wurden dort
+vorgelegt.
 :::
 
 Das ist kein Wissensproblem einzelner Personen. Es ist ein strukturelles Problem
@@ -94,6 +102,55 @@ Befund ist mehrfach repliziert worden und gilt bis heute.
 Wenn jemand nach Aussage 3 nachfragt: p = .01 gegen p = .04 sagt nichts über die
 Effektgröße, weil der p-Wert von Effekt UND Stichprobengröße abhängt. Das kommt
 zwei Folien weiter.
+
+Rund 3 Minuten.
+:::
+
+## Kein Lehrbuchproblem
+
+::: {.bp-belege}
+- **Lortie-Forgues & Inglis (2019),** Educational Researcher 48(3).
+  **141 große Wirksamkeitsstudien** aus den Förderprogrammen von EEF und
+  NCEE, zusammen über **1,2 Millionen Lernende**. Durchschnittlicher Effekt
+  **0,06 SD**, durchschnittliche Intervallbreite **0,30 SD**. Der mittlere
+  Bayes-Faktor liegt bei **0,56**, die Studien sind also überwiegend
+  uninformativ.
+- **Wasserstein & Lazar (2016),** The American Statistician 70(2). Die
+  **erste Stellungnahme der American Statistical Association zu einer
+  statistischen Frage überhaupt**. Kernsatz: Schlussfolgerungen sollen nicht
+  daran hängen, ob ein p-Wert eine Schwelle überschreitet.
+:::
+
+::: {.bp-callout}
+Das Problem ist bekannt, benannt und dokumentiert. Geändert hat sich an der
+Praxis wenig.
+:::
+
+::: notes
+Diese Folie ist die Antwort auf den Reflex "das weiß man doch alles". Ja, man
+weiß es. Genau das ist der Befund.
+
+Lortie-Forgues und Inglis ist die Studie, die bei diesem Publikum am besten
+zieht, weil sie aus der Bildungsforschung selbst kommt und nicht aus der
+Psychologie.
+
+Die Zahlen langsam nennen. Durchschnittlicher Effekt 0,06 Standardabweichungen
+bei einer durchschnittlichen Intervallbreite von 0,30. Das heißt: das Intervall
+ist fünfmal so breit wie der Effekt, den es einschließen soll. Viele dieser
+Intervalle enthalten gleichzeitig nennenswerten Nutzen und nennenswerten
+Schaden.
+
+Der mittlere Bayes-Faktor von 0,56 ist der Hammer, und er kommt an Tag 2 wieder.
+Ein Bayes-Faktor um 1 heißt: die Daten unterscheiden nicht zwischen Wirkung und
+keiner Wirkung. Bei der Hälfte dieser Studien war der Aufwand also groß und der
+Erkenntnisgewinn nahe null. Das hier schon ankündigen, in Einheit 6 einlösen.
+
+Wichtig, wie ich das framen: das sind keine schlechten Studien. Das sind teure,
+sorgfältig gemachte Studien, die an einer strukturellen Grenze scheitern.
+
+Die ASA-Stellungnahme lohnt als Autoritätsargument, wenn Skepsis aufkommt. Es
+ist nicht meine Privatmeinung, sondern die Position der Fachgesellschaft, und
+es war deren allererste Stellungnahme zu einer statistischen Frage überhaupt.
 
 Rund 3 Minuten.
 :::
@@ -163,21 +220,11 @@ Rund 3 Minuten.
 
 ## Dieselbe Förderwirkung, zwei Urteile
 
-**LeseStark an zwei Standorten.** Je 45 getestete Lernende, beide Standorte
-gewinnen rund **2,1 Punkte** im Lesekompetenztest.
+![](../assets/e1-zwei-standorte.png){.bp-abb}
 
-| Standort | Zuwachs | p | Urteil |
-|---|---|---|---|
-| Nord | ~ 2,1 Punkte | **0.047** | signifikant, Programm wirkt |
-| Süd | ~ 2,1 Punkte | **0.053** | nicht signifikant, Programm wirkt nicht |
-
-::: {.bp-warn}
-Zwei faktisch gleich starke Effekte. Zwei konträre Entscheidungen. Und in der
-Praxis zwei verschiedene Förderbescheide.
-:::
-
-::: {.bp-quote}
-Die Natur zieht keine magische Grenze zwischen p = 0.049 und p = 0.051.
+::: {.bp-quelle}
+Je 45 getestete Lernende, identischer Zuwachs. Nur die Streuung unterscheidet
+sich. In der Praxis: zwei verschiedene Förderbescheide.
 :::
 
 ::: notes
@@ -196,38 +243,49 @@ Gruppenarbeit.
 Die Zeile mit dem Förderbescheid ist der Grund, warum das für dieses Publikum
 kein akademisches Problem ist. Kurz betonen, nicht ausmalen.
 
-Das Szenario im Hinterkopf, falls jemand nachrechnet: Lesekompetenztest,
-Rohwerte 0 bis 25, Mittelwert rund 12, SD rund 5 Punkte. Je 45 Lernende pro
-Standort. Der Zuwachs von 2,1 Punkten entspricht damit d = 0.42. Der
-Unterschied zwischen den Standorten liegt allein in der Streuung, 4,96 gegen
-5,10 Punkte. Genau daraus entstehen die beiden p-Werte. Die Anwendung in der
+Was auf der Abbildung zu sehen ist, Schritt für Schritt ansagen, weil auf der
+Folie kaum Text steht:
+
+Links Standort Nord, rechts Standort Süd. Graue Punkte sind Lernende ohne
+Förderung, türkise mit LeseStark. Die dunkle Linie verbindet die beiden
+Mittelwerte. Diese Linie ist in beiden Panels exakt gleich steil.
+
+Was sich unterscheidet, ist die Streuung der Punktwolken. Rechts liegen die
+Punkte etwas weiter auseinander. Das genügt, damit das eine p unter .05 fällt
+und das andere nicht.
+
+Das Szenario, falls jemand nachrechnet: Lesekompetenztest, Rohwerte 0 bis 25,
+Mittelwert rund 12, SD rund 5 Punkte. Je 45 Lernende pro Standort. Der Zuwachs
+von 2,1 Punkten entspricht d = 0.42. Der Unterschied zwischen den Standorten
+liegt allein in der Streuung, 4,96 gegen 5,10 Punkte. Die Anwendung in der
 Gruppenarbeit rechnet mit exakt diesen Werten.
+
+Wenn jemand fragt, ob das konstruiert ist: ja, die Streuungen sind so gewählt,
+dass die p-Werte links und rechts der Schwelle landen. Genau darum geht es.
+Zwei reale Standorte mit unterschiedlich homogener Schülerschaft erzeugen
+denselben Effekt.
 
 Rund 4 Minuten.
 :::
 
 ## Signifikanz misst vor allem n
 
-**Der belanglose Rekord.** Eine Variante von LeseStark verbessert die
-Testleistung um **0,2 Punkte**. Dieser Effekt bleibt jetzt konstant.
+![](../assets/e1-p-gegen-n.png){.bp-abb}
 
-::: {.bp-zwei}
-::: {}
-| Stichprobe | p-Wert | Urteil |
-|---|---|---|
-| n = 20 | deutlich über .05 | nichts gefunden |
-| n = 5000 | weit unter .05 | hochsignifikant |
-:::
 ::: {.bp-warn}
-Die Signifikanz testet primär deine **Stichprobengröße**, nicht die Größe oder
-Wichtigkeit des Effekts.
-
-Und umgekehrt: bei kleinem n bleibt ein großer, wichtiger Effekt unentdeckt.
-Nicht signifikant heißt nicht, dass nichts da ist.
-:::
+Signifikanz testet vor allem die **Stichprobengröße**. Und umgekehrt: bei
+kleinem n bleibt ein großer Effekt unentdeckt.
 :::
 
 ::: notes
+Die Abbildung zuerst erklären: auf der waagerechten Achse die Zahl getesteter
+Lernender, senkrecht der p-Wert. Die gepunktete Linie ist die Schwelle .05.
+Der Zuwachs ist über die ganze Kurve hinweg konstant bei 0,2 Punkten, es
+verändert sich nur die Stichprobengröße.
+
+Die beiden markierten Punkte laut vorlesen: bei 50 Lernenden nichts gefunden,
+bei 1800 hochsignifikant. Derselbe Effekt.
+
 0,2 Punkte erst einordnen lassen: ist das viel? Der Raum antwortet zuverlässig
 nein. Bei der Streuung von 3 Punkten, mit der die Anwendung rechnet, sind das
 d = 0.07.

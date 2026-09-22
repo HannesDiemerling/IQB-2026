@@ -104,35 +104,31 @@ Rund 3 Minuten.
 
 ## Der Garten der sich verzweigenden Pfade
 
-**Region Mitte**, 60 Lernende je Bedingung. Der wahre Effekt von LeseStark ist
-hier **exakt null**.
-
-::: {.bp-zwei}
-::: {}
-| Analyseschritt | p |
-|---|---|
-| Alle Daten | **0.35** |
-| ohne auffällige Testwerte | sinkt |
-| ohne unplausible Bearbeitungszeiten | sinkt weiter |
-| nur vollständige Klassen | **0.04** |
-:::
-::: {.bp-warn}
-Der Effekt wurde nicht entdeckt. Er wurde durch selektives Ausschließen
-künstlich erzeugt.
-:::
-:::
+![](../assets/e2-garten.png){.bp-abb}
 
 ::: {.bp-callout}
 Nicht die einzelne Entscheidung ist das Problem, sondern die **Zahl der
-möglichen Entscheidungen**. Jede für sich ist begründbar.
+möglichen Entscheidungen**.
 :::
 
 ::: notes
-Die wichtigste Folie der Einheit. Langsam, Zeile für Zeile.
+Die wichtigste Folie der Einheit. Langsam.
 
-Zuerst und deutlich: der wahre Effekt ist null. Alles, was hier gefunden wird,
-ist per Konstruktion ein Fehlalarm. Diesen Satz zweimal sagen, sonst geht er
-unter.
+Die Abbildung erklären, sie trägt den ganzen Inhalt: jeder Balken ist ein
+möglicher Analysepfad, aufsteigend nach p-Wert sortiert. Die gepunktete Linie
+ist .05. Die korallenroten Balken links davon sind die Pfade, die ein
+signifikantes Ergebnis liefern.
+
+Zuerst und deutlich: der wahre Effekt ist null. Jeder rote Balken ist per
+Konstruktion ein Fehlalarm. Diesen Satz zweimal sagen, sonst geht er unter.
+
+Dann die Kombinationen benennen, aus denen die 24 Pfade entstehen: Ausreißer
+ausschließen ja oder nein, nur vollständig getestete Klassen ja oder nein, nur
+Regelklassen ja oder nein, und drei Subgruppen. Zwei mal zwei mal zwei mal
+drei.
+
+Vier Entscheidungen. Niemand würde von sich sagen, dass er vier Entscheidungen
+zu viel getroffen hat.
 
 Dann jeden Schritt einzeln plausibel machen, und zwar ernsthaft, nicht
 ironisch. Auffällige Testwerte prüfen ist gute Praxis. Unplausible
@@ -164,8 +160,8 @@ ist.]{.bp-stat__label}
 :::
 ::: {.bp-stat}
 [2015]{.bp-stat__num}
-[verzichtet *Basic and Applied Social Psychology* als erstes Journal vollständig
-auf p-Werte.]{.bp-stat__label}
+[verbietet *Basic and Applied Social Psychology* Signifikanztests **und**
+Konfidenzintervalle.]{.bp-stat__label}
 :::
 :::
 
@@ -195,6 +191,55 @@ Erde rund ist, würde niemand mit einem p-Wert belegen wollen.
 
 In der Gruppenarbeit zählt die Anwendung alle Pfade gleichzeitig aus. Das
 kündige ich hier an, weil es der stärkste Moment des Nachmittags ist.
+
+Rund 3 Minuten.
+:::
+
+## Was am Ende in der Literatur steht
+
+::: {.bp-belege}
+- **Open Science Collaboration (2015),** Science 349(6251). 100 Studien
+  systematisch wiederholt. In den Originalen waren **97 %** der Befunde
+  signifikant, in den Replikationen **36 %**. Die Effektstärken der
+  Replikationen betrugen im Schnitt nur **die Hälfte** der Originalwerte.
+- **Schäfer & Schwarz (2019),** Frontiers in Psychology 10:813. Vergleich von
+  **900** Effekten aus Publikationen ohne Präregistrierung mit **93** Effekten
+  aus präregistrierten Studien: Median **r = 0.36** gegen **r = 0.16**.
+- **Simmons, Nelson & Simonsohn (2011),** Psychological Science. Vier übliche
+  Freiheitsgrade kombiniert: nominal 5 % Fehlerrate, faktisch **61 %**.
+:::
+
+::: {.bp-warn}
+Keine dieser Arbeiten wirft jemandem Betrug vor. Sie beschreiben ein System,
+das bestimmte Ergebnisse belohnt.
+:::
+
+::: notes
+Die drei Arbeiten in aufsteigender Unbequemlichkeit vortragen.
+
+Bei der Open Science Collaboration die Gegenüberstellung 97 zu 36 Prozent
+langsam sprechen lassen. Fast alle Originalbefunde waren signifikant, ein gutes
+Drittel der Wiederholungen. Und der eigentliche Befund ist die dritte Zahl: die
+Effektstärken halbierten sich. Genau das erwartet man, wenn die Literatur
+systematisch überschätzt.
+
+Schäfer und Schwarz ist die saubere Gegenprobe und für dieses Publikum
+vielleicht das stärkste Argument der Folie. Dieselbe Disziplin, derselbe
+Zeitraum, nur der Unterschied zwischen präregistriert und nicht: der mittlere
+Zusammenhang fällt von r gleich 0.36 auf 0.16. Die Präregistrierung hat nichts
+an der Wirklichkeit geändert, nur an dem, was publiziert wurde.
+
+Zur Übertragung auf dieses Publikum: es gibt keine vergleichbar große
+systematische Replikationsstudie für die Bildungsforschung. Das ist kein
+Entlastungsargument, sondern eine offene Flanke. Wer hier fragt, bekommt diese
+ehrliche Antwort.
+
+Ioannidis nur nennen, nicht ausführen. Der Titel macht die Arbeit.
+
+Wenn jemand einwendet, das sei alles Psychologie und nicht übertragbar:
+zustimmen, dass die Felder sich unterscheiden, und dann zurückfragen, welcher
+der Mechanismen von dieser Folie in der Bildungsforschung nicht vorkommt.
+Üblicherweise wird die Liste kurz.
 
 Rund 3 Minuten.
 :::
@@ -278,23 +323,11 @@ Rund 3 Minuten.
 
 ## Publikationsbias: niemand hat gelogen
 
-**40 Forschungsteams** untersuchen unabhängig dasselbe. Der wahre Effekt ist
-**2,0 Punkte**. Publiziert wird nur, was signifikant wurde.
-
-::: {.bp-zwei}
-::: {}
-- Die Literatur zeigt einen **größeren** Effekt als die Wirklichkeit.
-- Meta-Analysen erben die Verzerrung.
-- Replikationen scheitern, weil sie mit realistischen Effekten arbeiten.
-:::
-::: {.bp-quote}
-Kein Betrug, kein Vorsatz. Nur ein System, das die falsche Frage belohnt: Ist es
-signifikant? statt Wie groß ist der Effekt wirklich?
-:::
-:::
+![](../assets/e2-publikationsbias.png){.bp-abb}
 
 ::: {.bp-callout}
-Niemand hat gelogen, und das Bild ist trotzdem verzerrt.
+Niemand hat gelogen, und das Bild ist trotzdem verzerrt. Meta-Analysen erben
+diese Verzerrung.
 :::
 
 ::: notes
@@ -376,9 +409,11 @@ Rund 3 Minuten.
 ## Gruppenarbeit 2 {background-color="#4FA8A0"}
 
 ::: {.bp-aufgabe}
-**Die Frage für eure Gruppe:** Ihr habt den kleinsten p-Wert gesucht, den der
-Garten hergibt. Wie viele Pfade habt ihr gebraucht, und welcher davon wäre in
-einem Bericht am wenigsten aufgefallen?
+**Stellt euch vor**, ihr wollt dieses Programm durchbekommen. Der wahre Effekt
+ist null. Sucht den kleinsten p-Wert, den der Garten hergibt.
+
+**Die Frage für eure Gruppe:** Wie viele Pfade habt ihr gebraucht, und welcher
+davon wäre in einem Bericht am wenigsten aufgefallen?
 :::
 
 ::: {.bp-demo-hinweis}

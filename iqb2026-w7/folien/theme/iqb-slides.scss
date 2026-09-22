@@ -476,6 +476,41 @@ $code-block-font-size: 0.62em !default;
   }
 }
 
+// Abbildung, die den Folientext ersetzt. Erzeugt von tools/make-figures.py.
+// Hoehe ist begrenzt, damit Titel, Bild und Kasten darunter gemeinsam in die
+// 720 Pixel passen.
+.reveal p:has(> img.bp-abb),
+.reveal p:has(> .bp-abb) {
+  margin: 0.2em 0 0.3em 0;
+  text-align: center;
+}
+
+.reveal img.bp-abb {
+  display: block;
+  max-height: 50vh;
+  max-width: 100%;
+  width: auto;
+  margin: 0.2em auto 0.3em auto;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+// Belegfolien: Quellenliste kompakt, damit mehrere Einträge Platz haben.
+.reveal .bp-belege {
+  font-size: 0.52em;
+  line-height: 1.45;
+  margin: 0.4em 0;
+
+  li {
+    margin-bottom: 0.55em;
+  }
+
+  em {
+    color: var(--bp-navy);
+  }
+}
+
 // Demo-Folie ohne eingebettetes iframe: Screenshot plus Hinweiszeile.
 // Das Bild wird vor der Sitzung erzeugt, die App laeuft in einem eigenen Tab.
 .reveal .bp-screenshot {

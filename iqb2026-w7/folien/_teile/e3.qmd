@@ -16,6 +16,11 @@ Wie viele Pfade habt ihr gebraucht, um unter .05 zu kommen, und welcher davon
 wäre in einem Bericht am wenigsten aufgefallen?
 :::
 
+::: {.bp-warn}
+Ihr habt gezielt gesucht. Der unangenehme Teil: man landet dort auch ohne zu
+suchen. Eine Entscheidung nach der anderen, jede plausibel.
+:::
+
 ::: {.bp-runde}
 ::: {.bp-runde__gruppe}
 [1]{.bp-runde__num}
@@ -46,6 +51,11 @@ Die Pfadzahlen auf der Tafel sammeln, das ergibt eine sichtbare Reihe. Taste b
 Der zweite Teil der Frage ist der wichtige. Hier kommt regelmäßig die
 unangenehme Einsicht, dass der unauffälligste Pfad auch der übliche ist. Diesen
 Moment nicht überspielen, sondern stehen lassen.
+
+Der Warnkasten ist die Entlastung und gehört gesagt, nicht nur gezeigt.
+Niemand im Raum soll sich als Betrüger wiedererkennen. Dieselbe Verzerrung
+entsteht bei Leuten, die sorgfältig arbeiten, weil das System diesen Weg
+belohnt.
 
 Wenn eine Gruppe sehr wenige Pfade gebraucht hat: fragen, ob sie Glück hatte
 oder gesucht hat. Beides ist eine gute Antwort und beides macht denselben Punkt.
@@ -197,27 +207,12 @@ Rund 4 Minuten.
 
 ## Die Faustregeln sind kein Kriterium
 
-::: {.bp-warn}
-Die Richtwerte von Cohen (0.2 · 0.5 · 0.8) sind grobe Orientierungen, keine
-inhaltlichen Kriterien. Ein d = 0.3 kann in einem Kontext wichtig und in einem
-anderen trivial sein.
-:::
-
-::: {.bp-zwei}
-::: {}
-**Groß:** d = 0.2 für eine Maßnahme, die flächendeckend und fast kostenlos
-ausgerollt werden kann.
-:::
-::: {}
-**Mittelmäßig:** d = 0.5 für ein aufwendiges Einzelförderformat in einem
-gut beforschten Feld.
-:::
-:::
+![](../assets/e3-benchmarks.png){.bp-abb}
 
 ::: {.bp-quelle}
-Schäfer & Schwarz (2019). *The meaningfulness of effect sizes in psychological
-research.* Frontiers in Psychology. Liefert empirische Verteilungen von
-Effektstärken als Vergleichsmaßstab.
+Kraft (2020), *Interpreting Effect Sizes of Education Interventions*,
+Educational Researcher. Dazu Schäfer & Schwarz (2019) mit empirischen
+Verteilungen von Effektstärken.
 :::
 
 ::: notes
@@ -235,30 +230,74 @@ dass gar nichts Besseres verfügbar ist.
 Rund 3 Minuten.
 :::
 
-## Und dann misst du auch noch ungenau
+## Woran Effektstärken tatsächlich hängen
 
-Jede Effektstärke wird durch die Unzuverlässigkeit der Messung **nach unten
-gezogen**. Das ist kein Schätzfehler, das ist systematisch.
+::: {.bp-belege}
+- **Cheung & Slavin (2016),** Educational Researcher 45(5). **645 Studien** aus
+  12 Übersichtsarbeiten. Effektstärken sind rund **doppelt so groß** bei
+  kleinen Stichproben, bei selbst entwickelten Tests und in publizierten
+  Arbeiten. Quasi-Experimente liefern höhere Werte als randomisierte Studien.
+- **Kraft (2020),** Educational Researcher 49(4). Cohens Faustregeln passen
+  nicht auf Bildungsinterventionen. Vorschlag: unter **.05** klein, **.05 bis
+  .20** mittel, ab **.20** groß.
+- **Simpson (2017),** Journal of Education Policy 32(4). Ranglisten von
+  Maßnahmen seien womöglich keine Wirksamkeitsranglisten, sondern
+  **Ranglisten der Manipulierbarkeit von Studiendesigns**.
+:::
+
+::: {.bp-callout}
+Wer zwei Effektstärken vergleicht, vergleicht immer auch zwei Designs.
+:::
+
+::: notes
+Die inhaltlich wichtigste Belegfolie des Workshops, weil sie direkt in die
+Arbeit dieses Publikums greift.
+
+Cheung und Slavin zuerst, und zwar mit der praktischen Konsequenz: wenn eine
+kleine Studie mit selbst gebautem Test ein doppelt so großes d liefert wie eine
+große Studie mit normiertem Instrument, ist das kein Hinweis darauf, dass die
+Maßnahme dort besser wirkt. Es ist ein Hinweis auf das Design.
+
+Das ist der Moment, an dem oft die Hattie-Frage kommt. Wenn sie kommt, nehme ich
+sie an und antworte mit Simpsons Formulierung: solche Ranglisten könnten
+Ranglisten der Manipulierbarkeit von Designs sein statt Ranglisten der
+Wirksamkeit. Das Problem ist nicht, Effektstärken zu sammeln, sondern sie aus
+völlig verschiedenen Designs in eine Rangfolge zu schreiben.
+
+Kraft ist die konstruktive Wendung. Er sagt nicht, dass Effektstärken nutzlos
+sind, sondern dass sie feldspezifische Maßstäbe brauchen.
+
+Ehrlichkeitshalber dazu, falls jemand tief im Thema steckt: Kraft ist nicht
+unwidersprochen. Simpson hat 2023 in derselben Zeitschrift unter dem Titel
+*Benchmarking a Misnomer* dagegen argumentiert. Wenn das im Raum aufkommt, ist
+die Antwort: die Debatte läuft, und schon dass sie läuft, ist der Punkt dieser
+Folie.
+
+Rund 4 Minuten.
+:::
+
+## Und dann misst du auch noch ungenau
 
 $$d_{\text{beobachtet}} = d_{\text{wahr}} \cdot \sqrt{\text{Rel}}$$
 
-| Reliabilität des Tests | aus wahrem d = 0.50 wird |
-|---|---|
-| 1.00 | 0.50 |
-| .90 | 0.47 |
-| .80 | 0.45 |
-| **.70** | **0.42** |
-| .50 | 0.35 |
+![](../assets/e3-minderung.png){.bp-abb}
 
 ::: {.bp-warn}
-Der beobachtete Effekt aus Einheit 1, **d = 0.42**, ist bei einer
-Testreliabilität von .70 genau das, was ein wahrer Effekt von **0.50**
-hinterlässt. Kein Stichprobenumfang der Welt holt das zurück.
+Das **d = 0.42** aus Einheit 1 ist bei Reliabilität .70 genau das, was ein
+wahrer Effekt von **0.50** übrig lässt.
 :::
 
 ::: notes
 Das ist die Folie, wegen der diese Einheit anders aussieht als ein üblicher
 Effektstärken-Vortrag. Hier langsam werden.
+
+Die Abbildung zuerst lesen: waagerecht die Reliabilität des Instruments,
+senkrecht die Effektstärke. Die türkise gepunktete Linie ist das wahre d von
+0.50, die dunkle Kurve das, was man davon messen kann. Die rot schattierte
+Fläche dazwischen ist der Anteil, der in der Messung verloren geht.
+
+Die fünf roten Punkte auf der Kurve sind die Reliabilitäten, die die Gruppen
+gleich bekommen. Das kurz ankündigen, dann wissen sie später, wo sie stehen.
 
 Der Rückgriff auf Einheit 1 ist der Clou. Dieselbe Zahl, 0.42, die wir vorhin
 noch für den Effekt gehalten haben, ist in Wahrheit der Schatten eines größeren
@@ -282,6 +321,10 @@ Falls jemand nach der Minderungskorrektur fragt: ja, man kann nach oben
 korrigieren, und ja, das ist umstritten, weil die Korrektur die
 Reliabilitätsschätzung mitschleppt. Berichten sollte man beides, korrigiert und
 unkorrigiert.
+
+Baguley (2009) nennt die Reliabilität ausdrücklich als einen der Faktoren, die
+standardisierte Effektstärken verzerren, neben eingeschränkter Varianz und
+Designunterschieden. Das ist die Literaturstelle, falls jemand eine will.
 
 Falls jemand nach Korrelationen fragt: dort werden beide Variablen gedämpft,
 die Wurzel steht dann über dem Produkt beider Reliabilitäten.

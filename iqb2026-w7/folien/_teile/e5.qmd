@@ -185,23 +185,11 @@ Rund 4 Minuten.
 
 ## Der Posterior: ein sichtbarer Kompromiss
 
-**Prior gegen Daten.** Frühere Evaluationen sagen **8 Punkte**. Die fünf
-Pilotklassen sagen **6 Punkte**.
+![](../assets/e5-drei-kurven.png){.bp-abb}
 
-::: {.bp-zwei}
-::: {}
-Der Posterior landet **dazwischen**. Wie nah an den Daten, hängt davon ab, wie
-sicher der Prior formuliert war:
-
-- **Breiter Prior:** die Daten dominieren.
-- **Schmaler Prior:** es braucht viele Daten, um ihn zu bewegen.
-- **Viele Daten:** der Prior wird irrelevant.
-:::
 ::: {.bp-callout}
-Und damit ist der Einwand von vorhin beantwortet. Wer genug Daten hat, bei dem
-spielt es keine Rolle mehr, was er vorher geglaubt hat. Wer wenig Daten hat,
-bei dem spielt es eine Rolle, und dann ist es besser, wenn man es sieht.
-:::
+Breiter Prior: die Daten dominieren. Schmaler Prior: es braucht viele Daten,
+um ihn zu bewegen. Genug Daten: der Prior wird irrelevant.
 :::
 
 ::: {.bp-demo-hinweis}
@@ -209,8 +197,18 @@ Anwendung: **Prior und Daten verrechnen** · [zum Selbstausprobieren](../../apps
 :::
 
 ::: notes
-Der Höhepunkt der Einheit. In der Anwendung liegen drei Kurven übereinander:
-Prior grau, Likelihood rot, Posterior violett. Hier Zeit lassen.
+Der Höhepunkt der Einheit. Hier Zeit lassen.
+
+Die Abbildung von links nach rechts erklären. Grau gepunktet der Prior mit
+Schwerpunkt bei 8 Punkten, das ist die Vorerwartung aus früheren
+Evaluationen. Rot gestrichelt die Likelihood mit Schwerpunkt bei 6 Punkten,
+das sind die fünf Pilotklassen. Violett und dick der Posterior, das Ergebnis.
+
+Darauf zeigen, dass der Posterior zwischen den beiden liegt und deutlich
+schmaler ist als beide. Das ist der Gewinn: zwei unsichere Quellen ergeben
+zusammen eine sicherere Aussage.
+
+Die violett schattierte Fläche ist das 95-Prozent-Intervall.
 
 Die drei Regeln wörtlich sagen. Sie sind die praktische Antwort auf den
 Subjektivitätsvorwurf, und sie sind überprüfbar, nicht rhetorisch.

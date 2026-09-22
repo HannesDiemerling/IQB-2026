@@ -135,29 +135,28 @@ Rund 5 Minuten.
 
 ## Die Auflösung, in Häufigkeiten
 
-**Von 1000 gescreenten Lernenden:**
-
-::: {.bp-zwei}
-::: {}
-- **30** haben tatsächlich Förderbedarf, davon werden **28** erkannt.
-- **970** haben keinen, davon schlagen **78** falsch Alarm.
-- Also **28 echte** gegen **78 falsche** Treffer.
-:::
-::: {.bp-warn}
-Die Intuition sagt: über 90 %.
-
-Die Rechnung sagt: **rund 27 %.**
-:::
-:::
+![](../assets/e4-basisrate.png){.bp-abb}
 
 ::: {.bp-callout}
-Ein Verfahren mit vielen Fehlalarmen entwertet jeden einzelnen Alarm. Bei
-seltenen Merkmalen entscheidet die Basisrate, nicht die Testgüte.
+Die Intuition sagt über 90 %. Bei seltenen Merkmalen entscheidet die
+**Basisrate**, nicht die Testgüte.
 :::
 
 ::: notes
 Die Auflösung. Zuerst auf die Zahlen von der Tafel zeigen, die der Raum vorhin
 geschätzt hat. Der Kontrast macht die Arbeit.
+
+Die Abbildung erklären: jeder Punkt ist eine Person, tausend insgesamt.
+Türkis sind die 28 mit echtem Bedarf, die das Screening findet. Dunkelblau
+sind die 2, die es übersieht. Korallenrot sind die 78 Fehlalarme. Der graue
+Rest hat keinen Bedarf und schlägt auch nicht an.
+
+Der Trick der Darstellung: man sieht auf einen Blick, dass die rote Gruppe
+fast dreimal so groß ist wie die türkise. Dafür braucht niemand eine Formel.
+
+Das ist das Prinzip der Faktenboxen. Absolute Häufigkeiten statt Prozente,
+weil Prozente bei bedingten Wahrscheinlichkeiten fast alle Menschen in die
+Irre führen, Fachleute eingeschlossen.
 
 Die Rechnung in absoluten Häufigkeiten führen, nicht in Prozent. In Prozent
 versteht sie fast niemand, in absoluten Zahlen fast jeder. Das ist genau das

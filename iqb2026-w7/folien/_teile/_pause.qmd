@@ -1,10 +1,10 @@
 ## Pause {background-color="#2A3F66"}
 
-[Wir machen weiter, wenn die Zeit um ist]{.bp-eyebrow}
+[Kurz Luft holen]{.bp-eyebrow}
 
 ::: {.bp-callout}
-Lass die Workshop-Seite offen. Dann bleibt die Rechenumgebung im
-Zwischenspeicher und die nächste Anwendung startet sofort.
+Eine Bitte: die Workshop-Seite offen lassen. Dann bleibt die Rechenumgebung
+im Zwischenspeicher und die nächste Anwendung startet sofort.
 :::
 
 ::: notes

@@ -39,6 +39,11 @@ hättet ihr stattdessen berichtet?
 :::
 
 ::: notes
+**Faden.** Davor: Gruppenarbeit an den zwei Standorten, dann Pause. Hier: die
+fünf Gruppen tragen zusammen, woran der Unterschied lag. Überleitung: "Bis
+hierhin war der p-Wert das Problem. Jetzt schauen wir uns an, was passiert,
+bevor er überhaupt berechnet wird."
+
 Der Reihe nach, Gruppe 1 bis 5, eine Minute pro Gruppe. Ich sage das vorher an
 und halte mich daran, sonst frisst diese Runde die halbe Einheit.
 
@@ -52,10 +57,6 @@ zusammengefasst gehören.
 
 Wenn eine Gruppe nichts hat, nicht bohren. Stattdessen: "Was hat euch am meisten
 überrascht?" Darauf hat jede Gruppe eine Antwort.
-
-Mein Schlusssatz nach Gruppe 5, er leitet direkt über: "Bis hierhin war der
-p-Wert das Problem. Jetzt schauen wir uns an, was passiert, bevor er überhaupt
-berechnet wird."
 :::
 
 # Einheit 2 {.bp-trenner background-color="#E27C5C"}
@@ -65,8 +66,12 @@ berechnet wird."
 ## Die Freiheitsgrade des Forschens
 
 ::: notes
-Kurz. Der Titel ist Programm: es geht jetzt nicht mehr um die Kennzahl, sondern
-um alles, was vor ihr passiert.
+**Faden.** Davor: die Fragerunde hat den p-Wert als Kennzahl abgeschlossen.
+Hier: der Titel verschiebt den Blick auf alles, was vor der Kennzahl passiert.
+Überleitung: "Und ich fange wieder mit einer Frage an, diesmal einer
+unangenehmen."
+
+Kurz. Der Titel ist Programm.
 :::
 
 ## Welche davon hast du schon einmal getan?
@@ -84,6 +89,11 @@ Handzeichen. Oder auch nicht, das ist gleich gültig.
 :::
 
 ::: notes
+**Faden.** Davor: der Titel kündigt an, dass es um die Entscheidungen vor der
+Kennzahl geht. Hier: fünf solcher Entscheidungen, und alle im Raum kennen sie.
+Überleitung: "Keine dieser fünf Handlungen ist Betrug. Das Problem entsteht
+erst durch ihre Menge, und die will ich euch zeigen."
+
 Der heikelste Moment der beiden Tage. Er funktioniert nur, wenn ich zuerst
 selbst die Hand hebe. Das mache ich sichtbar und ohne Umschweife.
 
@@ -118,6 +128,10 @@ und nennen sie das Ergebnis.
 :::
 
 ::: notes
+**Faden.** Davor: fünf einzelne Entscheidungen, jede für sich harmlos. Hier:
+dieselben Entscheidungen kombiniert, 24 Pfade auf einen Blick, wahrer Effekt
+null. Überleitung: "Ist das ein konstruiertes Extrembeispiel? Leider nicht."
+
 Die wichtigste Folie der Einheit. Langsam.
 
 Die Abbildung erklären, sie trägt den ganzen Inhalt: jeder Balken ist ein
@@ -185,11 +199,16 @@ The earth is round (p < .05).
 :::
 
 ::: notes
+**Faden.** Davor: der Garten zeigt 24 Pfade an unserem erfundenen Datensatz.
+Hier: drei Zahlen, die belegen, dass das kein Einzelfall und längst benannt
+ist. Überleitung: "So weit die Mechanik. Jetzt schauen wir, was davon am Ende
+in der Literatur landet."
+
 Die drei Zahlen einzeln durchgehen, nicht als Block überfliegen.
 
 61 Prozent: das ist der Wert, den Simmons, Nelson und Simonsohn erreichen, wenn
 sie vier übliche Freiheitsgrade kombinieren. Nominal 5 Prozent, faktisch 61.
-Genau die Kombination, die die Folie davor gezeigt hat.
+Genau die Kombination, die der Garten eben gezeigt hat.
 
 .05: kurz erwähnen, dass Fisher die Schwelle als pragmatische Konvention
 vorgeschlagen hat, nicht als Naturkonstante. Er selbst hat sie flexibel
@@ -218,6 +237,12 @@ das bestimmte Ergebnisse belohnt.
 :::
 
 ::: notes
+**Faden.** Davor: 61 Prozent Falsch-positiv-Rate, eine willkürliche Schwelle,
+ein Journal das aussteigt. Hier: was daraus in der veröffentlichten Literatur
+geworden ist, drei Befunde. Überleitung: "Bis hierhin ging es um
+Entscheidungen beim Auswerten. Jetzt um die Fälle, die gar nicht erst in den
+Daten landen."
+
 Die drei Arbeiten in aufsteigender Unbequemlichkeit vortragen, je ein Panel
 der Abbildung, von links nach rechts.
 
@@ -225,7 +250,8 @@ Bei der Open Science Collaboration die Gegenüberstellung 97 zu 36 Prozent
 langsam sprechen lassen. Fast alle Originalbefunde waren signifikant, ein gutes
 Drittel der Wiederholungen. Und der eigentliche Befund ist die dritte Zahl: die
 Effektstärken halbierten sich. Genau das erwartet man, wenn die Literatur
-systematisch überschätzt.
+systematisch überschätzt, und genau das hat die Teststärke-Folie aus Einheit 1
+vorhergesagt. Diesen Bogen ausdrücklich schlagen.
 
 Schäfer und Schwarz ist die saubere Gegenprobe und für dieses Publikum
 vielleicht das stärkste Argument der Folie. Dieselbe Disziplin, derselbe
@@ -272,8 +298,13 @@ Entscheidend ist nicht, **wie viele** fehlen, sondern **wer**.
 :::
 
 ::: notes
-Roter Faden: fehlende Daten sind eine Information über den Auswahlprozess, nicht
-nur ein Loch in der Tabelle.
+**Faden.** Davor: die Literatur überschätzt systematisch. Hier: eine zweite
+Quelle derselben Verzerrung, diesmal schon in der eigenen Stichprobe.
+Überleitung: "Dafür gibt es eine Systematik, und sie entscheidet, ob man es
+reparieren kann."
+
+Kernbotschaft: fehlende Daten sind eine Information über den Auswahlprozess,
+nicht nur ein Loch in der Tabelle.
 
 Das Beispiel ist bewusst absichtslos gewählt. Niemand hat entschieden, welche
 Schule herausfällt. Die Belastung hat es entschieden. Genau deshalb fällt es im
@@ -286,6 +317,10 @@ ausgerechnet die?
 
 Die Richtung ist fast immer dieselbe: die Maßnahme sieht besser aus, als sie
 ist.
+
+Die konkrete Faustregel dazu, sie steht nicht mehr auf der Folie: wenn 30
+Prozent der Stichprobe wegfallen und das nicht zufällig geschieht, hast du
+keine repräsentative Stichprobe mehr.
 
 Rund 4 Minuten.
 :::
@@ -303,6 +338,10 @@ Unser Fall ist **MNAR**. Das lässt sich nicht wegrechnen, nur offenlegen.
 :::
 
 ::: notes
+**Faden.** Davor: die belasteten Schulen fallen aus der Testung. Hier: die
+Systematik dahinter, und warum ausgerechnet unser Fall nicht reparabel ist.
+Überleitung: "Fehlende Fälle sind das eine. Fehlende Studien sind das andere."
+
 Die Tabelle nicht vorlesen. Nur die Trennlinie erklären: MCAR und MAR sind
 technische Probleme mit technischen Lösungen. MNAR ist ein inhaltliches
 Problem, und dafür gibt es keine Rechnung.
@@ -332,7 +371,11 @@ diese Verzerrung.
 :::
 
 ::: notes
-Roter Faden: die Verzerrung entsteht bei der Auswahl dessen, was publiziert
+**Faden.** Davor: innerhalb einer Studie fallen die schwierigen Fälle weg.
+Hier: dieselbe Auswahllogik eine Ebene höher, jetzt fallen ganze Studien weg.
+Überleitung: "Genug Diagnose. Was hilft eigentlich dagegen?"
+
+Kernbotschaft: die Verzerrung entsteht bei der Auswahl dessen, was publiziert
 wird, nicht beim Rechnen.
 
 Der Trick der Darstellung in der Anwendung: man sieht alle 40 Teams, auch die,
@@ -382,6 +425,11 @@ Präregistrierung verbietet dir nichts. Sie trennt nur **geplant** von
 :::
 
 ::: notes
+**Faden.** Davor: drei Verzerrungsquellen, vom Analysepfad bis zur
+Publikationsauswahl. Hier: was dagegen hilft, getrennt in Diagnose und
+Struktur. Überleitung: "Und jetzt seid ihr dran, allerdings von der anderen
+Seite: ihr sollt gleich selbst p-hacken."
+
 Die drei Karten unterscheiden Diagnose von Struktur. Funnel-Plot und p-Curve
 erkennen das Problem im Nachhinein. Präregistrierung verhindert es. Nur das
 Zweite löst es wirklich.
@@ -419,6 +467,10 @@ Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 2](../../tag1
 :::
 
 ::: notes
+**Faden.** Davor: Funnel-Plot, p-Curve und Präregistrierung als Gegenmittel.
+Hier: der Auftrag, den Garten selbst auszubeuten. Danach: Pause, dann
+Fragerunde zu Beginn von Einheit 3.
+
 Das Wettbewerbselement funktioniert hier besonders gut: welche Gruppe findet den
 kleinsten p-Wert? Das ansagen, es erzeugt Energie und passt inhaltlich genau,
 weil es die Absurdität der Übung selbst vorführt.

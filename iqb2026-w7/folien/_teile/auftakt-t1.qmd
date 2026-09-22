@@ -13,6 +13,10 @@ trotzdem seit hundert Jahren. Tag 1 zeigt, warum das ein Problem ist. Tag 2
 zeigt, was du stattdessen tun kannst.
 
 ::: notes
+**Faden.** Davor: nichts, das ist die allererste Folie. Hier: die Leitfrage
+beider Tage, noch vor jeder Organisation. Überleitung: "Bevor wir anfangen,
+in zwei Sätzen, woher dieses Material kommt."
+
 Nicht mit Organisatorischem anfangen. Mit dieser Frage anfangen.
 
 Vorlesen, dann drei Sekunden Pause. Dann der Satz: "Der p-Wert beantwortet
@@ -45,6 +49,9 @@ weiterverwenden, umbauen und in eigener Lehre einsetzen.
 :::
 
 ::: notes
+**Faden.** Davor: die Leitfrage der beiden Tage. Hier: Herkunft und Lizenz,
+kurz und sachlich. Überleitung: "So viel zum Woher. Jetzt zum Wie."
+
 Bewusst kurz, rund 60 bis 90 Sekunden. Das ist eine Einordnung, kein Vortrag
 über das Projekt.
 
@@ -91,6 +98,10 @@ oder schreib in den Chat.
 :::
 
 ::: notes
+**Faden.** Davor: Herkunft und Lizenz des Materials. Hier: der Rhythmus aus
+Input, Gruppenarbeit und Zusammentragen, dreimal pro Tag. Überleitung: "So
+sieht das konkret für heute aus."
+
 Das ist der Vertrag mit dem Raum. Drei Dinge ansprechen.
 
 Erstens, der Rhythmus ist immer gleich. Das nimmt Unsicherheit raus, niemand
@@ -123,6 +134,10 @@ werden eingehalten. Beide Tage enden um 18 Uhr.
 :::
 
 ::: notes
+**Faden.** Davor: der immer gleiche Rhythmus einer Einheit. Hier: der konkrete
+Ablauf des heutigen Tages. Überleitung: "Und weil heute vieles unbequem wird,
+gleich vorweg, was morgen kommt."
+
 Zügig durchgehen, rund 2 Minuten. Niemand merkt sich diesen Plan, er steht auf
 der Website.
 
@@ -157,6 +172,10 @@ Werkzeug dafür.
 :::
 
 ::: notes
+**Faden.** Davor: der Ablauf des heutigen Tages. Hier: die Aufteilung in
+Diagnose heute und Alternative morgen, damit heute niemand frustriert
+aussteigt. Überleitung: "Zwei organisatorische Dinge noch, dann geht es los."
+
 Wichtige Folie, auch wenn sie kurz ist. Sie verhindert, dass Tag 1 als reine
 Kritikveranstaltung ankommt und Leute frustriert rausgehen.
 
@@ -200,6 +219,10 @@ eine Person den Bildschirm teilt, damit alle dasselbe sehen.
 :::
 
 ::: notes
+**Faden.** Davor: heute Diagnose, morgen Alternative. Hier: die
+Gruppeneinteilung, die wir jetzt live vornehmen. Überleitung: "Und eine letzte
+Sache, bevor es inhaltlich losgeht: bitte einmal alles laden."
+
 Die Gruppen teilen wir live ein. Diese Folie ist nur der Verweis darauf, sie
 zeigt die Struktur, nicht die Zuordnung. Ich sage dazu, dass niemand selbst
 aktiv werden muss.
@@ -230,6 +253,10 @@ Daten verlassen deinen Rechner nicht.
 :::
 
 ::: notes
+**Faden.** Davor: die Gruppen stehen. Hier: der Technikcheck, damit später
+niemand im Breakout-Raum hängt. Überleitung: "Gut. Dann fangen wir an, und
+zwar mit einer Frage an euch."
+
 Diese Folie ist die Versicherung gegen den schlimmsten Fall: eine Gruppe sitzt
 im Breakout-Raum und bei zwei Leuten lädt nichts.
 

@@ -13,7 +13,12 @@ Verlinkte Seiten dieses Decks, hier zentral pflegen:
 ## Die Frage umdrehen
 
 ::: notes
-Kurz stehen lassen. Ab hier wird gebaut statt kritisiert.
+**Faden.** Davor: der Auftakt hat den Wechsel von der Diagnose zur
+Alternative angekündigt. Hier: der Titel macht ihn zum Programm, ab jetzt
+wird gebaut statt kritisiert. Überleitung: "Und ich fange mit einer Frage an,
+bei der fast alle danebenliegen."
+
+Kurz stehen lassen.
 :::
 
 ## Ein Screening schlägt an. Wie sicher ist das?
@@ -31,6 +36,12 @@ Handzeichen in Bändern: über 90 %, zwischen 50 und 90 %, unter 50 %.
 :::
 
 ::: notes
+**Faden.** Davor: der Titel kündigt die Umkehrung der Frage an. Hier: ein
+Screening-Beispiel, bei dem die Intuition zuverlässig scheitert, mit
+Handzeichen in drei Bändern. Überleitung: "Bevor ich auflöse, müssen wir
+klären, worüber wir hier eigentlich reden, wenn wir Wahrscheinlichkeit
+sagen."
+
 Der stärkste Einzeleffekt, den man in einem Statistik-Workshop erzeugen kann.
 Deshalb steht er am Anfang von Tag 2.
 
@@ -79,15 +90,21 @@ Aussagen gelten über **Hypothesen**.
 ::: {.bp-warn}
 Ein 95-%-Konfidenzintervall bedeutet **nicht**, dass der wahre Wert mit 95 %
 Wahrscheinlichkeit darin liegt. Es beschreibt die langfristige Erfolgsquote des
-Verfahrens. Das war Fehlannahme Nummer 7 von gestern.
+Verfahrens. Das war der offene Faden von gestern.
 :::
 
 ::: notes
+**Faden.** Davor: das Screening, dessen Auflösung noch aussteht. Hier: zwei
+Definitionen von Wahrscheinlichkeit, und der eingelöste Cliffhanger von
+gestern. Überleitung: "Mit dieser zweiten Definition lässt sich rechnen, und
+zwar mit genau einer Formel."
+
 Beide Definitionen wörtlich bringen, sie sind präzise formuliert.
 
 Der Warnkasten ist der wichtigste Satz der Folie. Er löst den Cliffhanger von
-gestern ein, Fehlannahme Nummer 7. Das ausdrücklich sagen, die Gruppe erinnert
-sich.
+gestern ein: die Aussage, der wahre Wert liege mit 95 Prozent
+Wahrscheinlichkeit im Intervall. Das ausdrücklich so benennen, nicht als
+"Fehlannahme Nummer 7", daran erinnert sich niemand.
 
 Die Pointe: die Aussage, die wir intuitiv über ein Konfidenzintervall machen
 wollen, ist nicht falsch als Gedanke. Sie ist nur die falsche Aussage für
@@ -117,6 +134,11 @@ Eine Anleitung, aus neuen Informationen klüger zu werden. Mehr steht da nicht.
 :::
 
 ::: notes
+**Faden.** Davor: Wahrscheinlichkeit als Grad der Überzeugung. Hier: die
+Formel, die genau damit rechnet, plus die vier Begriffe des Tages.
+Überleitung: "Und jetzt löse ich das Screening von vorhin auf, ohne dass wir
+irgendetwas rechnen müssen."
+
 Die Tabelle Zeile für Zeile, bei jeder eine Sekunde Pause. Diese vier Begriffe
 tragen den ganzen Rest des Tages, sie bekommen morgen keine zweite Chance.
 
@@ -142,6 +164,10 @@ Die Intuition sagt über 90 %. Der Test ist auch wirklich gut. Die
 :::
 
 ::: notes
+**Faden.** Davor: das Bayes-Theorem als Formel. Hier: dieselbe Formel als
+Bild, und damit die Auflösung des Screenings vom Anfang. Überleitung: "So
+weit die Diagnostik. Jetzt dasselbe an unserer eigenen Studie."
+
 Die Auflösung. Zuerst auf die Zahlen von der Tafel zeigen, die der Raum vorhin
 geschätzt hat. Der Kontrast macht die Arbeit.
 
@@ -214,6 +240,11 @@ ihn heute den ganzen Tag.
 :::
 
 ::: notes
+**Faden.** Davor: die Basisrate am Screening, ein Lehrbuchfall. Hier:
+dasselbe Vorgehen an unserer eigenen LeseStark-Studie, frequentistisch und
+bayesianisch nebeneinander. Überleitung: "Und genau das seht ihr gleich
+live."
+
 Die Brücke zwischen den beiden Tagen und die vielleicht wichtigste Folie des
 Workshops. Hier langsam werden.
 
@@ -264,6 +295,10 @@ Anwendung: **p-Wert und Posterior nebeneinander** · [zum Selbstausprobieren](..
 :::
 
 ::: notes
+**Faden.** Davor: p-Wert und Posterior nebeneinander an festen Zahlen. Hier:
+dieselbe Gegenüberstellung als Live-Demo mit beweglichen Reglern.
+Überleitung: "Und jetzt seid ihr dran, allerdings zurück am Screening."
+
 Diese Folie kauft die Ladezeit. Ich rede hier mindestens 45 Sekunden, während
 der Tab mit der Anwendung schon offen ist.
 
@@ -298,6 +333,10 @@ Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 4](../../tag2
 :::
 
 ::: notes
+**Faden.** Davor: die Live-Demo an p-Wert und Posterior. Hier: der Auftrag an
+der Screening-Anwendung, also zurück zum Einstieg dieser Einheit. Danach:
+Pause, dann Fragerunde zu Beginn von Einheit 5.
+
 Diese Gruppenarbeit ist die längste des Workshops, 32 Minuten. Der Grund: für
 die meisten ist Bayes neu, und die Basisraten-Anwendung braucht Zeit, bis die
 Intuition kippt.

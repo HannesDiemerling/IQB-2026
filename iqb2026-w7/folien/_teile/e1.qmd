@@ -14,8 +14,11 @@ der Projektseite auf GitHub Pages. Ein fuehrender Slash waere hier falsch.
 ## Was der p-Wert nicht sagt
 
 ::: notes
-Kurz stehen lassen, fünf Sekunden. Der Titel ist die Behauptung, der Rest der
-Einheit ist der Beleg.
+**Faden.** Davor: Auftakt und Technikcheck, alle haben die Seite offen.
+Hier: der Titel ist die Behauptung, der Rest der Einheit ist der Beleg.
+Überleitung: "Bevor ich irgendetwas behaupte, eine Frage an euch."
+
+Kurz stehen lassen, fünf Sekunden.
 :::
 
 ## Welche dieser Aussagen ist richtig?
@@ -37,12 +40,18 @@ Handzeichen bitte. Bei jeder Aussage einzeln.
 :::
 
 ::: notes
+**Faden.** Davor: der Titel als Behauptung. Hier: sechs Aussagen zu einem
+p-Wert von .01, Handzeichen bei jeder einzeln. Überleitung: "Ich sage euch
+jetzt, wie viele davon stimmen."
+
 Das ist der wichtigste Moment der ganzen Einheit. Nicht überspringen, und nicht
 abkürzen.
 
 Ablauf: jede Aussage einzeln vorlesen, dann Handzeichen abwarten. Ruhig etwas
-Zeit lassen, auch wenn es still wird. Erfahrungsgemäß gehen bei 2, 4 und 5 viele
-Hände hoch.
+Zeit lassen, auch wenn es still wird. Erfahrungsgemäß gehen viele Hände hoch
+bei "der Effekt ist real, denn p liegt unter .05", bei "die
+Replikationswahrscheinlichkeit ist 99 Prozent" und bei "die Wahrscheinlichkeit,
+dass es Zufall war, ist 1 Prozent".
 
 In Zoom die Reaktionsfunktion nutzen und selbst laut mitzählen: "vier Hände,
 sechs Hände". Sonst sieht niemand, wie die Gruppe steht, und der Effekt der
@@ -91,17 +100,27 @@ vorgelegt.
 Mehr Methodenausbildung hilft. Von 100 auf 80 Prozent.
 
 ::: notes
+**Faden.** Davor: das Quiz mit den erhobenen Händen. Hier: die Auflösung, keine
+einzige Aussage stimmt, und das gilt bis in die Lehre hinein. Überleitung:
+"Wenn alle sechs falsch sind, dann sollten wir einmal klären, was der p-Wert
+eigentlich ist."
+
 Die Auflösung ohne Triumph vortragen. Der Satz, der sitzen muss: das ist kein
 individuelles Versäumnis, sondern ein Ausbildungsproblem.
+
+Die Zeile "Mehr Methodenausbildung hilft. Von 100 auf 80 Prozent." ist ironisch
+gemeint und muss auch ironisch klingen, sonst kippt sie ins Gegenteil. Der
+Zusatz dazu: die Lehrenden liegen besser als die Studierenden, aber immer noch
+zu vier Fünfteln falsch. Mehr vom Gleichen löst das Problem nicht.
 
 Haller und Krauss (2002) haben Studierende, wissenschaftliche Mitarbeitende und
 Methoden-Lehrende befragt. In allen drei Gruppen lagen die Fehlerquoten hoch. Der
 Befund ist mehrfach repliziert worden und gilt bis heute.
 
-Wenn jemand nach Aussage 3 nachfragt: p = .01 gegen p = .04 sagt nichts über die
-Effektgröße, weil der p-Wert von Effekt UND Stichprobengröße abhängt. Das kommt
-später in dieser Einheit, bei "Signifikanz misst vor allem n". Auf später
-vertrösten, nicht hier ausführen.
+Wenn jemand zur Aussage nachfragt, der Effekt sei bei p = .01 größer als bei
+p = .04: das sagt nichts über die Effektgröße, weil der p-Wert von Effekt UND
+Stichprobengröße abhängt. Das kommt später in dieser Einheit, bei "Signifikanz
+misst vor allem n". Auf später vertrösten, nicht hier ausführen.
 
 Rund 3 Minuten.
 :::
@@ -126,13 +145,19 @@ Statistical Association. *Wasserstein & Lazar (2016)*
 :::
 
 ::: notes
+**Faden.** Davor: alle sechs Aussagen sind falsch, und das quer durch alle
+Qualifikationsstufen. Hier: die korrekte Definition, langsam und wörtlich.
+Überleitung: "Das ist, was er sagt. Interessanter ist, was er alles nicht
+sagt."
+
 Langsam vorlesen, wörtlich. Dann den Kern zweimal sagen: bedingte
 Wahrscheinlichkeit der Daten gegeben die Hypothese, nicht der Hypothese gegeben
 die Daten.
 
 Analogie, die gut funktioniert: "Die Wahrscheinlichkeit, nass zu sein, wenn es
 regnet, ist hoch. Die Wahrscheinlichkeit, dass es regnet, wenn ich nass bin, ist
-etwas völlig anderes." Genau diese Verwechslung steckt in Aussage 1 des Quiz.
+etwas völlig anderes." Genau diese Verwechslung steckt in der ersten Quizaussage,
+die Nullhypothese sei mit 1 Prozent Wahrscheinlichkeit wahr.
 
 Die Formulierung "und alle Modellannahmen zutreffen" nicht unterschlagen. Sie ist
 der Teil, der in Lehrbüchern meist fehlt, und sie ist praktisch relevant: bei
@@ -165,6 +190,11 @@ Genau das sind aber die sechs Fragen, die wir eigentlich stellen wollen.
 :::
 
 ::: notes
+**Faden.** Davor: die korrekte Definition, eine Aussage über die Daten.
+Hier: die Negativliste, und sie ist deckungsgleich mit unseren echten Fragen.
+Überleitung: "Das klingt abstrakt. Also schauen wir uns zwei echte Standorte
+an."
+
 Diese Liste Punkt für Punkt einblenden, das ist der Rhythmus der Folie. Bei jedem
 Punkt eine Sekunde Pause.
 
@@ -190,10 +220,15 @@ sich. In der Praxis: zwei verschiedene Förderbescheide.
 :::
 
 ::: notes
-Die Tabelle in zwei Schritten aufbauen, das ist der ganze Trick der Folie.
+**Faden.** Davor: die Liste dessen, was der p-Wert nicht leistet. Hier: der
+erste Beleg an echten Zahlen, gleicher Effekt und trotzdem
+gegensätzliche Urteile. Überleitung: "Hier war es die Streuung. Es gibt einen
+zweiten Hebel, und der ist noch größer."
 
-Erst nur die Spalte Zuwachs zeigen und fragen lassen: sind das dieselben
-Ergebnisse? Der Raum sagt ja.
+Die Abbildung in zwei Schritten aufbauen, das ist der ganze Trick der Folie.
+
+Erst nur den Zuwachs zeigen und fragen lassen: sind das dieselben Ergebnisse?
+Der Raum sagt ja.
 
 Dann p und Urteil einblenden. Der Bruch entsteht erst hier, und er entsteht
 sichtbar.
@@ -240,6 +275,11 @@ die **Größe** des Effekts sagen beide Fälle nichts.
 :::
 
 ::: notes
+**Faden.** Davor: die Streuung kippt das Urteil bei identischem Effekt.
+Hier: der zweite und stärkere Hebel, die Stichprobengröße. Überleitung: "Wenn
+n so viel entscheidet, sollten wir unsere eigene Studie einmal daraufhin
+ansehen."
+
 Die Abbildung zuerst erklären: auf der waagerechten Achse die Zahl getesteter
 Lernender, senkrecht der p-Wert. Die gepunktete Linie ist die Schwelle .05.
 Der Zuwachs ist über die ganze Kurve hinweg konstant bei 0,2 Punkten, es
@@ -259,7 +299,8 @@ direkt.
 
 Den Umkehrschluss betonen, er ist der praktisch wichtigere: die kleine
 Pilotstudie, die nichts findet, hat meist nicht gezeigt, dass nichts wirkt. Sie
-hat gezeigt, dass sie zu klein war.
+hat gezeigt, dass sie zu klein war. Genau das hat einen Namen, und der kommt
+auf der nächsten Folie.
 
 Nicht schon alles verraten, die Gruppenarbeit dreht genau an diesem Regler.
 
@@ -279,6 +320,11 @@ Schwelle.
 :::
 
 ::: notes
+**Faden.** Davor: der p-Wert hängt vor allem an n, und eine kleine Studie
+findet auch echte Effekte nicht. Hier: dieser Umkehrschluss bekommt einen
+Namen und eine Zahl, für unsere eigene Studie. Überleitung: "Ist unsere Studie
+damit ein Ausreißer? Leider nein."
+
 Die unbequemste Folie des Nachmittags, und sie kostet nur drei Minuten.
 
 Zuerst die Abbildung lesen: waagerecht die Lernenden je Gruppe, senkrecht die
@@ -330,6 +376,11 @@ von EEF und NCEE.
 :::
 
 ::: notes
+**Faden.** Davor: unsere eine Studie hat eine Teststärke von 50 Prozent.
+Hier: dieselbe Diagnose für 141 Studien des Feldes, also kein Einzelfall.
+Überleitung: "Damit ist der Rundgang durch die Probleme fertig. Zurück zum
+Quiz vom Anfang."
+
 Die Steigerung zur Folie davor, und sie muss als Steigerung vorgetragen
 werden. Eben war unsere eine Studie ein Münzwurf. Jetzt die Frage stellen: war
 das ein Ausreißer? Und dann diese Folie.
@@ -371,34 +422,42 @@ Rund 3 Minuten.
 ## Sechs erledigt, eine offen
 
 ::: {.bp-warn}
-Die schädlichste war Nummer 4: **1 − p ist nicht die
-Replikationswahrscheinlichkeit.** Die häufigste war Nummer 6: **nicht
-signifikant heißt nicht kein Effekt.**
+Die schädlichste Aussage war: *"Die Wahrscheinlichkeit, dass sich der Befund
+replizieren lässt, ist 99 %."* Die häufigste war: *"Wäre p größer als .05, gäbe
+es keinen Effekt."*
 :::
 
 ::: {.bp-callout}
-**Die siebte steht noch aus.** "Konfidenzintervalle sind der bessere p-Wert."
-Halb richtig: das Intervall zeigt wenigstens die Effektgröße. Aber die Lesart,
-der wahre Wert liege mit 95 % Wahrscheinlichkeit darin, ist genauso falsch.
+**Eine siebte kam im Quiz nicht vor:** "Konfidenzintervalle sind der bessere
+p-Wert." Halb richtig. Das Intervall zeigt wenigstens die Effektgröße. Aber die
+Lesart, der wahre Wert liege mit 95 % Wahrscheinlichkeit darin, ist genauso
+falsch.
 
 Diese Lesart gibt es trotzdem. Sie heißt nur anders, und sie kommt morgen.
 :::
 
 ::: notes
+**Faden.** Davor: die Probleme sind durchgespielt, von der Schwelle über n bis
+zur Teststärke. Hier: Rückbindung ans Eingangsquiz und ein offener Faden für
+morgen. Überleitung: "Genug von mir. Jetzt seht ihr selbst, woran es liegt."
+
 Die beiden Kästen tragen die Folie, ich lese sie nicht vor. Stattdessen die
-zwei genannten Fehlannahmen ausführen und dann auf Nummer 7 zulaufen.
+zwei genannten Fehlannahmen ausführen und dann auf die siebte zulaufen.
 
-Nummer 4, weil sie die schädlichste ist. Wer glaubt, ein p von .01 bedeute 99 %
-Replikationschance, wundert sich zu Recht über die Replikationskrise. Die
-Replizierbarkeit hängt an wahrer Effektstärke und Stichprobenqualität, nicht am p
-der Originalstudie.
+Die Replikationsaussage, weil sie die schädlichste ist. Wer glaubt, ein p von
+.01 bedeute 99 Prozent Replikationschance, wundert sich zu Recht über die
+Replikationskrise. Die Replizierbarkeit hängt an wahrer Effektstärke und
+Stichprobenqualität, nicht am p der Originalstudie. Der Rückbezug auf die
+Teststärke-Folie liegt hier nahe und lohnt sich.
 
-Nummer 6, weil sie die häufigste Fehlentscheidung in der Praxis erzeugt. Absence
-of evidence is not evidence of absence. Für dieses Publikum konkret: ein
-Programm, das in einer kleinen Evaluation nicht signifikant wurde, ist nicht
-widerlegt.
+Die Aussage "nicht signifikant heißt kein Effekt", weil sie die häufigste
+Fehlentscheidung in der Praxis erzeugt. Absence of evidence is not evidence of
+absence. Für dieses Publikum konkret: ein Programm, das in einer kleinen
+Evaluation nicht signifikant wurde, ist nicht widerlegt.
 
-Nummer 7 als Cliffhanger für morgen stehen lassen. Nicht auflösen.
+Die Aussage zu den Konfidenzintervallen als Cliffhanger für morgen stehen
+lassen. Nicht auflösen. Wenn jemand drängt: "Das Werkzeug, das diese Aussage
+erlaubt, heißt anders und bekommt morgen eine eigene Einheit."
 
 Diese Folie ist zugleich die Vorbereitung auf die Anwendung, ich rede hier also
 bewusst eine gute Minute länger, bevor ich den Tab wechsle.
@@ -421,6 +480,10 @@ Anwendung: **Die Illusion der harten Grenze** · [zum Selbstausprobieren](../../
 :::
 
 ::: notes
+**Faden.** Davor: der offene Faden zu den Intervallen. Hier: Brücke zur
+Live-Demo an den zwei Standorten von vorhin. Überleitung: "Ich öffne die
+Räume, ihr habt 30 Minuten."
+
 Diese Folie ist die Brücke zur Live-Demo und sie hat eine zweite Funktion: sie
 kauft die Ladezeit. Ich spreche hier mindestens 45 Sekunden, während die
 Anwendung im zweiten Tab schon offen ist.
@@ -433,7 +496,7 @@ In der Demo selbst nur eine einzige Sache zeigen: Regler von links nach rechts,
 p kippt über die Schwelle, der Effekt bleibt stehen. Nicht mehr. Die Gruppen
 machen den Rest gleich selbst.
 
-Wenn die Anwendung nicht lädt: die Tabelle von der Folie davor reicht
+Wenn die Anwendung nicht lädt: die Abbildung mit den zwei Standorten reicht
 vollständig aus, um den Punkt zu machen. Kein Drama daraus machen.
 
 Diese Folie ist die kürzbare Folie dieser Einheit. Wenn ich im Verzug bin,
@@ -458,6 +521,10 @@ Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 1](../../tag1
 :::
 
 ::: notes
+**Faden.** Davor: die Live-Demo am Regler. Hier: der Auftrag und die Frage,
+die nach der Pause abgefragt wird. Danach: Pause, dann Fragerunde zu Beginn
+von Einheit 2.
+
 Drei Dinge ansagen, dann die Räume öffnen. Nicht länger.
 
 Erstens, wo das Arbeitsblatt steht. Zweitens, dass die Lösungen aufklappbar

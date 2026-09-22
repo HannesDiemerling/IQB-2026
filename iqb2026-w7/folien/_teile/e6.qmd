@@ -40,6 +40,11 @@ Antrag verteidigen können?
 :::
 
 ::: notes
+**Faden.** Davor: die Gruppen haben den Prior gegen die Daten antreten
+lassen, dann Pause. Hier: zusammentragen, ab wann der Prior gewinnt.
+Überleitung: "Ihr habt jetzt eine Posterior. Was macht ihr damit? Eine Zahl
+allein ist noch keine Entscheidung."
+
 Die erste Teilfrage liefert Zahlen, die zweite liefert die Diskussion.
 
 Auf der Tafel die Prior-Breiten sammeln, ab denen die Gruppen den Kipppunkt
@@ -61,6 +66,10 @@ allein ist noch keine Entscheidung."
 ## Evidenz berichten
 
 ::: notes
+**Faden.** Davor: die Fragerunde endet mit der Frage, was man mit einer
+Posterior anfängt. Hier: der Titel gibt die Antwort, es geht um Berichten und
+Entscheiden. Überleitung: "Und ich fange, wie immer, mit einer Frage an."
+
 Kurz. Letzte Inhaltseinheit, ab hier geht es nur noch um Anwendung.
 :::
 
@@ -77,6 +86,11 @@ Handzeichen, wer diesen Satz so unterschreiben würde.
 :::
 
 ::: notes
+**Faden.** Davor: der Titel kündigt das Berichten von Evidenz an. Hier: der
+Satz, den die Gruppe nach anderthalb Tagen nicht mehr unterschreibt, und die
+Lücke, die er hinterlässt. Überleitung: "Genau diese Lücke schließen wir
+jetzt, und zwar mit einem Bild."
+
 Fast niemand hebt die Hand, und das ist auch gut so. Nach anderthalb Tagen weiß
 die Gruppe, dass dieser Schluss nicht zulässig ist.
 
@@ -105,6 +119,11 @@ Rund 2 Minuten.
 :::
 
 ::: notes
+**Faden.** Davor: "kein Effekt gefunden" ist korrekt, aber leer. Hier: das
+Werkzeug, das die Lücke schließt, drei mögliche Ausgänge statt zwei.
+Überleitung: "Das ist die Entscheidung. Jetzt noch die Evidenz dahinter, und
+die geht in beide Richtungen."
+
 Die Folie, die aus Statistik eine Entscheidung macht.
 
 Die drei Panels der Abbildung einzeln durchgehen. In allen drei ist das graue
@@ -156,6 +175,11 @@ Stufen nach Lee & Wagenmakers (2013).
 :::
 
 ::: notes
+**Faden.** Davor: HDI und ROPE liefern drei Ausgänge statt zwei. Hier:
+dieselbe Symmetrie als Evidenzmaß, jetzt auch zugunsten der Nullhypothese.
+Überleitung: "Eine Verwechslung fehlt noch, und die ist im Alltag ständig
+relevant."
+
 Die Symmetrie ist der Nutzen-Beweis dieser Einheit. Darauf hinarbeiten.
 
 Die Abbildung trägt genau das: eine Leiter, in der Mitte der Bayes-Faktor 1.
@@ -216,6 +240,11 @@ davon kannst du halten.
 :::
 
 ::: notes
+**Faden.** Davor: der Bayes-Faktor als graduelle Evidenz. Hier: die letzte
+Unterscheidung des Workshops, Aussage über den Mittelwert gegen Aussage über
+den Einzelfall. Überleitung: "Damit habt ihr alles beisammen. Bleibt die
+Frage, womit man das eigentlich rechnet."
+
 Kurz, aber nicht weglassen. Die Verwechslung ist im Alltag ständig relevant und
 wird ständig gemacht.
 
@@ -271,6 +300,11 @@ richtige.
 :::
 
 ::: notes
+**Faden.** Davor: die beiden Unsicherheiten, epistemisch und aleatorisch.
+Hier: womit man das alles tatsächlich rechnet, sortiert nach Vorkenntnis.
+Überleitung: "Und jetzt setzt ihr die Entscheidung ein letztes Mal selbst
+zusammen."
+
 Die Folie, die verhindert, dass alles Theorie bleibt. Drei Wege, klar nach
 Vorkenntnis sortiert.
 
@@ -322,6 +356,10 @@ Anwendung: **HDI und ROPE** · [zum Selbstausprobieren](../../apps/a16-hdi-rope.
 :::
 
 ::: notes
+**Faden.** Davor: die Werkzeuge für danach. Hier: Brücke zur letzten
+Live-Demo, die ROPE wird selbst gesetzt. Überleitung: "Und dann seid ihr zum
+letzten Mal dran."
+
 Diese Folie kauft die Ladezeit für die letzte Anwendung des Workshops.
 
 In der Demo nur eine Sache zeigen: die ROPE-Grenzen von 3 auf 1 Punkt ziehen und
@@ -355,6 +393,10 @@ Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 6](../../tag2
 :::
 
 ::: notes
+**Faden.** Davor: die Live-Demo an der ROPE. Hier: der letzte Auftrag, ein
+Ergebnissatz für eine Kommission. Danach: direkt der Abschluss, in dem genau
+diese Sätze vorgelesen werden.
+
 Die letzte Gruppenarbeit und zugleich die Vorbereitung des Abschlusses. Das
 ansagen: was ihr hier formuliert, tragt ihr gleich vor, und daraus wird der
 Schlusspunkt der beiden Tage.

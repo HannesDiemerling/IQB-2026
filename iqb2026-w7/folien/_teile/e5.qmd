@@ -39,6 +39,12 @@ Screening in eurem eigenen Arbeitsfeld?
 :::
 
 ::: notes
+**Faden.** Davor: die Gruppen haben an Basisrate, Erkennungsrate und
+Fehlalarmrate gedreht, dann Pause. Hier: zusammentragen, welcher Regler zählt.
+Überleitung: "Ihr habt gerade mit einem Prior gearbeitet, ohne dass ich das
+Wort benutzt habe. Die Basisrate war der Prior. Jetzt schauen wir ihn uns
+richtig an."
+
 Die Antwort auf den ersten Teil ist fast immer die Basisrate, und das ist
 richtig. Deshalb liegt der Ertrag im zweiten Teil.
 
@@ -61,6 +67,10 @@ richtig an."
 ## Prior, Likelihood, Posterior
 
 ::: notes
+**Faden.** Davor: die Fragerunde hat die Basisrate als Prior entlarvt. Hier:
+der Titel nennt die drei Zutaten, die die Einheit abarbeitet. Überleitung:
+"Und wir fangen mit der an, die den meisten Ärger macht."
+
 Kurz. Drei Zutaten, eine pro Block.
 :::
 
@@ -76,6 +86,11 @@ Handzeichen, wer diesen Einwand schon einmal gehört oder selbst gemacht hat.
 :::
 
 ::: notes
+**Faden.** Davor: der Titel kündigt Prior, Likelihood und Posterior an. Hier:
+der Standardeinwand gegen den Prior, abgefragt per Handzeichen und bewusst
+nicht sofort beantwortet. Überleitung: "Ich lasse den Einwand stehen und
+zeige euch erst, was ein Prior überhaupt ist."
+
 Die Hände gehen fast vollständig hoch, und das ist gut so. Der Einwand ist
 verbreitet, er ist ernst gemeint, und er ist teilweise berechtigt.
 
@@ -117,6 +132,11 @@ Neutralität. Das ist Leichtgläubigkeit mit Formel.
 :::
 
 ::: notes
+**Faden.** Davor: der Vorwurf, der Prior sei subjektiv. Hier: die erste
+Hälfte der Antwort, denn auch der scheinbar neutrale Prior behauptet etwas.
+Überleitung: "So viel zur ersten Zutat. Die zweite ist die, die die Daten
+einbringen."
+
 Die zentrale Einsicht der Einheit: uninformativ ist nicht neutral.
 
 Das 30-Punkte-Argument ist stark und konkret, deshalb steht es hier. Ein flacher
@@ -151,8 +171,12 @@ denselben fünf Zahlen.
 :::
 
 ::: notes
-Roter Faden: die Daten sind fix, die Hypothese wandert. Das ist genau umgekehrt
-zur Intuition, und deshalb ist dieses Kapitel das rutschigste.
+**Faden.** Davor: der Prior, also was wir vor den Daten glauben. Hier: die
+zweite Zutat, der Beitrag der Daten selbst. Überleitung: "Zwei Zutaten sind
+da. Jetzt verrechnen wir sie."
+
+Kernbotschaft: die Daten sind fix, die Hypothese wandert. Das ist genau
+umgekehrt zur Intuition, und deshalb ist dieses Kapitel das rutschigste.
 
 Die fünf Zahlen nennen und betonen: die ändern sich nie mehr. Auf der
 Abbildung sind sie die senkrechten Striche unten, sie stehen still. Was
@@ -192,6 +216,10 @@ Anwendung: **Prior und Daten verrechnen** · [zum Selbstausprobieren](../../apps
 :::
 
 ::: notes
+**Faden.** Davor: Prior und Likelihood einzeln. Hier: beide verrechnet, und
+damit die Antwort auf den Subjektivitätsvorwurf vom Einstieg. Überleitung:
+"Und jetzt der Ertrag: was ihr mit so einer Posterior sagen dürft."
+
 Der Höhepunkt der Einheit. Hier Zeit lassen.
 
 Die Abbildung von links nach rechts erklären. Grau gepunktet der Prior mit
@@ -249,13 +277,20 @@ Genau die Aussage, die alle gemeint haben.
 :::
 
 ::: {.bp-callout}
-Dieselben Zahlen. Gestern war dieser Satz noch Fehlannahme Nummer 7, heute ist
-er zulässig. Geändert hat sich nicht die Rechnung, sondern die Frage.
+Dieselben Zahlen, derselbe Satz. Gestern war er falsch, heute ist er zulässig.
+Geändert hat sich nicht die Rechnung, sondern die Frage.
 :::
 
 ::: notes
-Die Rechnung von gestern wird hier beglichen. Fehlannahme Nummer 7 aus Einheit
-1 ausdrücklich aufrufen.
+**Faden.** Davor: der Posterior als sichtbarer Kompromiss. Hier: was man
+damit sagen darf, im direkten Vergleich zum Konfidenzintervall. Überleitung:
+"Bleibt eine Frage: wie berichtest du den Prior, ohne angreifbar zu werden?"
+
+Die Rechnung von gestern wird hier beglichen. Den offenen Faden von Tag 1
+ausdrücklich aufrufen, und zwar ausgeschrieben: gestern habt ihr für falsch
+erklärt bekommen, dass der wahre Wert mit 95 Prozent Wahrscheinlichkeit im
+Intervall liegt. Heute stimmt genau dieser Satz, nur für ein anderes
+Intervall.
 
 Die beiden Sätze nebeneinander vorlesen und die Gruppe spüren lassen, dass der
 rechte der ist, den sie ohnehin immer gemeint haben.
@@ -296,6 +331,11 @@ Annahme nie werden.
 :::
 
 ::: notes
+**Faden.** Davor: das Glaubwürdigkeitsintervall erlaubt endlich die Aussage,
+die alle immer gemeint haben. Hier: der Preis dafür, nämlich den Prior
+offenlegen und prüfbar machen. Überleitung: "Und genau daran dürft ihr euch
+gleich selbst versuchen."
+
 Die praktische Konsequenz aus der ganzen Einheit, und der Satz, mit dem man
 jede Begutachtung übersteht.
 
@@ -330,6 +370,10 @@ Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 5](../../tag2
 :::
 
 ::: notes
+**Faden.** Davor: Prior-Sensitivität in drei Schritten. Hier: der Auftrag,
+den Prior gegen die Daten antreten zu lassen. Danach: Pause, dann Fragerunde
+zu Beginn von Einheit 6.
+
 Auf dem Arbeitsblatt ist der dritte Arbeitsschritt bewusst destruktiv angelegt:
 die Gruppen sollen den Prior so eng setzen, dass die Daten nichts mehr
 ausrichten. Das ist kein Fehler, das ist die Lektion. Kurz ansagen, sonst

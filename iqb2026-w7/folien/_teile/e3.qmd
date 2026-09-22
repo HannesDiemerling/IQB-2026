@@ -45,6 +45,12 @@ suchen. Eine Entscheidung nach der anderen, jede plausibel.
 :::
 
 ::: notes
+**Faden.** Davor: die Gruppen haben im Garten selbst nach einem signifikanten
+Pfad gesucht, dann Pause. Hier: die Pfadzahlen zusammentragen und den
+Wettbewerb auflösen. Überleitung: "Bis jetzt ging es darum, ob überhaupt etwas
+da ist. Jetzt geht es darum, wie viel, und ob wir das überhaupt messen
+können."
+
 Die Pfadzahlen auf der Tafel sammeln, das ergibt eine sichtbare Reihe. Taste b
 öffnet sie.
 
@@ -59,9 +65,6 @@ belohnt.
 
 Wenn eine Gruppe sehr wenige Pfade gebraucht hat: fragen, ob sie Glück hatte
 oder gesucht hat. Beides ist eine gute Antwort und beides macht denselben Punkt.
-
-Mein Überleitungssatz: "Bis jetzt ging es darum, ob überhaupt etwas da ist.
-Jetzt geht es darum, wie viel, und ob wir das überhaupt messen können."
 :::
 
 # Einheit 3 {.bp-trenner background-color="#E27C5C"}
@@ -71,6 +74,10 @@ Jetzt geht es darum, wie viel, und ob wir das überhaupt messen können."
 ## Effektstärken und ihre Grenzen
 
 ::: notes
+**Faden.** Davor: zwei Einheiten darüber, ob überhaupt ein Effekt da ist.
+Hier: der Wechsel zur Frage, wie groß er ist. Überleitung: "Und wieder fange
+ich mit einer Frage an."
+
 Kurz. Der Zusatz "und ihre Grenzen" ist der Unterschied zu einem üblichen
 Effektstärken-Vortrag. Genau darauf läuft die Einheit hinaus.
 :::
@@ -90,6 +97,11 @@ Halte das Ergebnis im Kopf. Wir kommen am Ende dieser Einheit darauf zurück.
 :::
 
 ::: notes
+**Faden.** Davor: der Titel kündigt Effektstärken und ihre Grenzen an. Hier:
+eine Falle, die genau diese Grenzen vorführt, plus die Zahl der Hände auf der
+Tafel. Überleitung: "Ich löse das am Ende der Einheit auf. Vorher drei Dinge
+über Effekte."
+
 Bewusst knapp. Die Folie stellt eine Falle, und sie soll sie stellen.
 
 Die ehrliche Antwort lautet: die Frage ist so nicht beantwortbar. Das sage ich
@@ -136,6 +148,10 @@ unstandardisierten Effekt.
 :::
 
 ::: notes
+**Faden.** Davor: die offene Frage, ob d = 0.42 groß ist. Hier: der erste
+Grund, warum sie so nicht beantwortbar ist, es fehlt die Einheit. Überleitung:
+"Wenn die Einheit so wichtig ist, warum standardisieren wir dann überhaupt?"
+
 Der Kern: die Einheit ist keine Nebensache, sie ist die Entscheidungsgrundlage.
 
 Baguley (2009) ist hier die Referenz, falls jemand fragt. Sein Argument: die
@@ -181,16 +197,21 @@ Preis: Punkte kann man einer Kommission erklären, d nicht.
 :::
 
 ::: notes
+**Faden.** Davor: berichte zuerst unstandardisiert. Hier: die faire
+Gegenrechnung, was d tatsächlich leistet und warum es existiert. Überleitung:
+"So weit das Lob. Jetzt die drei Gründe, warum d allein nicht reicht, und der
+erste betrifft die Faustregeln."
+
 Zuerst die Formel entschärfen: das ist eine Division, mehr nicht. Das laut zu
 sagen entspannt spürbar.
 
-Aspekt 1 erklärt, warum d sinkt, wenn die Streuung steigt, obwohl sich am
-Effekt nichts ändert. Das ist genau der Mechanismus aus Einheit 1, jetzt in
-einer Kennzahl.
+Die Entdeckbarkeit erklärt, warum d sinkt, wenn die Streuung steigt, obwohl
+sich am Effekt nichts ändert. Das ist genau der Mechanismus von den zwei
+Standorten aus Einheit 1, jetzt in einer Kennzahl.
 
-Aspekt 2 ist für dieses Publikum der relevantere. Zwei Instrumente für
-dieselbe Kompetenz mit verschiedener Skalierung sind ohne Standardisierung
-nicht vergleichbar. Das ist Alltag in der Bildungsforschung.
+Die Vergleichbarkeit ist für dieses Publikum der relevantere Punkt. Zwei
+Instrumente für dieselbe Kompetenz mit verschiedener Skalierung sind ohne
+Standardisierung nicht vergleichbar. Das ist Alltag in der Bildungsforschung.
 
 In der Anwendung lässt sich d frei einstellen, und die beiden Rohwerte
 bewegen sich mit. Bei d = 0.50 sind es +0,50 auf der Kurzform und +10 auf der
@@ -216,9 +237,19 @@ Educational Researcher. Dazu Schäfer & Schwarz (2019).
 :::
 
 ::: notes
+**Faden.** Davor: d leistet Entdeckbarkeit und Vergleichbarkeit. Hier: der
+erste Grund gegen d allein, die Richtwerte sind keine Kriterien und für
+Bildungsinterventionen sogar falsch geeicht. Überleitung: "Wenn nicht die
+Faustregel, woran hängt eine Effektstärke dann?"
+
 Der Satz, der sitzen muss: wer nur Cohens Faustregel benutzt, hat das Ritual
 ersetzt, nicht überwunden. Aus p < .05 wird d > 0.5, und die Denkarbeit bleibt
 dieselbe, nämlich keine.
+
+Die Abbildung zeigt beides nebeneinander: oben die Bänder von Kraft für
+Bildungsinterventionen, unten die Punktkonventionen von Cohen. Dieselbe Zahl
+landet in zwei völlig verschiedenen Kategorien. Unser d = 0.42 ist bei Cohen
+knapp unter mittel und bei Kraft weit im großen Bereich.
 
 Der bessere Maßstab ist die empirische Verteilung im eigenen Feld. Schäfer und
 Schwarz liefern die, und der Aufwand ist gering: einmal nachschauen, was in
@@ -241,6 +272,11 @@ von Designs** sein. *Simpson (2017)*
 :::
 
 ::: notes
+**Faden.** Davor: die Faustregeln taugen nicht als Maßstab. Hier: der zweite
+Grund, die Zahl selbst hängt am Design und nicht nur an der Wirkung.
+Überleitung: "Und dann kommt noch eine dritte Fehlerquelle dazu, die fast
+niemand berichtet."
+
 Die inhaltlich wichtigste Belegfolie des Workshops, weil sie direkt in die
 Arbeit dieses Publikums greift.
 
@@ -287,6 +323,11 @@ wahrer Effekt von **0.50** übrig lässt.
 :::
 
 ::: notes
+**Faden.** Davor: die Effektstärke hängt am Design. Hier: der dritte Grund,
+sie hängt zusätzlich an der Genauigkeit des Instruments, und zwar immer in
+dieselbe Richtung. Überleitung: "So viel zu den Grenzen. Zum Schluss ein Maß,
+das erstaunlich gut funktioniert."
+
 Das ist die Folie, wegen der diese Einheit anders aussieht als ein üblicher
 Effektstärken-Vortrag. Hier langsam werden.
 
@@ -314,7 +355,9 @@ Reliabilität ist eine Obergrenze, kein Rauschen.
 
 Drittens, die Konsequenz für die Planung: Investition in ein besseres
 Messinstrument kann mehr bringen als Investition in mehr Fälle. Für dieses
-Publikum ist das der praktisch wertvollste Satz des Tages.
+Publikum ist das der praktisch wertvollste Satz des Tages. Und es ist die
+zweite Antwort auf die Teststärke-Folie von heute Nachmittag: dort war mehr n
+die Lösung, hier ist es das bessere Instrument.
 
 Falls jemand nach der Minderungskorrektur fragt: ja, man kann nach oben
 korrigieren, und ja, das ist umstritten, weil die Korrektur die
@@ -356,9 +399,14 @@ auf dem Arbeitsblatt.
 :::
 
 ::: notes
-Die Tabelle ist bewusst von der Folie verschwunden und steht jetzt aufklappbar
-auf dem Arbeitsblatt. Hier stattdessen fragen, welche Maße die Anwesenden
-tatsächlich berichten, und nur die besprechen.
+**Faden.** Davor: drei Gründe, warum eine Effektstärke allein wenig sagt.
+Hier: trotzdem ein Maß, das sofort verständlich ist, und die Einlösung des
+Versprechens von der Einzelfall-Übersetzung. Überleitung: "Damit habt ihr alle
+Bausteine für einen Ergebnissatz, der hält."
+
+Die Tabelle mit allen Maßen ist bewusst von der Folie verschwunden und steht
+jetzt aufklappbar auf dem Arbeitsblatt. Hier stattdessen fragen, welche Maße
+die Anwesenden tatsächlich berichten, und nur die besprechen.
 
 CLES ist der Punkt, der am meisten mitgenommen wird. Es übersetzt ein
 standardisiertes Maß in eine Aussage über Einzelfälle, und genau das wollen
@@ -385,7 +433,7 @@ Rund 3 Minuten.
 :::
 
 ::: {.bp-warn}
-**Was Nummer 3 leistet, und was nicht.** Das Intervall zeigt genau das, was
+**Was das Intervall leistet, und was nicht.** Es zeigt genau das, was
 der p-Wert verschweigt: wie groß der Effekt ist und wie genau du ihn kennst.
 Ein breites Intervall ist kein Makel, sondern ein ehrliches Eingeständnis.
 Nur die eine Auskunft, die du eigentlich willst, gibt es nicht dazu.
@@ -398,13 +446,17 @@ Messgenauigkeit.
 :::
 
 ::: notes
+**Faden.** Davor: CLES als verständliches Maß. Hier: alle fünf Pflichtangaben
+auf einmal und die Auflösung der Eingangsfrage. Überleitung: "Und damit
+bekommt jede Gruppe gleich ihr eigenes Messinstrument."
+
 Die praktisch nützlichste Folie des ganzen Tages. Hier darf man langsam werden.
 
-Punkt 4 ist der, den ich gegenüber dem üblichen Standard ergänzt habe, und er
-folgt direkt aus der Minderungsfolie. Ohne Reliabilitätsangabe ist eine
+Die Reliabilitätsangabe ist die, die ich gegenüber dem üblichen Standard
+ergänzt habe, und sie folgt direkt aus der Minderungsfolie. Ohne sie ist eine
 Effektstärke nicht interpretierbar.
 
-Punkt 5 fehlt am häufigsten und macht am wenigsten Arbeit.
+Der Vergleich mit dem Feld fehlt am häufigsten und macht am wenigsten Arbeit.
 
 Beim Warnkasten kurz innehalten, das ist die einzige Stelle an Tag 1, an der
 das Konfidenzintervall etwas Raum bekommt. Zwei Sätze reichen: es zeigt
@@ -412,10 +464,10 @@ Effektgröße und Präzision, und ein breites Intervall ist eine ehrliche
 Auskunft, kein Versagen.
 
 Den letzten Satz bewusst offen lassen und **nicht** auflösen. Wer nachhakt,
-welche Auskunft denn fehlt, bekommt: genau die, die heute Nachmittag im Quiz
-als Nummer 7 stand. Morgen. Das ist derselbe
-Cliffhanger wie in Einheit 1 und er wird hier nur nachgezogen, nicht
-aufgelöst.
+welche Auskunft denn fehlt, bekommt: genau die, die heute Nachmittag als
+siebte Fehlannahme stand, nämlich dass der wahre Wert mit 95 Prozent
+Wahrscheinlichkeit im Intervall liegt. Das kommt morgen. Derselbe Cliffhanger
+wie in Einheit 1, hier nur nachgezogen, nicht aufgelöst.
 
 Dann der Rückgriff auf die Eingangsfrage. Die Zahl der Hände von vorhin steht
 noch auf der Tafel. Darauf zeigen und auflösen. Das schließt die Einheit als
@@ -441,6 +493,10 @@ Alle Aufgaben, Auffrischungen und Lösungen: [Arbeitsblatt Einheit 3](../../tag1
 :::
 
 ::: notes
+**Faden.** Davor: der Berichtsstandard mit fünf Angaben. Hier: der Auftrag,
+jede Gruppe mit einer anderen Reliabilität. Danach: direkt der Tagesabschluss,
+in dem sich aus den fünf Antworten die Minderungskurve zusammensetzt.
+
 Die Zuweisung der Reliabilitäten steht auf dem Arbeitsblatt: Gruppe 1 bekommt
 .95, Gruppe 2 .85, Gruppe 3 .75, Gruppe 4 .65, Gruppe 5 .55.
 

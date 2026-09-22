@@ -155,6 +155,6 @@ Urteil wird triumphal signifikant. Schau gleichzeitig nach rechts: die
 Wahrscheinlichkeit, dass der Zuwachs über der Relevanzschwelle liegt, bleibt
 fast unverändert.
 
-Das ist der Punkt von Tag 1 in neuer Form. Mehr Daten machen den p-Wert
-kleiner. Sie machen den Effekt nicht größer.
+Da ist der gestrige Punkt wieder, nur von der anderen Seite betrachtet. Mehr
+Daten machen den p-Wert kleiner. Den Effekt machen sie nicht größer.
 :::

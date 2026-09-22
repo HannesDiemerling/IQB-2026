@@ -6,7 +6,8 @@ subtitle: "Prior, Likelihood, Posterior"
 ## Euer Auftrag
 
 Lasst den Prior gegen die Daten antreten. Findet heraus, ab wann der Prior
-gewinnt, und entscheidet, ob ihr einen solchen Prior verteidigen könntet.
+gewinnt, und entscheidet dann, ob ihr so einen Prior in einem Antrag
+verteidigen würdet.
 
 **Anwendungen:** [Der Prior](../apps/a13-prior.qmd){target="_blank"} ·
 [Die Likelihood](../apps/a14-likelihood.qmd){target="_blank"} ·
@@ -91,8 +92,9 @@ also nahe am Prior. Die Daten richten fast nichts mehr aus.
 Der Umschlagpunkt liegt dort, wo die Prior-Unsicherheit kleiner wird als der
 Standardfehler der Daten. Der liegt hier bei etwa **1,1 Punkten**.
 
-Das ist kein Fehler der Methode. Es ist die korrekte Konsequenz daraus, dass
-ihr behauptet habt, den Wert schon sehr genau zu kennen.
+Die Methode macht dabei nichts falsch, sie nimmt euch nur ernst. Ihr habt
+behauptet, den Wert schon sehr genau zu kennen, und genau damit rechnet sie
+weiter.
 :::
 
 ## Aufgabe 3: Begreifen
@@ -101,8 +103,8 @@ ihr behauptet habt, den Wert schon sehr genau zu kennen.
 
 Bleibt in derselben Anwendung.
 
-1. Stellt die Prior-Unsicherheit bewusst so ein, dass die Daten **keine
-   Rolle mehr spielen**.
+1. Stellt die Prior-Unsicherheit so ein, dass die Daten **keine Rolle mehr
+   spielen**.
 2. Schaut euch das Glaubwürdigkeitsintervall an. Wie schmal ist es geworden?
 3. Diskutiert: Könntet ihr diesen Prior in einem Antrag oder gegenüber
    Begutachtenden verteidigen? Womit?
@@ -110,9 +112,10 @@ Bleibt in derselben Anwendung.
 ::: {.callout-note collapse="true"}
 ## Lösung Aufgabe 3
 
-Ab einer Prior-Unsicherheit von 0,5 ist der Einfluss der Daten minimal. Das
-Intervall wird dabei sehr schmal, die Analyse wirkt also **sehr sicher**.
-Genau das ist die Gefahr: ein enger Prior erzeugt scheinbare Präzision.
+Ab einer Prior-Unsicherheit von 0,5 richten die Daten kaum noch etwas aus.
+Das Intervall wird dabei schön schmal, die Analyse sieht also **sehr sicher**
+aus. Und da liegt der Haken: ein enger Prior sieht wie Präzision aus, ist aber
+nur eine feste Meinung.
 
 Verteidigen ließe sich so ein Prior nur mit sehr starker Vorevidenz, etwa
 einer großen Meta-Analyse zum selben Programm mit demselben Instrument. Ohne

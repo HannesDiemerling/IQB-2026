@@ -182,6 +182,6 @@ Stelle die Streuung auf 15 Punkte und lass den Mittelwert stehen. Der Zuwachs
 in Punkten ändert sich nicht, das **d** und die CLES-Prozentzahl brechen aber
 deutlich ein.
 
-Genau das ist der Unterschied zwischen einem Effekt und seiner
-Entdeckbarkeit.
+Das ist der Unterschied zwischen einem Effekt und der Frage, ob man ihn
+überhaupt erkennen kann.
 :::

@@ -5,9 +5,11 @@ subtitle: "Die Freiheitsgrade des Forschens"
 
 ## Euer Auftrag
 
-Ihr bekommt einen Datensatz, in dem der wahre Effekt **exakt null** ist. Eure
-Aufgabe ist es, trotzdem ein signifikantes Ergebnis zu finden. Das ist keine
-Provokation, das ist die Lektion.
+Stellt euch vor, ihr wollt dieses Programm unbedingt durchbekommen. Der wahre
+Effekt ist **exakt null**. Findet trotzdem ein signifikantes Ergebnis.
+
+In der echten Welt passiert das meist ohne Absicht. Man trifft eine
+Entscheidung nach der anderen, jede sieht für sich vernünftig aus.
 
 **Anwendungen:** [Der Garten der sich verzweigenden Pfade](../apps/a03-garten.qmd){target="_blank"} ·
 [Verzerrung durch fehlende Testungen](../apps/a04-dropout.qmd){target="_blank"} ·
@@ -76,9 +78,9 @@ pro Pfad ist ein Treffer fast garantiert.
 Es gibt mehrere Kombinationen, die unter .05 landen. Die meisten Gruppen
 finden eine innerhalb weniger Versuche.
 
-Der entscheidende Punkt ist nicht, welche Kombination ihr gefunden habt,
-sondern **wie wenige Versuche nötig waren**. Genau so entstehen falsch
-positive Befunde in echter Forschung, ohne dass jemand betrügt.
+Interessant ist nicht, welche Kombination es war, sondern **wie wenige
+Versuche nötig waren**. Ihr habt gezielt gesucht. In echter Forschung landet
+man dort auch, ohne zu suchen.
 :::
 
 ## Aufgabe 3: Begreifen
@@ -113,10 +115,10 @@ Der wahre Durchschnitt über alle 100 Klassen liegt bei rund **1,3 Punkten**.
 Bei einer Schwelle von 5 steigt der berichtete Durchschnitt deutlich an, weil
 genau die Klassen wegfallen, in denen das Programm weniger bringt.
 
-Niemand hat entschieden, welche Klasse herausfällt. Die Belastung hat es
-entschieden. Das ist **MNAR**: das Fehlen hängt mit dem Merkmal zusammen, das
-gemessen werden soll. Diese Verzerrung lässt sich nicht wegrechnen, sie kann
-nur benannt werden.
+Und hier hat niemand mehr die Hand im Spiel. Die Belastung entscheidet, wer
+herausfällt. Das ist **MNAR**: das Fehlen hängt mit genau dem Merkmal
+zusammen, das gemessen werden soll. Wegrechnen lässt sich das nicht, benennen
+schon.
 :::
 
 ## Pufferaufgaben

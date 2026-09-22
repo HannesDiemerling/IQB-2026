@@ -4,8 +4,8 @@ subtitle: "Einheit 3 · Die Obergrenze, die niemand berichtet"
 ---
 
 Jede Effektstärke wird durch die Unzuverlässigkeit der Messung nach unten
-gezogen. Das ist kein Zufallsfehler, der sich mit mehr Fällen auszahlt. Es ist
-eine systematische Dämpfung.
+gezogen. Und zwar nicht als Zufallsfehler, der sich mit genug Fällen wieder
+herausmittelt. Die Dämpfung bleibt.
 
 $$d_{\text{beobachtet}} = d_{\text{wahr}} \cdot \sqrt{\text{Rel}}$$
 

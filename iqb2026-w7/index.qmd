@@ -3,9 +3,9 @@ title: "Jenseits des Frequentismus: Vom p-Wert zur Posterior"
 subtitle: "Workshop 7 · IQB 2026 · 23. und 24. September, jeweils 14 bis 18 Uhr"
 ---
 
-Willkommen. Auf dieser Seite findest du alles, was du für die beiden
-Workshop-Tage brauchst: die Arbeitsblätter für die Gruppenphasen, die
-interaktiven Anwendungen und ein Glossar zum Nachschlagen.
+Willkommen. Hier findest du alles für die beiden Tage: die Arbeitsblätter für
+die Gruppenphasen, die interaktiven Anwendungen und ein Glossar zum
+Nachschlagen.
 
 ::: {.callout-important}
 ## Du musst nichts installieren
@@ -56,8 +56,8 @@ In den Aufgaben stecken **aufklappbare Kästen**. Grün markierte frischen
 Grundlagen auf, falls dir ein Begriff gerade fehlt. Blau markierte enthalten
 die Lösung.
 
-Beides ist ausdrücklich zum Benutzen da. Niemand soll eine halbe
-Gruppenphase feststecken.
+Beides ist zum Benutzen gedacht. Niemand muss eine halbe Gruppenphase mit
+Raten verbringen.
 
 Wer lieber am Stück liest, findet alle Auffrischungen im [Glossar](glossar.qmd).
 :::

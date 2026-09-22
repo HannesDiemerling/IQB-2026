@@ -5,9 +5,9 @@ subtitle: "Die Frage umdrehen"
 
 ## Euer Auftrag
 
-Dreht an den drei Reglern eines Screenings und findet heraus, welcher davon
-tatsächlich entscheidet. Übertragt das Ergebnis dann auf euer eigenes
-Arbeitsfeld.
+Drei Regler, ein Screening, und eine Intuition, die dabei zuverlässig kippt.
+Findet heraus, welcher der drei Regler tatsächlich entscheidet, und übertragt
+das Ergebnis danach auf euer eigenes Arbeitsfeld.
 
 **Anwendungen:** [Screening auf Leseförderbedarf](../apps/a11-screening.qmd){target="_blank"} ·
 [Zwei Welten der Wahrscheinlichkeit](../apps/a10-zwei-welten.qmd){target="_blank"} ·

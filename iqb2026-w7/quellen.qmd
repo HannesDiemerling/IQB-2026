@@ -1,0 +1,132 @@
+---
+title: "Quellen"
+subtitle: "Alle im Workshop genannten Arbeiten, mit DOI"
+---
+
+Die Angaben sind geprüft. Wo eine Seitenzahl fehlt, ist sie nicht belegt, der
+DOI führt aber zuverlässig zur Arbeit.
+
+## Was der p-Wert nicht sagt
+
+**Haller, H. & Krauss, S. (2002).** Misinterpretations of significance: A
+problem students share with their teachers? *Methods of Psychological Research
+Online*, 7(1).
+
+> Legt sechs verbreitete Fehlinterpretationen des p-Werts vor, dieselben, die
+> in Einheit 1 abgefragt werden. Mindestens einen Fehler machten **100 %** der
+> befragten Studierenden, **90 %** der forschenden Psychologinnen und
+> Psychologen und **80 %** der Methoden-Lehrenden.
+
+**Wasserstein, R. L. & Lazar, N. A. (2016).** The ASA's Statement on p-Values:
+Context, Process, and Purpose. *The American Statistician*, 70(2), 129–133.
+[doi:10.1080/00031305.2016.1154108](https://doi.org/10.1080/00031305.2016.1154108)
+
+> Die erste Stellungnahme der American Statistical Association zu einer
+> statistischen Frage überhaupt.
+
+**Lortie-Forgues, H. & Inglis, M. (2019).** Rigorous Large-Scale Educational
+RCTs Are Often Uninformative: Should We Be Concerned? *Educational
+Researcher*, 48(3), 158–166.
+[doi:10.3102/0013189X19832850](https://doi.org/10.3102/0013189X19832850)
+
+> 141 große Wirksamkeitsstudien aus den Programmen von EEF und NCEE, über
+> 1,2 Millionen Lernende. Mittlerer Effekt 0,06 SD, mittlere Intervallbreite
+> 0,30 SD, mittlerer Bayes-Faktor 0,56.
+
+**Cohen, J. (1994).** The earth is round (p < .05). *American Psychologist*,
+49(12).
+
+## Die Freiheitsgrade des Forschens
+
+**Simmons, J. P., Nelson, L. D. & Simonsohn, U. (2011).** False-Positive
+Psychology: Undisclosed Flexibility in Data Collection and Analysis Allows
+Presenting Anything as Significant. *Psychological Science*, 22(11).
+[doi:10.1177/0956797611417632](https://doi.org/10.1177/0956797611417632)
+
+> Vier übliche Freiheitsgrade kombiniert ergeben eine Falsch-positiv-Rate von
+> **61 %** statt der nominellen 5 %. Tabelle 1, unterste Zeile.
+
+**Open Science Collaboration (2015).** Estimating the reproducibility of
+psychological science. *Science*, 349(6251), aac4716.
+[doi:10.1126/science.aac4716](https://doi.org/10.1126/science.aac4716)
+
+> 100 Studien wiederholt. In den Originalen waren 97 % der Befunde
+> signifikant, in den Replikationen 36 %. Die Effektstärken der Replikationen
+> betrugen im Schnitt die Hälfte der Originalwerte.
+
+**Schäfer, T. & Schwarz, M. A. (2019).** The Meaningfulness of Effect Sizes in
+Psychological Research: Differences Between Sub-Disciplines and the Impact of
+Potential Biases. *Frontiers in Psychology*, 10, 813.
+[doi:10.3389/fpsyg.2019.00813](https://doi.org/10.3389/fpsyg.2019.00813)
+
+> 900 Effekte aus nicht präregistrierten Publikationen gegen 93 aus
+> präregistrierten: Median r = 0.36 gegen r = 0.16.
+
+**Ioannidis, J. P. A. (2005).** Why Most Published Research Findings Are
+False. *PLoS Medicine*, 2(8), e124.
+[doi:10.1371/journal.pmed.0020124](https://doi.org/10.1371/journal.pmed.0020124)
+
+**Trafimow, D. & Marks, M. (2015).** Editorial. *Basic and Applied Social
+Psychology*, 37(1).
+[doi:10.1080/01973533.2015.1012991](https://doi.org/10.1080/01973533.2015.1012991)
+
+> Das Editorial, mit dem die Zeitschrift Signifikanztests **und**
+> Konfidenzintervalle untersagt hat.
+
+## Effektstärken und ihre Grenzen
+
+**Baguley, T. (2009).** Standardized or simple effect size: What should be
+reported? *British Journal of Psychology*, 100(3), 603–617.
+[doi:10.1348/000712608X377117](https://doi.org/10.1348/000712608X377117)
+
+> Argumentiert, dass unstandardisierte Effektstärken für die meisten Zwecke
+> robuster sind. Nennt Reliabilität, eingeschränkte Varianz und
+> Designunterschiede als Faktoren, die standardisierte Maße verzerren.
+
+**Cheung, A. C. K. & Slavin, R. E. (2016).** How Methodological Features
+Affect Effect Sizes in Education. *Educational Researcher*, 45(5).
+[doi:10.3102/0013189X16656615](https://doi.org/10.3102/0013189X16656615)
+
+> 645 Studien aus 12 Übersichtsarbeiten. Effektstärken rund doppelt so groß
+> bei kleinen Stichproben, selbst entwickelten Tests und publizierten
+> Arbeiten. Quasi-Experimente über randomisierten Studien.
+
+**Kraft, M. A. (2020).** Interpreting Effect Sizes of Education Interventions.
+*Educational Researcher*, 49(4), 241–253.
+[doi:10.3102/0013189X20912798](https://doi.org/10.3102/0013189X20912798)
+
+> Bildungsspezifische Maßstäbe: unter .05 klein, .05 bis .20 mittel, ab .20
+> groß.
+
+**Simpson, A. (2017).** The misdirection of public policy: comparing and
+combining standardised effect sizes. *Journal of Education Policy*, 32(4),
+450–466.
+[doi:10.1080/02680939.2017.1280183](https://doi.org/10.1080/02680939.2017.1280183)
+
+> Ranglisten von Maßnahmen seien womöglich keine Wirksamkeitsranglisten,
+> sondern Ranglisten der Manipulierbarkeit von Studiendesigns.
+
+**Simpson, A. (2023).** Benchmarking a Misnomer: A Note on "Interpreting
+Effect Sizes in Education Interventions". *Educational Researcher*, 52(3).
+[doi:10.3102/0013189X20985448](https://doi.org/10.3102/0013189X20985448)
+
+> Die Gegenrede zu Kraft. Aufgenommen, weil die Debatte offen ist und das
+> selbst ein Befund ist.
+
+## Evidenz berichten
+
+**Lee, M. D. & Wagenmakers, E.-J. (2013).** *Bayesian Cognitive Modeling: A
+Practical Course.* Cambridge University Press.
+
+> Quelle der Evidenzstufen für den Bayes-Faktor: 1 bis 3 anekdotisch, 3 bis 10
+> moderat, 10 bis 30 stark, 30 bis 100 sehr stark, über 100 extrem. Angepasst
+> von Jeffreys (1961), wobei die Stufe 3 bis 10 von "substantiell" in
+> "moderat" umbenannt wurde, weil sie zu entschieden klang.
+
+::: {.callout-note}
+## Warum hier keine Bildungsstudie zur Replikation steht
+
+Für die Bildungsforschung gibt es keine systematische Replikationsstudie in
+der Größenordnung der Open Science Collaboration. Das ist kein
+Entlastungsargument, sondern eine offene Flanke.
+:::

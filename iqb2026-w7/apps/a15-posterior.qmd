@@ -106,6 +106,7 @@ Zieh die Prior-Unsicherheit auf **10**. Der Prior wird breit, die Daten
 übernehmen fast vollständig.
 
 Zieh sie dann auf **0,5**. Jetzt gewinnt der Prior, und die Daten richten fast
-nichts mehr aus. Das ist kein Fehler, das ist die Lektion: ein sehr enger
-Prior ist eine sehr starke Behauptung, und du musst sie begründen können.
+nichts mehr aus. Keine Sorge, du hast nichts kaputtgemacht. Ein sehr enger
+Prior ist einfach eine sehr starke Behauptung, und die musst du dann auch
+verteidigen können.
 :::

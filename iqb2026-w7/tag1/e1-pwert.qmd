@@ -5,9 +5,9 @@ subtitle: "Was der p-Wert nicht sagt"
 
 ## Euer Auftrag
 
-Zwei Standorte melden denselben Zuwachs, kommen aber zu entgegengesetzten
-Urteilen. Findet heraus, woran das liegt, und einigt euch darauf, was ihr
-stattdessen berichten würdet.
+Zwei Standorte, derselbe Zuwachs, zwei entgegengesetzte Urteile. Der eine
+bekommt die Förderung verlängert, der andere nicht. Findet heraus, woran das
+hängt, und einigt euch darauf, was ihr an deren Stelle berichtet hättet.
 
 **Anwendungen:** [Gleicher Effekt, gegensätzliche Urteile](../apps/a01-schwelle.qmd){target="_blank"}
 und [Signifikanz durch Datenmasse](../apps/a02-stichprobengroesse.qmd){target="_blank"}
@@ -82,9 +82,10 @@ p-Wert bei rund .10, also weit von der Schwelle entfernt.
 Der Zuwachs bleibt die ganze Zeit exakt bei 2,1 Punkten. Er ist in der
 Anwendung fest verdrahtet.
 
-Das ist der Kern: der p-Wert reagiert auf die Streuung, nicht nur auf den
-Effekt. Zwei Standorte mit identischer Wirkung bekommen verschiedene Urteile,
-weil ihre Schülerschaft unterschiedlich homogen ist.
+Damit ist der p-Wert hier weniger ein Urteil über das Programm als eines über
+die Schülerschaft. Er reagiert auf die Streuung, nicht nur auf den Effekt.
+Zwei Standorte mit identischer Wirkung bekommen verschiedene Bescheide, weil
+die eine Gruppe homogener ist als die andere.
 :::
 
 ## Aufgabe 3: Begreifen

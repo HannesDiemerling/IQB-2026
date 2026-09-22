@@ -6,7 +6,7 @@ subtitle: "Evidenz berichten"
 ## Euer Auftrag
 
 Macht aus einer Verteilung eine Entscheidung. Am Ende formuliert ihr den
-Ergebnissatz, den ihr einer Kommission vorlegen würdet. Genau diesen Satz
+einen Satz, den ihr einer Kommission tatsächlich vorlegen würdet. Diesen Satz
 tragt ihr im Abschluss vor.
 
 **Anwendungen:** [HDI und ROPE](../apps/a16-hdi-rope.qmd){target="_blank"} ·
@@ -50,8 +50,8 @@ Rund 80 Prozent der Posterior-Masse liegen innerhalb der ROPE. Das heißt: der
 wahrscheinlichste Fall ist, dass der Zuwachs zwar existiert, aber unterhalb
 der Relevanzschwelle bleibt.
 
-Der Satz ist unbequem, und er ist korrekt. Frequentistisch wäre derselbe
-Befund als signifikanter Erfolg durchgegangen.
+Unbequem, aber korrekt. Frequentistisch wäre derselbe Befund als Erfolg
+berichtet worden.
 :::
 
 ## Aufgabe 2: Manipulieren

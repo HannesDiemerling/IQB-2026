@@ -29,6 +29,8 @@ website:
         text: Anwendungen
       - href: glossar.qmd
         text: Glossar
+      - href: quellen.qmd
+        text: Quellen
   # leitung/ steht bewusst NICHT in der Navigation. Die Seite ist ueber die
   # URL erreichbar, taucht aber bei den Teilnehmenden nicht auf.
   sidebar:
@@ -79,6 +81,8 @@ website:
           - apps/a19-mcmc.qmd
       - href: glossar.qmd
         text: Glossar
+      - href: quellen.qmd
+        text: Quellen
   page-footer:
     center: |
       CC BY 4.0 · Workshop 7, IQB 2026 · Hannes Diemerling

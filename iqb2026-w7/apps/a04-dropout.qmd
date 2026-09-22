@@ -86,8 +86,8 @@ app = App(app_ui, server)
 ::: {.callout-note collapse="true"}
 ## Worauf du achten solltest
 
-Niemand hat entschieden, welche Klasse herausfällt. Die Belastung hat es
-entschieden. Genau deshalb fällt es in einem Bericht nicht auf.
+Niemand hat entschieden, welche Klasse herausfällt. Die Belastung hat das
+übernommen. Und deshalb fällt es in keinem Bericht auf.
 
 Ziehe die Schwelle auf 5. Der berichtete Zuwachs steigt deutlich, obwohl sich
 an der Wirkung des Programms nichts geändert hat. Das ist **MNAR**, und es

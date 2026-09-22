@@ -5,11 +5,12 @@ subtitle: "Effektstärken und ihre Grenzen"
 
 ## Euer Auftrag
 
-Jede Gruppe arbeitet mit einem **anderen Messinstrument**. Findet heraus,
-welcher wahre Effekt hinter eurem beobachteten d steckt, und was ihr der
-Kommission empfehlen würdet.
+Jede Gruppe arbeitet mit einem **anderen Messinstrument**, manche mit einem
+präzisen, manche mit einem ungenauen. Findet heraus, welcher wahre Effekt
+hinter eurem beobachteten d steckt, und was ihr der Kommission empfehlen
+würdet.
 
-In der Fragerunde setzt sich aus euren fünf Antworten eine Kurve zusammen, die
+Beim Zusammentragen setzt sich aus den fünf Antworten eine Kurve zusammen, die
 keine Gruppe allein sehen kann.
 
 **Anwendungen:** [Reliabilität dämpft Effektstärken](../apps/a09-minderung.qmd){target="_blank"} ·

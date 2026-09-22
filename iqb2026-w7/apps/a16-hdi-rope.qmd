@@ -164,8 +164,9 @@ Probiere alle drei Ausgänge durch:
 - **Relevanter Effekt:** Mittelwert zurück auf **2,1**, Unsicherheit auf
   **0,5**, ROPE auf **1,0**. Jetzt liegt das HDI vollständig außerhalb.
 
-Achte beim letzten Schritt darauf, was du getan hast: du hast die
-Relevanzschwelle verschoben, nachdem du die Daten kanntest. Genau deshalb muss
-sie **vorher** festgelegt und begründet werden. Sonst ist sie nur ein weiterer
-Freiheitsgrad, so wie die aus Einheit 2.
+Schau noch einmal, was im letzten Schritt passiert ist: die Relevanzschwelle
+wurde verschoben, nachdem die Daten bekannt waren.
+
+Deshalb legt man sie **vorher** fest und schreibt sie auf. Sonst ist sie nur
+ein weiterer Freiheitsgrad, genau wie die aus Einheit 2.
 :::

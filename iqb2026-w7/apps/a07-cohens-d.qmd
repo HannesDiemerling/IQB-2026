@@ -238,9 +238,9 @@ app = App(app_ui, server)
 ::: {.callout-note collapse="true"}
 ## Worauf du achten solltest
 
-**Aspekt 1:** Der Zuwachs bleibt immer bei 5 Punkten. Nur die Streuung
-verändert sich, und mit ihr das d. Genau deshalb ist d ein
-Signal-Rausch-Verhältnis und keine Größenangabe.
+**Aspekt 1:** Der Zuwachs bleibt stur bei 5 Punkten. Nur die Streuung
+verändert sich, und mit ihr das d. So ist d eben gebaut: als
+Signal-Rausch-Verhältnis, nicht als Größenangabe.
 
 **Aspekt 2:** Zwei Instrumente für dieselbe Kompetenz, zwei völlig
 verschiedene Rohwerte, identisches d. Das ist der Grund, warum es d

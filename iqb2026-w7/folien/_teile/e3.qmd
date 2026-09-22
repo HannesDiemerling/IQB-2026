@@ -162,7 +162,8 @@ $$d = \frac{|M_1 - M_2|}{SD}$$
 ### Entdeckbarkeit
 
 5 Punkte bei **SD = 2** sind ein klares Signal. Dieselben 5 Punkte bei
-**SD = 20** verschwinden im Rauschen.
+**SD = 20** verschwinden im Rauschen. d ist ein
+**Signal-Rausch-Verhältnis**.
 :::
 ::: {.bp-pillar .tone-teal}
 [Aspekt 02]{.bp-pillar__num}
@@ -175,8 +176,8 @@ Verschiedene Skalen, identisches d.
 :::
 
 ::: {.bp-callout}
-Genau deshalb existiert d. Der Preis: Punkte kann man einer Kommission
-erklären, d nicht.
+Genau deshalb existiert d: Meta-Analysen brauchen eine gemeinsame Skala. Der
+Preis: Punkte kann man einer Kommission erklären, d nicht.
 :::
 
 ::: notes

@@ -100,59 +100,8 @@ Befund ist mehrfach repliziert worden und gilt bis heute.
 
 Wenn jemand nach Aussage 3 nachfragt: p = .01 gegen p = .04 sagt nichts über die
 Effektgröße, weil der p-Wert von Effekt UND Stichprobengröße abhängt. Das kommt
-zwei Folien weiter.
-
-Rund 3 Minuten.
-:::
-
-## Kein Lehrbuchproblem
-
-![](../assets/e1-lortie-forgues.png){.bp-abb .bp-abb--knapp}
-
-::: {.bp-callout}
-Das Problem ist bekannt, benannt und dokumentiert. Geändert hat sich an der
-Praxis wenig.
-:::
-
-::: {.bp-quelle}
-Lortie-Forgues & Inglis (2019), Educational Researcher 48(3), Förderprogramme
-von EEF und NCEE. Dazu Wasserstein & Lazar (2016), die erste Stellungnahme der
-American Statistical Association zu einer statistischen Frage überhaupt.
-:::
-
-::: notes
-Diese Folie ist die Antwort auf den Reflex "das weiß man doch alles". Ja, man
-weiß es. Genau das ist der Befund.
-
-Lortie-Forgues und Inglis ist die Studie, die bei diesem Publikum am besten
-zieht, weil sie aus der Bildungsforschung selbst kommt und nicht aus der
-Psychologie.
-
-Die Abbildung erklären, sie trägt die Folie: waagerecht die Effektstärke in
-Standardabweichungen. Der korallenrote Punkt ist der durchschnittliche Effekt
-über alle 141 Studien, 0,06. Der dunkle Balken ist das durchschnittliche
-Intervall, 0,30 breit.
-
-Dann auf die beiden farbigen Felder zeigen. Links vom Nullstrich liegt
-möglicher Schaden, rechts von 0,20 liegt nach Kraft ein großer Effekt. Das
-durchschnittliche Intervall reicht in beide Felder hinein. Es enthält also
-gleichzeitig nennenswerten Schaden und nennenswerten Nutzen.
-
-Der Satz dazu: das Intervall ist fünfmal so breit wie der Effekt, den es
-einschließen soll.
-
-Der mittlere Bayes-Faktor von 0,56 kommt an Tag 2 wieder. Ein Bayes-Faktor um
-1 heißt: die Daten unterscheiden nicht zwischen Wirkung und keiner Wirkung. Die
-Autoren selbst nennen die Studien deshalb überwiegend uninformativ. Diese
-Formulierung übernehmen und nicht zuspitzen. Hier ankündigen, in Einheit 6
-einlösen.
-
-Wichtig, wie ich das framen: das sind keine schlechten Studien. Das sind teure,
-sorgfältig gemachte Studien, die an einer strukturellen Grenze scheitern.
-
-Die ASA-Stellungnahme lohnt als Autoritätsargument, wenn Skepsis aufkommt. Es
-ist nicht meine Privatmeinung, sondern die Position der Fachgesellschaft, und
-es war deren allererste Stellungnahme zu einer statistischen Frage überhaupt.
+später in dieser Einheit, bei "Signifikanz misst vor allem n". Auf später
+vertrösten, nicht hier ausführen.
 
 Rund 3 Minuten.
 :::
@@ -170,6 +119,12 @@ Eigenschaft der **Hypothese**.
 
 Das klingt nach einer Feinheit. Es ist der ganze Unterschied.
 
+::: {.bp-quelle}
+Dass Schlussfolgerungen nicht daran hängen sollen, ob ein p-Wert eine Schwelle
+überschreitet, ist keine Außenseitermeinung. Es ist die Position der American
+Statistical Association. *Wasserstein & Lazar (2016)*
+:::
+
 ::: notes
 Langsam vorlesen, wörtlich. Dann den Kern zweimal sagen: bedingte
 Wahrscheinlichkeit der Daten gegeben die Hypothese, nicht der Hypothese gegeben
@@ -182,6 +137,11 @@ etwas völlig anderes." Genau diese Verwechslung steckt in Aussage 1 des Quiz.
 Die Formulierung "und alle Modellannahmen zutreffen" nicht unterschlagen. Sie ist
 der Teil, der in Lehrbüchern meist fehlt, und sie ist praktisch relevant: bei
 verletzten Annahmen ist der p-Wert nicht nur ungenau, er ist bedeutungslos.
+
+Die ASA-Zeile unten lohnt als Autoritätsargument, wenn Skepsis aufkommt. Es
+ist nicht meine Privatmeinung, sondern die Position der Fachgesellschaft, und
+es war deren allererste Stellungnahme zu einer statistischen Frage überhaupt.
+Nur nennen, nicht ausführen.
 
 Das ist auch die Folie, auf die ich morgen in Einheit 4 zurückkomme, wenn wir
 die Frage umdrehen. Schon hier ankündigen.
@@ -351,6 +311,59 @@ verweisen.
 Falls jemand eine Quelle will: Greenland et al. (2016) behandelt genau diese
 Verwechslungen, p-Wert, Intervall und Teststärke, in einer einzigen Arbeit.
 Steht auf der Quellenseite.
+
+Rund 3 Minuten.
+:::
+
+## Und das ist der Normalfall
+
+![](../assets/e1-lortie-forgues.png){.bp-abb .bp-abb--knapp}
+
+::: {.bp-callout}
+Nicht unsere Studie ist die Ausnahme. So sieht die **Spitze** der
+Bildungsforschung aus.
+:::
+
+::: {.bp-quelle}
+Lortie-Forgues & Inglis (2019), Educational Researcher 48(3), Förderprogramme
+von EEF und NCEE.
+:::
+
+::: notes
+Die Steigerung zur Folie davor, und sie muss als Steigerung vorgetragen
+werden. Eben war unsere eine Studie ein Münzwurf. Jetzt die Frage stellen: war
+das ein Ausreißer? Und dann diese Folie.
+
+Lortie-Forgues und Inglis ist die Studie, die bei diesem Publikum am besten
+zieht, weil sie aus der Bildungsforschung selbst kommt und nicht aus der
+Psychologie. 141 große Wirksamkeitsstudien aus den Programmen von EEF und
+NCEE, zusammen über 1,2 Millionen Lernende. Das ist kein Sammelsurium, das ist
+der Goldstandard des Feldes.
+
+Die Abbildung erklären: waagerecht die Effektstärke in Standardabweichungen.
+Der korallenrote Punkt ist der durchschnittliche Effekt über alle 141 Studien,
+0,06. Der dunkle Balken ist das durchschnittliche Intervall, 0,30 breit.
+
+Dann auf die beiden farbigen Felder zeigen. Links vom Nullstrich liegt
+möglicher Schaden, rechts von 0,20 liegt nach Kraft ein großer Effekt. Das
+durchschnittliche Intervall reicht in beide Felder hinein. Es enthält also
+gleichzeitig nennenswerten Schaden und nennenswerten Nutzen.
+
+Der Satz dazu: das Intervall ist fünfmal so breit wie der Effekt, den es
+einschließen soll.
+
+Den Bogen zur Folie davor ausdrücklich schließen: genau das ist die Folge
+schwacher Teststärke, nur diesmal über ein ganzes Feld gemittelt statt an
+einer Studie.
+
+Der mittlere Bayes-Faktor von 0,56 kommt an Tag 2 wieder. Ein Bayes-Faktor um
+1 heißt: die Daten unterscheiden nicht zwischen Wirkung und keiner Wirkung. Die
+Autoren selbst nennen die Studien deshalb überwiegend uninformativ. Diese
+Formulierung übernehmen und nicht zuspitzen. Hier ankündigen, in Einheit 6
+einlösen.
+
+Wichtig, wie ich das framen: das sind keine schlechten Studien. Das sind teure,
+sorgfältig gemachte Studien, die an einer strukturellen Grenze scheitern.
 
 Rund 3 Minuten.
 :::

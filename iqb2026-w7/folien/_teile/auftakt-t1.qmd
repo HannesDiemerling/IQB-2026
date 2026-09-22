@@ -191,7 +191,8 @@ Rund 1,5 Minuten.
 :::
 :::
 
-Fünf Gruppen zu je fünf Personen, an beiden Tagen dieselben.
+Fünf Gruppen zu je fünf Personen. **Die Einteilung machen wir gleich hier**,
+du musst dich also um nichts kümmern.
 
 ::: {.bp-callout}
 Wie ihr in der Gruppe vorgeht, entscheidet ihr selbst. Sinnvoll ist nur, dass
@@ -199,8 +200,9 @@ eine Person den Bildschirm teilt, damit alle dasselbe sehen.
 :::
 
 ::: notes
-Die Gruppen sind in Zoom schon angelegt, ich weise sie nicht live zu. Das spart
-fünf Minuten und vermeidet Chaos.
+Die Gruppen teilen wir live ein. Diese Folie ist nur der Verweis darauf, sie
+zeigt die Struktur, nicht die Zuordnung. Ich sage dazu, dass niemand selbst
+aktiv werden muss.
 
 Bewusst keine Rollenverteilung vorgeben. Das sind Berufstätige, die
 organisieren sich selbst. Der einzige praktische Hinweis, den ich gebe: eine

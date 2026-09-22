@@ -209,8 +209,10 @@ sammelst.
 :::
 
 ::: {.bp-callout}
-"Das Programm bringt 2,1 Punkte" und "dieses Kind gewinnt 2,1 Punkte" sind
-zwei verschiedene Versprechen. Nur eines davon kannst du halten.
+Die Vorhersage für den Einzelfall ist deshalb **immer breiter** als die
+Posterior für den Mittelwert. "Das Programm bringt 2,1 Punkte" und "dieses
+Kind gewinnt 2,1 Punkte" sind zwei verschiedene Versprechen, und nur eines
+davon kannst du halten.
 :::
 
 ::: notes

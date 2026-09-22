@@ -108,7 +108,7 @@ $$P(\theta \mid D) = \frac{P(D \mid \theta)\, P(\theta)}{P(D)}$$
 | Teil | Bedeutung |
 |---|---|
 | **Prior** $P(\theta)$ | was du vorher geglaubt hast |
-| **Likelihood** $P(D \mid \theta)$ | wie gut die Hypothese zu diesen Daten passt |
+| **Likelihood** $P(D \mid \theta)$ | wie wahrscheinlich diese Daten wären, wenn die Hypothese stimmt |
 | **Evidenz** $P(D)$ | der Nenner, der alles auf eins normiert |
 | **Posterior** $P(\theta \mid D)$ | was du danach glaubst |
 

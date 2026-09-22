@@ -92,13 +92,17 @@ Rund 2 Minuten.
 
 ## Der Prior: uninformativ ist nicht neutral
 
+Der Prior beschreibt, welche Werte du **vor** den neuen Daten für plausibel
+hältst.
+
 ::: {.bp-zwei}
 ::: {}
 **Uninformativ.** Alle Werte gleich plausibel.
 
 **Informativ.** Nutzt Vorwissen, um Unsinn auszuschließen.
 
-**Schwach informativ.** Der Mittelweg, und der Normalfall.
+**Schwach informativ.** Der Mittelweg: schließt Unsinn aus, lässt den Daten
+den Rest.
 :::
 ::: {.bp-callout}
 Der Prior erfindet keine Annahmen. Er macht die Annahmen, die ohnehin da sind,

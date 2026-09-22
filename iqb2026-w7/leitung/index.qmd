@@ -166,8 +166,9 @@ links.
 - `python tools/check-apps.py` ausführen, das prüft Syntax und Konventionen
   ohne Browser.
 - `_site` herunterladen und die Offline-Variante einmal testen.
-- Zoom-Breakout-Räume vorab anlegen, damit die Zuweisung nicht live passieren
-  muss.
+- Fünf leere Zoom-Breakout-Räume anlegen. Die Einteilung selbst passiert live
+  im Auftakt, die Folie "Deine Gruppe für beide Tage" verweist nur darauf.
+  Dafür im Auftakt ein paar Minuten einplanen.
 
 ## Offene Prüfpunkte
 

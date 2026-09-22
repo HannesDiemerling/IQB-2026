@@ -132,6 +132,55 @@ def e1_p_gegen_n():
     sichern(fig, "e1-p-gegen-n")
 
 
+def e1_lortie_forgues():
+    """141 Wirksamkeitsstudien: der Effekt verschwindet in seinem Intervall.
+
+    Ersetzt eine Belegliste in Kleinschrift. Die Pointe ist ein
+    Groessenverhaeltnis, und Groessenverhaeltnisse gehoeren ins Bild.
+    """
+    EFFEKT, BREITE = 0.06, 0.30
+    lo, hi = EFFEKT - BREITE / 2, EFFEKT + BREITE / 2
+
+    fig, ax = plt.subplots(figsize=(11.5, 4.3), layout="constrained")
+    ax.axvspan(-0.16, 0, color=CORAL, alpha=.13, zorder=0)
+    ax.axvspan(0.20, 0.32, color=TEAL, alpha=.20, zorder=0)
+
+    ax.plot([lo, hi], [0, 0], color=NAVY, lw=11, solid_capstyle="butt", zorder=3)
+    ax.scatter([EFFEKT], [0], s=300, color=CORAL, zorder=5,
+               edgecolor=CREAM, lw=2.5)
+    ax.axvline(0, color=INK, ls="dotted", lw=2)
+
+    ax.text(EFFEKT, .30, "Durchschnitt\n0,06 SD", ha="center", fontsize=14,
+            fontweight="bold", color=CORAL)
+    ax.text(lo, -.30, f"{lo:.2f}".replace(".", ","), ha="center", fontsize=12,
+            color=GRAU)
+    ax.text(hi, -.30, f"{hi:.2f}".replace(".", ","), ha="center", fontsize=12,
+            color=GRAU)
+    ax.text(-.08, .78, "Schaden\nmöglich", ha="center", fontsize=12.5,
+            color=CORAL, style="italic")
+    ax.text(.26, .78, "großer Effekt\nnach Kraft", ha="center", fontsize=12.5,
+            color=TEAL, style="italic")
+
+    ax.text(.5, -.42, "Das Intervall ist fünfmal so breit wie der Effekt, den "
+                      "es einschließen soll.\nMittlerer Bayes-Faktor 0,56: die "
+                      "Daten unterscheiden nicht zwischen Wirkung und keiner "
+                      "Wirkung.",
+            transform=ax.transAxes, ha="center", fontsize=13, color=NAVY,
+            bbox=dict(boxstyle="round,pad=0.5", facecolor="white",
+                      edgecolor=HELLGRAU, lw=1.2))
+
+    ax.set_xlim(-.16, .32)
+    ax.set_ylim(-1.15, 1.15)
+    ax.set_yticks([])
+    ax.set_xticks([-.1, 0, .1, .2, .3])
+    ax.set_xticklabels(["-0,10", "0", "0,10", "0,20", "0,30"])
+    ax.set_xlabel("Effektstärke in Standardabweichungen")
+    ax.set_title("141 große Wirksamkeitsstudien, zusammen über 1,2 Millionen "
+                 "Lernende", fontweight="bold", fontsize=16, pad=12)
+    blank(ax, ("top", "right", "left"))
+    sichern(fig, "e1-lortie-forgues")
+
+
 # ---------------------------------------------------------------- Einheit 2
 
 def e2_garten():
@@ -217,6 +266,68 @@ def e2_publikationsbias():
     sichern(fig, "e2-publikationsbias")
 
 
+def e2_replikation():
+    """Drei Befunde zur Replizierbarkeit, je ein Panel.
+
+    Die drei Arbeiten messen Verschiedenes und bekommen deshalb verschiedene
+    Darstellungen. Gemeinsam ist nur die Richtung.
+    """
+    fig, axes = plt.subplots(1, 3, figsize=(13.5, 4.6), layout="constrained",
+                             gridspec_kw=dict(width_ratios=[1, 1, 1.3]))
+
+    # Panel 1: Original gegen Replikation
+    ax = axes[0]
+    ax.bar([0, 1], [97, 36], color=[NAVY, CORAL], width=.62)
+    for x, v in [(0, 97), (1, 36)]:
+        ax.text(x, v + 3, f"{v} %", ha="center", fontsize=15,
+                fontweight="bold", color=NAVY if x == 0 else CORAL)
+    ax.set_xticks([0, 1])
+    ax.set_xticklabels(["Original", "Replikation"])
+    ax.set_ylim(0, 118)
+    ax.set_yticks([])
+    ax.set_title("Anteil signifikanter Befunde\nOpen Science Collaboration 2015",
+                 fontsize=13.5, fontweight="bold", color=NAVY)
+    blank(ax, ("top", "right", "left"))
+
+    # Panel 2: ohne gegen mit Praeregistrierung
+    ax = axes[1]
+    ax.bar([0, 1], [.36, .16], color=[NAVY, CORAL], width=.62)
+    for x, v in [(0, .36), (1, .16)]:
+        ax.text(x, v + .012, f"{v:.2f}".replace(".", ","), ha="center",
+                fontsize=15, fontweight="bold", color=NAVY if x == 0 else CORAL)
+    ax.set_xticks([0, 1])
+    ax.set_xticklabels(["ohne\nPräregistrierung", "präregistriert"])
+    ax.set_ylim(0, .44)
+    ax.set_yticks([])
+    ax.set_title("Median der Effekte, r\nSchäfer & Schwarz 2019",
+                 fontsize=13.5, fontweight="bold", color=NAVY)
+    blank(ax, ("top", "right", "left"))
+
+    # Panel 3: wie selten Replikationen ueberhaupt sind
+    ax = axes[2]
+    SP, ZE = 40, 25
+    TREFFER = (SP * ZE) // 2      # genau ein Punkt, mittig, damit er auffaellt
+    for i in range(SP * ZE):
+        if i == TREFFER:
+            continue
+        ax.scatter(i % SP, -(i // SP), s=11, color="#d8dde3",
+                   edgecolor="none", zorder=1)
+    tx, ty = TREFFER % SP, -(TREFFER // SP)
+    ax.scatter([tx], [ty], s=150, color=CORAL, edgecolor="none", zorder=4)
+    ax.scatter([tx], [ty], s=620, facecolors="none", edgecolor=CORAL, lw=2,
+               zorder=4)
+    ax.set_xlim(-1.5, SP + .5)
+    ax.set_ylim(-ZE - 1.5, 1.5)
+    ax.axis("off")
+    ax.set_title("Von 1000 Artikeln ist einer eine Replikation\n"
+                 "Makel & Plucker 2014", fontsize=13.5, fontweight="bold",
+                 color=NAVY)
+    ax.text(SP / 2, -ZE - .6, "0,13 %", ha="center", fontsize=15,
+            fontweight="bold", color=CORAL)
+
+    sichern(fig, "e2-replikation")
+
+
 # ---------------------------------------------------------------- Einheit 3
 
 def e3_minderung():
@@ -298,6 +409,44 @@ def e3_benchmarks():
     sichern(fig, "e3-benchmarks")
 
 
+def e3_design_effekte():
+    """Cheung und Slavin: dasselbe Programm, doppelte Effektstaerke.
+
+    Bewusst relativ skaliert. Die Quelle traegt die Aussage "rund doppelt so
+    gross", nicht ein Paar absoluter Werte je Merkmal. Wer hier absolute
+    Zahlen hinschreibt, erfindet sie.
+    """
+    paare = [
+        ("kleine Stichprobe", "große Stichprobe"),
+        ("selbst entwickelter Test", "normiertes Instrument"),
+        ("publiziert", "unpubliziert"),
+    ]
+
+    fig, ax = plt.subplots(figsize=(11.5, 4.8), layout="constrained")
+    for i, (hoch, referenz) in enumerate(paare):
+        y = len(paare) - 1 - i
+        ax.barh(y + .19, 2.0, height=.34, color=CORAL, zorder=3)
+        ax.barh(y - .19, 1.0, height=.34, color=HELLGRAU, zorder=3)
+        ax.text(2.06, y + .19, hoch, va="center", fontsize=13.5,
+                fontweight="bold", color=CORAL)
+        ax.text(1.06, y - .19, referenz, va="center", fontsize=13.5,
+                color=GRAU)
+        ax.text(1.94, y + .19, "doppelt", va="center", ha="right",
+                fontsize=12.5, color="white", fontweight="bold")
+
+    ax.set_xlim(0, 3.7)
+    ax.set_ylim(-.7, len(paare) - .2)
+    ax.set_yticks([])
+    ax.set_xticks([0, 1])
+    ax.set_xticklabels(["0", "Referenz"])
+    ax.set_xlabel("Effektstärke relativ zur jeweiligen Vergleichsgruppe")
+    ax.set_title("Dasselbe Programm, doppelte Effektstärke.\n"
+                 "Cheung & Slavin 2016, 645 Studien aus 12 Übersichtsarbeiten",
+                 fontweight="bold", fontsize=15.5, pad=12)
+    blank(ax, ("top", "right", "left"))
+    sichern(fig, "e3-design-effekte")
+
+
 # ---------------------------------------------------------------- Einheit 4
 
 def e4_basisrate():
@@ -342,6 +491,55 @@ def e4_basisrate():
 
 
 # ---------------------------------------------------------------- Einheit 5
+
+def e5_likelihood():
+    """Die Likelihood ueber den fuenf festen Pilotklassen.
+
+    Ersetzt eine Tabelle aus Hypothese und Bewertung. Die Tabelle konnte nicht
+    zeigen, was den Begriff schwer macht: die Daten stehen still, die
+    Hypothese wandert.
+    """
+    DATEN = np.array([3, 7, 5, 9, 6])
+    m = DATEN.mean()
+    se = DATEN.std(ddof=1) / np.sqrt(len(DATEN))
+
+    theta = np.linspace(0, 12, 500)
+    like = norm.pdf(theta, m, se)
+    like /= like.max()
+
+    fig, ax = plt.subplots(figsize=(11.5, 4.8), layout="constrained")
+    ax.plot(theta, like, color=CORAL, lw=3.5, zorder=4)
+    ax.fill_between(theta, 0, like, color=CORAL, alpha=.15, zorder=2)
+
+    # Die fuenf Messwerte als Teppich, innerhalb der Achsen, damit sie nicht
+    # in die Tick-Beschriftung laufen.
+    ax.scatter(DATEN, np.full(len(DATEN), .05), s=320, color=NAVY,
+               marker="|", linewidths=3, zorder=6)
+    ax.text(.02, .88, "Die fünf Pilotklassen stehen fest:  3 · 7 · 5 · 9 · 6",
+            transform=ax.transAxes, ha="left", fontsize=13, color=NAVY,
+            bbox=dict(boxstyle="round,pad=0.4", facecolor="white",
+                      edgecolor=HELLGRAU, lw=1.1))
+
+    for t, label, ha in [(m, "Maximum", "center"), (3.0, "gering", "center"),
+                         (9.0, "gering", "center"),
+                         (0.0, "praktisch null", "left"),
+                         (12.0, "praktisch null", "right")]:
+        y = float(norm.pdf(t, m, se) / norm.pdf(m, m, se))
+        ax.scatter([t], [y], s=120, color=NAVY, zorder=7)
+        ax.text(t, y + .11, label, ha=ha, fontsize=12.5, color=NAVY,
+                fontweight="bold")
+
+    ax.set_xlim(-.5, 12.5)
+    ax.set_ylim(0, 1.3)
+    ax.set_yticks([])
+    ax.set_xticks([0, 3, 6, 9, 12])
+    ax.set_xlabel("Hypothese θ: wahrer Zuwachs in Punkten")
+    ax.set_ylabel("Likelihood")
+    ax.set_title("Die Daten stehen fest. Die Hypothese wandert.",
+                 fontweight="bold", fontsize=16, pad=10)
+    blank(ax)
+    sichern(fig, "e5-likelihood")
+
 
 def e5_drei_kurven():
     """Prior, Likelihood, Posterior in einem Bild."""
@@ -412,11 +610,61 @@ def e6_hdi_rope():
     sichern(fig, "e6-hdi-rope")
 
 
+def e6_bayesfaktor():
+    """Die Evidenzleiter, symmetrisch in beide Richtungen.
+
+    Ersetzt eine fuenfzeilige Tabelle, die nur die rechte Haelfte zeigte. Die
+    Symmetrie ist der eigentliche Inhalt der Folie, und eine Tabelle kann sie
+    nicht zeigen.
+    """
+    kanten = [0, np.log10(3), 1, np.log10(30), 2, 2.4]
+    namen = ["anekdotisch", "moderat", "stark", "sehr stark", "extrem"]
+    coral_t = ["#f7ded5", "#f1c3b0", "#eaa78b", "#e2845c", "#c65f34"]
+    teal_t = ["#d8e9e7", "#b4d7d3", "#8fc5bf", "#69b1aa", "#3e8b84"]
+
+    fig, ax = plt.subplots(figsize=(12.5, 4.5), layout="constrained")
+    for i, name in enumerate(namen):
+        lo, hi = kanten[i], kanten[i + 1]
+        for vz, tabelle in ((1, coral_t), (-1, teal_t)):
+            ax.barh(0, vz * (hi - lo), left=vz * lo, height=.9,
+                    color=tabelle[i], zorder=3, align="center")
+            ax.text(vz * (lo + hi) / 2, .62, name, ha="center", fontsize=11.5,
+                    color=NAVY, rotation=0 if hi - lo > .45 else 90,
+                    va="bottom")
+
+    # Nur ueber die Leiter, nicht ueber die ganze Achse. Sonst schneidet die
+    # Linie durch die Beschriftung darunter.
+    ax.plot([0, 0], [-.45, .45], color=INK, lw=2.5, zorder=5)
+    ax.text(0, -.95, "Die Daten entscheiden nicht", ha="center", fontsize=12,
+            color=GRAU, style="italic")
+
+    ax.text(-1.2, 1.28, "BF₀₁  ·  Evidenz für kein Effekt", ha="center",
+            fontsize=14.5, fontweight="bold", color="#3e8b84")
+    ax.text(1.2, 1.28, "BF₁₀  ·  Evidenz für einen Effekt", ha="center",
+            fontsize=14.5, fontweight="bold", color=CORAL)
+
+    ticks = [-2, -np.log10(30), -1, -np.log10(3), 0,
+             np.log10(3), 1, np.log10(30), 2]
+    ax.set_xticks(ticks)
+    ax.set_xticklabels(["100", "30", "10", "3", "1", "3", "10", "30", "100"])
+    ax.set_xlim(-2.4, 2.4)
+    ax.set_ylim(-1.35, 1.75)
+    ax.set_yticks([])
+    ax.set_xlabel("Bayes-Faktor")
+    ax.set_title("Dieselben Stufen gelten in beide Richtungen.\n"
+                 "Genau das kann ein Signifikanztest nicht.",
+                 fontweight="bold", fontsize=15.5, pad=10)
+    blank(ax, ("top", "right", "left"))
+    sichern(fig, "e6-bayesfaktor")
+
+
 def main() -> int:
     print("Abbildungen erzeugen:")
-    for f in (e1_zwei_standorte, e1_p_gegen_n, e2_garten, e2_publikationsbias,
-              e3_minderung, e3_benchmarks, e4_basisrate, e5_drei_kurven,
-              e6_hdi_rope):
+    for f in (e1_zwei_standorte, e1_p_gegen_n, e1_lortie_forgues,
+              e2_garten, e2_publikationsbias, e2_replikation,
+              e3_minderung, e3_benchmarks, e3_design_effekte,
+              e4_basisrate, e5_likelihood, e5_drei_kurven,
+              e6_hdi_rope, e6_bayesfaktor):
         f()
     print("Fertig.")
     return 0

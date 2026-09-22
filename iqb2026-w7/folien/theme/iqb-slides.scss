@@ -496,6 +496,13 @@ $code-block-font-size: 0.62em !default;
   background: none;
 }
 
+// Die 50vh oben reichen fuer Titel, Bild und GENAU EINEN Kasten. Folien mit
+// zwei Kaesten darunter, etwa Aussage plus Quellenzeile, brauchen diese
+// flachere Variante, sonst laeuft die Folie unten aus den 720 Pixeln heraus.
+.reveal img.bp-abb--knapp {
+  max-height: 38vh;
+}
+
 // Belegfolien: Quellenliste kompakt, damit mehrere Einträge Platz haben.
 .reveal .bp-belege {
   font-size: 0.52em;

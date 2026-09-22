@@ -117,22 +117,22 @@ oder Bedingungen, oder die Stärke eines Zusammenhangs.
 
 ::: {.bp-zwei}
 ::: {}
-**0,4 Punkte oder 6 Punkte?** Dieselbe Analyse, völlig verschiedene Konsequenz
-für die Förderentscheidung. Der p-Wert unterscheidet die beiden nicht
-zuverlässig. Die Zahl schon.
+**0,4 Punkte oder 6 Punkte?** Der p-Wert unterscheidet die beiden nicht
+zuverlässig. Die Förderentscheidung hängt an ihnen.
 :::
 ::: {}
 **Zwei Übersetzungen, die sofort wirken:**
 
-- **Hochrechnung:** Punkte pro Lernenden, hochgerechnet auf einen Jahrgang.
-- **Einzelfall:** Wie viel Prozent der geförderten Lernenden liegen über dem
-  Median der Vergleichsgruppe?
+- **Hochrechnung** auf einen ganzen Jahrgang.
+- **Einzelfall:** Wie viele der Geförderten liegen über dem Median der
+  Vergleichsgruppe?
 :::
 :::
 
 ::: {.bp-callout}
-Berichte immer zuerst den unstandardisierten Effekt. Er ist der einzige, über
-den man eine praktische Entscheidung treffen kann.
+Eine Kommission entscheidet nicht über d. Sie entscheidet über Punkte,
+Förderstunden und Kosten. Berichte deshalb immer zuerst den
+unstandardisierten Effekt.
 :::
 
 ::: notes
@@ -146,7 +146,7 @@ Für dieses Publikum die konkrete Form: Eine Kommission entscheidet nicht über
 d. Sie entscheidet über Punkte, Förderstunden und Kosten.
 
 Die Einzelfall-Übersetzung ist der Teil, den die Teilnehmenden am ehesten
-mitnehmen. Sie kommt in der Werkzeugkasten-Tabelle als CLES wieder.
+mitnehmen. Sie bekommt am Ende der Einheit als CLES eine eigene Folie.
 
 Rund 4 Minuten.
 :::
@@ -161,26 +161,22 @@ $$d = \frac{|M_1 - M_2|}{SD}$$
 
 ### Entdeckbarkeit
 
-Ein Zuwachs von 5 Punkten bei **SD = 2** ist ein klares Signal. Dieselben
-5 Punkte bei **SD = 20** verschwinden im Rauschen.
-
-d ist ein Signal-Rausch-Verhältnis.
+5 Punkte bei **SD = 2** sind ein klares Signal. Dieselben 5 Punkte bei
+**SD = 20** verschwinden im Rauschen.
 :::
 ::: {.bp-pillar .tone-teal}
 [Aspekt 02]{.bp-pillar__num}
 
 ### Vergleichbarkeit
 
-Die **Screening-Kurzform** läuft auf einer Skala von 1 bis 5, **+0,50** Punkte.
-Die **Vollform** läuft auf einer Skala von 0 bis 100, **+10** Punkte.
-
-Verschiedene Skalen, identisches d. Erst das macht sie vergleichbar.
+**Kurzform** 1 bis 5, **+0,50** Punkte. **Vollform** 0 bis 100, **+10** Punkte.
+Verschiedene Skalen, identisches d.
 :::
 :::
 
 ::: {.bp-callout}
-Genau deshalb existiert d: Meta-Analysen brauchen eine gemeinsame Skala. Der
-Preis ist, dass die Einheit verloren geht.
+Genau deshalb existiert d. Der Preis: Punkte kann man einer Kommission
+erklären, d nicht.
 :::
 
 ::: notes
@@ -207,12 +203,15 @@ Rund 4 Minuten.
 
 ## Die Faustregeln sind kein Kriterium
 
-![](../assets/e3-benchmarks.png){.bp-abb}
+![](../assets/e3-benchmarks.png){.bp-abb .bp-abb--knapp}
+
+::: {.bp-warn}
+Aus p < .05 wird d > 0.5. Das Ritual hat nur die Kleider gewechselt.
+:::
 
 ::: {.bp-quelle}
 Kraft (2020), *Interpreting Effect Sizes of Education Interventions*,
-Educational Researcher. Dazu Schäfer & Schwarz (2019) mit empirischen
-Verteilungen von Effektstärken.
+Educational Researcher. Dazu Schäfer & Schwarz (2019).
 :::
 
 ::: notes
@@ -232,26 +231,25 @@ Rund 3 Minuten.
 
 ## Woran Effektstärken tatsächlich hängen
 
-::: {.bp-belege}
-- **Cheung & Slavin (2016),** Educational Researcher 45(5). **645 Studien** aus
-  12 Übersichtsarbeiten. Effektstärken sind rund **doppelt so groß** bei
-  kleinen Stichproben, bei selbst entwickelten Tests und in publizierten
-  Arbeiten. Quasi-Experimente liefern höhere Werte als randomisierte Studien.
-- **Kraft (2020),** Educational Researcher 49(4). Cohens Faustregeln passen
-  nicht auf Bildungsinterventionen. Vorschlag: unter **.05** klein, **.05 bis
-  .20** mittel, ab **.20** groß.
-- **Simpson (2017),** Journal of Education Policy 32(4). Ranglisten von
-  Maßnahmen seien womöglich keine Wirksamkeitsranglisten, sondern
-  **Ranglisten der Manipulierbarkeit von Studiendesigns**.
-:::
+![](../assets/e3-design-effekte.png){.bp-abb}
 
 ::: {.bp-callout}
 Wer zwei Effektstärken vergleicht, vergleicht immer auch zwei Designs.
+Ranglisten von Maßnahmen könnten deshalb Ranglisten der **Manipulierbarkeit
+von Designs** sein. *Simpson (2017)*
 :::
 
 ::: notes
 Die inhaltlich wichtigste Belegfolie des Workshops, weil sie direkt in die
 Arbeit dieses Publikums greift.
+
+Die Abbildung zuerst lesen: je Zeile ein Merkmal des Designs. Der graue Balken
+ist die Vergleichsgruppe, der korallenrote die Studien mit diesem Merkmal. In
+allen drei Zeilen ist er doppelt so lang. Die Skala ist bewusst relativ, weil
+die Quelle ein Verhältnis berichtet und keine absoluten Paare.
+
+Was nicht im Bild steht und dazugehört: Quasi-Experimente liefern höhere Werte
+als randomisierte Studien.
 
 Cheung und Slavin zuerst, und zwar mit der praktischen Konsequenz: wenn eine
 kleine Studie mit selbst gebautem Test ein doppelt so großes d liefert wie eine
@@ -338,26 +336,28 @@ die Wurzel steht dann über dem Produkt beider Reliabilitäten.
 Rund 5 Minuten. Nicht kürzen, das ist der Kern der Einheit.
 :::
 
-## Der Werkzeugkasten hinter d
+## Ein Maß, das niemand erklären muss
 
-| Maß | Wofür | Orientierung |
-|---|---|---|
-| **Cohen's d** | Mittelwertsvergleich zweier Gruppen | 0.2 · 0.5 · 0.8 |
-| **Hedges' g** | wie d, korrigiert für kleine Stichproben | ≈ d ab n > 50 |
-| **η² / ω²** | Varianzaufklärung, ANOVA | .01 · .06 · .14 |
-| **Pearson's r** | Zusammenhang zweier stetiger Variablen | .10 · .30 · .50 |
-| **CLES** | Wahrscheinlichkeit, dass ein zufälliger Fall besser ist | 0.50 = Zufall, 0.71 ≈ d 0.8 |
-| **Odds / Risk Ratio** | binäre Ergebnisse | 1 = kein Unterschied |
+::: {.bp-quote}
+In 71 % der Vergleiche liegt die geförderte Person vorn.
+
+[CLES, dasselbe wie d = 0.8]{.bp-quote__author}
+:::
 
 ::: {.bp-callout}
-**CLES ist der Kommunikations-Tipp.** "In 71 % der Vergleiche liegt die
-geförderte Person vorn" versteht jede Kommission sofort. "d = 0.8" nicht.
+Beide Sätze beschreiben denselben Befund. Nur einer davon übersteht eine
+Kommissionssitzung.
+:::
+
+::: {.bp-quelle}
+Die übrigen Maße, von Hedges' g bis zum Odds Ratio, stehen zum Nachschlagen
+auf dem Arbeitsblatt.
 :::
 
 ::: notes
-Die Tabelle nicht durchgehen, das wird zäh. Stattdessen fragen, welche Maße die
-Anwesenden tatsächlich berichten, und nur die besprechen. Die Tabelle bleibt als
-Nachschlagewerk stehen und steht auch auf dem Arbeitsblatt.
+Die Tabelle ist bewusst von der Folie verschwunden und steht jetzt aufklappbar
+auf dem Arbeitsblatt. Hier stattdessen fragen, welche Maße die Anwesenden
+tatsächlich berichten, und nur die besprechen.
 
 CLES ist der Punkt, der am meisten mitgenommen wird. Es übersetzt ein
 standardisiertes Maß in eine Aussage über Einzelfälle, und genau das wollen

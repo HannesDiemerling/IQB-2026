@@ -164,7 +164,12 @@ Minuten. Üblicherweise wird über den Deploy validiert, nicht lokal.
 
 ## Offene Punkte
 
-- Der Remote ist noch nicht angelegt. `site-url` in `_quarto.yml` steht auf
-  `iqb2026-w7` und muss zum tatsächlichen Repo-Namen passen.
 - Die Anwendungen sind noch nie in einem echten Browser gestartet worden. Das
   ist die verbleibende Sichtprüfung vor dem Termin.
+
+Erledigt: der Remote liegt auf `HannesDiemerling/IQB-2026`, `site-url` zeigt
+auf die passende Pages-Adresse. Der Repo-Name wandert bei einer Project Page in
+den Pfad, `site-url` muss ihn also in genau dieser Schreibweise enthalten. Wer
+das Repo umbenennt, fasst auch diese Zeile an. Interne Links sind relativ und
+haengen nicht daran, betroffen waeren nur `sitemap.xml` und die
+`og:url`-Metadaten.

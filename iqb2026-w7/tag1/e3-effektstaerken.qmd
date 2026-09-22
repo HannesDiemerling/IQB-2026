@@ -160,6 +160,28 @@ nichts mehr, bei .55 bringt jede zusätzliche Erhebung wenig, solange das
 Instrument so ungenau misst. Der Kipppunkt liegt dazwischen.
 :::
 
+## Zum Nachschlagen
+
+::: {.callout-note collapse="true"}
+## Der Werkzeugkasten hinter d
+
+| Maß | Wofür | Orientierung |
+|---|---|---|
+| **Cohen's d** | Mittelwertsvergleich zweier Gruppen | 0.2 · 0.5 · 0.8 |
+| **Hedges' g** | wie d, korrigiert für kleine Stichproben | ≈ d ab n > 50 |
+| **η² / ω²** | Varianzaufklärung, ANOVA | .01 · .06 · .14 |
+| **Pearson's r** | Zusammenhang zweier stetiger Variablen | .10 · .30 · .50 |
+| **CLES** | Wahrscheinlichkeit, dass ein zufälliger Fall besser ist | 0.50 = Zufall, 0.71 ≈ d 0.8 |
+| **Odds / Risk Ratio** | binäre Ergebnisse | 1 = kein Unterschied |
+
+Die Orientierungswerte sind Konventionen, keine Kriterien. Für
+Bildungsinterventionen gelten die Bänder von Kraft (2020), nicht die von
+Cohen.
+
+Eine Warnung zum Odds Ratio: er wird systematisch als Risiko fehlgelesen. Bei
+häufigen Ereignissen liegen Odds Ratio und Risk Ratio weit auseinander.
+:::
+
 ## Pufferaufgaben
 
 ::: {.callout-important collapse="true"}

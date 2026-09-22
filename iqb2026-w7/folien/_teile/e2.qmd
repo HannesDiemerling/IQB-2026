@@ -104,11 +104,17 @@ Rund 3 Minuten.
 
 ## Der Garten der sich verzweigenden Pfade
 
-![](../assets/e2-garten.png){.bp-abb}
+![](../assets/e2-garten.png){.bp-abb .bp-abb--knapp}
 
 ::: {.bp-callout}
 Nicht die einzelne Entscheidung ist das Problem, sondern die **Zahl der
 möglichen Entscheidungen**.
+:::
+
+::: {.bp-quelle}
+Der Titel ist bei Borges geborgt. Bei ihm verzweigt sich der Garten in alle
+möglichen Zukünfte gleichzeitig. Beim Auswerten nehmen wir davon genau eine
+und nennen sie das Ergebnis.
 :::
 
 ::: notes
@@ -204,21 +210,7 @@ Rund 3 Minuten.
 
 ## Was am Ende in der Literatur steht
 
-::: {.bp-belege}
-- **Open Science Collaboration (2015),** Science 349(6251). 100 Studien
-  systematisch wiederholt. In den Originalen waren **97 %** der Befunde
-  signifikant, in den Replikationen **36 %**. Die Effektstärken der
-  Replikationen betrugen im Schnitt nur **die Hälfte** der Originalwerte.
-- **Schäfer & Schwarz (2019),** Frontiers in Psychology 10:813. Vergleich von
-  **900** Effekten aus Publikationen ohne Präregistrierung mit **93** Effekten
-  aus präregistrierten Studien: Median **r = 0.36** gegen **r = 0.16**.
-- **Makel & Plucker (2014),** Educational Researcher. Vollständige
-  Publikationsgeschichte der 100 Bildungszeitschriften mit dem höchsten
-  Impact Factor: nur **0,13 %** der Artikel sind Replikationen. Und sie
-  gelingen deutlich seltener, wenn kein Autor der Originalstudie beteiligt ist.
-- **Simmons, Nelson & Simonsohn (2011),** Psychological Science. Vier übliche
-  Freiheitsgrade kombiniert: nominal 5 % Fehlerrate, faktisch **61 %**.
-:::
+![](../assets/e2-replikation.png){.bp-abb}
 
 ::: {.bp-warn}
 Keine dieser Arbeiten wirft jemandem Betrug vor. Sie beschreiben ein System,
@@ -226,7 +218,8 @@ das bestimmte Ergebnisse belohnt.
 :::
 
 ::: notes
-Die drei Arbeiten in aufsteigender Unbequemlichkeit vortragen.
+Die drei Arbeiten in aufsteigender Unbequemlichkeit vortragen, je ein Panel
+der Abbildung, von links nach rechts.
 
 Bei der Open Science Collaboration die Gegenüberstellung 97 zu 36 Prozent
 langsam sprechen lassen. Fast alle Originalbefunde waren signifikant, ein gutes
@@ -241,16 +234,15 @@ Zusammenhang fällt von r gleich 0.36 auf 0.16. Die Präregistrierung hat nichts
 an der Wirklichkeit geändert, nur an dem, was publiziert wurde.
 
 Makel und Plucker ist der bildungsspezifische Beleg auf dieser Folie und
-deshalb der wichtigste für dieses Publikum. 0,13 Prozent heißt: von etwa
-tausend Artikeln ist einer eine Replikation. Man kann in der
+deshalb der wichtigste für dieses Publikum. Im rechten Panel ist jeder Punkt
+ein Artikel, tausend insgesamt, und genau einer davon ist eine Replikation.
+Das Bild macht die Arbeit, ich sage nur die Zahl dazu. Man kann in der
 Bildungsforschung also gar nicht wissen, wie replizierbar sie ist.
 
-Der zweite Befund dort ist der schärfere: Replikationen gelingen deutlich
-seltener, wenn kein Autor der Originalstudie beteiligt ist. Wenn also
-unabhängige Teams nachprüfen, hält weniger. Wer hier fragt, bekommt diese
-ehrliche Antwort.
-
-Ioannidis nur nennen, nicht ausführen. Der Titel macht die Arbeit.
+Der zweite Befund dort ist der schärfere und steht bewusst nicht auf der
+Folie: Replikationen gelingen deutlich seltener, wenn kein Autor der
+Originalstudie beteiligt ist. Wenn also unabhängige Teams nachprüfen, hält
+weniger. Wer hier fragt, bekommt diese ehrliche Antwort.
 
 Wenn jemand einwendet, das sei alles Psychologie und nicht übertragbar:
 zustimmen, dass die Felder sich unterscheiden, und dann zurückfragen, welcher
@@ -267,20 +259,16 @@ schwierig wird: hohe Belastung, Personalmangel, viele Abwesenheiten.
 
 ::: {.bp-zwei}
 ::: {}
-- Übrig bleiben die **gut ausgestatteten** Schulen.
-- Dort wirkt LeseStark besser.
-- Der berichtete Effekt wird **künstlich aufgebläht**.
-- Kein Rechenfehler ist passiert.
+Übrig bleiben die **gut ausgestatteten** Schulen. Dort wirkt LeseStark besser.
+Der berichtete Effekt wächst, ohne dass sich jemand verrechnet hätte.
 :::
 ::: {.bp-quote}
-Die Daten lügen nicht, aber sie zeigen nur noch die verzerrte halbe Wahrheit.
+Die Daten lügen nicht. Sie schweigen nur über die, die nicht mehr da sind.
 :::
 :::
 
 ::: {.bp-callout}
-Entscheidend ist nicht, **wie viele** fehlen, sondern **wer**. Wenn 30 % deiner
-Stichprobe wegfällt und das nicht zufällig geschieht, hast du keine
-repräsentative Stichprobe mehr.
+Entscheidend ist nicht, **wie viele** fehlen, sondern **wer**.
 :::
 
 ::: notes
@@ -304,21 +292,14 @@ Rund 4 Minuten.
 
 ## Drei Mechanismen, drei Konsequenzen
 
-| | Bedeutung | Was rettbar ist |
+| | Das Fehlen hängt ab von | Rettbar? |
 |---|---|---|
-| **MCAR** | völlig zufällig fehlend | unproblematisch, nur Präzisionsverlust |
-| **MAR** | fehlend abhängig von **beobachteten** Variablen | korrigierbar, etwa durch multiple Imputation |
-| **MNAR** | fehlend abhängig von **unbeobachteten** Werten selbst | nicht aus den Daten korrigierbar |
+| **MCAR** | nichts, reiner Zufall | ja, kostet nur Präzision |
+| **MAR** | **beobachteten** Variablen | ja, etwa durch Imputation |
+| **MNAR** | den **unbeobachteten** Werten selbst | nein |
 
 ::: {.bp-warn}
-Der Fall von der Folie davor ist **MNAR**. Die Ausfälle hängen an der Belastung,
-und genau dort fehlen die Werte. Das lässt sich nicht wegrechnen. Man kann es
-nur benennen und offenlegen.
-:::
-
-::: {.bp-quelle}
-Dazu die Frage der Verallgemeinerung: auch eine vollständige Stichprobe sagt
-wenig über Gruppen, die im Design nie vorkamen.
+Unser Fall ist **MNAR**. Das lässt sich nicht wegrechnen, nur offenlegen.
 :::
 
 ::: notes
@@ -333,6 +314,10 @@ prüfbar. Man kann sie nur begründen.
 Für dieses Publikum die Brücke schlagen: bei Schulleistungsstudien ist die
 Teilnahmeentscheidung selbst oft der Auswahlmechanismus, und sie hängt mit dem
 Merkmal zusammen, das gemessen werden soll. Das ist der Lehrbuchfall für MNAR.
+
+Der Zusatz zur Verallgemeinerung steht nicht mehr auf der Folie, gehört aber
+gesagt: auch eine vollständige Stichprobe sagt wenig über Gruppen, die im
+Design nie vorkamen.
 
 Rund 3 Minuten.
 :::
@@ -372,31 +357,28 @@ Rund 4 Minuten.
 
 ### Funnel-Plot
 
-Effekt gegen Präzision auftragen. Symmetrischer Trichter heißt unverzerrt,
-fehlende Ecke heißt Publikationslücke.
+Symmetrischer Trichter heißt unverzerrt. Fehlende Ecke heißt Publikationslücke.
 :::
 ::: {.bp-pillar .tone-teal}
 [Diagnose]{.bp-pillar__num}
 
 ### p-Curve
 
-Die Verteilung der p-Werte knapp unter .05. Häuft sie sich dort, deutet das auf
-selektives Berichten.
+Häufen sich die p-Werte knapp unter .05, wurde selektiv berichtet.
 :::
 ::: {.bp-pillar .tone-coral}
 [Struktur]{.bp-pillar__num}
 
 ### Präregistrierung
 
-Analyseplan vor der Erhebung festlegen. Bei Registered Reports hängt die Zusage
-am Design, nicht am Ergebnis.
+Analyseplan vor der Erhebung. Bei Registered Reports hängt die Zusage am
+Design, nicht am Ergebnis.
 :::
 :::
 
 ::: {.bp-callout}
-Präregistrierung verbietet dir nichts. Sie trennt nur, was **geplant** war, von
-dem, was du **entdeckt** hast. Beides ist erlaubt, beides ist wertvoll, es muss
-nur unterscheidbar bleiben.
+Präregistrierung verbietet dir nichts. Sie trennt nur **geplant** von
+**entdeckt**. Beides ist erlaubt, es muss nur unterscheidbar bleiben.
 :::
 
 ::: notes

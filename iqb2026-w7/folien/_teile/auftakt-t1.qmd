@@ -31,13 +31,10 @@ Rund 2 Minuten.
 
 ::: {.bp-zwei}
 ::: {}
-Die Grundlagen dieses Workshops stammen aus dem Projekt **Beyond p-values** an
-der **HMU Health and Medical University Erfurt**, gefördert von der
-**VolkswagenStiftung** in der Förderlinie Pioniervorhaben.
-
-Für heute habe ich das Material neu geschnitten und auf die Bildungsforschung
-übertragen. Was du in den Anwendungen siehst, ist dort in ähnlicher Form frei
-verfügbar.
+Die Grundlagen stammen aus dem Projekt **Beyond p-values** an der **HMU
+Erfurt**, gefördert von der **VolkswagenStiftung** in der Förderlinie
+Pioniervorhaben. Für heute neu geschnitten und auf die Bildungsforschung
+übertragen.
 :::
 ::: {}
 ::: {.bp-callout}

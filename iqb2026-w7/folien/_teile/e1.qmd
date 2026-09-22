@@ -88,8 +88,7 @@ Psychological Research Online 7(1). Genau diese sechs Aussagen wurden dort
 vorgelegt.
 :::
 
-Das ist kein Wissensproblem einzelner Personen. Es ist ein strukturelles Problem
-der Ausbildung.
+Mehr Methodenausbildung hilft. Von 100 auf 80 Prozent.
 
 ::: notes
 Die Auflösung ohne Triumph vortragen. Der Satz, der sitzen muss: das ist kein
@@ -108,22 +107,17 @@ Rund 3 Minuten.
 
 ## Kein Lehrbuchproblem
 
-::: {.bp-belege}
-- **Lortie-Forgues & Inglis (2019),** Educational Researcher 48(3).
-  **141 große Wirksamkeitsstudien** aus den Förderprogrammen von EEF und
-  NCEE, zusammen über **1,2 Millionen Lernende**. Durchschnittlicher Effekt
-  **0,06 SD**, durchschnittliche Intervallbreite **0,30 SD**. Der mittlere
-  Bayes-Faktor liegt bei **0,56**, die Studien sind also überwiegend
-  uninformativ.
-- **Wasserstein & Lazar (2016),** The American Statistician 70(2). Die
-  **erste Stellungnahme der American Statistical Association zu einer
-  statistischen Frage überhaupt**. Kernsatz: Schlussfolgerungen sollen nicht
-  daran hängen, ob ein p-Wert eine Schwelle überschreitet.
-:::
+![](../assets/e1-lortie-forgues.png){.bp-abb .bp-abb--knapp}
 
 ::: {.bp-callout}
 Das Problem ist bekannt, benannt und dokumentiert. Geändert hat sich an der
 Praxis wenig.
+:::
+
+::: {.bp-quelle}
+Lortie-Forgues & Inglis (2019), Educational Researcher 48(3), Förderprogramme
+von EEF und NCEE. Dazu Wasserstein & Lazar (2016), die erste Stellungnahme der
+American Statistical Association zu einer statistischen Frage überhaupt.
 :::
 
 ::: notes
@@ -134,11 +128,18 @@ Lortie-Forgues und Inglis ist die Studie, die bei diesem Publikum am besten
 zieht, weil sie aus der Bildungsforschung selbst kommt und nicht aus der
 Psychologie.
 
-Die Zahlen langsam nennen. Durchschnittlicher Effekt 0,06 Standardabweichungen
-bei einer durchschnittlichen Intervallbreite von 0,30. Das heißt: das Intervall
-ist fünfmal so breit wie der Effekt, den es einschließen soll. Viele dieser
-Intervalle enthalten gleichzeitig nennenswerten Nutzen und nennenswerten
-Schaden.
+Die Abbildung erklären, sie trägt die Folie: waagerecht die Effektstärke in
+Standardabweichungen. Der korallenrote Punkt ist der durchschnittliche Effekt
+über alle 141 Studien, 0,06. Der dunkle Balken ist das durchschnittliche
+Intervall, 0,30 breit.
+
+Dann auf die beiden farbigen Felder zeigen. Links vom Nullstrich liegt
+möglicher Schaden, rechts von 0,20 liegt nach Kraft ein großer Effekt. Das
+durchschnittliche Intervall reicht in beide Felder hinein. Es enthält also
+gleichzeitig nennenswerten Schaden und nennenswerten Nutzen.
+
+Der Satz dazu: das Intervall ist fünfmal so breit wie der Effekt, den es
+einschließen soll.
 
 Der mittlere Bayes-Faktor von 0,56 kommt an Tag 2 wieder. Ein Bayes-Faktor um
 1 heißt: die Daten unterscheiden nicht zwischen Wirkung und keiner Wirkung. Die
@@ -274,8 +275,8 @@ Rund 4 Minuten.
 ![](../assets/e1-p-gegen-n.png){.bp-abb}
 
 ::: {.bp-warn}
-Signifikanz testet vor allem die **Stichprobengröße**. Und umgekehrt: bei
-kleinem n bleibt ein großer Effekt unentdeckt.
+Mit genug Lernenden wird alles signifikant, ohne genug Lernende nichts. Über
+die **Größe** des Effekts sagen beide Fälle nichts.
 :::
 
 ::: notes
@@ -305,27 +306,25 @@ Nicht schon alles verraten, die Gruppenarbeit dreht genau an diesem Regler.
 Rund 4 Minuten.
 :::
 
-## Alle sieben Fehlannahmen
+## Sechs erledigt, eine offen
 
-| | Aussage | Status |
-|---|---|---|
-| 1 | p ist die Wahrscheinlichkeit, dass H₀ wahr ist | falsch |
-| 2 | p < .05 heißt, der Effekt ist real | falsch, 5 % Fehlalarme per Konstruktion |
-| 3 | p < .05 heißt, der Effekt ist groß oder wichtig | falsch, hängt an n |
-| 4 | 1 − p ist die Replikationswahrscheinlichkeit | falsch, und besonders schädlich |
-| 5 | p ist die Wahrscheinlichkeit, dass es Zufall war | falsch |
-| 6 | Nicht signifikant heißt kein Effekt | falsch |
-| 7 | Konfidenzintervalle sind der bessere p-Wert | **halb richtig** |
+::: {.bp-warn}
+Die schädlichste war Nummer 4: **1 − p ist nicht die
+Replikationswahrscheinlichkeit.** Die häufigste war Nummer 6: **nicht
+signifikant heißt nicht kein Effekt.**
+:::
 
 ::: {.bp-callout}
-Nummer 7 ist der interessante Fall. Das Intervall zeigt wenigstens die
-Effektgröße. Aber die intuitive Lesart, der wahre Wert liege mit 95 %
-Wahrscheinlichkeit darin, ist auch falsch. Diese Lesart erlaubt erst das
-Glaubwürdigkeitsintervall, und das kommt morgen.
+**Die siebte steht noch aus.** "Konfidenzintervalle sind der bessere p-Wert."
+Halb richtig: das Intervall zeigt wenigstens die Effektgröße. Aber die Lesart,
+der wahre Wert liege mit 95 % Wahrscheinlichkeit darin, ist genauso falsch.
+
+Diese Lesart gibt es trotzdem. Sie heißt nur anders, und sie kommt morgen.
 :::
 
 ::: notes
-Die Tabelle nicht durchlesen. Stattdessen zwei Zeilen herausgreifen.
+Die beiden Kästen tragen die Folie, ich lese sie nicht vor. Stattdessen die
+zwei genannten Fehlannahmen ausführen und dann auf Nummer 7 zulaufen.
 
 Nummer 4, weil sie die schädlichste ist. Wer glaubt, ein p von .01 bedeute 99 %
 Replikationschance, wundert sich zu Recht über die Replikationskrise. Die

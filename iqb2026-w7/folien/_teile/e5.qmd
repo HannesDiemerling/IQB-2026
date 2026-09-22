@@ -92,25 +92,24 @@ Rund 2 Minuten.
 
 ## Der Prior: uninformativ ist nicht neutral
 
-Der Prior beschreibt, welche Werte wir **vor** den neuen Daten für plausibel
-halten.
-
 ::: {.bp-zwei}
 ::: {}
-**Uninformativ.** Alle Werte gleich plausibel. Klingt neutral, ist es nicht: er
-hält einen Zuwachs von **30 Punkten** für genauso plausibel wie einen von
-2 Punkten, auf einem Test mit einer Streuung von 5 Punkten.
+**Uninformativ.** Alle Werte gleich plausibel.
 
-**Informativ.** Nutzt Vorwissen aus früheren Evaluationen oder aus der Logik der
-Sache, um Unsinn auszuschließen.
+**Informativ.** Nutzt Vorwissen, um Unsinn auszuschließen.
 
-**Schwach informativ.** Der praktische Mittelweg: schließt Unsinn aus, lässt den
-Daten aber allen Spielraum.
+**Schwach informativ.** Der Mittelweg, und der Normalfall.
 :::
 ::: {.bp-callout}
 Der Prior erfindet keine Annahmen. Er macht die Annahmen, die ohnehin da sind,
 sichtbar und dadurch angreifbar.
 :::
+:::
+
+::: {.bp-warn}
+Ein flacher Prior hält einen Zuwachs von **30 Punkten** für genauso plausibel
+wie einen von 2, auf einem Test mit einer Streuung von 5. Das ist keine
+Neutralität. Das ist Leichtgläubigkeit mit Formel.
 :::
 
 ::: notes
@@ -134,39 +133,31 @@ Rund 5 Minuten.
 
 ## Die Likelihood: die Daten stehen fest
 
-*Wie wahrscheinlich ist es, genau diese Daten zu sehen, falls eine bestimmte
-Hypothese stimmt?*
-
-**Fünf Pilotklassen, gemessener Zuwachs:** 3 · 7 · 5 · 9 · 6 Punkte.
-
-::: {.bp-zwei}
-::: {}
-| Hypothese | Likelihood |
-|---|---|
-| θ = 0 Punkte | praktisch null |
-| θ = 3 Punkte | gering |
-| θ = 6 Punkte | **Maximum** |
-| θ = 12 Punkte | gering |
-:::
-::: {}
-Die Likelihood ist der **Filter**, durch den die Daten auf den Prior wirken. Sie
-ist keine Wahrscheinlichkeitsverteilung über θ, sondern eine Bewertung jeder
-einzelnen Hypothese an denselben, festen Daten.
-:::
-:::
+![](../assets/e5-likelihood.png){.bp-abb .bp-abb--knapp}
 
 ::: {.bp-callout}
-Beim Maximum-Likelihood-Verfahren hört man hier auf und nimmt den besten Wert.
-Bayesianisch behält man die ganze Kurve und verrechnet sie mit dem Prior.
+Maximum Likelihood hört hier auf und nimmt den besten Wert. Bayesianisch
+behält man die ganze Kurve.
+:::
+
+::: {.bp-quelle}
+Wie wahrscheinlich sind genau diese Daten, falls eine bestimmte Hypothese
+stimmt? Keine Verteilung über θ, sondern eine Bewertung jeder Hypothese an
+denselben fünf Zahlen.
 :::
 
 ::: notes
 Roter Faden: die Daten sind fix, die Hypothese wandert. Das ist genau umgekehrt
 zur Intuition, und deshalb ist dieses Kapitel das rutschigste.
 
-Die fünf Zahlen nennen und betonen: die ändern sich nie mehr. In der Anwendung
-wandert die Kurve über die fünf festen Punkte, und genau dieses Bild ist die
-Likelihood.
+Die fünf Zahlen nennen und betonen: die ändern sich nie mehr. Auf der
+Abbildung sind sie die senkrechten Striche unten, sie stehen still. Was
+wandert, ist die Hypothese auf der waagerechten Achse.
+
+Dann die Kurve entlanggehen. Bei θ gleich 6 passt die Hypothese am besten zu
+den Daten, das ist das Maximum. Nach außen fällt die Bewertung schnell ab, bei
+0 und bei 12 ist sie praktisch null. Beide Enden sind gleich weit weg und
+bekommen deshalb dasselbe Gewicht.
 
 Die Abgrenzung zu Maximum Likelihood lohnt sich, weil viele im Raum ML aus der
 Regression oder aus IRT-Modellen kennen. Für ein Publikum aus der
@@ -236,8 +227,8 @@ Rund 5 Minuten inklusive Demo.
 
 ### 95 % CI [0,0; 4,2]
 
-Wenn ich diese Studie unendlich oft wiederhole, enthalten 95 % der so
-berechneten Intervalle den wahren Wert.
+Bei unendlich vielen Wiederholungen enthalten 95 % solcher Intervalle den
+wahren Wert.
 
 Über **dieses** Intervall sagt das nichts.
 :::
@@ -246,16 +237,16 @@ berechneten Intervalle den wahren Wert.
 
 ### 95 % HDI [0,0; 4,2]
 
-Gegeben meine Daten und mein Modell liegt der wahre Wert mit 95 %
-Wahrscheinlichkeit in diesem Bereich.
+Der wahre Wert liegt mit 95 % Wahrscheinlichkeit hier drin, gegeben Daten und
+Modell.
 
 Genau die Aussage, die alle gemeint haben.
 :::
 :::
 
 ::: {.bp-callout}
-**HDI** heißt Highest Density Interval: der schmalste Bereich, der 95 % der
-Verteilung enthält. Jeder Wert darin ist plausibler als jeder Wert außerhalb.
+Dieselben Zahlen. Gestern war dieser Satz noch Fehlannahme Nummer 7, heute ist
+er zulässig. Geändert hat sich nicht die Rechnung, sondern die Frage.
 :::
 
 ::: notes
@@ -271,10 +262,14 @@ sondern über die Wirklichkeit unter einem bestimmten Modell. Wer das
 unterschlägt, verkauft Bayes als Wundermittel, und das rächt sich in der
 Diskussion.
 
+Die Abkürzung HDI einmal auflösen, sie steht nicht mehr auf der Folie:
+Highest Density Interval, der schmalste Bereich, der 95 Prozent der Verteilung
+enthält. Jeder Wert darin ist plausibler als jeder Wert außerhalb. Ausführlich
+steht das aufklappbar auf dem Arbeitsblatt und im Glossar.
+
 Der Unterschied zwischen HDI und ETI nur kurz: ETI schneidet unten und oben je
 2,5 Prozent ab, HDI nimmt den schmalsten Bereich. Bei symmetrischen
-Verteilungen fast identisch, bei schiefen nicht. Mehr braucht es hier nicht,
-das steht auf dem Arbeitsblatt.
+Verteilungen fast identisch, bei schiefen nicht.
 
 Rund 4 Minuten.
 :::

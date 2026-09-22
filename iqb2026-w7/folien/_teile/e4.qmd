@@ -107,14 +107,13 @@ $$P(\theta \mid D) = \frac{P(D \mid \theta)\, P(\theta)}{P(D)}$$
 
 | Teil | Bedeutung |
 |---|---|
-| **Prior** $P(\theta)$ | Deine anfängliche Überzeugung, bevor du die neuen Daten kennst |
-| **Likelihood** $P(D \mid \theta)$ | Wahrscheinlichkeit, genau diese Daten zu sehen, falls die Hypothese stimmt |
-| **Evidenz** $P(D)$ | Totale Wahrscheinlichkeit dieser Daten, über alle Hypothesen hinweg |
-| **Posterior** $P(\theta \mid D)$ | Deine aktualisierte Überzeugung, nachdem du die Daten einbezogen hast |
+| **Prior** $P(\theta)$ | was du vorher geglaubt hast |
+| **Likelihood** $P(D \mid \theta)$ | wie gut die Hypothese zu diesen Daten passt |
+| **Evidenz** $P(D)$ | der Nenner, der alles auf eins normiert |
+| **Posterior** $P(\theta \mid D)$ | was du danach glaubst |
 
 ::: {.bp-callout}
-Das Bayes-Theorem ist eine Anleitung dafür, aus neuen Informationen klüger zu
-werden. Mehr steht da nicht.
+Eine Anleitung, aus neuen Informationen klüger zu werden. Mehr steht da nicht.
 :::
 
 ::: notes
@@ -138,8 +137,8 @@ Rund 5 Minuten.
 ![](../assets/e4-basisrate.png){.bp-abb}
 
 ::: {.bp-callout}
-Die Intuition sagt über 90 %. Bei seltenen Merkmalen entscheidet die
-**Basisrate**, nicht die Testgüte.
+Die Intuition sagt über 90 %. Der Test ist auch wirklich gut. Die
+**Basisrate** ist davon nur leider unbeeindruckt.
 :::
 
 ::: notes
@@ -189,8 +188,7 @@ SD rund 5.
 
 95 % CI [0,0; 4,2]
 
-**Sagen darfst du:** Wenn es keinen Effekt gäbe, wären Daten wie diese
-überraschend.
+**Sagen darfst du:** Ohne Effekt wären Daten wie diese überraschend.
 :::
 ::: {.bp-pillar .tone-navy}
 [Bayesianisch]{.bp-pillar__num}
@@ -199,14 +197,14 @@ SD rund 5.
 
 95 % HDI [0,0; 4,2]
 
-**Sagen darfst du:** Mit 98 % Wahrscheinlichkeit wirkt das Programm überhaupt.
-Mit 20 % Wahrscheinlichkeit um mehr als 3 Punkte.
+**Sagen darfst du:** Das Programm wirkt mit 98 % Wahrscheinlichkeit. Um mehr
+als 3 Punkte allerdings nur mit 20 %.
 :::
 :::
 
 ::: {.bp-callout}
-Dasselbe Intervall, zwei verschiedene Sätze. Nur der rechte beantwortet die
-Frage, die jemand tatsächlich gestellt hat.
+Dasselbe Intervall, zwei Sätze. Nur der rechte beantwortet die Frage, die
+jemand gestellt hat.
 :::
 
 ::: notes

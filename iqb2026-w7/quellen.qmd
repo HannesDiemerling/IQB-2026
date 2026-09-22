@@ -62,6 +62,16 @@ Potential Biases. *Frontiers in Psychology*, 10, 813.
 > 900 Effekte aus nicht präregistrierten Publikationen gegen 93 aus
 > präregistrierten: Median r = 0.36 gegen r = 0.16.
 
+**Makel, M. C. & Plucker, J. A. (2014).** Facts Are More Important Than
+Novelty: Replication in the Education Sciences. *Educational Researcher*,
+43(6).
+[doi:10.3102/0013189X14545513](https://doi.org/10.3102/0013189X14545513)
+
+> Vollständige Publikationsgeschichte der 100 Bildungszeitschriften mit dem
+> höchsten Impact Factor: nur **0,13 %** der Artikel sind Replikationen. Von
+> diesen gelangen 68 %, allerdings deutlich seltener, wenn kein Autor der
+> Originalstudie beteiligt war.
+
 **Ioannidis, J. P. A. (2005).** Why Most Published Research Findings Are
 False. *PLoS Medicine*, 2(8), e124.
 [doi:10.1371/journal.pmed.0020124](https://doi.org/10.1371/journal.pmed.0020124)
@@ -123,10 +133,36 @@ Practical Course.* Cambridge University Press.
 > von Jeffreys (1961), wobei die Stufe 3 bis 10 von "substantiell" in
 > "moderat" umbenannt wurde, weil sie zu entschieden klang.
 
-::: {.callout-note}
-## Warum hier keine Bildungsstudie zur Replikation steht
+## Methodische Grundlagen
 
-Für die Bildungsforschung gibt es keine systematische Replikationsstudie in
-der Größenordnung der Open Science Collaboration. Das ist kein
-Entlastungsargument, sondern eine offene Flanke.
+**Minderungskorrektur.** Die Beziehung
+$d_{\text{beobachtet}} = d_{\text{wahr}} \cdot \sqrt{\text{Rel}}$ ist die
+Standard-Minderungskorrektur für standardisierte Mittelwertsdifferenzen,
+umgestellt aus $d_{\text{wahr}} = d_{\text{beobachtet}} / \sqrt{\text{Rel}}$.
+Dargestellt etwa in der *SAGE Encyclopedia of Research Design* unter
+"Correction for Attenuation" und im Artefaktkorrektur-Verfahren von Hunter und
+Schmidt.
+
+::: {.callout-important}
+## Reichweite der Korrektur
+
+Die Formel korrigiert Unreliabilität **im Ergebnismaß**. Messfehler in der
+Gruppenzuordnung sind damit nicht erfasst, dafür gibt es eigene Verfahren. Die
+Anwendung in Einheit 3 modelliert bewusst nur den ersten Fall.
+:::
+
+**Typische Reliabilität von Schulleistungstests.** Die im Glossar genannte
+Spanne von .70 bis .90 deckt sich mit veröffentlichten Werten für die
+PISA-Lesekompetenz, dort liegt Cronbachs Alpha zwischen .73 und .87.
+
+**Bayes-Faktor in Einheit 6.** Die Anwendung berechnet den Bayes-Faktor über
+die **Savage-Dickey-Dichteregel** am Nullpunkt, mit einer Normalverteilung als
+Prior auf den Effekt. Das ist ein bewusst einfaches Modell für den Workshop,
+kein Ersatz für eine Auswertung in JASP oder brms.
+
+::: {.callout-note}
+## Was hier nicht steht
+
+Alle Zahlen des LeseStark-Szenarios sind für den Workshop gesetzt und nicht
+empirisch erhoben. Das gilt auch für die Screening-Werte in Einheit 4.
 :::

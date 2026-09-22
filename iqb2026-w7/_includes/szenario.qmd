@@ -14,3 +14,8 @@ mit einem standardisierten Lesekompetenztest.
 Diese Zahlen ziehen sich durch alle sechs Einheiten. Wenn dir in einer
 Anwendung eine Zahl begegnet, die du nicht einordnen kannst, ist sie fast immer
 hier erklärt.
+
+**LeseStark ist ein erfundenes Programm**, und alle Zahlen sind für den
+Workshop gesetzt, nicht empirisch erhoben. Das gilt auch für die
+Screening-Werte in Einheit 4: ein Anteil von 3 % mit Förderbedarf, 95 %
+Erkennung und 8 % Fehlalarme sind Annahmen, keine Prävalenzangaben.

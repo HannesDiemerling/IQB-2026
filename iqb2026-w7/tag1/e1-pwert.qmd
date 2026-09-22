@@ -76,8 +76,12 @@ verändert nur die **Streuung** an Standort Süd, nicht den Zuwachs.
 ::: {.callout-note collapse="true"}
 ## Lösung Aufgabe 2
 
-Das Urteil kippt bei einer Streuung von etwa **4,95**. Bei 6,0 liegt der
-p-Wert bei rund .10, also weit von der Schwelle entfernt.
+Das Urteil kippt schon beim **ersten Schritt nach unten**: bei einer Streuung
+von 5,00 liegt der p-Wert bei .049 und damit unter der Schwelle. Bei 5,10 war
+er noch .054.
+
+Nach oben: bei 6,0 liegt der p-Wert bei rund .10, also weit von der Schwelle
+entfernt.
 
 Der Zuwachs bleibt die ganze Zeit exakt bei 2,1 Punkten. Er ist in der
 Anwendung fest verdrahtet.
@@ -110,8 +114,9 @@ der getesteten Lernenden.
 ::: {.callout-note collapse="true"}
 ## Lösung Aufgabe 3
 
-Bei 50 Lernenden ist nichts signifikant. Der Umschlag passiert bei rund
-**1800 Lernenden je Gruppe**.
+Bei 50 Lernenden ist nichts signifikant. Der Umschlag passiert bei
+**1750 Lernenden je Gruppe** (p = .049). Bei 1700 liegt der p-Wert noch bei
+.052.
 
 Die beiden Balken bewegen sich überhaupt nicht, denn die Mittelwerte sind
 fest. Kleiner wird nur der Fehlerbalken, also das Konfidenzintervall.

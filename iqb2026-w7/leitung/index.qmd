@@ -168,3 +168,35 @@ links.
 - `_site` herunterladen und die Offline-Variante einmal testen.
 - Zoom-Breakout-Räume vorab anlegen, damit die Zuweisung nicht live passieren
   muss.
+
+## Offene Prüfpunkte
+
+Diese Punkte sind noch nicht verifiziert. Sie brechen den Workshop nicht, aber
+wer sie vorher abarbeitet, kann im Zweifel sicher antworten.
+
+### Muss vorher geprüft werden
+
+| Punkt | Prüfweg |
+|---|---|
+| Starten alle 19 Anwendungen im Browser? | Jede Seite einmal kalt öffnen, auf ein gerendertes Diagramm warten, auf Fehlermeldungen achten |
+| Passen die Abbildungen neben Titel und Kasten? | Beide Decks durchklicken, `o` für die Übersicht. Die Höhe ist auf 50 vh geschätzt, nicht getestet |
+| Läuft keine Tabelle über 720 Pixel? | Dabei mitprüfen |
+
+### Sollte geprüft werden, wenn Zeit ist
+
+| Behauptung im Material | Prüfweg |
+|---|---|
+| "In JASP dauert das fünf Minuten" (Abschluss Tag 2) | Einmal selbst machen: JASP installieren, bayesianischen t-Test auf einen eigenen Datensatz rechnen |
+| Die Bayes-Faktoren der Anwendung sind plausibel | Denselben Fall in JASP gegenrechnen. Abweichungen sind wegen des anderen Priors erwartbar, die Größenordnung sollte stimmen |
+| Die Testskala 0 bis 25 mit SD 5 wirkt realistisch | Grobabgleich mit einem echten Verfahren, etwa ELFE II, SLS oder LGVT. Das Szenario ist als fiktiv gekennzeichnet, ein Widerspruch wäre aber unnötig |
+
+### Bewusst nicht belegt
+
+- **Alle Zahlen des LeseStark-Szenarios** sind gesetzt, nicht erhoben. Das
+  steht so im Szenario, im Glossar und auf der Quellenseite.
+- **Die Zeitbudgets** in der Zeitplanung sind geschätzt. Nur ein Laut-Durchlauf
+  mit Stoppuhr klärt sie. In jedem Deck ist eine Folie in den Notizen als
+  kürzbar markiert.
+- **Die Prognose, dass die Mehrheit die Nachtestwahrscheinlichkeit zu hoch
+  schätzt**, stützt sich auf die gut belegte Basisratenvernachlässigung, nicht
+  auf Erfahrung mit dieser Gruppe. Plan B steht in den Notizen.

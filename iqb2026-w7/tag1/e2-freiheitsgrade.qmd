@@ -39,12 +39,12 @@ Subgruppe steht auf "Alle Lernenden".
 ::: {.callout-note collapse="true"}
 ## Lösung Aufgabe 1
 
-Der Ausgangspfad liegt deutlich über .05. Insgesamt gibt es **24 Pfade**, und
-mehrere davon sind bereits signifikant, ohne dass ihr irgendetwas getan habt.
+Der Ausgangspfad liegt bei **p = 0,079**. Insgesamt gibt es **24 Pfade**, und
+**vier** davon sind bereits signifikant, ohne dass ihr irgendetwas getan habt.
 
-Der niedrigste p-Wert über alle Pfade liegt klar unter .05.
+Der niedrigste p-Wert über alle Pfade liegt bei **0,005**.
 
-Wichtig: der wahre Effekt ist null. Jeder dieser signifikanten Pfade ist per
+Wichtig: der wahre Effekt ist null. Jeder dieser vier Pfade ist per
 Konstruktion ein Fehlalarm.
 :::
 
@@ -75,8 +75,9 @@ pro Pfad ist ein Treffer fast garantiert.
 ::: {.callout-note collapse="true"}
 ## Lösung Aufgabe 2
 
-Es gibt mehrere Kombinationen, die unter .05 landen. Die meisten Gruppen
-finden eine innerhalb weniger Versuche.
+Vier der 24 Kombinationen landen unter .05, und alle vier haben eine
+Gemeinsamkeit: sie beschränken auf die Subgruppe **Ganztagsschulen**. Die
+Subgruppenwahl ist der eigentliche Hebel, nicht das Ausreißer-Häkchen.
 
 Interessant ist nicht, welche Kombination es war, sondern **wie wenige
 Versuche nötig waren**. Ihr habt gezielt gesucht. In echter Forschung landet
@@ -111,9 +112,10 @@ begründet werden.
 ::: {.callout-note collapse="true"}
 ## Lösung Aufgabe 3
 
-Der wahre Durchschnitt über alle 100 Klassen liegt bei rund **1,3 Punkten**.
-Bei einer Schwelle von 5 steigt der berichtete Durchschnitt deutlich an, weil
-genau die Klassen wegfallen, in denen das Programm weniger bringt.
+Der wahre Durchschnitt über alle 100 Klassen liegt bei **1,4 Punkten**. Bei
+einer Schwelle von 5 steigt der berichtete Durchschnitt auf **2,8 Punkte**,
+also auf mehr als das Doppelte. Es fallen genau die Klassen weg, in denen das
+Programm weniger bringt.
 
 Und hier hat niemand mehr die Hand im Spiel. Die Belastung entscheidet, wer
 herausfällt. Das ist **MNAR**: das Fehlen hängt mit genau dem Merkmal

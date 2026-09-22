@@ -140,10 +140,11 @@ ist fünfmal so breit wie der Effekt, den es einschließen soll. Viele dieser
 Intervalle enthalten gleichzeitig nennenswerten Nutzen und nennenswerten
 Schaden.
 
-Der mittlere Bayes-Faktor von 0,56 ist der Hammer, und er kommt an Tag 2 wieder.
-Ein Bayes-Faktor um 1 heißt: die Daten unterscheiden nicht zwischen Wirkung und
-keiner Wirkung. Bei der Hälfte dieser Studien war der Aufwand also groß und der
-Erkenntnisgewinn nahe null. Das hier schon ankündigen, in Einheit 6 einlösen.
+Der mittlere Bayes-Faktor von 0,56 kommt an Tag 2 wieder. Ein Bayes-Faktor um
+1 heißt: die Daten unterscheiden nicht zwischen Wirkung und keiner Wirkung. Die
+Autoren selbst nennen die Studien deshalb überwiegend uninformativ. Diese
+Formulierung übernehmen und nicht zuspitzen. Hier ankündigen, in Einheit 6
+einlösen.
 
 Wichtig, wie ich das framen: das sind keine schlechten Studien. Das sind teure,
 sorgfältig gemachte Studien, die an einer strukturellen Grenze scheitern.

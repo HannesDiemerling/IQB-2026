@@ -326,6 +326,12 @@ Baguley (2009) nennt die Reliabilität ausdrücklich als einen der Faktoren, die
 standardisierte Effektstärken verzerren, neben eingeschränkter Varianz und
 Designunterschieden. Das ist die Literaturstelle, falls jemand eine will.
 
+Eine Einschränkung, die ich von mir aus nennen sollte: die Anwendung modelliert
+nur Unreliabilität im **Ergebnismaß**. Messfehler in der Gruppenzuordnung
+wären eine eigene Korrektur und sind hier nicht abgebildet. Wer das anspricht,
+hat recht, und die Antwort lautet: bewusst weggelassen, weil der Punkt schon
+mit einer Fehlerquelle ankommt.
+
 Falls jemand nach Korrelationen fragt: dort werden beide Variablen gedämpft,
 die Wurzel steht dann über dem Produkt beider Reliabilitäten.
 

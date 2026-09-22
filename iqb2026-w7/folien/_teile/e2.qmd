@@ -131,9 +131,16 @@ Vier Entscheidungen. Niemand würde von sich sagen, dass er vier Entscheidungen
 zu viel getroffen hat.
 
 Dann jeden Schritt einzeln plausibel machen, und zwar ernsthaft, nicht
-ironisch. Auffällige Testwerte prüfen ist gute Praxis. Unplausible
-Bearbeitungszeiten auszuschließen ist bei Kompetenztests sogar geboten. Nur
-vollständige Klassen zu betrachten ist methodisch sauber begründbar.
+ironisch. Auffällige Testwerte zu prüfen ist gute Praxis. Nur vollständig
+getestete Klassen auszuwerten ist methodisch sauber. Sich auf Regelklassen
+oder eine Jahrgangsstufe zu beschränken ist inhaltlich begründbar.
+
+Konkrete Zahlen für diesen Datensatz, falls jemand nachfragt: der
+Ausgangspfad liegt bei p = 0,079. Vier der 24 Pfade sind signifikant, der
+niedrigste bei p = 0,005. Alle vier laufen über die Subgruppe
+Ganztagsschulen. Die Subgruppenwahl ist also der stärkste Hebel, nicht das
+Ausreißer-Häkchen. Das nicht vorweg verraten, die Gruppen sollen es selbst
+finden.
 
 Genau das ist der Punkt: es gibt keinen Schritt, an dem jemand etwas falsch
 macht. Der Fehler liegt darin, dass die Reihenfolge der Entscheidungen von den
@@ -205,6 +212,10 @@ Rund 3 Minuten.
 - **Schäfer & Schwarz (2019),** Frontiers in Psychology 10:813. Vergleich von
   **900** Effekten aus Publikationen ohne Präregistrierung mit **93** Effekten
   aus präregistrierten Studien: Median **r = 0.36** gegen **r = 0.16**.
+- **Makel & Plucker (2014),** Educational Researcher. Vollständige
+  Publikationsgeschichte der 100 Bildungszeitschriften mit dem höchsten
+  Impact Factor: nur **0,13 %** der Artikel sind Replikationen. Und sie
+  gelingen deutlich seltener, wenn kein Autor der Originalstudie beteiligt ist.
 - **Simmons, Nelson & Simonsohn (2011),** Psychological Science. Vier übliche
   Freiheitsgrade kombiniert: nominal 5 % Fehlerrate, faktisch **61 %**.
 :::
@@ -229,9 +240,14 @@ Zeitraum, nur der Unterschied zwischen präregistriert und nicht: der mittlere
 Zusammenhang fällt von r gleich 0.36 auf 0.16. Die Präregistrierung hat nichts
 an der Wirklichkeit geändert, nur an dem, was publiziert wurde.
 
-Zur Übertragung auf dieses Publikum: es gibt keine vergleichbar große
-systematische Replikationsstudie für die Bildungsforschung. Das ist kein
-Entlastungsargument, sondern eine offene Flanke. Wer hier fragt, bekommt diese
+Makel und Plucker ist der bildungsspezifische Beleg auf dieser Folie und
+deshalb der wichtigste für dieses Publikum. 0,13 Prozent heißt: von etwa
+tausend Artikeln ist einer eine Replikation. Man kann in der
+Bildungsforschung also gar nicht wissen, wie replizierbar sie ist.
+
+Der zweite Befund dort ist der schärfere: Replikationen gelingen deutlich
+seltener, wenn kein Autor der Originalstudie beteiligt ist. Wenn also
+unabhängige Teams nachprüfen, hält weniger. Wer hier fragt, bekommt diese
 ehrliche Antwort.
 
 Ioannidis nur nennen, nicht ausführen. Der Titel macht die Arbeit.
